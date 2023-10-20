@@ -28,7 +28,6 @@ public abstract class CommonState : MonoBehaviour, IState
     protected void Awake() 
     {
         _parent = transform.parent;
-        
         fsm = _parent.GetComponent<FSM>();
 
         _animator = transform.parent.Find("Visual").GetComponent<AnimationController>();
