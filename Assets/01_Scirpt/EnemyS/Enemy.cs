@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using StateMachine_Jang;
+using UnityEngine.AI;
 
 public abstract class Enemy : MonoBehaviour
 {
@@ -21,11 +22,13 @@ public abstract class Enemy : MonoBehaviour
 
     [HideInInspector] public GameObject player;
     [HideInInspector] public Animator anim;
+    [HideInInspector] public NavMeshAgent navMeshAgent;
 
     protected virtual void Awake()
     {
         player = GameObject.FindWithTag("Player");
         anim = GetComponent<Animator>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
 
         state = State.Idle;
 
