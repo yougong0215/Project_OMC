@@ -18,11 +18,12 @@ public abstract class ColliderCast : MonoBehaviour
     
     
     protected float _playerDamage;
-    protected Transform _player;
-    public void Init(Transform Player, float Damage)
+    protected CharacterInfo _player;
+    public void Init(CharacterInfo Player, float Damage)
     {
         _player = Player;
         _playerDamage = Damage;
+        _skill.Init(_player, this);
     }
     
     /// <summary>
