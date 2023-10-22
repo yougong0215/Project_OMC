@@ -39,10 +39,13 @@ public abstract class SkillSO : ScriptableObject
     /// <summary>
     /// cols의 게임오브잭트  접근 피격시 이벤트 발동
     /// </summary>
-    /// <param name="cols"></param>
+    /// <param name="cols"></param>t
     public virtual void SKillInvoke(Collider cols)
     {
-        
+        if (cols.TryGetComponent(out CharacterInfo _pl))
+        {
+            _pl.GetDamage(DamageReturn());
+        }
     }
     
     
