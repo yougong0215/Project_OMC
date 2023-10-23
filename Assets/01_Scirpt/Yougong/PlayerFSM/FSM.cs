@@ -23,6 +23,7 @@ public enum FSMState
 
 public class FSM : MonoBehaviour
 {
+        
     [SerializeField]
     private Dictionary<FSMState, CommonState> stateMap = new Dictionary<FSMState, CommonState>();
     [SerializeField] private CommonState currentState;

@@ -8,6 +8,7 @@ public abstract class CommonAction : MonoBehaviour
     [SerializeField] protected CommonState com;
 
     protected FSM FSMMain => com.FSMMain;
+    protected Transform Character => com.Character;
 
 
     protected void OnEnable()

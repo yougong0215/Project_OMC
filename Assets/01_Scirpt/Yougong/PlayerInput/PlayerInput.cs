@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInput : MonoBehaviour
 {
-    
+    public FSM _fsm;
     private PlayerMain _inputAction;
     public PlayerMain InputAction => _inputAction;
 
@@ -25,6 +25,7 @@ public class PlayerInput : MonoBehaviour
         _inputAction.Player.Enable();
         _inputAction.Player.Jump.performed += SpaceHandle;
         _inputAction.Player.MouseLeftClick.performed += LeftClickHandle;
+        
     }
 
     public void SpaceHandle(InputAction.CallbackContext context)

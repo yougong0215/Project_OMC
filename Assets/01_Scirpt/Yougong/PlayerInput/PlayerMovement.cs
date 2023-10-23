@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private PlayerInput _input;
     private Camera _cam;
-    
+    private Vector3 vec;
     
 
     private void Awake()
@@ -22,12 +22,24 @@ public class PlayerMovement : MonoBehaviour
 
     public void Movement(Vector2 dir)
     {
+        Debug.LogWarning("여서 FSM Move 변경");
+        
+        transform.position += vec * 5 * Time.deltaTime;
+        
         if (dir == Vector2.zero)
         {
+            if(Mathf.Abs(vec.x) > 0.01f)
+                vec.x = Mathf.Abs(vec.x) - (0.1f * Time.deltaTime);
+            
+            if(Mathf.Abs(vec.y) > 0.01f)
+                vec.y = Mathf.Abs(vec.y) - (0.1f * Time.deltaTime);
+            
+            if(Mathf.Abs(vec.z) > 0.01f)
+                vec.z = Mathf.Abs(vec.z) - (0.1f * Time.deltaTime);
             return;
         }
-
-        Vector3 vec = new Vector3(0, 0, 0);
+        
+        vec = new Vector3(0, 0, 0);
         if (dir.y >= 1)
             vec += _cam.transform.forward;
         else if (dir.y <= -1)
@@ -40,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         vec.y = 0;
         transform.rotation = Quaternion.LookRotation(vec);
         print(vec);
-        transform.position += vec * 5 * Time.deltaTime;
+        
     }
     
     
