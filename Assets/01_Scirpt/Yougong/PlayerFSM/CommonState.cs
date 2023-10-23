@@ -29,6 +29,10 @@ public abstract class CommonState : MonoBehaviour, IState
 
     public Action Init = null;
     public Action UpdateAction = null;
+    
+    /// <summary>
+    /// 필요하면 넣기
+    /// </summary>
     public Action EventAction = null;
     public Action EndAction = null;
 

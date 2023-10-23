@@ -12,16 +12,21 @@ public class IdleState : CommonState
     }
     public override void EnterState()
     {
+        Init?.Invoke();
         //throw new System.NotImplementedException();
+        
     }
 
     public override void UpdateState()
     {
+        UpdateAction?.Invoke();
         //throw new System.NotImplementedException();
     }
 
     public override void ExitState()
     {
+        EndAction?.Invoke();
+        
         //throw new System.NotImplementedException();
     }
 }
