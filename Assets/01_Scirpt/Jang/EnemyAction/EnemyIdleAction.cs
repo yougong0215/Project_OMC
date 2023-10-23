@@ -2,14 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMoveAction : CommonAction
+public class EnemyIdleAction : CommonAction
 {
     protected override void Init()
-    {
-        
-    }
-
-    protected override void OnEndFunc()
     {
         
     }
@@ -20,6 +15,11 @@ public class EnemyMoveAction : CommonAction
     }
 
     protected override void OnUpdateFunc()
+    {
+
+    }
+
+    protected override void OnEndFunc()
     {
         
     }

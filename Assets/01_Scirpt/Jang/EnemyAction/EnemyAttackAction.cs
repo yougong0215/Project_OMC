@@ -9,11 +9,6 @@ public class EnemyAttackAction : CommonAction
         
     }
 
-    protected override void OnEndFunc()
-    {
-        
-    }
-
     protected override void OnEventFunc()
     {
         
@@ -22,5 +17,10 @@ public class EnemyAttackAction : CommonAction
     protected override void OnUpdateFunc()
     {
         
+    }
+
+    protected override void OnEndFunc()
+    {
+
     }
 }
