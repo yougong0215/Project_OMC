@@ -6,9 +6,9 @@ public abstract class CharacterInfo : MonoBehaviour
 {
 
 
-    [SerializeField] CharacterStat _stat;
+    [SerializeField] ObjectStat _stat;
 
-    public CharacterStat Stat
+    public ObjectStat Stat
     {
         get
         {

@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 public class CameraCollision : MonoBehaviour
 {
-    // Made by GmSoft ( You Jae Hyun )
+    // Made by GmSoft ( You Gong )
 
 
     [Header("카메라 셋팅")]

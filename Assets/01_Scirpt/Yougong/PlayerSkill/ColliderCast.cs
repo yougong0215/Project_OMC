@@ -17,13 +17,11 @@ public abstract class ColliderCast : MonoBehaviour
     public Action<Collider> CastAct;
     
     
-    protected float _playerDamage;
     protected CharacterInfo _player;
-    public void Init(CharacterInfo Player, float Damage)
+    public void Init(CharacterInfo Player, ObjectStat Weapon)
     {
         _player = Player;
-        _playerDamage = Damage;
-        _skill.Init(_player, this);
+        _skill.Init(_player, Weapon, this);
     }
     
     /// <summary>
