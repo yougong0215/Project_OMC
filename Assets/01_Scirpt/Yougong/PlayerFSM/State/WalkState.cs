@@ -7,16 +7,21 @@ public class WalkState : CommonState
 
     public override void EnterState()
     {
-        //throw new System.NotImplementedException();
+        _animator.SetMoveAnimation(true);
+        _animator.OnAnimationEventTrigger  += EventAction;
+        _animator.OnAnimationEndTrigger    += EndAction;
     }
 
     public override void UpdateState()
     {
-        //throw new System.NotImplementedException();
+        UpdateAction?.Invoke();
+        
     }
 
     public override void ExitState()
     {
-        //throw new System.NotImplementedException();
+        _animator.SetMoveAnimation(false);
+        _animator.OnAnimationEventTrigger  -= EventAction;
+        _animator.OnAnimationEndTrigger    -= EndAction;
     }
 }

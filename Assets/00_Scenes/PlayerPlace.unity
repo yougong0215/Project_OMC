@@ -838,13 +838,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 2.5
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!1 &1388675883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,6 +1055,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: dd3ffdd6d596668ac5f7872513945965, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4f32b54aa1330a7419be34fec481bc0c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1086,7 +1090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AOC: {fileID: 0}
-  av: {fileID: 0}
+  av: {fileID: 9000000, guid: dd3ffdd6d596668ac5f7872513945965, type: 3}
 --- !u!1 &1828847611
 GameObject:
   m_ObjectHideFlags: 0
