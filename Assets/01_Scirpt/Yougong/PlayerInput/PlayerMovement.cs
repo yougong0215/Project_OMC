@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput _input;
     private Camera _cam;
     private Vector3 vec;
+    private float moveUpTime = 0.0f;
     
 
     private void Awake()
@@ -24,34 +25,69 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.LogWarning("여서 FSM Move 변경");
         
-        transform.position += vec * 5 * Time.deltaTime;
+        transform.position += vec * Time.deltaTime;
         
-        if (dir == Vector2.zero)
+        
+
+        if (moveUpTime < 0f)
         {
-            if(Mathf.Abs(vec.x) > 0.01f)
-                vec.x = Mathf.Abs(vec.x) - (0.1f * Time.deltaTime);
-            
-            if(Mathf.Abs(vec.y) > 0.01f)
-                vec.y = Mathf.Abs(vec.y) - (0.1f * Time.deltaTime);
-            
-            if(Mathf.Abs(vec.z) > 0.01f)
-                vec.z = Mathf.Abs(vec.z) - (0.1f * Time.deltaTime);
-            return;
+            moveUpTime = 0;
         }
         
-        vec = new Vector3(0, 0, 0);
-        if (dir.y >= 1)
-            vec += _cam.transform.forward;
-        else if (dir.y <= -1)
-            vec += -_cam.transform.forward;
+        if (dir == Vector2.zero ||  (int)_input._fsm.CurrentState._myState > 10)
+        {
+            moveUpTime -= Time.deltaTime;
+            
+            if(Mathf.Abs(vec.x) > 0.1f)
+                vec.x = Mathf.Abs(vec.x) - (4*Time.deltaTime);
+            else
+                vec.x = 0;
+            
+            if(Mathf.Abs(vec.y) > 9.8f)
+                vec.y = Mathf.Abs(vec.y) - (4*Time.deltaTime);
+            else
+                vec.y = -9.8f;
+            
+            if(Mathf.Abs(vec.z) > 0.1f)
+                vec.z = Mathf.Abs(vec.z) - (4*Time.deltaTime);
+            else
+                vec.z = 0;
+            
+            if (vec == Vector3.zero)
+            {
+                _input._fsm.ChangeState(FSMState.Idle);
+            }
+            
+            return;
+        }
 
-        if (dir.x >= 1)
-            vec += _cam.transform.right;
-        else if (dir.x <= -1)
-            vec += -_cam.transform.right;
-        vec.y = 0;
-        transform.rotation = Quaternion.LookRotation(vec);
-        print(vec);
+        if ((int)_input._fsm.CurrentState._myState <= 10)
+        {
+            _input._fsm.ChangeState(FSMState.Run);
+        }
+
+        moveUpTime += Time.deltaTime;
+        if (moveUpTime > 1f)
+        {
+            moveUpTime = 1;
+        }
+
+        
+        vec = new Vector3(0, 0, 0);
+        if (dir.y >= 0.7)
+            vec += _cam.transform.forward * moveUpTime;
+        else if (dir.y <= -0.7)
+            vec += -_cam.transform.forward * moveUpTime;
+
+        if (dir.x >= 0.7)
+            vec += _cam.transform.right * moveUpTime;
+        else if (dir.x <= -0.7)
+            vec += -_cam.transform.right * moveUpTime;
+        
+        Quaternion t  = Quaternion.LookRotation(vec);
+        transform.rotation = Quaternion.Lerp(transform.rotation, t, Time.deltaTime * 7);
+        vec.y = -9.8f;
+        print(dir);
         
     }
     

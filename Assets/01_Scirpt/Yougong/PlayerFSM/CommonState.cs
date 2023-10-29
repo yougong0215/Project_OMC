@@ -43,7 +43,7 @@ public abstract class CommonState : MonoBehaviour, IState
 
         fsm = transform.parent.GetComponent<FSM>();
         Character = transform.parent.parent.transform;
-        //_animator = transform.parent.parent.Find("Visual").GetComponent<AnimationController>();
+        _animator = transform.parent.parent.Find("Visual").GetComponent<AnimationController>();
         
         fsm.AddState(_myState, this);
     }
