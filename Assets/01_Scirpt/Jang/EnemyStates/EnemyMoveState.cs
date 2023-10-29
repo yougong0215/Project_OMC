@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class EnemyMoveState : CommonState
 {
-    [SerializeField] private float moveDec;
+    [SerializeField] private float idleDec;
     [SerializeField] private float attackDec;
-    [SerializeField] private LayerMask obstacleMask;
 
     private Transform playerTrs;
 
@@ -27,10 +26,9 @@ public class EnemyMoveState : CommonState
         Vector3 dir = playerTrs.position - transform.position;
         Ray ray = new Ray(transform.position, dir);
         RaycastHit playerHit;
-        bool isPlayer = Physics.Raycast(ray, out playerHit, moveDec, LayerMask.GetMask("Player"));
-        bool isObstacle = Physics.Raycast(ray, moveDec, obstacleMask);
+        bool isPlayer = Physics.Raycast(ray, out playerHit, idleDec, LayerMask.GetMask("Player"));
 
-        if (!isPlayer || isObstacle)
+        if (!isPlayer)
         {
             fsm.ChangeState(FSMState.Idle);
         }
