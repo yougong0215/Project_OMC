@@ -16,8 +16,7 @@ public class EnemyAttackState : CommonState
 
     public override void EnterState()
     {
-        _animator.Animator.SetBool("Attack", true);
-        EventAction?.Invoke();
+        _animator.SetAttackAnimation(true);
     }
 
     public override void UpdateState()
@@ -38,7 +37,6 @@ public class EnemyAttackState : CommonState
 
     public override void ExitState()
     {
-        _animator.Animator.SetBool("Attack", false);
-        EndAction?.Invoke();
+        _animator.SetAttackAnimation(false);
     }
 }

@@ -2,23 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMoveState : CommonState
 {
     [SerializeField] private float idleDec;
     [SerializeField] private float attackDec;
 
+    private NavMeshAgent agent;
     private Transform playerTrs;
 
     private void Start()
     {
+        agent = Character.GetComponent<NavMeshAgent>();
         playerTrs = GameObject.FindWithTag("Player").transform;
     }
 
     public override void EnterState()
     {
-        _animator.Animator.SetBool("Move", true);
-        EventAction?.Invoke();
+        agent.isStopped = false;
+        _animator.SetMoveAnimation(true);
     }
 
     public override void UpdateState()
@@ -42,7 +45,7 @@ public class EnemyMoveState : CommonState
 
     public override void ExitState()
     {
-        _animator.Animator.SetBool("Move", false);
-        EndAction?.Invoke();
+        agent.isStopped = true;
+        _animator.SetMoveAnimation(false);
     }
 }

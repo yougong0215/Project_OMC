@@ -16,8 +16,7 @@ public class EnemyIdleState : CommonState
 
     public override void EnterState()
     {
-        _animator.Animator.SetBool("Idle", true);
-        EventAction?.Invoke();
+        
     }
 
     public override void UpdateState()
@@ -38,7 +37,6 @@ public class EnemyIdleState : CommonState
 
     public override void ExitState()
     {
-        _animator.Animator.SetBool("Idle", false);
-        EndAction?.Invoke();
+        
     }
 }
