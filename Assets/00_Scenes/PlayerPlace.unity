@@ -131,9 +131,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 926111918, guid: fa2ec9c7514bd4d46a25e63a4fadd69a, type: 3}
+      propertyPath: layer.m_Bits
+      value: 4352
+      objectReference: {fileID: 0}
     - target: {fileID: 2196048594258216465, guid: fa2ec9c7514bd4d46a25e63a4fadd69a, type: 3}
       propertyPath: m_Name
       value: Virtual3rdCam
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196048594574135334, guid: fa2ec9c7514bd4d46a25e63a4fadd69a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196048594574135334, guid: fa2ec9c7514bd4d46a25e63a4fadd69a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.999688
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196048594574135334, guid: fa2ec9c7514bd4d46a25e63a4fadd69a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.024976602
       objectReference: {fileID: 0}
     - target: {fileID: 2196048594628167195, guid: fa2ec9c7514bd4d46a25e63a4fadd69a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -174,6 +190,26 @@ PrefabInstance:
     - target: {fileID: 2196048594628167195, guid: fa2ec9c7514bd4d46a25e63a4fadd69a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172557893494052991, guid: fa2ec9c7514bd4d46a25e63a4fadd69a, type: 3}
+      propertyPath: CameraDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847067344249976231, guid: fa2ec9c7514bd4d46a25e63a4fadd69a, type: 3}
+      propertyPath: m_SoftZoneWidth
+      value: 0.048
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847067344249976231, guid: fa2ec9c7514bd4d46a25e63a4fadd69a, type: 3}
+      propertyPath: m_SoftZoneHeight
+      value: 0.023
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847067344249976231, guid: fa2ec9c7514bd4d46a25e63a4fadd69a, type: 3}
+      propertyPath: m_VerticalDamping
+      value: 2.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847067344249976231, guid: fa2ec9c7514bd4d46a25e63a4fadd69a, type: 3}
+      propertyPath: m_HorizontalDamping
+      value: 2.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -447,7 +483,7 @@ GameObject:
   - component: {fileID: 921938652}
   - component: {fileID: 921938651}
   - component: {fileID: 921938650}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,7 +571,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.58, z: 0}
-  m_LocalScale: {x: 100, y: 1.7887, z: 100}
+  m_LocalScale: {x: 100, y: 2.877, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -724,6 +760,7 @@ GameObject:
   - component: {fileID: 1108444891}
   - component: {fileID: 1108444892}
   - component: {fileID: 1108444894}
+  - component: {fileID: 1108444895}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -760,6 +797,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339ef91625dc194587d7a3383da8d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ground:
+    serializedVersion: 2
+    m_Bits: 4096
+  _gravity: 0
+  _gravityScale: 1
 --- !u!114 &1108444892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,6 +841,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.2, z: 0}
+--- !u!114 &1108444895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108444885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e227433c2132d5c48b15f5ca38f4332b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stat: {fileID: 11400000, guid: 25988b977e9f56d4dabdbb774384a7ab, type: 2}
 --- !u!1 &1388675883
 GameObject:
   m_ObjectHideFlags: 0

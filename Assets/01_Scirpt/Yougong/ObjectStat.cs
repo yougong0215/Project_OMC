@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class ObjectStat
+[CreateAssetMenu(menuName = "SO/Stat")]
+public class ObjectStat : ScriptableObject
 {
     [SerializeField] private float _hp;
     public float HP
