@@ -10,7 +10,7 @@ public enum FSMState
 {
     Any = 0,
     Idle = 1,
-    Walk = 2, // ������
+    //Walk = 2, // ������
     Run = 3,
     Attack = 11,
     Hit = 12,

@@ -20,6 +20,6 @@ public class TestIdleAction : CommonAction
 
     protected override void OnUpdateFunc()
     {
-        Debug.Log("장휘성 이거봐");
+//        Debug.Log("장휘성 이거봐");
     }
 }

@@ -7,10 +7,12 @@ using UnityEngine;
 public abstract class SkillSO : ScriptableObject
 {
     private CharacterInfo _info;
+    private ObjectStat _weaponStat;
     
-    public void Init(CharacterInfo info, ColliderCast cols)
+    public void Init(CharacterInfo info, ObjectStat weapon, ColliderCast cols)
     {
         _info = info;
+        _weaponStat = weapon;
         cols.CastAct += SKillInvoke;
     }
     
@@ -21,7 +23,7 @@ public abstract class SkillSO : ScriptableObject
     /// <returns></returns>
     protected virtual bool CritReturn()
     {
-        return Random.Range(0f, 100f) < _info.Stat.Crit ? true : false;
+        return Random.Range(0f, 100f) < _info.Stat.Crit + _weaponStat.Crit ? true : false;
     }
     
     /// <summary>
@@ -33,11 +35,16 @@ public abstract class SkillSO : ScriptableObject
     /// <returns></returns>
     public virtual float DamageReturn()
     {
-        return CritReturn() == true ? _info.Stat.CritAmp *_info.Stat.ATK  : _info.Stat.ATK ;
+        return CritReturn() == true ? (_info.Stat.CritAmp + _weaponStat.CritAmp) * (_info.Stat.ATK + _weaponStat.ATK) 
+            : (_info.Stat.ATK + _weaponStat.ATK);
     }
 
     /// <summary>
     /// cols의 게임오브잭트  접근 피격시 이벤트 발동
+    /// if (cols.TryGetComponent(out CharacterInfo _pl))
+    ///{
+    ///    _pl.GetDamage(DamageReturn());
+    ///}
     /// </summary>
     /// <param name="cols"></param>t
     public virtual void SKillInvoke(Collider cols)
