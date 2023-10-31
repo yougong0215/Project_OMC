@@ -9,6 +9,8 @@ public class EnemyAttackState : CommonState
 
     private Transform playerTrs;
 
+    public bool isAttacking;
+
     private void Start()
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
@@ -17,6 +19,8 @@ public class EnemyAttackState : CommonState
     public override void EnterState()
     {
         _animator.SetAttackAnimation(true);
+        _animator.OnAnimationEventTrigger += EventAction;
+        _animator.OnAnimationEndTrigger += EndAction;
     }
 
     public override void UpdateState()
@@ -27,7 +31,7 @@ public class EnemyAttackState : CommonState
         bool isPlayer = Physics.Raycast(ray, out playerHit, moveDec, LayerMask.GetMask("Player"));
         bool isObstacle = Physics.Raycast(ray, moveDec, obstacleMask);
 
-        if (!isPlayer || isObstacle)
+        if ((!isPlayer || isObstacle) && !isAttacking)
         {
             fsm.ChangeState(FSMState.Run);
         }
@@ -38,5 +42,7 @@ public class EnemyAttackState : CommonState
     public override void ExitState()
     {
         _animator.SetAttackAnimation(false);
+        _animator.OnAnimationEventTrigger -= EventAction;
+        _animator.OnAnimationEndTrigger -= EndAction;
     }
 }

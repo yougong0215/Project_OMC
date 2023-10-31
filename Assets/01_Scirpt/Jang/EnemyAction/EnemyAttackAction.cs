@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class EnemyAttackAction : CommonAction
 {
+    private EnemyAttackState attackState;
+
+    private void Start()
+    {
+        attackState = transform.parent.GetComponent<EnemyAttackState>();
+    }
+
     protected override void Init()
     {
 
@@ -11,7 +18,7 @@ public class EnemyAttackAction : CommonAction
 
     protected override void OnEventFunc()
     {
-
+        attackState.isAttacking = true;
     }
 
     protected override void OnUpdateFunc()
@@ -21,6 +28,6 @@ public class EnemyAttackAction : CommonAction
 
     protected override void OnEndFunc()
     {
-
+        attackState.isAttacking = false;
     }
 }
