@@ -21,6 +21,7 @@ public abstract class ColliderCast : MonoBehaviour
     protected CharacterInfo _player;
     public void Init(CharacterInfo Player, ObjectStat Weapon)
     {
+        Debug.Log(1);
         _player = Player;
         _skill.Init(_player, Weapon, this);
     }
@@ -49,7 +50,8 @@ public abstract class ColliderCast : MonoBehaviour
         {
             if (CheckDic[col] != false)
                 return;
-            
+
+            Debug.Log(4);
             CheckDic[col] = true;
             CastAct?.Invoke(col);
 

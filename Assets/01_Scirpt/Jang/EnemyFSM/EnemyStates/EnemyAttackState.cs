@@ -6,6 +6,7 @@ public class EnemyAttackState : CommonState
 {
     public ColliderCast colliderCast;
 
+    [SerializeField] private EnemyWeaponStance weaponStance;
     [SerializeField] private float moveDec;
     [SerializeField] private LayerMask obstacleMask;
 
@@ -23,6 +24,8 @@ public class EnemyAttackState : CommonState
         _animator.SetAttackAnimation(true);
         _animator.OnAnimationEventTrigger += EventAction;
         _animator.OnAnimationEndTrigger += EndAction;
+
+        weaponStance.NormalAttack1_On();
     }
 
     public override void UpdateState()
@@ -46,5 +49,7 @@ public class EnemyAttackState : CommonState
         _animator.SetAttackAnimation(false);
         _animator.OnAnimationEventTrigger -= EventAction;
         _animator.OnAnimationEndTrigger -= EndAction;
+
+        weaponStance.SkillOff();
     }
 }
