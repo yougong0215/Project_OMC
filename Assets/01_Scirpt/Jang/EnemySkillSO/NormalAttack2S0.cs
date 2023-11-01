@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "SO/Skill/Enemy/Attack2")]
 public class NormalAttack2S0 : EnemySkillSO
 {
     public override float DamageReturn()

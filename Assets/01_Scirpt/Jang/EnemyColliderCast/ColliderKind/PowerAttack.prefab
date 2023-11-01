@@ -51,10 +51,10 @@ PrefabInstance:
     - target: {fileID: 4990062523532859066, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
       propertyPath: _skill
       value: 
-      objectReference: {fileID: 11400000, guid: 966096a6a550b724e9e7bc7d55eac300, type: 2}
+      objectReference: {fileID: 11400000, guid: f860b184f391da540adeb002ae333981, type: 2}
     - target: {fileID: 5594657452941815927, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
       propertyPath: m_Name
-      value: TestEnemyColliderCast
+      value: PowerAttack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

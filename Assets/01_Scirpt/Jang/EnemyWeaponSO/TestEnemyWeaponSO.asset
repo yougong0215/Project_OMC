@@ -18,8 +18,9 @@ MonoBehaviour:
   E_Skill: {fileID: 0}
   R_Skill: {fileID: 0}
   Stat: {fileID: 11400000, guid: 5dfef1fb6404d664aabfde2adad2fc46, type: 2}
-  Normal_Attack_1: {fileID: 0}
-  Normal_Attack_2: {fileID: 0}
-  Normal_Attack_3: {fileID: 0}
-  Power_Attack: {fileID: 0}
-  Speed_Attack: {fileID: 0}
+  Normal_Attack_1: {fileID: 8710362552980665843, guid: e3ee125d49c0a4842ad2f1be3200b126, type: 3}
+  Normal_Attack_2: {fileID: 8710362552980665843, guid: 12220b9bccb0fd945a4a8759901c4af8, type: 3}
+  Normal_Attack_3: {fileID: 8710362552980665843, guid: 3ead2401141a21045ac3b2c5af10ff5d, type: 3}
+  Power_Attack: {fileID: 8710362552980665843, guid: 60178c60f6e292a42bb61bd3e5d5c317, type: 3}
+  Speed_Attack: {fileID: 8710362552980665843, guid: 0f9c440a08591c9409b9f4d6c6d71c2c, type: 3}
+  Throw_Attack: {fileID: 8710362552980665843, guid: 460b8dce7885e274cbdb459df7ec6fea, type: 3}
