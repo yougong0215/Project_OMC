@@ -37,7 +37,7 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Jump"",
+                    ""name"": ""Space"",
                     ""type"": ""Button"",
                     ""id"": ""1b276ec8-0572-403f-8ad2-a30298bb4d20"",
                     ""expectedControlType"": ""Button"",
@@ -46,7 +46,7 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Dash"",
+                    ""name"": ""Shift"",
                     ""type"": ""Button"",
                     ""id"": ""e9aec74a-b269-4c5d-8c96-fdbd3635b636"",
                     ""expectedControlType"": ""Button"",
@@ -55,7 +55,7 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Splint"",
+                    ""name"": ""Control"",
                     ""type"": ""Button"",
                     ""id"": ""e0b2436d-bae9-4f32-b8d9-7ab267cd8657"",
                     ""expectedControlType"": ""Button"",
@@ -67,6 +67,42 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
                     ""name"": ""MouseLeftClick"",
                     ""type"": ""Button"",
                     ""id"": ""30454ad4-cdf0-4fff-8100-b59b231995f0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseRightClick"",
+                    ""type"": ""Button"",
+                    ""id"": ""1ce553e0-ff0e-4744-bbba-5204ea02267d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Q_Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""e4d57010-4bc4-4db1-bf5f-4beca328602d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""E_Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""1c178cda-696a-44d6-9e48-1007849eefc1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""R_Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""181f62fa-d413-4cc0-9ab5-faff1244ee72"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -136,7 +172,7 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""PC"",
-                    ""action"": ""Jump"",
+                    ""action"": ""Space"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -147,7 +183,7 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""PC"",
-                    ""action"": ""Dash"",
+                    ""action"": ""Shift"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -158,7 +194,7 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""PC"",
-                    ""action"": ""Splint"",
+                    ""action"": ""Control"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -170,6 +206,50 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""MouseLeftClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""00375966-4c59-4967-be1e-5cf306339578"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Q_Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""684d04af-cd4c-489c-8fc4-47347538c3cf"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseRightClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f07d8906-2da8-4c37-ab13-4b1152ba194e"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""E_Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8c077889-814a-48a3-9b22-61d94b963ec6"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""R_Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -193,10 +273,14 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
-        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
-        m_Player_Splint = m_Player.FindAction("Splint", throwIfNotFound: true);
+        m_Player_Space = m_Player.FindAction("Space", throwIfNotFound: true);
+        m_Player_Shift = m_Player.FindAction("Shift", throwIfNotFound: true);
+        m_Player_Control = m_Player.FindAction("Control", throwIfNotFound: true);
         m_Player_MouseLeftClick = m_Player.FindAction("MouseLeftClick", throwIfNotFound: true);
+        m_Player_MouseRightClick = m_Player.FindAction("MouseRightClick", throwIfNotFound: true);
+        m_Player_Q_Click = m_Player.FindAction("Q_Click", throwIfNotFound: true);
+        m_Player_E_Click = m_Player.FindAction("E_Click", throwIfNotFound: true);
+        m_Player_R_Click = m_Player.FindAction("R_Click", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -259,19 +343,27 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Movement;
-    private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_Dash;
-    private readonly InputAction m_Player_Splint;
+    private readonly InputAction m_Player_Space;
+    private readonly InputAction m_Player_Shift;
+    private readonly InputAction m_Player_Control;
     private readonly InputAction m_Player_MouseLeftClick;
+    private readonly InputAction m_Player_MouseRightClick;
+    private readonly InputAction m_Player_Q_Click;
+    private readonly InputAction m_Player_E_Click;
+    private readonly InputAction m_Player_R_Click;
     public struct PlayerActions
     {
         private @PlayerMain m_Wrapper;
         public PlayerActions(@PlayerMain wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
-        public InputAction @Jump => m_Wrapper.m_Player_Jump;
-        public InputAction @Dash => m_Wrapper.m_Player_Dash;
-        public InputAction @Splint => m_Wrapper.m_Player_Splint;
+        public InputAction @Space => m_Wrapper.m_Player_Space;
+        public InputAction @Shift => m_Wrapper.m_Player_Shift;
+        public InputAction @Control => m_Wrapper.m_Player_Control;
         public InputAction @MouseLeftClick => m_Wrapper.m_Player_MouseLeftClick;
+        public InputAction @MouseRightClick => m_Wrapper.m_Player_MouseRightClick;
+        public InputAction @Q_Click => m_Wrapper.m_Player_Q_Click;
+        public InputAction @E_Click => m_Wrapper.m_Player_E_Click;
+        public InputAction @R_Click => m_Wrapper.m_Player_R_Click;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -284,18 +376,30 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
-            @Jump.started += instance.OnJump;
-            @Jump.performed += instance.OnJump;
-            @Jump.canceled += instance.OnJump;
-            @Dash.started += instance.OnDash;
-            @Dash.performed += instance.OnDash;
-            @Dash.canceled += instance.OnDash;
-            @Splint.started += instance.OnSplint;
-            @Splint.performed += instance.OnSplint;
-            @Splint.canceled += instance.OnSplint;
+            @Space.started += instance.OnSpace;
+            @Space.performed += instance.OnSpace;
+            @Space.canceled += instance.OnSpace;
+            @Shift.started += instance.OnShift;
+            @Shift.performed += instance.OnShift;
+            @Shift.canceled += instance.OnShift;
+            @Control.started += instance.OnControl;
+            @Control.performed += instance.OnControl;
+            @Control.canceled += instance.OnControl;
             @MouseLeftClick.started += instance.OnMouseLeftClick;
             @MouseLeftClick.performed += instance.OnMouseLeftClick;
             @MouseLeftClick.canceled += instance.OnMouseLeftClick;
+            @MouseRightClick.started += instance.OnMouseRightClick;
+            @MouseRightClick.performed += instance.OnMouseRightClick;
+            @MouseRightClick.canceled += instance.OnMouseRightClick;
+            @Q_Click.started += instance.OnQ_Click;
+            @Q_Click.performed += instance.OnQ_Click;
+            @Q_Click.canceled += instance.OnQ_Click;
+            @E_Click.started += instance.OnE_Click;
+            @E_Click.performed += instance.OnE_Click;
+            @E_Click.canceled += instance.OnE_Click;
+            @R_Click.started += instance.OnR_Click;
+            @R_Click.performed += instance.OnR_Click;
+            @R_Click.canceled += instance.OnR_Click;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -303,18 +407,30 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
-            @Jump.started -= instance.OnJump;
-            @Jump.performed -= instance.OnJump;
-            @Jump.canceled -= instance.OnJump;
-            @Dash.started -= instance.OnDash;
-            @Dash.performed -= instance.OnDash;
-            @Dash.canceled -= instance.OnDash;
-            @Splint.started -= instance.OnSplint;
-            @Splint.performed -= instance.OnSplint;
-            @Splint.canceled -= instance.OnSplint;
+            @Space.started -= instance.OnSpace;
+            @Space.performed -= instance.OnSpace;
+            @Space.canceled -= instance.OnSpace;
+            @Shift.started -= instance.OnShift;
+            @Shift.performed -= instance.OnShift;
+            @Shift.canceled -= instance.OnShift;
+            @Control.started -= instance.OnControl;
+            @Control.performed -= instance.OnControl;
+            @Control.canceled -= instance.OnControl;
             @MouseLeftClick.started -= instance.OnMouseLeftClick;
             @MouseLeftClick.performed -= instance.OnMouseLeftClick;
             @MouseLeftClick.canceled -= instance.OnMouseLeftClick;
+            @MouseRightClick.started -= instance.OnMouseRightClick;
+            @MouseRightClick.performed -= instance.OnMouseRightClick;
+            @MouseRightClick.canceled -= instance.OnMouseRightClick;
+            @Q_Click.started -= instance.OnQ_Click;
+            @Q_Click.performed -= instance.OnQ_Click;
+            @Q_Click.canceled -= instance.OnQ_Click;
+            @E_Click.started -= instance.OnE_Click;
+            @E_Click.performed -= instance.OnE_Click;
+            @E_Click.canceled -= instance.OnE_Click;
+            @R_Click.started -= instance.OnR_Click;
+            @R_Click.performed -= instance.OnR_Click;
+            @R_Click.canceled -= instance.OnR_Click;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -344,9 +460,13 @@ public partial class @PlayerMain: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnMovement(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
-        void OnDash(InputAction.CallbackContext context);
-        void OnSplint(InputAction.CallbackContext context);
+        void OnSpace(InputAction.CallbackContext context);
+        void OnShift(InputAction.CallbackContext context);
+        void OnControl(InputAction.CallbackContext context);
         void OnMouseLeftClick(InputAction.CallbackContext context);
+        void OnMouseRightClick(InputAction.CallbackContext context);
+        void OnQ_Click(InputAction.CallbackContext context);
+        void OnE_Click(InputAction.CallbackContext context);
+        void OnR_Click(InputAction.CallbackContext context);
     }
 }
