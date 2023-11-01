@@ -46,7 +46,7 @@ public class PlayerInput : MonoBehaviour
         OnRightClick = null;
         Q_Btn = null;
         E_Btn = null;
-        R_btn = null;
+        R_Btn = null;
     }
 
     private void R_ClickHandle(InputAction.CallbackContext obj)
