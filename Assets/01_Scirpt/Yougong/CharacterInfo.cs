@@ -5,7 +5,18 @@ using UnityEngine;
 public abstract class CharacterInfo : MonoBehaviour
 {
 
+    private FSM _fsm;
+    public FSM FSM => _fsm;
 
+    private AnimationController _con;
+
+    public AnimationController AnimCon => _con;
+    private void Awake()
+    {
+        _fsm = GetComponentInChildren<FSM>();
+        _con = GetComponentInChildren<AnimationController>();
+    }
+    
     [SerializeField] ObjectStat _stat;
 
     public ObjectStat Stat

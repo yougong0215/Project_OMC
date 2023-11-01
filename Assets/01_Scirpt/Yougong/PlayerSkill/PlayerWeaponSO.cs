@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerWeaponSO : MonoBehaviour
+public class PlayerWeaponSO : WeaponSO
 {
     [Header("좌클릭")]
     public ColliderCast L_Click;
@@ -19,5 +19,5 @@ public class PlayerWeaponSO : MonoBehaviour
     [Header("R 스킬")]
     public ColliderCast R_Skill;
 
-    [SerializeField] public ObjectStat Stat = new ObjectStat();
+    
 }

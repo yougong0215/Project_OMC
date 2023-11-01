@@ -8,12 +8,22 @@ public abstract class SkillSO : ScriptableObject
 {
     private CharacterInfo _info;
     private ObjectStat _weaponStat;
+    public FSMState State = FSMState.Attack;
+    public AnimationClip Clip = null;
     
     public void Init(CharacterInfo info, ObjectStat weapon, ColliderCast cols)
     {
         _info = info;
         _weaponStat = weapon;
         cols.CastAct += SKillInvoke;
+        
+        info.FSM.ChangeState(State);
+        
+        if (Clip != null)
+        {
+            
+            info.AnimCon.ChangeAnimationClip(State, Clip);
+        }
     }
     
     

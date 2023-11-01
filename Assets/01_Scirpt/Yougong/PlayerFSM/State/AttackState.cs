@@ -9,7 +9,10 @@ public class AttackState : CommonState
     {
         Init?.Invoke();
         
-        //throw new System.NotImplementedException();
+        _animator.SetAttackAnimation(true);
+        
+        _animator.OnAnimationEventTrigger  += EventAction;
+        _animator.OnAnimationEndTrigger    += EndAction;
     }
 
     public override void UpdateState()
@@ -20,6 +23,9 @@ public class AttackState : CommonState
 
     public override void ExitState()
     {
+        _animator.SetAttackAnimation(false);
        // throw new System.NotImplementedException();
+       _animator.OnAnimationEventTrigger  -= EventAction;
+       _animator.OnAnimationEndTrigger    -= EndAction;
     }
 }
