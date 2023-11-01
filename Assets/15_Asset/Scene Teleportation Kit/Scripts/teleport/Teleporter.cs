@@ -6,6 +6,7 @@ namespace Scene_Teleportation_Kit.Scripts.teleport
 {
     public class Teleporter : MonoBehaviour
     {
+        public GameObject player;
         public Object destinationScene;
         public string destSpawnName;
 
@@ -57,7 +58,7 @@ namespace Scene_Teleportation_Kit.Scripts.teleport
             SpawnPoint spawnPoint = FindSpawnPoint(destSpawnName);
             if (spawnPoint != null)
             {
-                // teleportable.GetComponent<PlayerMovement>().TeleportTo(spawnPoint.transform);
+                TelePort(spawnPoint.transform);
             }
             teleportable.canTeleport = true;
         }
@@ -74,6 +75,11 @@ namespace Scene_Teleportation_Kit.Scripts.teleport
                 }
             }
             return null;
+        }
+
+        private void TelePort(Transform transform)
+        {
+            player.transform.position = transform.position;
         }
     }
 }
