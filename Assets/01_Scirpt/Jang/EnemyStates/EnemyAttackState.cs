@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class EnemyAttackState : CommonState
 {
+    public ColliderCast colliderCast;
+
     [SerializeField] private float moveDec;
     [SerializeField] private LayerMask obstacleMask;
 
     private Transform playerTrs;
 
-    public bool isAttacking;
+    [HideInInspector] public bool isAttacking;
 
     private void Start()
     {
