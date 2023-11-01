@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Jump",
+                    "name": "Space",
                     "type": "Button",
                     "id": "1b276ec8-0572-403f-8ad2-a30298bb4d20",
                     "expectedControlType": "Button",
@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Dash",
+                    "name": "Shift",
                     "type": "Button",
                     "id": "e9aec74a-b269-4c5d-8c96-fdbd3635b636",
                     "expectedControlType": "Button",
@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Splint",
+                    "name": "Control",
                     "type": "Button",
                     "id": "e0b2436d-bae9-4f32-b8d9-7ab267cd8657",
                     "expectedControlType": "Button",
@@ -45,6 +45,42 @@
                     "name": "MouseLeftClick",
                     "type": "Button",
                     "id": "30454ad4-cdf0-4fff-8100-b59b231995f0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MouseRightClick",
+                    "type": "Button",
+                    "id": "1ce553e0-ff0e-4744-bbba-5204ea02267d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Q_Click",
+                    "type": "Button",
+                    "id": "e4d57010-4bc4-4db1-bf5f-4beca328602d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "E_Click",
+                    "type": "Button",
+                    "id": "1c178cda-696a-44d6-9e48-1007849eefc1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "R_Click",
+                    "type": "Button",
+                    "id": "181f62fa-d413-4cc0-9ab5-faff1244ee72",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -114,7 +150,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PC",
-                    "action": "Jump",
+                    "action": "Space",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -125,7 +161,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PC",
-                    "action": "Dash",
+                    "action": "Shift",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -136,7 +172,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PC",
-                    "action": "Splint",
+                    "action": "Control",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -148,6 +184,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "MouseLeftClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "00375966-4c59-4967-be1e-5cf306339578",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Q_Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "684d04af-cd4c-489c-8fc4-47347538c3cf",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseRightClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f07d8906-2da8-4c37-ab13-4b1152ba194e",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "E_Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8c077889-814a-48a3-9b22-61d94b963ec6",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "R_Click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

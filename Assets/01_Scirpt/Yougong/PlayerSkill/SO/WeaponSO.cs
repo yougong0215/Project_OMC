@@ -2,25 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "SO/Weapon")]
-public class WeaponSO : ScriptableObject
+//[CreateAssetMenu(menuName = "SO/Weapon")]
+public abstract class WeaponSO : ScriptableObject
 {
-    [Header("좌클릭")]
-    public ColliderCast L_Click;
-
-    [Header("우클릭")]
-    public ColliderCast R_Click;
     
-    [Header("Q 스킬")]
-    public ColliderCast Q_Skill;
-
-    [Header("E 스킬")]
-    public ColliderCast E_Skill;
-
-    [Header("R 스킬")]
-    public ColliderCast R_Skill;
-
-    [SerializeField] public ObjectStat Stat = new ObjectStat();
-
-
 }

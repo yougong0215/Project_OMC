@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,16 +17,56 @@ public class PlayerInput : MonoBehaviour
     public event Action OnSpace;
     public event Action OnLeftClick;
     public event Action OnContrl;
-    public event Action OnShift; 
+    public event Action OnShift;
+    public event Action OnRightClick;
+    
+    ////////// Attack Btn
+
+    public event Action Q_Btn;
+    public event Action E_Btn;
+    public event Action R_Btn;
     
     private void Awake()
     {
         _inputAction = new PlayerMain();
         
         _inputAction.Player.Enable();
-        _inputAction.Player.Jump.performed += SpaceHandle;
+        _inputAction.Player.Space.performed += SpaceHandle;
         _inputAction.Player.MouseLeftClick.performed += LeftClickHandle;
-        
+        _inputAction.Player.MouseRightClick.performed += RightClickHandle;
+        _inputAction.Player.Q_Click.performed += Q_ClickHandle;
+        _inputAction.Player.E_Click.performed += E_ClickHandle;
+        _inputAction.Player.R_Click.performed += R_ClickHandle;
+
+    }
+
+    public void SkillInputReset()
+    {
+        OnLeftClick = null;
+        OnRightClick = null;
+        Q_Btn = null;
+        E_Btn = null;
+        R_Btn = null;
+    }
+
+    private void R_ClickHandle(InputAction.CallbackContext obj)
+    {
+        R_Btn?.Invoke();
+    }
+
+    private void E_ClickHandle(InputAction.CallbackContext obj)
+    {
+        E_Btn?.Invoke();
+    }
+
+    private void Q_ClickHandle(InputAction.CallbackContext obj)
+    {
+        Q_Btn?.Invoke();
+    }
+
+    private void RightClickHandle(InputAction.CallbackContext obj)
+    {
+        OnRightClick?.Invoke();
     }
 
     public void SpaceHandle(InputAction.CallbackContext context)
@@ -43,4 +84,7 @@ public class PlayerInput : MonoBehaviour
         Vector2 inputDir = _inputAction.Player.Movement.ReadValue<Vector2>();
         OnMovement?.Invoke(inputDir);
     }
+    
+    
+    
 }
