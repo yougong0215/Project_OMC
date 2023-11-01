@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class EnemyAttackState : CommonState
 {
-    public ColliderCast colliderCast;
+    [Space(10)]
+    [Header("적 오버라이드")]
+    public EnemyWeaponStance weaponStance;
 
-    [SerializeField] private EnemyWeaponStance weaponStance;
     [SerializeField] private float moveDec;
     [SerializeField] private LayerMask obstacleMask;
 
     private Transform playerTrs;
 
     [HideInInspector] public bool isAttacking;
+    [HideInInspector] public ColliderCast colliderCast;
 
     private void Start()
     {
@@ -21,11 +23,14 @@ public class EnemyAttackState : CommonState
 
     public override void EnterState()
     {
+        if(colliderCast == null)
+            colliderCast = weaponStance.NormalAttack1_Create();
+
         _animator.SetAttackAnimation(true);
         _animator.OnAnimationEventTrigger += EventAction;
         _animator.OnAnimationEndTrigger += EndAction;
 
-        weaponStance.NormalAttack1_On();
+        Init?.Invoke();
     }
 
     public override void UpdateState()
@@ -49,7 +54,5 @@ public class EnemyAttackState : CommonState
         _animator.SetAttackAnimation(false);
         _animator.OnAnimationEventTrigger -= EventAction;
         _animator.OnAnimationEndTrigger -= EndAction;
-
-        weaponStance.SkillOff();
     }
 }

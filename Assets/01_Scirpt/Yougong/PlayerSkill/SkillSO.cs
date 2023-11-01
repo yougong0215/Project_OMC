@@ -16,7 +16,6 @@ public abstract class SkillSO : ScriptableObject
         _info = info;
         _weaponStat = weapon;
         cols.CastAct += SKillInvoke;
-        Debug.Log(2);
 
         info.FSM.ChangeState(State);
         
@@ -62,7 +61,7 @@ public abstract class SkillSO : ScriptableObject
     {
         if (cols.TryGetComponent(out CharacterInfo _pl))
         {
-            Debug.Log(3);
+            Debug.Log(4);
             _pl.GetDamage(DamageReturn());
         }
     }

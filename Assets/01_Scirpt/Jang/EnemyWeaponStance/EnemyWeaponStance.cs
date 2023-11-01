@@ -38,66 +38,51 @@ public class EnemyWeaponStance : MonoBehaviour
     [SerializeField] private EnemyWeaponSO weaponSO;
     [SerializeField] private CharacterInfo enemy;
 
-    public void NormalAttack1_On()
+    public ColliderCast NormalAttack1_Create()
     {
-        Normal_Attack_1 += () =>
-        {
-            ColliderCast obj = Instantiate(weaponSO.Normal_Attack_1, transform);
-            obj.Init(enemy, weaponSO.Stat);
-        };
+        ColliderCast obj = Instantiate(weaponSO.Normal_Attack_1, transform);
+        return obj;
     }
 
-    public void NormalAttack2_On()
+    public ColliderCast NormalAttack2_Create()
     {
-        Normal_Attack_2 += () =>
-        {
-            ColliderCast obj = Instantiate(weaponSO.Normal_Attack_2, transform);
-            obj.Init(enemy, weaponSO.Stat);
-        };
+        ColliderCast obj = Instantiate(weaponSO.Normal_Attack_2, transform);
+        return obj;
     }
 
-    public void NormalAttack3_On()
+    public ColliderCast NormalAttack3_Create()
     {
-        Normal_Attack_3 += () =>
-        {
-            ColliderCast obj = Instantiate(weaponSO.Normal_Attack_3, transform); 
-            obj.Init(enemy, weaponSO.Stat);
-        };
+        ColliderCast obj = Instantiate(weaponSO.Normal_Attack_3, transform);
+        return obj;
     }
 
-    public void PowerAttack_On()
+    public ColliderCast PowerAttack_Create()
     {
-        Power_Attack += () =>
-        {
-            ColliderCast obj = Instantiate(weaponSO.Power_Attack, transform);
-            obj.Init(enemy, weaponSO.Stat);
-        };
+        ColliderCast obj = Instantiate(weaponSO.Power_Attack, transform);
+        return obj;
     }
 
-    public void SpeedAttack_On()
+    public ColliderCast SpeedAttack_Create()
     {
-        Speed_Attack += () =>
-        {
-            ColliderCast obj = Instantiate(weaponSO.Speed_Attack, transform);
-            obj.Init(enemy, weaponSO.Stat);
-        };
+        ColliderCast obj = Instantiate(weaponSO.Speed_Attack, transform);
+        return obj;
     }
 
-    public void ThrowAttack_On()
+    public ColliderCast ThrowAttack_Create()
     {
-        Throw_Attack += () =>
-        {
-            ColliderCast obj = Instantiate(weaponSO.Throw_Attack, transform);
-            obj.Init(enemy, weaponSO.Stat);
-        };
+        ColliderCast obj = Instantiate(weaponSO.Throw_Attack, transform);
+        return obj;
     }
 
-    public void SkillOff()
+    public void SkillOn(ColliderCast obj)
     {
-        Normal_Attack_1 = null;
-        Normal_Attack_2 = null;
-        Normal_Attack_3 = null;
-        Power_Attack = null;
-        Speed_Attack = null;
+        obj.Init(enemy, weaponSO.Stat);
+        obj.Attack(true);
+    }
+
+    public void SkillOff(ColliderCast obj)
+    {
+        obj.CastAct = null;
+        obj.Attack(false);
     }
 }
