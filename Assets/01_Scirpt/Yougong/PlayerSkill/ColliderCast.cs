@@ -19,11 +19,18 @@ public abstract class ColliderCast : MonoBehaviour
     
     
     protected CharacterInfo _player;
+
+    private bool isAttack = false;
     public void Init(CharacterInfo Player, ObjectStat Weapon)
     {
         Debug.Log(1);
         _player = Player;
         _skill.Init(_player, Weapon, this);
+    }
+
+    public void Attack(bool b)
+    {
+        isAttack = b;
     }
     
     /// <summary>
@@ -43,6 +50,9 @@ public abstract class ColliderCast : MonoBehaviour
     
     protected void Update()
     {
+        if (!isAttack)
+            return;
+        
         cols = ReturnColliders();
 
         // 생각해 봤는데 어차피 col있는 만큼만 돌아가기 때문에 큰 문제 없음

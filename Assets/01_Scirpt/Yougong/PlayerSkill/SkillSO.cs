@@ -20,9 +20,9 @@ public abstract class SkillSO : ScriptableObject
 
         info.FSM.ChangeState(State);
         
+        
         if (Clip != null)
         {
-            
             info.AnimCon.ChangeAnimationClip(State, Clip);
         }
     }
