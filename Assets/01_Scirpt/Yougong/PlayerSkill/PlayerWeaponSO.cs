@@ -2,22 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "SO/Player/Weapon")]
 public class PlayerWeaponSO : WeaponSO
 {
     [Header("좌클릭")]
-    public ColliderCast L_Click;
+    public PlayerSkillListSO L_Click;
 
     [Header("우클릭")]
-    public ColliderCast R_Click;
+    public PlayerSkillListSO R_Click;
     
     [Header("Q 스킬")]
-    public ColliderCast Q_Skill;
+    public PlayerSkillListSO Q_Skill;
 
     [Header("E 스킬")]
-    public ColliderCast E_Skill;
+    public PlayerSkillListSO E_Skill;
 
     [Header("R 스킬")]
-    public ColliderCast R_Skill;
+    public PlayerSkillListSO R_Skill;
 
     
 }

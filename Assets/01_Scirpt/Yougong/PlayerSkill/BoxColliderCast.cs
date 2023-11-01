@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,11 +20,20 @@ public class BoxColliderCast : ColliderCast
         if (transform.localScale != Vector3.one)
         {
             Debug.LogError($"Object : {gameObject.name} is Not Vector.oen(1,1,1)");
+            
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.matrix = transform.localToWorldMatrix;
+        Gizmos.DrawWireCube(Vector3.zero, _box.size);
     }
 
     public override Collider[] ReturnColliders()
     {
-        return Physics.OverlapBox(transform.position, _box.size/2, transform.rotation, _layer );
+
+        
+        return Physics.OverlapBox(transform.position, _box.size, transform.rotation, _layer);
     }
 }

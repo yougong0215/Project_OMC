@@ -99,7 +99,7 @@ public class CameraCollision : MonoBehaviour
             //_hitVec = hit.point;//Vector3.Lerp(_vcamFake.transform.position, hit.point, Time.deltaTime * 1500f);
             
             _camDistance = Vector3.Distance(transform.position, hit.point) - 0.4f;
-            Debug.Log(Vector3.Distance(transform.position, hit.point));
+//            Debug.Log(Vector3.Distance(transform.position, hit.point));
 
         }
         else if (Vector3.Distance(transform.position, _vcam.transform.position) > CameraMaxDistance)

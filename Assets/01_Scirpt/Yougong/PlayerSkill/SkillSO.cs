@@ -4,9 +4,10 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "SO/Skill/Base")]
-public abstract class SkillSO : ScriptableObject
+public class SkillSO : ScriptableObject
 {
     private CharacterInfo _info;
+    
     private ObjectStat _weaponStat;
     public FSMState State = FSMState.Attack;
     public AnimationClip Clip = null;
@@ -16,14 +17,14 @@ public abstract class SkillSO : ScriptableObject
         _info = info;
         _weaponStat = weapon;
         cols.CastAct += SKillInvoke;
-
-        info.FSM.ChangeState(State);
-        
         
         if (Clip != null)
         {
             info.AnimCon.ChangeAnimationClip(State, Clip);
         }
+        info.FSM.ChangeState(State);
+//        Debug.Log("스테이트 변경");
+        
     }
     
     
@@ -61,7 +62,6 @@ public abstract class SkillSO : ScriptableObject
     {
         if (cols.TryGetComponent(out CharacterInfo _pl))
         {
-            Debug.Log(4);
             _pl.GetDamage(DamageReturn());
         }
     }

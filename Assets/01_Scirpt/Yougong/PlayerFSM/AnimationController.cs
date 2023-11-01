@@ -75,6 +75,7 @@ public class AnimationController : MonoBehaviour
     }
     public void OnAnimationEnd()
     {
+//        print("ㅁㅁㅁ");
         OnAnimationEndTrigger?.Invoke();
     }
 

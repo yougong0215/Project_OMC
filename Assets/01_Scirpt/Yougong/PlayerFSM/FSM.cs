@@ -90,6 +90,7 @@ public class FSM : MonoBehaviour
             
             currentState = stateObject;
             currentState.EnterState();
+//            Debug.Log($"{currentState.name} ㅇㅇㅇㅇ ㅄㅂㅇㄴㅁㅀㄴㅇㄹㄴㄹㄷㄴㄹㄷㄴ");
         }
         else
         {
