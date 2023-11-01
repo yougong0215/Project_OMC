@@ -38,40 +38,53 @@ public class EnemyWeaponStance : MonoBehaviour
     [SerializeField] private EnemyWeaponSO weaponSO;
     [SerializeField] private CharacterInfo enemy;
 
-    public void SkillOn()
+    public void NormalAttack1_On()
     {
-        SkillOff();
-
         Normal_Attack_1 += () =>
         {
             ColliderCast obj = Instantiate(weaponSO.Normal_Attack_1, transform);
             obj.Init(enemy, weaponSO.Stat);
         };
+    }
 
+    public void NormalAttack2_On()
+    {
         Normal_Attack_2 += () =>
         {
             ColliderCast obj = Instantiate(weaponSO.Normal_Attack_2, transform);
             obj.Init(enemy, weaponSO.Stat);
         };
+    }
 
+    public void NormalAttack3_On()
+    {
         Normal_Attack_3 += () =>
         {
-            ColliderCast obj = Instantiate(weaponSO.Normal_Attack_3, transform);
+            ColliderCast obj = Instantiate(weaponSO.Normal_Attack_3, transform); 
             obj.Init(enemy, weaponSO.Stat);
         };
+    }
 
+    public void PowerAttack_On()
+    {
         Power_Attack += () =>
         {
             ColliderCast obj = Instantiate(weaponSO.Power_Attack, transform);
             obj.Init(enemy, weaponSO.Stat);
         };
+    }
 
+    public void SpeedAttack_On()
+    {
         Speed_Attack += () =>
         {
             ColliderCast obj = Instantiate(weaponSO.Speed_Attack, transform);
             obj.Init(enemy, weaponSO.Stat);
         };
+    }
 
+    public void ThrowAttack_On()
+    {
         Throw_Attack += () =>
         {
             ColliderCast obj = Instantiate(weaponSO.Throw_Attack, transform);
