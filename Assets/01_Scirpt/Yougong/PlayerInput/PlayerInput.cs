@@ -25,6 +25,8 @@ public class PlayerInput : MonoBehaviour
     public event Action Q_Btn;
     public event Action E_Btn;
     public event Action R_Btn;
+
+    public event Action Interactive_Btn;
     
     private void Awake()
     {
@@ -47,6 +49,12 @@ public class PlayerInput : MonoBehaviour
         Q_Btn = null;
         E_Btn = null;
         R_Btn = null;
+    }
+
+    public void SetInteractive(Action act = null)
+    {
+        
+        Interactive_Btn = act;
     }
 
     private void R_ClickHandle(InputAction.CallbackContext obj)

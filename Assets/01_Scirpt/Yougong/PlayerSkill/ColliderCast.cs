@@ -9,7 +9,8 @@ public abstract class ColliderCast : MonoBehaviour
     protected Collider[] cols;
     [Header("SkillSO")]
     [SerializeField] SkillSO _skill;
-    
+
+    public SkillSO SkillSO => _skill;
     
     [Header("Layer")]
     public LayerMask _layer;
