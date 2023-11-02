@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/00_Scenes/HY30K/Teleport.unity
+    guid: f670fe481e46c4a4cb92928e8c9caa60
+  - enabled: 1
+    path: Assets/00_Scenes/HY30K/Teleport2.unity
+    guid: 4f2508376f6dba0439d13f0d69e35fb4
   m_configObjects: {}
