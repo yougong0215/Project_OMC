@@ -594,6 +594,7 @@ GameObject:
   - component: {fileID: 1090467486}
   - component: {fileID: 1090467485}
   - component: {fileID: 1090467484}
+  - component: {fileID: 1090467488}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -681,12 +682,27 @@ Transform:
   m_GameObject: {fileID: 1090467483}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: 0.5, z: 0}
+  m_LocalPosition: {x: 17.22, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1090467488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090467483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f630343d813f334ebd19123d11cc8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fsm: {fileID: 0}
+  _con: {fileID: 0}
+  _stat: {fileID: 11400000, guid: 25988b977e9f56d4dabdbb774384a7ab, type: 2}
 --- !u!1 &1109739988
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f630343d813f334ebd19123d11cc8fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fsm: {fileID: 0}
+  _con: {fileID: 0}
   _stat: {fileID: 11400000, guid: 5dfef1fb6404d664aabfde2adad2fc46, type: 2}
 --- !u!1 &1202032325
 GameObject:

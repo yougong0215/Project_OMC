@@ -10,14 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 126968c0e1355a649891c8ebd35e5c5d, type: 3}
-  m_Name: TestEnemyWeaponSO
+  m_Name: EnemyWeaponSO
   m_EditorClassIdentifier: 
-  L_Click: {fileID: 0}
-  R_Click: {fileID: 0}
-  Q_Skill: {fileID: 0}
-  E_Skill: {fileID: 0}
-  R_Skill: {fileID: 0}
-  Stat: {fileID: 11400000, guid: 5dfef1fb6404d664aabfde2adad2fc46, type: 2}
+  Stat: {fileID: 11400000, guid: f2c453575391e8544a6201a2c8bc81c0, type: 2}
   Normal_Attack_1: {fileID: 8710362552980665843, guid: e3ee125d49c0a4842ad2f1be3200b126, type: 3}
   Normal_Attack_2: {fileID: 8710362552980665843, guid: 12220b9bccb0fd945a4a8759901c4af8, type: 3}
   Normal_Attack_3: {fileID: 8710362552980665843, guid: 3ead2401141a21045ac3b2c5af10ff5d, type: 3}

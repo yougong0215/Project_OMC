@@ -1,8 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+
+public enum AttackState
+{
+    NORMAL1,
+    NORMAL2,
+    NORMAL3,
+    POWER,
+    SPEED,
+    THROW
+};
 
 public class EnemyMoveState : CommonState
 {
@@ -12,7 +23,7 @@ public class EnemyMoveState : CommonState
     private NavMeshAgent agent;
     private Transform playerTrs;
 
-    private void Start()
+    protected virtual void Start()
     {
         agent = Character.GetComponent<NavMeshAgent>();
         playerTrs = GameObject.FindWithTag("Player").transform;
@@ -45,6 +56,7 @@ public class EnemyMoveState : CommonState
 
     public override void ExitState()
     {
+        Debug.Log(agent.isStopped);
         agent.isStopped = true;
         _animator.SetMoveAnimation(false);
     }
