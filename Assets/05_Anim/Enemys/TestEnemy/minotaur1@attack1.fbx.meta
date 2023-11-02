@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: attack1
+    second: Attack
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,7 +36,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: attack1
+      name: Attack
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 0
@@ -60,7 +60,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.24398625
+      - time: 0
         functionName: OnAnimationEvent
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 027fb07379936444f9298626310178a6, type: 3}

@@ -22,7 +22,6 @@ public class EnemyAttackAction : CommonAction
 
     protected override void OnEventFunc()
     {
-        Debug.Log(colliderCast);
         weaponStance.SkillOn(colliderCast);
         attackState.isAttacking = true;
     }
@@ -54,12 +53,15 @@ public class EnemyAttackAction : CommonAction
         {
             case 0:
                 ChangeAttackStance(AttackEnum.NORMAL1);
+                Debug.Log(0);
                 break;
             case 1:
                 ChangeAttackStance(AttackEnum.NORMAL2);
+                Debug.Log(1);
                 break;
             case 2:
                 ChangeAttackStance(AttackEnum.NORMAL3);
+                Debug.Log(2);
                 break;
         }
     }

@@ -19,12 +19,13 @@ public class EnemyAttackState : CommonState
     private void Start()
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
-
+        
         weaponStance.AllAttack_Create();
     }
 
     public override void EnterState()
     {
+        _animator.SetAttackAnimation(true);
         _animator.OnAnimationEventTrigger += EventAction;
         _animator.OnAnimationEndTrigger += EndAction;
         
@@ -51,6 +52,7 @@ public class EnemyAttackState : CommonState
 
     public override void ExitState()
     {
+        _animator.SetAttackAnimation(false);
         _animator.OnAnimationEventTrigger -= EventAction;
         _animator.OnAnimationEndTrigger -= EndAction;
     }

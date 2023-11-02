@@ -24,7 +24,7 @@ public class EnemyWeaponStance : MonoBehaviour
     {
         //if(orgColliderCast != allColliderCast[attackEnum])
         //    allColliderCast[attackEnum].Init(enemy, weaponSO.Stat);
-
+        
         return allColliderCast[attackEnum];
     }
 
