@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd870c773a5e4484fbcc9c49dba83dfd, type: 3}
   m_Name: ThrowAttackS0
   m_EditorClassIdentifier: 
+  State: 11
+  Clip: {fileID: 1827226128182048838, guid: 1245117f7c42d8e4ca48df3b8262dc0b, type: 3}
