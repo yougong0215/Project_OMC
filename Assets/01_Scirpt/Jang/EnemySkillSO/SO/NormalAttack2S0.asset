@@ -9,13 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093ae8caf8d004d48880b24bbfaa8ad1, type: 3}
-  m_Name: PlayerStat
+  m_Script: {fileID: 11500000, guid: cb242fae76c374a4ab635308a337974c, type: 3}
+  m_Name: NormalAttack2S0
   m_EditorClassIdentifier: 
-  _hp: 96
-  _atk: 10
-  _def: 10
-  _speed: 12
-  _crit: 10
-  _critAmp: 10
-  _coolTime: 10

@@ -73,10 +73,10 @@ public abstract class ColliderCast : MonoBehaviour
     
     protected void Update()
     {
-//        Debug.Log(IsAttack);
+        //        Debug.Log(IsAttack);
         if (!isAttack)
             return;
-        
+
         cols = ReturnColliders();
 
         // 생각해 봤는데 어차피 col있는 만큼만 돌아가기 때문에 큰 문제 없음
@@ -85,8 +85,8 @@ public abstract class ColliderCast : MonoBehaviour
             if (CheckDic.ContainsKey(col))
                 return;
             else
-                CheckDic.Add(col, true);
-            
+                CheckDic.Add(col, false);
+
             CastAct?.Invoke(col);
             Debug.Log($"{col.name} 맞음");
 
