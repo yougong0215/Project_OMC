@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public enum AttackState
+public enum AttackEnum
 {
     NORMAL1,
     NORMAL2,
