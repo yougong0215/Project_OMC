@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: KablramSkill
   m_EditorClassIdentifier: 
   State: 11
-  Clip: {fileID: -4304836385353429653, guid: 4f2d00b64b239804fb07d21d9e10fa32, type: 3}
+  Clip: {fileID: -7524964340392654364, guid: 7a3a93d3b0914aa4e9363593049e22d1, type: 3}

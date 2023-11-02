@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Movement(Vector2 dir)
     {
-        Debug.LogWarning("여서 FSM Move 변경");
+//        Debug.LogWarning("여서 FSM Move 변경");
 
 
         if (!Physics.Raycast(transform.position, Vector3.down, 1.7f, _ground))
@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
             else
                 vec.z = 0;
 
-            if (vec.x == 0 && vec.z == 0)
+            if (vec.x == 0 && vec.z == 0 && (int)_input._fsm.CurrentState._myState <= 10)
             {
                 _input._fsm.ChangeState(FSMState.Idle);
             }
@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
             _input._fsm.ChangeState(FSMState.Run);
         }
 
-        moveUpTime += Time.deltaTime;
+        moveUpTime += Time.deltaTime * 4;
         if (moveUpTime > 1f)
         {
             moveUpTime = 1;
@@ -114,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
         Quaternion t = Quaternion.LookRotation(new Vector3(vec.x, 0, vec.z));
         transform.rotation = Quaternion.Lerp(transform.rotation, t, Time.deltaTime * _info.Stat.SPEED);
 
-        print(dir);
+        //print(dir);
 
     }
 
