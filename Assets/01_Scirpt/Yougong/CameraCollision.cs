@@ -1,14 +1,19 @@
+using System.Numerics;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 public class CameraCollision : MonoBehaviour
 {
     // Made by GmSoft ( You Gong )
-
+    [Header("락온")] [SerializeField] private Transform _target;
 
     [Header("카메라 셋팅")]
     [SerializeField] Transform _vcam;
+
+    [SerializeField] private Transform _LookOnCam;
 
     private CinemachineVirtualCamera _cin;
     private Cinemachine3rdPersonFollow _body;
@@ -61,7 +66,7 @@ public class CameraCollision : MonoBehaviour
         _body = _cin.GetCinemachineComponent<Cinemachine3rdPersonFollow>();
         _camDistance = CameraMaxDistance;
     }
-
+    
     private Transform _player;
     public Transform Player
     {
@@ -75,19 +80,36 @@ public class CameraCollision : MonoBehaviour
         }
     }
 
-
     private void LateUpdate()
     {
-
-        CameraAltitude();
+        if (_target == null)
+        {
+            _target = Player;
+        }
+        
+        LookOnMod();
+        //CameraAltitude();
         shake();
+    }
+
+    void LookOnMod()
+    {
+        Vector3 vec = Player.position;
+        transform.position = vec + new Vector3(0, 1f, 0);
+        vec.y = 0;
+        
+        //_LookOnCam.rotation = Quaternion.LookRotation(vec);
+
+        _body.CameraDistance = Vector3.Distance(_target.position, Player.position)/4 + 5;
+        //_body.CameraDistance = _camDistance;
+        transform.rotation = Quaternion.LookRotation(-vec);
     }
 
     void CameraAltitude()
     {
 
         // 플레이어 위치는 보통 발바닥임 + 1.4f
-        transform.position = Player.position + new Vector3(0.000000000000001f, 1f, 0);
+        transform.position = _target.position + new Vector3(0, 2f, 0);
         // 카메라 반전
         L = X ? -1 : 1;
         U = Y ? 1 : -1;
