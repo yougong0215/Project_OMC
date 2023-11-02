@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerWeaponStance : MonoBehaviour
 {
@@ -10,11 +11,18 @@ public class PlayerWeaponStance : MonoBehaviour
     private PlayerInput _input;
     
     public PlayerWeaponSO _currentWeapon;
+    
+    [NonSerialized] public PlayerSkillListSO _CurrentSkill;
 
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
         _player = GetComponent<PlayerInfo>();
+
+        if (_currentWeapon != null)
+        {
+            ChangeStance(_currentWeapon);
+        }
     }
 
     public void ChangeStance(PlayerWeaponSO _so)
@@ -26,43 +34,96 @@ public class PlayerWeaponStance : MonoBehaviour
         
         _input.OnLeftClick += () =>
         {
-            if (_so.L_Click == null)
+            PlayerSkillListSO s=  _so.L_Click;
+                _CurrentSkill = s;
+            if (s == null)
                 return;
             
-            ColliderCast obj = Instantiate(_so.L_Click, transform);
-            obj.Init(_player, _currentWeapon.Stat);
+            Debug.Log("좌클릭");
+            if (s.IsRunning == false && _input._fsm.CurrentState._myState != FSMState.Attack)
+            {
+                StartCoroutine(s.SkillAct(_player, _currentWeapon, transform));
+                //StartCoroutine(_so.L_Click.UpdateLayer());
+            }
+            else if(_input._fsm.CurrentState._myState == FSMState.Attack)
+            {
+                
+                s.ComboSet();
+            }
+            
         };
         
         _input.OnRightClick += () =>
         {
-            if (_so.R_Click == null)
+            Debug.Log("우클릭");
+            PlayerSkillListSO s=  _so.R_Click;
+            _CurrentSkill = s;
+            if (s == null)
                 return;
-            ColliderCast obj = Instantiate(_so.R_Click, transform);
-            obj.Init(_player, _currentWeapon.Stat);
+            if (s.IsRunning ==false&& _input._fsm.CurrentState._myState != FSMState.Attack)
+            {
+                StartCoroutine(s.SkillAct(_player, _currentWeapon, transform));
+                //StartCoroutine(_so.L_Click.UpdateLayer());
+            }
+            else if(_input._fsm.CurrentState._myState == FSMState.Attack)
+            {
+                s.ComboSet();
+            }
         };
         
         _input.Q_Btn += () =>
         {
-            if (_so.Q_Skill == null)
+            PlayerSkillListSO s=  _so.Q_Skill;
+            _CurrentSkill = s;
+            if (s == null)
                 return;
-            ColliderCast obj = Instantiate(_so.Q_Skill, transform);
-            obj.Init(_player, _currentWeapon.Stat);
+            if (s.IsRunning ==false&& _input._fsm.CurrentState._myState != FSMState.Attack)
+            {
+                Debug.Log("Q클릭");
+                StartCoroutine(s.SkillAct(_player, _currentWeapon, transform));
+                //StartCoroutine(_so.L_Click.UpdateLayer());
+            }
+            else if(_input._fsm.CurrentState._myState == FSMState.Attack)
+            {
+                s.ComboSet();
+            }
         };
         
         _input.E_Btn += () =>
         {
-            if (_so.E_Skill == null)
+            PlayerSkillListSO s=  _so.E_Skill;
+            if (s == null)
                 return;
-            ColliderCast obj = Instantiate(_so.E_Skill, transform);
-            obj.Init(_player, _currentWeapon.Stat);
+            
+            Debug.Log("E클릭");
+            _CurrentSkill = s;
+            if (s.IsRunning ==false&& _input._fsm.CurrentState._myState != FSMState.Attack)
+            {
+                StartCoroutine(s.SkillAct(_player, _currentWeapon, transform));
+                //StartCoroutine(_so.L_Click.UpdateLayer());
+            }
+            else if(_input._fsm.CurrentState._myState == FSMState.Attack)
+            {
+                s.ComboSet();
+            }
         };
         
         _input.R_Btn += () =>
         {
-            if (_so.R_Skill == null)
+            PlayerSkillListSO s=  _so.R_Skill;
+            if (s == null)
                 return;
-            ColliderCast obj = Instantiate(_so.R_Skill, transform);
-            obj.Init(_player, _currentWeapon.Stat);
+            Debug.Log("R클릭");
+            _CurrentSkill = s;
+            if (s.IsRunning ==false&& _input._fsm.CurrentState._myState != FSMState.Attack)
+            {
+                StartCoroutine(s.SkillAct(_player, _currentWeapon, transform));
+                //StartCoroutine(_so.L_Click.UpdateLayer());
+            }
+            else if(_input._fsm.CurrentState._myState == FSMState.Attack)
+            {
+                s.ComboSet();
+            }
         };
     }
     

@@ -21,6 +21,16 @@ public abstract class ColliderCast : MonoBehaviour
     protected CharacterInfo _player;
 
     private bool isAttack = false;
+    private bool ColliderEnd = false;
+
+    public bool IsAttack => isAttack;
+
+    private void OnEnable()
+    {
+        isAttack = false;
+        ColliderEnd = false;
+    }
+
     public void Init(CharacterInfo Player, ObjectStat Weapon)
     {
         _player = Player;
@@ -30,8 +40,22 @@ public abstract class ColliderCast : MonoBehaviour
     public void Attack(bool b)
     {
         isAttack = b;
+        if (b == false)
+        {
+//            Debug.Log("SKILLSYSTEM : 실패!");
+            ColliderEnd = true;
+        }
+        else
+        {
+//            Debug.Log("SKILLSYSTEM : 지금 콤보 발생!");
+        }
     }
     
+
+    public bool ReturnEnd()
+    {
+        return ColliderEnd;
+    }
     /// <summary>
     /// 중복 방지용
     /// </summary>
@@ -49,6 +73,7 @@ public abstract class ColliderCast : MonoBehaviour
     
     protected void Update()
     {
+//        Debug.Log(IsAttack);
         if (!isAttack)
             return;
         
@@ -57,11 +82,13 @@ public abstract class ColliderCast : MonoBehaviour
         // 생각해 봤는데 어차피 col있는 만큼만 돌아가기 때문에 큰 문제 없음
         foreach (var col in cols)
         {
-            if (CheckDic[col] != false)
+            if (CheckDic.ContainsKey(col))
                 return;
+            else
+                CheckDic.Add(col, true);
             
-            CheckDic[col] = true;
             CastAct?.Invoke(col);
+            Debug.Log($"{col.name} 맞음");
 
         }
     }
