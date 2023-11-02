@@ -17,7 +17,7 @@ public class SkillSO : ScriptableObject
         _info = info;
         _weaponStat = weapon;
         cols.CastAct += SKillInvoke;
-        
+        Debug.Log("??????");//이게 안됨
         if (Clip != null)
         {
             info.AnimCon.ChangeAnimationClip(State, Clip);

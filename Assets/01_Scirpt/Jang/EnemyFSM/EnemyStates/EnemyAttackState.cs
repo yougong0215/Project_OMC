@@ -19,16 +19,16 @@ public class EnemyAttackState : CommonState
     private void Start()
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
+
+        weaponStance.AllAttack_Create();
     }
 
     public override void EnterState()
     {
-        if(colliderCast == null)
-            colliderCast = weaponStance.NormalAttack1_Create();
-
-        _animator.SetAttackAnimation(true);
         _animator.OnAnimationEventTrigger += EventAction;
         _animator.OnAnimationEndTrigger += EndAction;
+        
+        colliderCast = weaponStance.ChangeColliderCase(AttackEnum.NORMAL1, colliderCast);
 
         Init?.Invoke();
     }
@@ -51,7 +51,6 @@ public class EnemyAttackState : CommonState
 
     public override void ExitState()
     {
-        _animator.SetAttackAnimation(false);
         _animator.OnAnimationEventTrigger -= EventAction;
         _animator.OnAnimationEndTrigger -= EndAction;
     }

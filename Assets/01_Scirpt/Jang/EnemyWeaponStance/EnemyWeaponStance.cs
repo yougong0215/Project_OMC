@@ -3,75 +3,81 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum AttackEnum
+{
+    NORMAL1 = 0,
+    NORMAL2 = 1,
+    NORMAL3 = 2,
+    POWER = 3,
+    SPEED = 4,
+    THROW = 5
+};
+
 public class EnemyWeaponStance : MonoBehaviour
 {
-    /// <summary>
-    /// 일반공격1
-    /// </summary>
-    public Action Normal_Attack_1 = null;
-
-    /// <summary>
-    /// 일반공격2
-    /// </summary>
-    public Action Normal_Attack_2 = null;
-
-    /// <summary>
-    /// 일반공격3
-    /// </summary>
-    public Action Normal_Attack_3 = null;
-
-    /// <summary>
-    /// 강력한 공격
-    /// </summary>
-    public Action Power_Attack = null;
-
-    /// <summary>
-    /// 빠른공격, 돌진공격
-    /// </summary>
-    public Action Speed_Attack = null;
-
-    /// <summary>
-    /// 발사체 공격
-    /// </summary>
-    public Action Throw_Attack = null;
+    private Dictionary<AttackEnum, ColliderCast> allColliderCast = new Dictionary<AttackEnum, ColliderCast>();
 
     [SerializeField] private EnemyWeaponSO weaponSO;
     [SerializeField] private CharacterInfo enemy;
 
-    public ColliderCast NormalAttack1_Create()
+    public ColliderCast ChangeColliderCase(AttackEnum attackEnum, ColliderCast orgColliderCast)
     {
-        ColliderCast obj = Instantiate(weaponSO.Normal_Attack_1, transform);
-        return obj;
+        //if(orgColliderCast != allColliderCast[attackEnum])
+        //    allColliderCast[attackEnum].Init(enemy, weaponSO.Stat);
+
+        return allColliderCast[attackEnum];
     }
 
-    public ColliderCast NormalAttack2_Create()
+    public void NormalAttack1_Create()
     {
-        ColliderCast obj = Instantiate(weaponSO.Normal_Attack_2, transform);
-        return obj;
+        ColliderCast nomal1Obj = Instantiate(weaponSO.Normal_Attack_1, transform);
+        allColliderCast[AttackEnum.NORMAL1] = nomal1Obj;
     }
 
-    public ColliderCast NormalAttack3_Create()
+    public void NormalAttack2_Create()
     {
-        ColliderCast obj = Instantiate(weaponSO.Normal_Attack_3, transform);
-        return obj;
+        ColliderCast nomal2Obj = Instantiate(weaponSO.Normal_Attack_2, transform);
+        allColliderCast[AttackEnum.NORMAL2] = nomal2Obj;
     }
 
-    public ColliderCast PowerAttack_Create()
+    public void NormalAttack3_Create()
     {
-        ColliderCast obj = Instantiate(weaponSO.Power_Attack, transform);
-        return obj;
+        ColliderCast nomal3Obj = Instantiate(weaponSO.Normal_Attack_3, transform);
+        allColliderCast[AttackEnum.NORMAL3] = nomal3Obj;
     }
 
-    public ColliderCast SpeedAttack_Create()
+    public void PowerAttack_Create()
     {
-        ColliderCast obj = Instantiate(weaponSO.Speed_Attack, transform);
-        return obj;
+        ColliderCast powerObj = Instantiate(weaponSO.Power_Attack, transform);
+        allColliderCast[AttackEnum.POWER] = powerObj;
     }
 
-    public ColliderCast ThrowAttack_Create()
+    public void SpeedAttack_Create()
     {
-        ColliderCast obj = Instantiate(weaponSO.Throw_Attack, transform);
-        return obj;
+        ColliderCast speedObj = Instantiate(weaponSO.Speed_Attack, transform);
+        allColliderCast[AttackEnum.SPEED] = speedObj;
+    }
+
+    public void ThrowAttack_Create()
+    {
+        ColliderCast throwObj = Instantiate(weaponSO.Throw_Attack, transform);
+        allColliderCast[AttackEnum.THROW] = throwObj;
+    }
+
+    public void AllAttack_Create()
+    {
+        ColliderCast nomal1Obj = Instantiate(weaponSO.Normal_Attack_1, transform);
+        allColliderCast[AttackEnum.NORMAL1] = nomal1Obj;
+        ColliderCast nomal2Obj = Instantiate(weaponSO.Normal_Attack_2, transform);
+        allColliderCast[AttackEnum.NORMAL2] = nomal2Obj;
+        ColliderCast nomal3Obj = Instantiate(weaponSO.Normal_Attack_3, transform);
+        allColliderCast[AttackEnum.NORMAL3] = nomal3Obj;
+        ColliderCast powerObj = Instantiate(weaponSO.Power_Attack, transform);
+        allColliderCast[AttackEnum.POWER] = powerObj;
+        ColliderCast speedObj = Instantiate(weaponSO.Speed_Attack, transform);
+        allColliderCast[AttackEnum.SPEED] = speedObj;
+        ColliderCast throwObj = Instantiate(weaponSO.Throw_Attack, transform);
+        allColliderCast[AttackEnum.THROW] = throwObj;
     }
 
     public void SkillOn(ColliderCast obj)

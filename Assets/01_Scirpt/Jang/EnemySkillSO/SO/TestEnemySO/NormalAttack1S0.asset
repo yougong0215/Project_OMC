@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NormalAttack1S0
   m_EditorClassIdentifier: 
   State: 11
-  Clip: {fileID: 0}
+  Clip: {fileID: 1827226128182048838, guid: 1245117f7c42d8e4ca48df3b8262dc0b, type: 3}
