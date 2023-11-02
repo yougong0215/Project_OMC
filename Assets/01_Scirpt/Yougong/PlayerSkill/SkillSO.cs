@@ -6,9 +6,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SO/Skill/Base")]
 public class SkillSO : ScriptableObject
 {
-    private CharacterInfo _info;
+    protected CharacterInfo _info;
     
-    private ObjectStat _weaponStat;
+    protected ObjectStat _weaponStat;
     public FSMState State = FSMState.Attack;
     public AnimationClip Clip = null;
     
