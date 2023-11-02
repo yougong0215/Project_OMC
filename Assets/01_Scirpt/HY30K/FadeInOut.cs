@@ -10,6 +10,11 @@ public class FadeInOut : MonoBehaviour
 
     public int TimeToFade = 3;
 
+    private void Start()
+    {
+        fadeOut = true;
+    }
+
     private void Update()
     {
         if (fadeIn == true)
@@ -26,7 +31,7 @@ public class FadeInOut : MonoBehaviour
 
         if (fadeOut == true)
         {
-            if (canvasGroup.alpha >= 1)
+            if (canvasGroup.alpha >= 0)
             {
                 canvasGroup.alpha -= TimeToFade * Time.deltaTime;
                 if (canvasGroup.alpha == 0)
@@ -35,15 +40,5 @@ public class FadeInOut : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void FadeIn()
-    {
-        fadeIn = true;
-    }
-
-    public void FadeOut()
-    {
-        fadeOut = true;
     }
 }

@@ -13,7 +13,7 @@ public class Teleporter : MonoBehaviour
 
     private void Awake()
     {
-        fade = FindObjectOfType<FadeInOut>();
+        fade = GetComponent<FadeInOut>();
     }
 
     private void OnTriggerEnter(Collider other)
