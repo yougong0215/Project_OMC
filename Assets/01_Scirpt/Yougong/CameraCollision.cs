@@ -87,8 +87,8 @@ public class CameraCollision : MonoBehaviour
             _target = Player;
         }
         
-        LookOnMod();
-        //CameraAltitude();
+        //LookOnMod();
+        CameraAltitude();
         shake();
     }
 
