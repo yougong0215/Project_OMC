@@ -7,11 +7,6 @@ public class SpeedAttackSO : EnemySkillSO
 {
     [SerializeField] private float moveDirction;
 
-    public override void Init(CharacterInfo info, ObjectStat weapon, ColliderCast cols)
-    {
-        base.Init(info, weapon, cols);
-    }
-
     protected override bool CritReturn()
     {
         return base.CritReturn();
