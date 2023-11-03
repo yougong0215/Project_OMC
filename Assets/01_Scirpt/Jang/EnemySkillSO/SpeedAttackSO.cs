@@ -5,6 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SO/Skill/Enemy/Speed")]
 public class SpeedAttackSO : EnemySkillSO
 {
+    protected override bool CritReturn()
+    {
+        return base.CritReturn();
+    }
+
     public override float DamageReturn()
     {
         return base.DamageReturn();

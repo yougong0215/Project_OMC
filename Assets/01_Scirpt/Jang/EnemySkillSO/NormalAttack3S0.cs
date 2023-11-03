@@ -5,6 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SO/Skill/Enemy/Attack3")]
 public class NormalAttack3S0 : EnemySkillSO
 {
+    protected override bool CritReturn()
+    {
+        return base.CritReturn();
+    }
+
     public override float DamageReturn()
     {
         return base.DamageReturn();

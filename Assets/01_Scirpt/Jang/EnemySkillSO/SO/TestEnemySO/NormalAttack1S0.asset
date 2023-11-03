@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfb02def0cc00094f9184edbbf159ca1, type: 3}
-  m_Name: NormalAttack3S0
+  m_Script: {fileID: 11500000, guid: 1b63aefcb62629f45891fc6fe575d973, type: 3}
+  m_Name: NormalAttack1S0
   m_EditorClassIdentifier: 
+  State: 11
+  Clip: {fileID: 1827226128182048838, guid: 1245117f7c42d8e4ca48df3b8262dc0b, type: 3}

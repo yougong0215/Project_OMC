@@ -8,9 +8,10 @@ using UnityEngine;
 public class SkillSO : ScriptableObject
 {
     public TextMeshPro _dmgSkin;
-    private CharacterInfo _info;
+
+    protected CharacterInfo _info;
     
-    private ObjectStat _weaponStat;
+    protected ObjectStat _weaponStat;
     public FSMState State = FSMState.Attack;
     public AnimationClip Clip = null;
     
@@ -19,7 +20,7 @@ public class SkillSO : ScriptableObject
         _info = info;
         _weaponStat = weapon;
         cols.CastAct += SKillInvoke;
-        
+
         if (Clip != null)
         {
             info.AnimCon.ChangeAnimationClip(State, Clip);
@@ -65,6 +66,8 @@ public class SkillSO : ScriptableObject
         Debug.Log("Invoke Active");
         if (cols.name != "Player")
         {
+            if(_dmgSkin == null)
+            return;
             TextMeshPro tmp = Instantiate(_dmgSkin) as TextMeshPro;
             tmp.transform.position = cols.transform.position;
             tmp.text = $"{Random.Range(1000, 10000000)}";

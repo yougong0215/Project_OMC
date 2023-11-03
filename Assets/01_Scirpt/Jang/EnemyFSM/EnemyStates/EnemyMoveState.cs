@@ -5,16 +5,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public enum AttackEnum
-{
-    NORMAL1,
-    NORMAL2,
-    NORMAL3,
-    POWER,
-    SPEED,
-    THROW
-};
-
 public class EnemyMoveState : CommonState
 {
     [SerializeField] private float idleDec;
@@ -46,7 +36,7 @@ public class EnemyMoveState : CommonState
         {
             fsm.ChangeState(FSMState.Idle);
         }
-        else if (playerHit.distance <= attackDec)
+        else if (playerHit.distance <= attackDec) 
         {
             fsm.ChangeState(FSMState.Attack);
         }
@@ -56,7 +46,6 @@ public class EnemyMoveState : CommonState
 
     public override void ExitState()
     {
-        Debug.Log(agent.isStopped);
         agent.isStopped = true;
         _animator.SetMoveAnimation(false);
     }
