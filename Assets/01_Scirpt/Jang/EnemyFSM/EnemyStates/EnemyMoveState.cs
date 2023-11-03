@@ -7,6 +7,7 @@ using UnityEngine.AI;
 
 public class EnemyMoveState : CommonState
 {
+    [SerializeField] private EnemyWeaponStance weaponStance;
     [SerializeField] private float idleDec;
     [SerializeField] private float attackDec;
 
@@ -38,7 +39,7 @@ public class EnemyMoveState : CommonState
         }
         else if (playerHit.distance <= attackDec) 
         {
-            fsm.ChangeState(FSMState.Attack);
+            weaponStance.ChangeColliderCase(AttackEnum.SPEED);
         }
 
         UpdateAction?.Invoke();

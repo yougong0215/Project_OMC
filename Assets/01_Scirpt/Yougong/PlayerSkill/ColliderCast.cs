@@ -61,7 +61,7 @@ public abstract class ColliderCast : MonoBehaviour
     /// <summary>
     /// 중복 방지용
     /// </summary>
-    [SerializeField] protected Dictionary<Collider, bool> CheckDic = new();
+    [SerializeField] public Dictionary<Collider, bool> CheckDic = new();
 
     
     /// <summary>

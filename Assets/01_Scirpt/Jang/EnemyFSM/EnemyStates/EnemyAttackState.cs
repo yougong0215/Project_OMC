@@ -4,23 +4,17 @@ using UnityEngine;
 
 public class EnemyAttackState : CommonState
 {
-    [Space(10)]
-    [Header("적 오버라이드")]
     public EnemyWeaponStance weaponStance;
-
     [SerializeField] private float moveDec;
     [SerializeField] private LayerMask obstacleMask;
 
     private Transform playerTrs;
 
-    [HideInInspector] public bool isAttacking;
-    [HideInInspector] public ColliderCast colliderCast;
-
     private void Start()
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
-        
-        weaponStance.AllAttack_Create();
+
+        Init?.Invoke();
     }
 
     public override void EnterState()
@@ -28,8 +22,6 @@ public class EnemyAttackState : CommonState
         _animator.SetAttackAnimation(true);
         _animator.OnAnimationEventTrigger += EventAction;
         _animator.OnAnimationEndTrigger += EndAction;
-        
-        colliderCast = weaponStance.ChangeColliderCase(AttackEnum.NORMAL1, colliderCast);
 
         Init?.Invoke();
     }
@@ -42,10 +34,14 @@ public class EnemyAttackState : CommonState
         bool isPlayer = Physics.Raycast(ray, out playerHit, moveDec, LayerMask.GetMask("Player"));
         bool isObstacle = Physics.Raycast(ray, moveDec, obstacleMask);
 
-        if ((!isPlayer || isObstacle) && !isAttacking)
+        if ((!isPlayer || isObstacle) && !weaponStance.IsAttacking())
         {
             fsm.ChangeState(FSMState.Run);
         }
+        //if (!weaponStance.IsAttacking())
+        //{
+        //    fsm.ChangeState(FSMState.Run);
+        //}
 
         UpdateAction?.Invoke();
     }
@@ -55,5 +51,7 @@ public class EnemyAttackState : CommonState
         _animator.SetAttackAnimation(false);
         _animator.OnAnimationEventTrigger -= EventAction;
         _animator.OnAnimationEndTrigger -= EndAction;
+
+        weaponStance.ExitAttack();
     }
 }

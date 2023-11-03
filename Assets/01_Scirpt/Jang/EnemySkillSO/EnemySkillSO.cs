@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SO/Skill/Enemy")]
 public class EnemySkillSO : SkillSO
 {
+
     protected override bool CritReturn()
     {
         return base.CritReturn();

@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd58b64652c0fa4dad2a46821bddf83, type: 3}
   m_Name: SpeedAttackS0
   m_EditorClassIdentifier: 
+  _dmgSkin: {fileID: 0}
   State: 11
-  Clip: {fileID: 1827226128182048838, guid: b6ac5f1b5d941db4585d707f2f2c3b28, type: 3}
+  Clip: {fileID: 1827226128182048838, guid: 1245117f7c42d8e4ca48df3b8262dc0b, type: 3}
+  moveDirction: 0

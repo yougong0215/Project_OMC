@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyIdleState : CommonState
 {
+    [SerializeField] private EnemyWeaponStance weaponStance;
     [SerializeField] private float moveDec;
     [SerializeField] private LayerMask obstacleMask;
 
@@ -12,6 +13,8 @@ public class EnemyIdleState : CommonState
     private void Start()
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
+
+        weaponStance.AllAttack_Create();
     }
 
     public override void EnterState()
