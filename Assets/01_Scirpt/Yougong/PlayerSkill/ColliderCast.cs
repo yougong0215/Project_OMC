@@ -16,6 +16,7 @@ public abstract class ColliderCast : MonoBehaviour
     public LayerMask _layer;
 
     public Action<Collider> CastAct;
+    public Action OnAnimEvnt;
     
     
     protected CharacterInfo _player;
@@ -35,6 +36,7 @@ public abstract class ColliderCast : MonoBehaviour
     {
         _player = Player;
         _skill.Init(_player, Weapon, this);
+        transform.parent = null;
     }
 
     public void Attack(bool b)
@@ -42,12 +44,12 @@ public abstract class ColliderCast : MonoBehaviour
         isAttack = b;
         if (b == false)
         {
-//            Debug.Log("SKILLSYSTEM : 실패!");
             ColliderEnd = true;
         }
         else
         {
-//            Debug.Log("SKILLSYSTEM : 지금 콤보 발생!");
+            
+            OnAnimEvnt?.Invoke();
         }
     }
     

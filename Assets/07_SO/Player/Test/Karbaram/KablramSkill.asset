@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fcc7d6725edd6459a928bf047ab9ff, type: 3}
   m_Name: KablramSkill
   m_EditorClassIdentifier: 
+  _dmgSkin: {fileID: 59324900738929681, guid: 43ad52739f540314a948dccfa028dbb6, type: 3}
   State: 11
   Clip: {fileID: -7524964340392654364, guid: 7a3a93d3b0914aa4e9363593049e22d1, type: 3}

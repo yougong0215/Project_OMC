@@ -12,8 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da84e4532a01c840847be600931c232, type: 3}
   m_Name: MolAchiGi
   m_EditorClassIdentifier: 
+  CurrentObject: {fileID: 0}
   Attacks:
   - cols: {fileID: 5875326251886678980, guid: a112568eae91c034d9e5fd3abc0cedf2, type: 3}
     comboLive: 0
+    isNotWaiting: 0
+    delayTime: 0.05
   - cols: {fileID: 5875326251886678980, guid: 8d2ca9523b8053d49b37b5f3fe82c048, type: 3}
     comboLive: 1
+    isNotWaiting: 0
+    delayTime: 0.05
+  - cols: {fileID: 5875326251886678980, guid: bf43a2e03971f9a45b89661069a52b6f, type: 3}
+    comboLive: 0
+    isNotWaiting: 1
+    delayTime: 0.05
+  - cols: {fileID: 5875326251886678980, guid: 20c82382ff90f024b9695518633eefa1, type: 3}
+    comboLive: 0
+    isNotWaiting: 1
+    delayTime: 0.05
+  - cols: {fileID: 5875326251886678980, guid: 5dcb7cd726d90c64b9ac9666258c4582, type: 3}
+    comboLive: 0
+    isNotWaiting: 1
+    delayTime: 0.05
+  - cols: {fileID: 5875326251886678980, guid: 1df9eaf018d71f24eb82472770470b6b, type: 3}
+    comboLive: 0
+    isNotWaiting: 1
+    delayTime: 0.05
+  - cols: {fileID: 5875326251886678980, guid: a3c35090c1c18b743b4523d1d733bb07, type: 3}
+    comboLive: 0
+    isNotWaiting: 1
+    delayTime: 0.05
+  - cols: {fileID: 5875326251886678980, guid: a3c35090c1c18b743b4523d1d733bb07, type: 3}
+    comboLive: 0
+    isNotWaiting: 1
+    delayTime: 0.05

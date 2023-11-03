@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 
 [System.Serializable]
@@ -9,6 +10,7 @@ public class SkillCollider
     public ColliderCast cols;
     public bool comboLive = false;
     public bool isNotWaiting = false;
+    public float delayTime = .05f;
 }
 
     [CreateAssetMenu(menuName = "SO/Player/SkillList")]
@@ -48,8 +50,12 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
     public IEnumerator StopFinding(ColliderCast col)
     {
         col.Attack(true);
-        yield return new WaitForSeconds(0.1f);
+        Debug.Log("삭제 시퀀스");
+        yield return new WaitForSeconds(0.2f);
+        
         col.Attack(false);
+        yield return new WaitForSeconds(1f);
+        Destroy(col.gameObject);
     }
     
     public IEnumerator SkillAct(CharacterInfo _char, WeaponSO _currentWeapon, Transform tls)
@@ -73,9 +79,11 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
                 }
                 else
                 {
-                    MonoBehaviour mono = tls.GetComponent<MonoBehaviour>();
+                    
+                    MonoBehaviour mono = _char.GetComponent<MonoBehaviour>();
 
-                    mono.StartCoroutine(StopFinding((CurrentObject)));
+                    mono.StartCoroutine(StopFinding(CurrentObject));
+                    yield return new WaitForSeconds(Attacks[currnetNum].delayTime);
                 }
                 
             }
@@ -88,6 +96,7 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
 
         yield return new WaitUntil(() => _char.AnimCon.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f);
         _isRunning = false;
+        if (_char.FSM.CurrentState._myState != FSMState.Idle) 
         _char.FSM.ChangeState(FSMState.Idle);
     }
 

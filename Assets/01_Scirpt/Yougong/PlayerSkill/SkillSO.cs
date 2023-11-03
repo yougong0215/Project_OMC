@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TMPro;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "SO/Skill/Base")]
 public class SkillSO : ScriptableObject
 {
+    public TextMeshPro _dmgSkin;
     private CharacterInfo _info;
     
     private ObjectStat _weaponStat;
@@ -60,6 +62,16 @@ public class SkillSO : ScriptableObject
     /// <param name="cols"></param>t
     public virtual void SKillInvoke(Collider cols)
     {
+        Debug.Log("Invoke Active");
+        if (cols.name != "Player")
+        {
+            TextMeshPro tmp = Instantiate(_dmgSkin) as TextMeshPro;
+            tmp.transform.position = cols.transform.position;
+            tmp.text = $"{Random.Range(1000, 10000000)}";
+            tmp.transform.position += new Vector3(Random.Range(-0.2f, 0.2f),Random.Range(-0.2f, 0.2f),Random.Range(-0.2f, 0.2f));
+
+        }
+        
         if (cols.TryGetComponent(out CharacterInfo _pl))
         {
             _pl.GetDamage(DamageReturn());
