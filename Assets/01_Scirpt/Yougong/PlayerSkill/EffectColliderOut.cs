@@ -19,6 +19,5 @@ public class EffectColliderOut : MonoBehaviour
         {
             effect.Play();
         }
-
     }
 }

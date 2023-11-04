@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class FirePrefab : MonoBehaviour
 {
+    [SerializeField] private GameObject bombParticle;
     [SerializeField] private float fireSpeed;
 
     private Rigidbody rb;
+
     private Vector3 fireDir;
     private float fireDmg;
+
+    const float partcleDestroyTime = 1f;
 
     private void Awake()
     {
@@ -32,7 +37,14 @@ public class FirePrefab : MonoBehaviour
         if (col.gameObject.TryGetComponent(out CharacterInfo _pl))
         {
             _pl.GetDamage(fireDmg);
-            Destroy(gameObject);
         }
+
+        GameObject partcle = Instantiate(bombParticle, transform.position, Quaternion.identity);
+        ParticleSystem[] a = partcle.GetComponentsInChildren<ParticleSystem>();
+        foreach (var effect in a)
+            effect.Play();
+
+        Destroy(partcle, partcleDestroyTime);
+        Destroy(gameObject);
     }
 }

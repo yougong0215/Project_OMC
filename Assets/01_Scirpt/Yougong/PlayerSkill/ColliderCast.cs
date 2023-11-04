@@ -17,8 +17,8 @@ public abstract class ColliderCast : MonoBehaviour
 
     public Action<Collider> CastAct;
     public Action OnAnimEvnt;
-    
-    
+
+
     public CharacterInfo _player;
 
     private bool isAttack = false;
