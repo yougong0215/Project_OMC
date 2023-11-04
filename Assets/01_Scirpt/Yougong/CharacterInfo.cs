@@ -17,7 +17,7 @@ public abstract class CharacterInfo : MonoBehaviour
         _con = GetComponentInChildren<AnimationController>();
     }
     
-    [SerializeField] ObjectStat _stat;
+    [SerializeField] protected ObjectStat _stat;
 
     public ObjectStat Stat
     {

@@ -26,8 +26,8 @@ public class EnemyInfo : CharacterInfo
 
     private void Update()
     {
-        Dashing();
         SkillStart();
+        Dashing();
     }
 
     private void SkillStart()
@@ -73,5 +73,7 @@ public class EnemyInfo : CharacterInfo
     public override void GetDamage(float _damage)
     {
         base.GetDamage(_damage);
+        if (_stat.HP <= 0)
+            FSM.ChangeState(FSMState.Die);
     }
 }

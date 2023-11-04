@@ -26,6 +26,9 @@ public class AnimationController : MonoBehaviour
     private readonly int _isDashHash = Animator.StringToHash("is_dash");
     private readonly int _dashTriggerhash = Animator.StringToHash("dash");
 
+    private readonly int _isDeathHash = Animator.StringToHash("is_death");
+    private readonly int _deathTriggerhash = Animator.StringToHash("death");
+
     public event Action OnAnimationEndTrigger = null;
     public event Action OnAnimationEventTrigger = null;
     public event Action OnPreAnimationEventTrigger = null;
@@ -118,6 +121,20 @@ public class AnimationController : MonoBehaviour
         {
             _animator.SetBool(_isNuckHash, b);
             _animator.ResetTrigger(_nuckTriggerhash);
+        }
+    }
+
+    public void SetDeathAnimation(bool b)
+    {
+        if (b == true)
+        {
+            _animator.SetBool(_isDeathHash, b);
+            _animator.SetTrigger(_deathTriggerhash);
+        }
+        else
+        {
+            _animator.SetBool(_isDeathHash, b);
+            _animator.ResetTrigger(_deathTriggerhash);
         }
     }
 

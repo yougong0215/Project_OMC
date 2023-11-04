@@ -39,7 +39,7 @@ public class EnemyMoveState : CommonState
         }
         else if (playerHit.distance <= attackDec) 
         {
-            weaponStance.ChangeColliderCase(AttackEnum.THROW);
+            weaponStance.ChangeColliderCase(AttackEnum.NORMAL1);
         }
 
         UpdateAction?.Invoke();
