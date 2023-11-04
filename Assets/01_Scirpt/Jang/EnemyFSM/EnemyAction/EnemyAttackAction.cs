@@ -27,14 +27,9 @@ public class EnemyAttackAction : CommonAction
         if (!weaponStance.IsAttacking())
         {
             Vector3 targetDirection = playerTrs.position - Character.position;
-
-            // y 방향만 고려한 각도 계산
             float targetAngle = Mathf.Atan2(targetDirection.x, targetDirection.z) * Mathf.Rad2Deg;
-
-            // Mathf.LerpAngle을 사용하여 y 방향 회전을 부드럽게 조절
             float currentAngle = Mathf.LerpAngle(Character.eulerAngles.y, targetAngle, rotationSpeed * Time.deltaTime);
 
-            // 새로운 회전 값을 설정
             Character.rotation = Quaternion.Euler(0, currentAngle, 0);
         }
     }

@@ -38,10 +38,6 @@ public class EnemyAttackState : CommonState
         {
             fsm.ChangeState(FSMState.Run);
         }
-        //if (!weaponStance.IsAttacking())
-        //{
-        //    fsm.ChangeState(FSMState.Run);
-        //}
 
         UpdateAction?.Invoke();
     }

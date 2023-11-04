@@ -15,7 +15,7 @@ public class SkillSO : ScriptableObject
     public FSMState State = FSMState.Attack;
     public AnimationClip Clip = null;
     
-    public void Init(CharacterInfo info, ObjectStat weapon, ColliderCast cols)
+    public virtual void Init(CharacterInfo info, ObjectStat weapon, ColliderCast cols)
     {
         _info = info;
         _weaponStat = weapon;

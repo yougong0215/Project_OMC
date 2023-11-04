@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [CreateAssetMenu(menuName = "SO/Skill/Enemy/Speed")]
 public class SpeedAttackSO : EnemySkillSO
 {
-    [SerializeField] private float moveDirction;
+    public override void Init(CharacterInfo info, ObjectStat weapon, ColliderCast cols)
+    {
+        base.Init(info, weapon, cols);
+        enemyInfo.DashInit();
+    }
 
     protected override bool CritReturn()
     {
@@ -20,11 +25,5 @@ public class SpeedAttackSO : EnemySkillSO
     public override void SKillInvoke(Collider cols)
     {
         base.SKillInvoke(cols);
-
-    }
-
-    public void Dash()
-    {
-        Debug.Log("´ë½¬");
     }
 }
