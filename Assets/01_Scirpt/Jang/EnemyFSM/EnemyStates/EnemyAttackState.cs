@@ -8,7 +8,7 @@ public class EnemyAttackState : CommonState
     [SerializeField] private float moveDec;
     [SerializeField] private LayerMask obstacleMask;
 
-    private Transform playerTrs;
+    [HideInInspector] public Transform playerTrs;
 
     private void Start()
     {
