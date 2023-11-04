@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4136376733092943691}
   - component: {fileID: 4990062523532859066}
   - component: {fileID: 5774836303789226633}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BoxColliderCast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,6 +49,7 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 512
+  _player: {fileID: 0}
 --- !u!65 &5774836303789226633
 BoxCollider:
   m_ObjectHideFlags: 0

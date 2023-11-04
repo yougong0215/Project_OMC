@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,11 @@ using UnityEngine.AI;
 
 public class EnemyInfo : CharacterInfo
 {
+    public event Action skillStartEvt;
+
     [HideInInspector] public NavMeshAgent agent;
+    [HideInInspector] public bool isAttack;
+    [Header("속공 없으면 안넣어도 됨")]
     [SerializeField] private float dashSpeed;
 
     private Transform playerTrs;
@@ -22,9 +27,21 @@ public class EnemyInfo : CharacterInfo
     private void Update()
     {
         Dashing();
+        SkillStart();
     }
 
-    void Dashing()
+    private void SkillStart()
+    {
+        if (isAttack)
+        {
+            isAttack = false;
+            skillStartEvt?.Invoke();
+        }
+        else if (FSM.NowState() != FSMState.Attack)
+            skillStartEvt = null;
+    }
+
+    private void Dashing()
     {
         if (isDashing)
         {

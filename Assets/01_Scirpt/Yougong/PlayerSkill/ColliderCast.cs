@@ -19,7 +19,7 @@ public abstract class ColliderCast : MonoBehaviour
     public Action OnAnimEvnt;
     
     
-    protected CharacterInfo _player;
+    public CharacterInfo _player;
 
     private bool isAttack = false;
     private bool ColliderEnd = false;

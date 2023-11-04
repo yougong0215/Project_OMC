@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1767716254468309035}
   - component: {fileID: 5083659020089721783}
   - component: {fileID: -6649834763102853303}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SphereColliderCast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,6 +49,7 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 512
+  _player: {fileID: 0}
 --- !u!135 &-6649834763102853303
 SphereCollider:
   m_ObjectHideFlags: 0

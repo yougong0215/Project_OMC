@@ -8,10 +8,12 @@ using UnityEngine.AI;
 public class EnemySkillSO : SkillSO
 {
     protected EnemyInfo enemyInfo;
+    protected ColliderCast colliderCast { get; private set; }
 
     public override void Init(CharacterInfo info, ObjectStat weapon, ColliderCast cols)
     {
         base.Init(info, weapon, cols);
+        colliderCast = cols;
         enemyInfo = _info.GetComponent<EnemyInfo>();
     }
 

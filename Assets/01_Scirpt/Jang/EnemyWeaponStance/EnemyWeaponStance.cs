@@ -22,7 +22,7 @@ public class EnemyWeaponStance : MonoBehaviour
     private Dictionary<AttackEnum, ColliderCast> allColliderCast = new Dictionary<AttackEnum, ColliderCast>();
 
     [SerializeField] private EnemyWeaponSO weaponSO;
-    [SerializeField] private CharacterInfo enemy;
+    [SerializeField] private EnemyInfo enemyInfo;
 
     //public AttackEnum NowColliderCastEnum(ColliderCast nowColliderCast)
     //{
@@ -46,6 +46,7 @@ public class EnemyWeaponStance : MonoBehaviour
     public void Attack(bool value)
     {
         allColliderCast[currentAttackEnum].Attack(value);
+        enemyInfo.isAttack = value;
     }
 
     public bool IsAttacking()
@@ -59,7 +60,7 @@ public class EnemyWeaponStance : MonoBehaviour
             return;//근데 어차피 idle이나 run일때 해주니까 없도도 되지 않나...?
 
         currentAttackEnum = attackEnum;//상태 바꾸고
-        allColliderCast[currentAttackEnum].Init(enemy, weaponSO.Stat);//액션 넣어줘야지
+        allColliderCast[currentAttackEnum].Init(enemyInfo, weaponSO.Stat);//액션 넣어줘야지
         allColliderCast[currentAttackEnum].transform.SetParent(transform);//플레이어는 왜 콜라이더 부모를 없엤는지 모르겠지만 유지해야됨
         allColliderCast[currentAttackEnum].Attack(true);
     }
