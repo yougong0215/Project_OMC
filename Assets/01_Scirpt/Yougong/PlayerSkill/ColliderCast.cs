@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public abstract class ColliderCast : MonoBehaviour
+public abstract class ColliderCast : PoolAble
 {
     protected Collider[] cols;
     [Header("SkillSO")]
@@ -23,10 +23,24 @@ public abstract class ColliderCast : MonoBehaviour
 
     private bool isAttack = false;
     private bool ColliderEnd = false;
+    
+    /// <summary>
+    /// 중복 방지용
+    /// </summary>
+    [SerializeField] public Dictionary<Collider, bool> CheckDic = new();
+
+    
+    /// <summary>
+    /// 콜라이더 형에 따라주기 =>
+    /// Switch는 가독성이 심각하게 떨어지는거 같고
+    /// 인스팩터에서 햇갈려서 이리함
+    /// </summary>
+    /// <returns></returns>
+    public abstract Collider[] ReturnColliders();
 
     public bool IsAttack => isAttack;
 
-    private void OnEnable()
+    public override void Reset()
     {
         isAttack = false;
         ColliderEnd = false;
@@ -54,28 +68,15 @@ public abstract class ColliderCast : MonoBehaviour
     }
     
 
-    public bool ReturnEnd()
+    public bool ReturnColliderEnd()
     {
         return ColliderEnd;
     }
-    /// <summary>
-    /// 중복 방지용
-    /// </summary>
-    [SerializeField] public Dictionary<Collider, bool> CheckDic = new();
 
-    
-    /// <summary>
-    /// 콜라이더 형에 따라주기 =>
-    /// Switch는 가독성이 심각하게 떨어지는거 같고
-    /// 인스팩터에서 햇갈려서 이리함
-    /// </summary>
-    /// <returns></returns>
-    public abstract Collider[] ReturnColliders();
     
     
     protected void Update()
     {
-        //        Debug.Log(IsAttack);
         if (!isAttack)
             return;
 
@@ -90,7 +91,7 @@ public abstract class ColliderCast : MonoBehaviour
                 CheckDic.Add(col, false);
 
             CastAct?.Invoke(col);
-            Debug.Log($"{col.name} 맞음");
+            //Debug.Log($"{col.name} 맞음");
 
         }
     }

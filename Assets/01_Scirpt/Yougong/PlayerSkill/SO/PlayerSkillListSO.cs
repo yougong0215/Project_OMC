@@ -60,6 +60,8 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
     
     public IEnumerator SkillAct(CharacterInfo _char, WeaponSO _currentWeapon, Transform tls)
     {
+        Vector3 vec = tls.position;
+        Quaternion rot = tls.rotation;
         
         _isRunning = true;
 
@@ -68,11 +70,14 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
             if (Attacks[currnetNum].comboLive==false || (ComboInterective && Attacks[currnetNum].comboLive))
             {
                 ComboInterective = false;
-                ColliderCast cols = Instantiate(Attacks[currnetNum].cols, tls);
+                ColliderCast cols = Instantiate(Attacks[currnetNum].cols);
+                cols.transform.position = vec;
+                cols.transform.rotation = rot;
+                
                 CurrentObject = cols;
                 cols.Init(_char, _currentWeapon.Stat);
                 
-                yield return new WaitUntil(() => cols.ReturnEnd() == true || Attacks[currnetNum].isNotWaiting == true);
+                yield return new WaitUntil(() => cols.ReturnColliderEnd() == true || Attacks[currnetNum].isNotWaiting == true);
                 if (Attacks[currnetNum].isNotWaiting == false)
                 {
                     Destroy(cols.gameObject);
