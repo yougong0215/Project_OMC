@@ -9,7 +9,7 @@ public class ThrowAttackSO : EnemySkillSO
 
     private Transform playerTrs;
 
-    public override void Init(CharacterInfo info, ObjectStat weapon, ColliderCast cols)
+    public override void Init(CharacterInfo info, ObjectStatSO weapon, ColliderCast cols)
     {
         base.Init(info, weapon, cols);
 

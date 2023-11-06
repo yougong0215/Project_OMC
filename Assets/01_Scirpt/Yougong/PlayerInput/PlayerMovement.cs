@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         {
             vec.y = 0;
         }
-        transform.position += vec * _info.Stat.SPEED * Time.deltaTime;
+        transform.position += vec * _info.StatSo.SPEED * Time.deltaTime;
 
 
 
@@ -66,17 +66,17 @@ public class PlayerMovement : MonoBehaviour
             moveUpTime -= Time.deltaTime;
 
             if (Mathf.Abs(vec.x) > 0.1f)
-                vec.x = Mathf.Abs(vec.x) - (_info.Stat.SPEED * Time.deltaTime);
+                vec.x = Mathf.Abs(vec.x) - (_info.StatSo.SPEED * Time.deltaTime);
             else
                 vec.x = 0;
 
             if (Mathf.Abs(vec.y) > -_gravity)
-                vec.y = Mathf.Abs(vec.y) - (_info.Stat.SPEED * Time.deltaTime);
+                vec.y = Mathf.Abs(vec.y) - (_info.StatSo.SPEED * Time.deltaTime);
             else
                 vec.y = -9.8f;
 
             if (Mathf.Abs(vec.z) > 0.1f)
-                vec.z = Mathf.Abs(vec.z) - (_info.Stat.SPEED * Time.deltaTime);
+                vec.z = Mathf.Abs(vec.z) - (_info.StatSo.SPEED * Time.deltaTime);
             else
                 vec.z = 0;
 
@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
             _input._fsm.ChangeState(FSMState.Run);
         }
 
-        moveUpTime += Time.deltaTime * 4;
+        moveUpTime += Time.deltaTime * .5f;
         if (moveUpTime > 1f)
         {
             moveUpTime = 1;
@@ -110,9 +110,10 @@ public class PlayerMovement : MonoBehaviour
             vec += Cam.transform.right * moveUpTime;
         else if (dir.x <= -0.7)
             vec += -Cam.transform.right * moveUpTime;
+        vec.Normalize();
 
         Quaternion t = Quaternion.LookRotation(new Vector3(vec.x, 0, vec.z));
-        transform.rotation = Quaternion.Lerp(transform.rotation, t, Time.deltaTime * _info.Stat.SPEED);
+        transform.rotation = Quaternion.Lerp(transform.rotation, t, Time.deltaTime * _info.StatSo.SPEED);
 
         //print(dir);
 

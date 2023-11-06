@@ -56,19 +56,19 @@ public class EnemyWeaponStance : MonoBehaviour
 
     public void ChangeColliderCase(AttackEnum attackEnum)
     {
-        if (IsAttacking())//ÇöÀç ½ÇÇàÁßÀÎ¾ê°¡ °ø°İ ´Ù ¾È³¡³²
-            return;//±Ùµ¥ ¾îÂ÷ÇÇ idleÀÌ³ª runÀÏ¶§ ÇØÁÖ´Ï±î ¾øµµµµ µÇÁö ¾Ê³ª...?
+        if (IsAttacking())//í˜„ì¬ ì‹¤í–‰ì¤‘ì¸ì–˜ê°€ ê³µê²© ë‹¤ ì•ˆëë‚¨
+            return;//ê·¼ë° ì–´ì°¨í”¼ idleì´ë‚˜ runì¼ë•Œ í•´ì£¼ë‹ˆê¹Œ ì—†ë„ë„ ë˜ì§€ ì•Šë‚˜...?
 
-        currentAttackEnum = attackEnum;//»óÅÂ ¹Ù²Ù°í
-        allColliderCast[currentAttackEnum].Init(enemyInfo, weaponSO.Stat);//¾×¼Ç ³Ö¾îÁà¾ßÁö
-        allColliderCast[currentAttackEnum].transform.SetParent(transform);//ÇÃ·¹ÀÌ¾î´Â ¿Ö Äİ¶óÀÌ´õ ºÎ¸ğ¸¦ ¾øx´ÂÁö ¸ğ¸£°ÚÁö¸¸ À¯ÁöÇØ¾ßµÊ
+        currentAttackEnum = attackEnum;//ìƒíƒœ ë°”ê¾¸ê³ 
+        allColliderCast[currentAttackEnum].Init(enemyInfo, weaponSO.statSo);//ì•¡ì…˜ ë„£ì–´ì¤˜ì•¼ì§€
+        allColliderCast[currentAttackEnum].transform.SetParent(transform);//í”Œë ˆì´ì–´ëŠ” ì™œ ì½œë¼ì´ë” ë¶€ëª¨ë¥¼ ì—†ì—¤ëŠ”ì§€ ëª¨ë¥´ê² ì§€ë§Œ ìœ ì§€í•´ì•¼ë¨
         allColliderCast[currentAttackEnum].Attack(true);
     }
 
     public void ExitAttack()
     {
-        allColliderCast[currentAttackEnum].CastAct = null; //¾ê ¾ÈÁö¿ì¸é Àü °ø°İµµ ÇÇ°İÃ³¸® µÇ°ÚÁö
-        allColliderCast[currentAttackEnum].CheckDic = new(); //¸Â¾Ò´ø ±â·Ï ¾ş¿¡°í
+        allColliderCast[currentAttackEnum].CastAct = null; //ì–˜ ì•ˆì§€ìš°ë©´ ì „ ê³µê²©ë„ í”¼ê²©ì²˜ë¦¬ ë˜ê² ì§€
+        allColliderCast[currentAttackEnum].CheckDic = new(); //ë§ì•˜ë˜ ê¸°ë¡ ì—ì—ê³ 
     }
 
     private void Attack_Create(ColliderCast colliderCast, AttackEnum attackEnum)

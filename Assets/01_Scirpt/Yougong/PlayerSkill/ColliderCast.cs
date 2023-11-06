@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using JetBrains.Annotations;
 using UnityEngine;
 
@@ -10,6 +11,9 @@ public abstract class ColliderCast : PoolAble
     [Header("SkillSO")]
     [SerializeField] SkillSO _skill;
 
+    [SerializeField] private List<ColliderSkillAction> _act = new();
+    public Vector3 originVec;
+    
     public SkillSO SkillSO => _skill;
     
     [Header("Layer")]
@@ -28,8 +32,9 @@ public abstract class ColliderCast : PoolAble
     /// 중복 방지용
     /// </summary>
     [SerializeField] public Dictionary<Collider, bool> CheckDic = new();
-
     
+
+
     /// <summary>
     /// 콜라이더 형에 따라주기 =>
     /// Switch는 가독성이 심각하게 떨어지는거 같고
@@ -40,21 +45,37 @@ public abstract class ColliderCast : PoolAble
 
     public bool IsAttack => isAttack;
 
+    protected virtual void Awake()
+    {
+        originVec = transform.localPosition;
+    }
+
     public override void Reset()
     {
         isAttack = false;
         ColliderEnd = false;
     }
 
-    public void Init(CharacterInfo Player, ObjectStat Weapon)
+    public void Init(CharacterInfo Player, ObjectStatSO Weapon)
     {
         _player = Player;
         _skill.Init(_player, Weapon, this);
+        //transform.localPosition += originVec;
         transform.parent = null;
+        //originVec = transform.position;
+        
+            Debug.Log("Reset try");
+            
+        _act = GetComponentsInChildren<ColliderSkillAction>().ToList();
+        foreach (var a in _act)
+        {
+            a.Reset(this,transform);
+        }
     }
 
     public void Attack(bool b)
     {
+        //Debug.Log(b);
         isAttack = b;
         if (b == false)
         {
@@ -77,6 +98,10 @@ public abstract class ColliderCast : PoolAble
     
     protected void Update()
     {
+        if (ColliderEnd == false)
+        {
+            _skill.SkillUpdate();
+        }
         if (!isAttack)
             return;
 

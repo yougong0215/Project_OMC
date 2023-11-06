@@ -1,10 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "SO/Player/Weapon")]
-public class PlayerWeaponSO : WeaponSO
+public class PlayerWeaponSO : WeaponSO,ISerializationCallbackReceiver
 {
+    [SerializeField] public List<PlayerSkillListSO> _skills = new();
+    
+
     [Header("좌클릭")]
     public PlayerSkillListSO L_Click;
 
@@ -20,5 +24,23 @@ public class PlayerWeaponSO : WeaponSO
     [Header("R 스킬")]
     public PlayerSkillListSO R_Skill;
 
-    
+
+    public void OnBeforeSerialize()
+    {
+        _skills.Clear();
+        if(L_Click != null)
+            _skills.Add(L_Click);
+        if(R_Click != null)
+            _skills.Add(R_Click);
+        if(Q_Skill != null)
+            _skills.Add(Q_Skill);
+        if(E_Skill != null)
+            _skills.Add(E_Skill);
+        if(R_Skill != null)
+            _skills.Add(R_Skill);
+    }
+
+    public void OnAfterDeserialize()
+    {
+    }
 }

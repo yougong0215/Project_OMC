@@ -18,7 +18,7 @@ public class SkillListSO : ScriptableObject,ISerializationCallbackReceiver
         for (int i = 0; i < Attacks.Count; i++)
         {
             ColliderCast obj = Instantiate(Attacks[i], tls);
-            obj.Init(_char, _currentWeapon.Stat);
+            obj.Init(_char, _currentWeapon.statSo);
             yield return new WaitUntil(() => obj.ReturnColliderEnd());
         }
 

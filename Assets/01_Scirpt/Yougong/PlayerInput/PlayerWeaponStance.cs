@@ -9,6 +9,8 @@ public class PlayerWeaponStance : MonoBehaviour
     protected PlayerInfo _player;
 
     private PlayerInput _input;
+
+    public List<PlayerWeaponSO> weaponList;
     
     public PlayerWeaponSO _currentWeapon;
     
@@ -25,6 +27,42 @@ public class PlayerWeaponStance : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        ///최대 3x5 돌아감
+        for (int i = 0; i < weaponList.Count; i++)
+        {
+            for (int j = 0; j < weaponList[i]._skills.Count; j++)
+            {
+//                Debug.Log(weaponList[i]._skills[j].name);
+                weaponList[i]._skills[j]._currentCooltime -= Time.deltaTime;
+            }
+        }
+    }
+
+    public void SkillInvoke(PlayerSkillListSO _so)
+    {
+            
+        if(_so != null && _CurrentSkill == _so && _input._fsm.CurrentState._myState == FSMState.Attack)
+        {
+            _so.ComboSet();
+            return;
+        }
+            
+        if ( _so == null || (_CurrentSkill != null && _CurrentSkill.IsCanPlay() == false))
+            return;
+
+        _CurrentSkill = _so;
+            
+        Debug.Log("좌클릭");
+        //Debug.Log(s);
+        if (_so.IsRunning == false || (int)_input._fsm.CurrentState._myState <= 10)
+        {
+            StartCoroutine(_so.SkillAct(this,_player, _currentWeapon, transform));
+            //StartCoroutine(_so.R_Click.UpdateLayer());
+        }
+    }
+
     public void ChangeStance(PlayerWeaponSO _so)
     {
          _input.SkillInputReset();
@@ -34,96 +72,29 @@ public class PlayerWeaponStance : MonoBehaviour
         
         _input.OnLeftClick += () =>
         {
-            PlayerSkillListSO s=  _so.L_Click;
-                _CurrentSkill = s;
-            if (s == null)
-                return;
-            
-            Debug.Log("좌클릭");
-            if (s.IsRunning == false && _input._fsm.CurrentState._myState != FSMState.Attack)
-            {
-                StartCoroutine(s.SkillAct(_player, _currentWeapon, transform));
-                //StartCoroutine(_so.L_Click.UpdateLayer());
-            }
-            else if(_input._fsm.CurrentState._myState == FSMState.Attack)
-            {
-                
-                s.ComboSet();
-            }
-            
+            SkillInvoke(_so.L_Click);
         };
         
         _input.OnRightClick += () =>
         {
-            Debug.Log("우클릭");
-            PlayerSkillListSO s=  _so.R_Click;
-            _CurrentSkill = s;
-            if (s == null)
-                return;
-            if (s.IsRunning ==false&& _input._fsm.CurrentState._myState != FSMState.Attack)
-            {
-                StartCoroutine(s.SkillAct(_player, _currentWeapon, transform));
-                //StartCoroutine(_so.L_Click.UpdateLayer());
-            }
-            else if(_input._fsm.CurrentState._myState == FSMState.Attack)
-            {
-                s.ComboSet();
-            }
+            SkillInvoke(_so.R_Click);
+
         };
         
         _input.Q_Btn += () =>
-        {
-            PlayerSkillListSO s=  _so.Q_Skill;
-            _CurrentSkill = s;
-            if (s == null)
-                return;
-            if (s.IsRunning ==false&& _input._fsm.CurrentState._myState != FSMState.Attack)
-            {
-                Debug.Log("Q클릭");
-                StartCoroutine(s.SkillAct(_player, _currentWeapon, transform));
-                //StartCoroutine(_so.L_Click.UpdateLayer());
-            }
-            else if(_input._fsm.CurrentState._myState == FSMState.Attack)
-            {
-                s.ComboSet();
-            }
+        { 
+            SkillInvoke(_so.Q_Skill);
+
         };
         
         _input.E_Btn += () =>
         {
-            PlayerSkillListSO s=  _so.E_Skill;
-            if (s == null)
-                return;
-            
-            Debug.Log("E클릭");
-            _CurrentSkill = s;
-            if (s.IsRunning ==false&& _input._fsm.CurrentState._myState != FSMState.Attack)
-            {
-                StartCoroutine(s.SkillAct(_player, _currentWeapon, transform));
-                //StartCoroutine(_so.L_Click.UpdateLayer());
-            }
-            else if(_input._fsm.CurrentState._myState == FSMState.Attack)
-            {
-                s.ComboSet();
-            }
+            SkillInvoke(_so.E_Skill);
         };
         
         _input.R_Btn += () =>
         {
-            PlayerSkillListSO s=  _so.R_Skill;
-            if (s == null)
-                return;
-            Debug.Log("R클릭");
-            _CurrentSkill = s;
-            if (s.IsRunning ==false&& _input._fsm.CurrentState._myState != FSMState.Attack)
-            {
-                StartCoroutine(s.SkillAct(_player, _currentWeapon, transform));
-                //StartCoroutine(_so.L_Click.UpdateLayer());
-            }
-            else if(_input._fsm.CurrentState._myState == FSMState.Attack)
-            {
-                s.ComboSet();
-            }
+            SkillInvoke(_so.R_Skill);
         };
     }
     

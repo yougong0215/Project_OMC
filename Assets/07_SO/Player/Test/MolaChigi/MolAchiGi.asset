@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da84e4532a01c840847be600931c232, type: 3}
   m_Name: MolAchiGi
   m_EditorClassIdentifier: 
+  CoolTime: 1
+  _currentCooltime: 5.9604673
   CurrentObject: {fileID: 0}
   Attacks:
   - cols: {fileID: 5875326251886678980, guid: a112568eae91c034d9e5fd3abc0cedf2, type: 3}

@@ -6,8 +6,9 @@ using UnityEngine;
 public class BoxColliderCast : ColliderCast
 {
     private BoxCollider _box;
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         try
         {
             _box = GetComponent<BoxCollider>();

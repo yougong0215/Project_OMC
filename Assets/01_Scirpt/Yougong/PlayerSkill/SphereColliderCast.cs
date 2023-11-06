@@ -7,8 +7,9 @@ public class SphereColliderCast : ColliderCast
 {
 
     private SphereCollider _sphere;
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         try
         {
             _sphere = GetComponent<SphereCollider>();

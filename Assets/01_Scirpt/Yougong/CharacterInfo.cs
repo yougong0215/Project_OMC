@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public abstract class CharacterInfo : MonoBehaviour
 {
@@ -17,19 +18,19 @@ public abstract class CharacterInfo : MonoBehaviour
         _con = GetComponentInChildren<AnimationController>();
     }
     
-    [SerializeField] protected ObjectStat _stat;
+    [FormerlySerializedAs("_stat")] [SerializeField] protected ObjectStatSO statSo;
 
-    public ObjectStat Stat
+    public ObjectStatSO StatSo
     {
         get
         {
-            if (_stat == null)
+            if (statSo == null)
             {
                 Debug.LogError("ChracterStat is Missing");
                 return null;
             }
 
-            return _stat;
+            return statSo;
         }
         protected set
         {
@@ -42,7 +43,7 @@ public abstract class CharacterInfo : MonoBehaviour
     /// </summary>
     public virtual void GetDamage(float _damage)
     {
-        _stat.HP -= _damage;
+        statSo.HP -= _damage;
     }
     
 
