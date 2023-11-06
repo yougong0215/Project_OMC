@@ -4,28 +4,33 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    private Camera cam;
     [SerializeField]
     private float distance = 3f;
     [SerializeField]
     private LayerMask mask;
     private PlayerUI playerUI;
 
+    private Camera cam;
+    public Camera Cam
+    {
+        get
+        {
+            if (cam == null)
+            {
+                cam = Camera.main;
+            }
+            return cam;
+        }
+    }
     private void Awake()
     {
-        cam = FindObjectOfType<Camera>();
         playerUI = GetComponent<PlayerUI>();
     }
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         playerUI.UpdateText(string.Empty);  
-        Ray ray = new Ray(cam.transform.position, cam.transform.forward);
+        Ray ray = new Ray(Cam.transform.position, Cam.transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * distance, Color.blue);
         RaycastHit hitInfo;
         if(Physics.Raycast(ray, out hitInfo, distance, mask))
