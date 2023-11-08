@@ -63,14 +63,14 @@ ModelImporter:
       - time: 0.25762713
         functionName: OnAnimationEvent
         data: 
-        objectReferenceParameter: {instanceID: 0}
+        objectReferenceParameter: {fileID: 11500000, guid: 027fb07379936444f9298626310178a6, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.7559322
         functionName: OnAnimationEnd
         data: 
-        objectReferenceParameter: {instanceID: 0}
+        objectReferenceParameter: {fileID: 11500000, guid: 027fb07379936444f9298626310178a6, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0

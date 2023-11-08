@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2605c45124f368a40a84b36cd40d2188, type: 3}
   m_Name: TestWeapon
   m_EditorClassIdentifier: 
-  Stat: {fileID: 0}
+  Stat: {fileID: 11400000, guid: 25988b977e9f56d4dabdbb774384a7ab, type: 2}
   L_Click: {fileID: 0}
   R_Click: {fileID: 0}
   Q_Skill: {fileID: 11400000, guid: 439ae83104f3e9e4997ba08762dfdc1a, type: 2}

@@ -60,7 +60,6 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
     
     public IEnumerator SkillAct(CharacterInfo _char, WeaponSO _currentWeapon, Transform tls)
     {
-        
         _isRunning = true;
 
         for (currnetNum = 0; currnetNum < Attacks.Count; currnetNum++)
