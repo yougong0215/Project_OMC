@@ -75,5 +75,7 @@ public class EnemyInfo : CharacterInfo
         base.GetDamage(_damage);
         if (statSo.HP <= 0)
             FSM.ChangeState(FSMState.Die);
+        else
+            FSM.ChangeState(FSMState.Hit);
     }
 }

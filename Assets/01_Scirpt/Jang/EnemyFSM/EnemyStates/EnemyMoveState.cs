@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
+using Unity.Profiling;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -32,14 +33,14 @@ public class EnemyMoveState : CommonState
         Ray ray = new Ray(transform.position, dir);
         RaycastHit playerHit;
         bool isPlayer = Physics.Raycast(ray, out playerHit, idleDec, LayerMask.GetMask("Player"));
-
+        
         if (!isPlayer)
         {
             fsm.ChangeState(FSMState.Idle);
         }
         else if (playerHit.distance <= attackDec) 
         {
-            weaponStance.ChangeColliderCase(AttackEnum.THROW);
+            weaponStance.ChangeColliderCase(AttackEnum.SPEED);
         }
 
         UpdateAction?.Invoke();

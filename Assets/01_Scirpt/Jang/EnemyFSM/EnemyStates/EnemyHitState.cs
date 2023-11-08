@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyHitState : CommonState
 {
@@ -13,7 +15,7 @@ public class EnemyHitState : CommonState
 
     public override void UpdateState()
     {
-
+        UpdateAction?.Invoke();
     }
 
     public override void ExitState()
