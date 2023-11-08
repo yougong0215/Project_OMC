@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,9 @@ public class SkillCollider
     [CreateAssetMenu(menuName = "SO/Player/SkillList")]
 public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceiver
 {
+    [Header("Info")] [SerializeField] private float CoolTime = 8f;
+    [SerializeField] public float _currentCooltime = 0;
+    
     private int currnetNum = 0;
     bool ComboInterective = false;
     
@@ -26,7 +30,14 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
     
     
     
+    
+    
     public List<SkillCollider> Attacks = new();
+
+    public bool IsCanPlay()
+    {
+        return _currentCooltime <= 0;
+    }
 
     /// <summary>
     /// 공격 판정이 들어갈때부터 콤보 잇기 가능
@@ -39,11 +50,11 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
         if (CurrentObject.IsAttack == true)
         {
             ComboInterective = true;
-//            Debug.Log("SKILLSYSTEM : 성공!");
+            Debug.Log("SKILLSYSTEM : 성공!");
         }
         else
         {
-//            Debug.Log($"SKILLSYSTEM : 실패! {Attacks[currnetNum].cols.IsAttack}");
+           Debug.Log($"SKILLSYSTEM : 실패! {Attacks[currnetNum].cols.IsAttack}");
         }
     }
 
@@ -58,8 +69,14 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
         Destroy(col.gameObject);
     }
     
-    public IEnumerator SkillAct(CharacterInfo _char, WeaponSO _currentWeapon, Transform tls)
+    public IEnumerator SkillAct(PlayerWeaponStance weapons,CharacterInfo _char, WeaponSO _currentWeapon, Transform tls)
     {
+        _currentCooltime = CoolTime + 3f;
+        Vector3 vec = tls.position;
+        Quaternion rot = tls.rotation;
+        GameObject obj = Instantiate(new GameObject(), tls);
+        obj.transform.parent = null;
+        
         _isRunning = true;
 
         for (currnetNum = 0; currnetNum < Attacks.Count; currnetNum++)
@@ -67,11 +84,14 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
             if (Attacks[currnetNum].comboLive==false || (ComboInterective && Attacks[currnetNum].comboLive))
             {
                 ComboInterective = false;
-                ColliderCast cols = Instantiate(Attacks[currnetNum].cols, tls);
-                CurrentObject = cols;
-                cols.Init(_char, _currentWeapon.Stat);
+                ColliderCast cols = Instantiate(Attacks[currnetNum].cols, obj.transform);
+                //cols.transform.position = vec;
+                //cols.transform.rotation = rot;
                 
-                yield return new WaitUntil(() => cols.ReturnEnd() == true || Attacks[currnetNum].isNotWaiting == true);
+                CurrentObject = cols;
+                cols.Init(_char, _currentWeapon.statSo);
+                
+                yield return new WaitUntil(() => cols.ReturnColliderEnd() == true || Attacks[currnetNum].isNotWaiting == true);
                 if (Attacks[currnetNum].isNotWaiting == false)
                 {
                     Destroy(cols.gameObject);
@@ -92,15 +112,19 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
             }
         }
 //        Debug.Log("빠져나옴");
-
+        Destroy(obj);
         yield return new WaitUntil(() => _char.AnimCon.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f);
         _isRunning = false;
-        if (_char.FSM.CurrentState._myState != FSMState.Idle) 
-        _char.FSM.ChangeState(FSMState.Idle);
+        if (_char.FSM.CurrentState._myState != FSMState.Run &&
+            _char.FSM.CurrentState._myState != FSMState.Idle &&
+            _char.FSM.CurrentState._myState <= _char.FSM.CurrentState._myState && 
+            weapons._CurrentSkill == this) 
+            _char.FSM.ChangeState(FSMState.Idle);
     }
 
     public void OnBeforeSerialize()
     {
+        _currentCooltime = 0;
         currnetNum = 0;
         _isRunning = false;
         CurrentObject = null;
@@ -108,6 +132,10 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
 
     public void OnAfterDeserialize()
     {
+        _currentCooltime = 0;
+        currnetNum = 0;
+        _isRunning = false;
+        CurrentObject = null;
         //throw new System.NotImplementedException();
     }
 }

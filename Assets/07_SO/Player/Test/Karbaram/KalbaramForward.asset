@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dc19a4b64550c4eafe01bd7bbb056e, type: 3}
+  m_Name: KalbaramForward
+  m_EditorClassIdentifier: 
+  _skillDamage: 0
+  _criticalPercentage: 0
+  _criticalDamage: 0
+  State: 11
+  Clip: {fileID: -7524964340392654364, guid: 7a3a93d3b0914aa4e9363593049e22d1, type: 3}
+  _speed: -10

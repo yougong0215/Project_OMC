@@ -10,7 +10,7 @@ public class EnemyInfo : CharacterInfo
 
     [HideInInspector] public NavMeshAgent agent;
     [HideInInspector] public bool isAttack;
-    [Header("¼Ó°ø ¾øÀ¸¸é ¾È³Ö¾îµµ µÊ")]
+    [Header("ì†ê³µ ì—†ìœ¼ë©´ ì•ˆë„£ì–´ë„ ë¨")]
     [SerializeField] private float dashSpeed;
 
     private Transform playerTrs;
@@ -21,7 +21,7 @@ public class EnemyInfo : CharacterInfo
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-        agentSpeed = Stat.SPEED;
+        agentSpeed = StatSo.SPEED;
     }
 
     private void Update()
@@ -63,7 +63,7 @@ public class EnemyInfo : CharacterInfo
         {
             isDashing = true;
 
-            Debug.Log("´ë½¬");
+            Debug.Log("ëŒ€ì‰¬");
             agent.isStopped = false;
             agent.speed *= dashSpeed;
             agent.SetDestination(playerTrs.position + transform.forward * 2);
@@ -72,12 +72,8 @@ public class EnemyInfo : CharacterInfo
 
     public override void GetDamage(float _damage)
     {
-        Debug.Log("ee");
         base.GetDamage(_damage);
-
-        if (_stat.HP <= 0)
+        if (statSo.HP <= 0)
             FSM.ChangeState(FSMState.Die);
-        else
-            FSM.ChangeState(FSMState.Hit);
     }
 }
