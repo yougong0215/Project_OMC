@@ -27,7 +27,8 @@ public class EffectColliderOut : MonoBehaviour
     {
         if(_dontEffectMove==false)
             return;
-        
+
+        a[0].transform.position = transform.position;
         //Vector3 vec = cols.originVec;
         //vec.y = a[0].transform.position.y;
         //a[0].transform.position = vec;

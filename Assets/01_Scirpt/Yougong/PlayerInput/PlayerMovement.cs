@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private PlayerInput _input;
     private PlayerInfo _info;
+    private CharacterController _char;
 
     private Camera _cam;
     public Camera Cam
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _input = GetComponent<PlayerInput>();
         _info = GetComponent<PlayerInfo>();
+        _char = GetComponent<CharacterController>();
         _input.OnMovement += Movement;
         _cam = Camera.main;
 
@@ -44,15 +46,11 @@ public class PlayerMovement : MonoBehaviour
         //Debug.LogWarning("여서 FSM Move 변경");
 
 
-        if (!Physics.Raycast(transform.position, Vector3.down, 1.7f, _ground))
+
         {
-            vec.y = _gravity / 5 * _gravityScale;
+            vec.y = _gravity / _info.StatSo.SPEED * _gravityScale;
         }
-        else
-        {
-            vec.y = 0;
-        }
-        transform.position += vec * _info.StatSo.SPEED * Time.deltaTime;
+        _char.Move( vec * _info.StatSo.SPEED * Time.deltaTime);
 
 
 

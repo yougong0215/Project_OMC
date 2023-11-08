@@ -50,7 +50,7 @@ public abstract class CharacterInfo : MonoBehaviour
     /// </summary>
     public virtual void GetDamage(float _damage)
     {
-        statSo.HP -= _damage;
+        statSo.HP -= (int)_damage;
     }
     
 
