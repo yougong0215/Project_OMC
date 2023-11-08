@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Teleporter : MonoBehaviour
+public class Teleporter : Interactable
 {
     [Header("이동할 씬")] public Object scene;
     [Header("스폰 이름")] public string spawnName;
     [Header("이동 딜레이")] public int delay;
-
+    private Teleportable player;
     private FadeInOut fade;
 
     private void Awake()
@@ -18,8 +18,11 @@ public class Teleporter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Teleportable player = other.GetComponent<Teleportable>();
+        player = other.GetComponent<Teleportable>();
+    }
 
+    protected override void Interact()
+    {
         if (player != null)
         {
             OnEnter(player);
