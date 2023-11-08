@@ -16,7 +16,7 @@ public enum FSMState
     Hit = 12,
     NuckDown =13,
     Die = 14,
-    WakeUP = 15
+    WakeUP = 15,
 }
 
 
@@ -50,17 +50,25 @@ public class FSM : MonoBehaviour
 
     public void AddState(FSMState state, CommonState stateObject)
     {
+        if (state == FSMState.Any)
+            return;
+        
         stateMap[state] = stateObject;
         Debug.Log(stateMap[state]);
     }
 
     public void AddAction(FSMState state, CommonAction action)
     {
+        if (state == FSMState.Any)
+            return;
+        
         Instantiate(action, stateMap[state].transform);
     }
 
     public void SetInitialState(FSMState initialState)
     {
+        
+        
         if (stateMap.TryGetValue(initialState, out CommonState stateObject))
         {
             currentState = stateObject;
@@ -80,6 +88,11 @@ public class FSM : MonoBehaviour
 
     public void ChangeState(FSMState newState)
     {
+        if (newState == FSMState.Any)
+        {
+            Debug.Log($"New State Is {newState}");
+            return;
+        }
         if (currentState != null)
         {
             currentState.ExitState();

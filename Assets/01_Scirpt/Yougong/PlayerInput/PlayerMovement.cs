@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Movement(Vector2 dir)
     {
-//        Debug.LogWarning("여서 FSM Move 변경");
+        //Debug.LogWarning("여서 FSM Move 변경");
 
 
         if (!Physics.Raycast(transform.position, Vector3.down, 1.7f, _ground))
@@ -102,14 +102,14 @@ public class PlayerMovement : MonoBehaviour
 
         vec = Vector3.zero;
         if (dir.y >= 0.7)
-            vec += Cam.transform.forward * moveUpTime;
+            vec += Cam.transform.forward.normalized * moveUpTime;
         else if (dir.y <= -0.7)
-            vec += -Cam.transform.forward * moveUpTime;
+            vec += -Cam.transform.forward.normalized * moveUpTime;
 
         if (dir.x >= 0.7)
-            vec += Cam.transform.right * moveUpTime;
+            vec += Cam.transform.right.normalized * moveUpTime;
         else if (dir.x <= -0.7)
-            vec += -Cam.transform.right * moveUpTime;
+            vec += -Cam.transform.right.normalized * moveUpTime;
         vec.Normalize();
 
         Quaternion t = Quaternion.LookRotation(new Vector3(vec.x, 0, vec.z));

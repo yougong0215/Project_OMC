@@ -20,7 +20,7 @@ public class PowerAttackSO : EnemySkillSO
         return base.DamageReturn() * increaseDmg;
     }
 
-    public override void SKillInvoke(Collider cols)
+    public override void SKillInvoke(Collider cols, bool Damaged =true)
     {
         base.SKillInvoke(cols);
     }

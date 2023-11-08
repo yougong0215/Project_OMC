@@ -140,14 +140,18 @@ public class CameraCollision : MonoBehaviour
         _body.CameraDistance = _camDistance;
 
 
-        transform.localEulerAngles = new Vector3(_originrayX, _originrayY, 0);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-
-        _originrayY += Input.GetAxis("Mouse X") * _sense * L;
+        
+        _originrayY = Input.GetAxis("Mouse X") * _sense * L;
         _originrayX += Input.GetAxisRaw("Mouse Y") * _sense * U;
 
         _originrayX = Mathf.Clamp(_originrayX, _bindCamMin, _bindCamMax);
+
+        float t = transform.localEulerAngles.y + _originrayY;
+            
+        transform.localEulerAngles = new Vector3(_originrayX, t, 0);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
 
         _setPos = false;
     }

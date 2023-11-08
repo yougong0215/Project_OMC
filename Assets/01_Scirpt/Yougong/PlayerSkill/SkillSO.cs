@@ -26,6 +26,7 @@ public class SkillSO : ScriptableObject
         _info = info;
         WeaponStatSo = weapon;
         cols.CastAct += SKillInvoke;
+        cols.OnAnimEvnt += SkillEvent;
 
         if (Clip != null)
         {
@@ -63,6 +64,11 @@ public class SkillSO : ScriptableObject
     {
         
     }
+
+    public virtual void SkillEvent()
+    {
+        
+    }
     /// <summary>
     /// cols의 게임오브잭트  접근 피격시 이벤트 발동
     /// if (cols.TryGetComponent(out CharacterInfo _pl))
@@ -71,7 +77,7 @@ public class SkillSO : ScriptableObject
     ///}
     /// </summary>
     /// <param name="cols"></param>t
-    public virtual void SKillInvoke(Collider cols)
+    public virtual void SKillInvoke(Collider cols, bool Damaged =true)
     {
         Debug.Log("Invoke Active");
         //if (cols.name != "Player")
@@ -85,11 +91,13 @@ public class SkillSO : ScriptableObject
         //
         //}
         
-        if (cols.TryGetComponent(out CharacterInfo _pl))
+        if (cols.TryGetComponent(out CharacterInfo _pl) && Damaged)
         {
             _pl.GetDamage(DamageReturn());
         }
     }
+    
+    
     
     
     

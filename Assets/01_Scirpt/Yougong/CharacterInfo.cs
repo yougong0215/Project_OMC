@@ -12,10 +12,17 @@ public abstract class CharacterInfo : MonoBehaviour
     [SerializeField] private AnimationController _con;
 
     public AnimationController AnimCon => _con;
-    private void Awake()
+
+    protected virtual void AwakeInvoke()
+    {
+        
+    }
+    
+    void Awake()
     {
         _fsm = GetComponentInChildren<FSM>();
         _con = GetComponentInChildren<AnimationController>();
+        AwakeInvoke();
     }
     
     [FormerlySerializedAs("_stat")] [SerializeField] protected ObjectStatSO statSo;

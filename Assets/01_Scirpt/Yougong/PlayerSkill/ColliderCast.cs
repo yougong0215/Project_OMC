@@ -19,7 +19,7 @@ public abstract class ColliderCast : PoolAble
     [Header("Layer")]
     public LayerMask _layer;
 
-    public Action<Collider> CastAct;
+    public Action<Collider, bool> CastAct;
     public Action OnAnimEvnt;
 
 
@@ -52,6 +52,8 @@ public abstract class ColliderCast : PoolAble
 
     public override void Reset()
     {
+        CastAct = null;
+        OnAnimEvnt = null;
         isAttack = false;
         ColliderEnd = false;
     }
@@ -115,7 +117,7 @@ public abstract class ColliderCast : PoolAble
             else
                 CheckDic.Add(col, false);
 
-            CastAct?.Invoke(col);
+            CastAct?.Invoke(col, true);
             //Debug.Log($"{col.name} 맞음");
 
         }

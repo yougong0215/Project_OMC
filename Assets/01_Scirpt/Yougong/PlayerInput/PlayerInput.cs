@@ -27,6 +27,8 @@ public class PlayerInput : MonoBehaviour
     public event Action R_Btn;
 
     public event Action Interactive_Btn;
+
+    public Vector2 _input;
     
     private void Awake()
     {
@@ -89,8 +91,14 @@ public class PlayerInput : MonoBehaviour
 
     public void Update()
     {
-        Vector2 inputDir = _inputAction.Player.Movement.ReadValue<Vector2>();
-        OnMovement?.Invoke(inputDir);
+        _input = _inputAction.Player.Movement.ReadValue<Vector2>();
+        OnMovement?.Invoke(_input);
+    }
+
+    public Vector2 InputVector()
+    {
+        return _input;
+        
     }
     
     

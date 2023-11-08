@@ -22,6 +22,7 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
     
     private int currnetNum = 0;
     bool ComboInterective = false;
+    [NonSerialized] public bool NoneCombo = false;
     
     protected bool _isRunning = false;
     public bool IsRunning => _isRunning;
@@ -36,7 +37,15 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
 
     public bool IsCanPlay()
     {
-        return _currentCooltime <= 0;
+        if (_currentCooltime > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        //return _currentCooltime <= 0;
     }
 
     /// <summary>
@@ -71,11 +80,14 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
     
     public IEnumerator SkillAct(PlayerWeaponStance weapons,CharacterInfo _char, WeaponSO _currentWeapon, Transform tls)
     {
-        _currentCooltime = CoolTime + 3f;
+        NoneCombo = false;
+        _currentCooltime = CoolTime + 2f;
         Vector3 vec = tls.position;
         Quaternion rot = tls.rotation;
-        GameObject obj = Instantiate(new GameObject(), tls);
-        obj.transform.parent = null;
+        GameObject obj = new GameObject();
+        obj.transform.position = tls.position;
+        obj.transform.rotation = tls.rotation;
+        //obj.transform.parent = null;
         
         _isRunning = true;
 
@@ -111,10 +123,11 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
                 break;
             }
         }
-//        Debug.Log("빠져나옴");
+        Debug.Log("빠져나옴");
         Destroy(obj);
-        yield return new WaitUntil(() => _char.AnimCon.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f);
         _isRunning = false;
+
+        yield return new WaitUntil(() => _char.AnimCon.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f);
         if (_char.FSM.CurrentState._myState != FSMState.Run &&
             _char.FSM.CurrentState._myState != FSMState.Idle &&
             _char.FSM.CurrentState._myState <= _char.FSM.CurrentState._myState && 
@@ -128,6 +141,7 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
         currnetNum = 0;
         _isRunning = false;
         CurrentObject = null;
+        NoneCombo = false;
     }
 
     public void OnAfterDeserialize()
@@ -136,6 +150,7 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
         currnetNum = 0;
         _isRunning = false;
         CurrentObject = null;
+        NoneCombo = false;
         //throw new System.NotImplementedException();
     }
 }

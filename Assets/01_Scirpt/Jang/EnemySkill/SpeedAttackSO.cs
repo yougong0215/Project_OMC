@@ -22,7 +22,7 @@ public class SpeedAttackSO : EnemySkillSO
         return base.DamageReturn();
     }
 
-    public override void SKillInvoke(Collider cols)
+    public override void SKillInvoke(Collider cols, bool Damaged =true)
     {
         base.SKillInvoke(cols);
     }
