@@ -2131,7 +2131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fsm: {fileID: 0}
   _con: {fileID: 1835948752}
-  statSo: {fileID: 0}
+  statSo: {fileID: 11400000, guid: 25988b977e9f56d4dabdbb774384a7ab, type: 2}
 --- !u!143 &1406241979
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2426,6 +2426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453648e7a77f454b9bc3bc708ad8782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  promptMessage: PRESS G
   scene: {fileID: 102900000, guid: 4f2508376f6dba0439d13f0d69e35fb4, type: 3}
   spawnName: 2
   delay: 1
