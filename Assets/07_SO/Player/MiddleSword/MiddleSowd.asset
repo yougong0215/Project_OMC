@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2605c45124f368a40a84b36cd40d2188, type: 3}
-  m_Name: TestWeapon
+  m_Name: MiddleSowd
   m_EditorClassIdentifier: 
-  statSo: {fileID: 11400000, guid: 25988b977e9f56d4dabdbb774384a7ab, type: 2}
+  statSo: {fileID: 0}
   _skills:
-  - {fileID: 11400000, guid: 439ae83104f3e9e4997ba08762dfdc1a, type: 2}
-  - {fileID: 11400000, guid: e4b43237fc56cb845b2376a24735306c, type: 2}
+  - {fileID: 11400000, guid: b7c2b0618f8eb1345bfca948f85df74c, type: 2}
   L_Click: {fileID: 0}
-  R_Click: {fileID: 0}
-  Q_Skill: {fileID: 11400000, guid: 439ae83104f3e9e4997ba08762dfdc1a, type: 2}
-  E_Skill: {fileID: 11400000, guid: e4b43237fc56cb845b2376a24735306c, type: 2}
+  R_Click: {fileID: 11400000, guid: b7c2b0618f8eb1345bfca948f85df74c, type: 2}
+  Q_Skill: {fileID: 0}
+  E_Skill: {fileID: 0}
   R_Skill: {fileID: 0}

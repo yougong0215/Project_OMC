@@ -31,6 +31,7 @@ public class SkillSO : ScriptableObject
         
         cols.CastAct += SKillInvoke;
         cols.OnAnimEvnt += SkillEvent;
+        cols.OnAnimEnd += SkillEnd;
         _info.AnimCon.Animator.speed = _animSpeed;
 
         if (Clip != null)
@@ -82,6 +83,11 @@ public class SkillSO : ScriptableObject
     }
 
     public virtual void SkillEvent()
+    {
+        
+    }
+
+    public virtual void SkillEnd()
     {
         
     }

@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85dc19a4b64550c4eafe01bd7bbb056e, type: 3}
-  m_Name: LeftDagger2
+  m_Script: {fileID: 11500000, guid: 2afbf37179bdd7642be44845883ef4d7, type: 3}
+  m_Name: Parring
   m_EditorClassIdentifier: 
   _animSpeed: 1
   _skillDamage: 0
   _criticalPercentage: 0
   _criticalDamage: 0
   State: 11
-  Clip: {fileID: -1525226487523588040, guid: a59c8c6d7ca343946bf28a1374111230, type: 3}
-  _speed: 20
+  Clip: {fileID: 8383680703467187579, guid: 21553180442283540a79211785830c02, type: 3}
+  _parringTime: 0.5

@@ -21,6 +21,7 @@ public abstract class ColliderCast : PoolAble
 
     public Action<Collider, bool> CastAct;
     public Action OnAnimEvnt;
+    public Action OnAnimEnd;
 
 
     public CharacterInfo _player;
@@ -54,6 +55,7 @@ public abstract class ColliderCast : PoolAble
     {
         CastAct = null;
         OnAnimEvnt = null;
+        OnAnimEnd = null;
         isAttack = false;
         ColliderEnd = false;
     }
@@ -82,6 +84,7 @@ public abstract class ColliderCast : PoolAble
         if (b == false)
         {
             ColliderEnd = true;
+            OnAnimEnd?.Invoke();
         }
         else
         {
