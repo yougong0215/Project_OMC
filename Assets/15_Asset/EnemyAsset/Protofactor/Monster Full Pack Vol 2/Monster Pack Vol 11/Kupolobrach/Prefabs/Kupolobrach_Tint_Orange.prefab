@@ -1,0 +1,3985 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &42686249779719727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4735119789158494456}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingRearRight_A_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4735119789158494456
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42686249779719727}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00057349715, y: 0.0019091406, z: 0.17819811, w: 0.98399264}
+  m_LocalPosition: {x: -1.8969616, y: -0.0000010681152, z: -0.00000061035155}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 432972049893782509}
+  m_Father: {fileID: 2434980041329925888}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &61385316883920009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3066528087179858018}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackWeakPointLeft_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3066528087179858018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61385316883920009}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.000000117665586, z: -0, w: 1}
+  m_LocalPosition: {x: -0.26719114, y: 0.004152317, z: -0.00000061035155}
+  m_LocalScale: {x: 0.99999994, y: 1.0000002, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1708949187843226396}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &118243409787032180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8661293056331342763}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingRearRight_B_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8661293056331342763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118243409787032180}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000015550193, y: 0.0057888585, z: 0.13057248, w: 0.9914219}
+  m_LocalPosition: {x: -1.8508693, y: 0.0000015258788, z: 0.0000012207031}
+  m_LocalScale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3744040442022606227}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &281722061450685460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5619467448103209533}
+  m_Layer: 0
+  m_Name: Kupolobrach_Throat_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5619467448103209533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281722061450685460}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.09362861, y: 0.70088065, z: -0.70088065, w: -0.09362861}
+  m_LocalPosition: {x: 0.03144104, y: 0.00036340512, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6450933572114004246}
+  m_Father: {fileID: 3127760546168762242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &317341664820199917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3439480847917392224}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingFrontRight_B_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3439480847917392224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317341664820199917}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00018245859, y: 0.013624567, z: 0.12194676, w: 0.99244314}
+  m_LocalPosition: {x: -1.7763684, y: 0.0000012207031, z: 0.0000018310546}
+  m_LocalScale: {x: 0.99999964, y: 1, z: 0.9999997}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3268595983529938163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &342530044883918756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1512782386123938255}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackLeft_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1512782386123938255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342530044883918756}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00034928587, y: 0.013551802, z: 0.028902266, w: 0.9994903}
+  m_LocalPosition: {x: -0.63632905, y: 0.00000010505318, z: 0.000000029504353}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4758183935107169525}
+  - {fileID: 2514357331056920312}
+  m_Father: {fileID: 1799184301640447876}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &395166950471181391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6189306925557999141}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingRearLeft_B_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6189306925557999141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395166950471181391}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0003579302, y: 0.0010231921, z: -0.18610741, w: 0.9825288}
+  m_LocalPosition: {x: -1.8969612, y: 0.0000008116523, z: -0.0000010787336}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3473919052149945588}
+  m_Father: {fileID: 614142347034685846}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &454091507910661496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7339792019507100961}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackWeakPointRight_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7339792019507100961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454091507910661496}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0000002410539, y: -0.000000080474635, z: -0.031281374, w: 0.99951065}
+  m_LocalPosition: {x: -0.26875305, y: -0.01798873, z: -0.00000061035155}
+  m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3817461209857708270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &535213712434972434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7608246674569509046}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingRearLeft_A_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7608246674569509046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535213712434972434}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00056827563, y: 0.0019066908, z: -0.17821261, w: 0.98399}
+  m_LocalPosition: {x: -1.8969612, y: 0.0000008116523, z: -0.0000010787336}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7890339228703297387}
+  m_Father: {fileID: 5492528904612018563}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1096052370314814114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 323737447410612248}
+  - component: {fileID: 5953206386469593698}
+  m_Layer: 0
+  m_Name: Kupolobrach_Tint_Orange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &323737447410612248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096052370314814114}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4496333218321281932}
+  - {fileID: 4972427429557297655}
+  - {fileID: 7575511935409896035}
+  - {fileID: 8215126821699655178}
+  - {fileID: 3742122756276368759}
+  - {fileID: 779471013166860043}
+  - {fileID: 1524026266361744997}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &5953206386469593698
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096052370314814114}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a4f5c7b2b1afe4541803d25ef1be808d, type: 3}
+  m_Controller: {fileID: 9100000, guid: f0363c3e5ee4df047a2afc336f84d54b, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1288755820064478899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4843933356619481593}
+  m_Layer: 0
+  m_Name: Kupolobrach_Throat_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4843933356619481593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288755820064478899}
+  serializedVersion: 2
+  m_LocalRotation: {x: -1.2846757e-10, y: -0.00057484204, z: -0.00000022348321, w: 0.9999998}
+  m_LocalPosition: {x: -0.59999996, y: 0.000000026239013, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8025675616246240258}
+  - {fileID: 1087832527818124307}
+  m_Father: {fileID: 1508549981338147780}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1290028180742517894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5571101685060409780}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmFrontLeft_ClawB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5571101685060409780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290028180742517894}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.98777086, y: 0.15566038, z: 0.008618012, w: -0.0020857984}
+  m_LocalPosition: {x: -3.7290568, y: -0.102903895, z: 0.060390737}
+  m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3442719960512387003}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1298086047349836295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 376574112147951577}
+  m_Layer: 0
+  m_Name: Kupolobrach_ToothFrontRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &376574112147951577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298086047349836295}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.38995937, y: -0.15911654, z: -0.27050453, w: 0.86570257}
+  m_LocalPosition: {x: -0.27567998, y: -0.17099983, z: 0.15183136}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6325522599538395071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1327116936574435056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3501098076467285213}
+  m_Layer: 0
+  m_Name: Kupolobrach_ToothFront
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3501098076467285213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327116936574435056}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.65322673, y: -0.27073023, z: 0.27073026, w: 0.65322673}
+  m_LocalPosition: {x: -0.28670347, y: 0.00000019073485, z: 0.25402495}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6325522599538395071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1638360021770396065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469204836854221571}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmFrontLeft_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &469204836854221571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638360021770396065}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.42513487, y: -0.2961457, z: 0.52298415, w: 0.6767907}
+  m_LocalPosition: {x: -0.092366636, y: -0.5730092, z: -0.63155824}
+  m_LocalScale: {x: 1, y: 1.0000002, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2241248053264145245}
+  m_Father: {fileID: 3127760546168762242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1681167240426406611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1045760612547148463}
+  m_Layer: 0
+  m_Name: Kupolobrach_ThroatWeakPoint_D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1045760612547148463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681167240426406611}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.24162295, y: 0.00000014586381, z: 0}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8025675616246240258}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1705880607467203482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779471013166860043}
+  - component: {fileID: 7801527802020609094}
+  m_Layer: 0
+  m_Name: SK_Kupolobrach_SackRightWeakPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &779471013166860043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705880607467203482}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 323737447410612248}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &7801527802020609094
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705880607467203482}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 76c39094d52b28749be7a4fc1aa35db6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 4
+  m_UpdateWhenOffscreen: 1
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 8640421278065459142, guid: a4f5c7b2b1afe4541803d25ef1be808d, type: 3}
+  m_Bones:
+  - {fileID: 7791050476979390301}
+  - {fileID: 2178703288869269397}
+  - {fileID: 4647866603629598284}
+  - {fileID: 7339792019507100961}
+  - {fileID: 4295110176976927873}
+  - {fileID: 317467820672583684}
+  - {fileID: 8312062761138599485}
+  - {fileID: 6452265508611881359}
+  - {fileID: 8381712228400336787}
+  - {fileID: 8914441292068256262}
+  - {fileID: 1682976098627634531}
+  - {fileID: 6303157614643798614}
+  - {fileID: 3835641033431377439}
+  - {fileID: 1517530325357097312}
+  - {fileID: 7511410997844825159}
+  - {fileID: 805182567104931762}
+  - {fileID: 75345749206517538}
+  - {fileID: 7847406206976455802}
+  - {fileID: 1626749214237363381}
+  - {fileID: 8672702267134929704}
+  - {fileID: 5571101685060409780}
+  - {fileID: 3442719960512387003}
+  - {fileID: 686309817155591520}
+  - {fileID: 6127942065526022533}
+  - {fileID: 5417849051915089777}
+  - {fileID: 889778218054201251}
+  - {fileID: 5564292859032528564}
+  - {fileID: 432972049893782509}
+  - {fileID: 4735119789158494456}
+  - {fileID: 2434980041329925888}
+  - {fileID: 3439480847917392224}
+  - {fileID: 4511745436440441645}
+  - {fileID: 2858566102182720406}
+  - {fileID: 4970884672888408051}
+  - {fileID: 7805024946417576200}
+  - {fileID: 5361120717581982617}
+  - {fileID: 3268595983529938163}
+  - {fileID: 3817461209857708270}
+  - {fileID: 8661293056331342763}
+  - {fileID: 7353189700195406945}
+  - {fileID: 3744040442022606227}
+  - {fileID: 5619467448103209533}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 7353189700195406945}
+  m_AABB:
+    m_Center: {x: -1.4644251, y: 0.43935573, z: 0.029624358}
+    m_Extent: {x: 0.95839554, y: 0.77652025, z: 0.49021345}
+  m_DirtyAABB: 0
+--- !u!1 &1848958883547157269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2481831984453171187}
+  m_Layer: 0
+  m_Name: Kupolobrach_ToothLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2481831984453171187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848958883547157269}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0060105408, y: 0.01906271, z: 0.30064574, w: 0.95352644}
+  m_LocalPosition: {x: -0.28195366, y: 0.23980176, z: -0.032856446}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6325522599538395071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1949981623432469732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1669059991438535077}
+  m_Layer: 0
+  m_Name: Kupolobrach_Spine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1669059991438535077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949981623432469732}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: -0.2091704, w: 0.9778792}
+  m_LocalPosition: {x: -1.3375844, y: 0.0000010280311, z: -6.0628896e-10}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6188695999363182136}
+  - {fileID: 3204401893422758140}
+  - {fileID: 5361120717581982617}
+  - {fileID: 2858566102182720406}
+  - {fileID: 5492528904612018563}
+  - {fileID: 614142347034685846}
+  - {fileID: 2434980041329925888}
+  - {fileID: 4511745436440441645}
+  m_Father: {fileID: 3127760546168762242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1960647716891050497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7003476145045123308}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingFrontLeft_B_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7003476145045123308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960647716891050497}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0005792809, y: 0.0019169647, z: -0.17756996, w: 0.9841062}
+  m_LocalPosition: {x: -1.8969612, y: 0.0000008116523, z: -0.0000010787336}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2204706315175983445}
+  m_Father: {fileID: 3204401893422758140}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2008712086518931868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8312062761138599485}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmFrontRight_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8312062761138599485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008712086518931868}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00010996957, y: -0.0013752128, z: -0.31254327, w: 0.94990253}
+  m_LocalPosition: {x: -2.4469967, y: 0, z: -0.007534866}
+  m_LocalScale: {x: 1.0000002, y: 0.99999964, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6452265508611881359}
+  m_Father: {fileID: 317467820672583684}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2075993734063600483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2800029376267934542}
+  m_Layer: 0
+  m_Name: Kupolobrach_ToothFrontLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2800029376267934542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075993734063600483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.38995925, y: -0.15911663, z: 0.27050442, w: 0.8657027}
+  m_LocalPosition: {x: -0.27568015, y: 0.17119972, z: 0.15183136}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6325522599538395071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2287222692474747818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3204401893422758140}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingFrontLeft_B_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3204401893422758140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287222692474747818}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.8277547, y: -0.01174774, z: -0.15470704, w: 0.53921247}
+  m_LocalPosition: {x: -1.3977543, y: -0.28644913, z: -0.6586084}
+  m_LocalScale: {x: 1, y: 0.9999998, z: 0.9999998}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7003476145045123308}
+  m_Father: {fileID: 1669059991438535077}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2323536842607846558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6452265508611881359}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmFrontRight_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6452265508611881359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2323536842607846558}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00000020045728, y: -0.00000010468986, z: -0.53435975, w: 0.84525716}
+  m_LocalPosition: {x: -2.1546466, y: 0, z: -0.00000064849854}
+  m_LocalScale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8381712228400336787}
+  - {fileID: 8914441292068256262}
+  m_Father: {fileID: 8312062761138599485}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2532045196957541206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2344941296582431028}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerRight_6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2344941296582431028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532045196957541206}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.04278902, y: -0.035959188, z: 0.1888744, w: 0.9804094}
+  m_LocalPosition: {x: -0.2743137, y: 0.0000010681152, z: -0.00000061035155}
+  m_LocalScale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1471208505877161720}
+  m_Father: {fileID: 4411829155465742175}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2578577376441718992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2434980041329925888}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingRearRight_A_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2434980041329925888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2578577376441718992}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7983728, y: 0.2284633, z: 0.0077813286, w: 0.557086}
+  m_LocalPosition: {x: -1.4000442, y: 0.3060547, z: 0.56100035}
+  m_LocalScale: {x: 1, y: 0.9999998, z: 0.9999998}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4735119789158494456}
+  m_Father: {fileID: 1669059991438535077}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2623762561281270270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7890339228703297387}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingRearLeft_A_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7890339228703297387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623762561281270270}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000092698785, y: 0.0137418015, z: -0.1325293, w: 0.99108386}
+  m_LocalPosition: {x: -1.7763674, y: -0.00000088959916, z: 0.0000012195902}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.99999976}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7608246674569509046}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2632681058131231107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2514357331056920312}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackWeakPointLeft_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2514357331056920312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2632681058131231107}
+  serializedVersion: 2
+  m_LocalRotation: {x: 2.1514811e-10, y: -0.0000001215184, z: 0.0017704954, w: 0.99999845}
+  m_LocalPosition: {x: -0.00000015258789, y: 0.00000048359607, z: 0.00000061035155}
+  m_LocalScale: {x: 1.0000002, y: 1.0000004, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1512782386123938255}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2661410728976213986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3442719960512387003}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmFrontLeft_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3442719960512387003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661410728976213986}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000016115706, y: -0.000000014594383, z: 0.5343255, w: 0.8452788}
+  m_LocalPosition: {x: -2.1546454, y: 0, z: 0.000000038146972}
+  m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 686309817155591520}
+  - {fileID: 5571101685060409780}
+  m_Father: {fileID: 2241248053264145245}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2790536186741093455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9145110912933346238}
+  m_Layer: 0
+  m_Name: Kupolobrach_ToothBackLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9145110912933346238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2790536186741093455}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.32942468, y: 0.23372808, z: 0.091962665, w: 0.91016126}
+  m_LocalPosition: {x: -0.283964, y: 0.16234404, z: -0.18395782}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6325522599538395071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2845695939399431229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5492528904612018563}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingRearLeft_A_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5492528904612018563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2845695939399431229}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5571003, y: -0.007819561, z: -0.22845416, w: 0.7983651}
+  m_LocalPosition: {x: -1.4000446, y: 0.30605492, z: -0.56083983}
+  m_LocalScale: {x: 1, y: 0.99999976, z: 0.9999998}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7608246674569509046}
+  m_Father: {fileID: 1669059991438535077}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2919016505593059636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1799184301640447876}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackLeft_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1799184301640447876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2919016505593059636}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00045499584, y: 0.00045731943, z: 0.032551046, w: 0.9994699}
+  m_LocalPosition: {x: -0.5406693, y: 0.000000028610229, z: 0.000000017779337}
+  m_LocalScale: {x: 0.9999997, y: 0.9999997, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1512782386123938255}
+  - {fileID: 6866296041208089472}
+  m_Father: {fileID: 1708949187843226396}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3009936452567184311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8914441292068256262}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmFrontRight_ClawB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8914441292068256262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3009936452567184311}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.9846297, y: -0.1744297, z: 0.008655885, w: 0.0019215026}
+  m_LocalPosition: {x: -3.72911, y: 0.10300239, z: 0.06048355}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.9999997}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6452265508611881359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3016732473593488220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8939463576633851500}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingFrontLeft_A_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8939463576633851500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016732473593488220}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00023807584, y: -0.00048568845, z: -0.18895936, w: 0.9819848}
+  m_LocalPosition: {x: -2.0757635, y: 0.00000088280996, z: -0.0000011769149}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6640957182250623014}
+  m_Father: {fileID: 6188695999363182136}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3056917720413445555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6188695999363182136}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingFrontLeft_A_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6188695999363182136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056917720413445555}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.98007745, y: 0.019584302, z: 0.050765347, w: -0.1910173}
+  m_LocalPosition: {x: -1.4111233, y: -0.5921792, z: -0.19537598}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8939463576633851500}
+  m_Father: {fileID: 1669059991438535077}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3061730406245210520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2097277183826715070}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerRight_8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2097277183826715070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3061730406245210520}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.007410854, y: -0.004534364, z: 0.08994882, w: 0.9959085}
+  m_LocalPosition: {x: -0.38301948, y: -0.00000045776366, z: -0.00000061035155}
+  m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1471208505877161720}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3343121404381237870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2091108052521502200}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerLeft_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2091108052521502200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3343121404381237870}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.044659533, y: -0.040177923, z: 0.85332686, w: 0.517904}
+  m_LocalPosition: {x: -0.562888, y: -0.9481222, z: -0.30815613}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2645321496351600648}
+  m_Father: {fileID: 3127760546168762242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3399394627318160651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2241248053264145245}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmFrontLeft_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2241248053264145245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3399394627318160651}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000110287765, y: -0.0013751658, z: 0.31251487, w: 0.9499119}
+  m_LocalPosition: {x: -2.4469974, y: 0.00000030517577, z: -0.007535629}
+  m_LocalScale: {x: 1, y: 0.99999976, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3442719960512387003}
+  m_Father: {fileID: 469204836854221571}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3439515473882927702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7581029764824591689}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackLeft_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7581029764824591689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3439515473882927702}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.3285021, y: 0.6318345, z: -0.6250631, w: -0.31963682}
+  m_LocalPosition: {x: -1.170474, y: 0.004933517, z: -0.6878534}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4232328910893711599}
+  m_Father: {fileID: 3127760546168762242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3469808980042115382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3170494665185692233}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerLeft_8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3170494665185692233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3469808980042115382}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0075094365, y: -0.0045521525, z: -0.08995606, w: 0.99590707}
+  m_LocalPosition: {x: -0.38301933, y: 0.00000006526757, z: -0.0000000014156478}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2149966405035198509}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3482436392110909858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 686309817155591520}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmFrontLeft_ClawA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &686309817155591520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3482436392110909858}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.952943, y: 0.3030198, z: 0.008834148, w: -0.0007606491}
+  m_LocalPosition: {x: -3.8080058, y: 0.24158965, z: 0.06103138}
+  m_LocalScale: {x: 0.9999999, y: 0.9999997, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3442719960512387003}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3689365159795737360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5417849051915089777}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackWeakPointRight_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5417849051915089777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3689365159795737360}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00000007779651, y: -0.00000008554768, z: -0.0017704954, w: 0.99999845}
+  m_LocalPosition: {x: 0.0001687622, y: 0.0003001662, z: 0}
+  m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 889778218054201251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3825471298045487109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4465377518663947361}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerLeft_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4465377518663947361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3825471298045487109}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0083934935, y: -0.027998745, z: 0.14992961, w: 0.9882645}
+  m_LocalPosition: {x: -0.2366034, y: 0.000000012478776, z: -8.5852775e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 436812219416061457}
+  m_Father: {fileID: 2645321496351600648}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3873037813714993491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471208505877161720}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerRight_7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1471208505877161720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873037813714993491}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.056742426, y: -0.037033495, z: 0.18017907, w: 0.98129725}
+  m_LocalPosition: {x: -0.26618728, y: 0.00000045776366, z: 0.00000061035155}
+  m_LocalScale: {x: 1.0000004, y: 0.9999998, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2097277183826715070}
+  m_Father: {fileID: 2344941296582431028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3961555545702004442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5845373141593496504}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerRight_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5845373141593496504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3961555545702004442}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.008376245, y: -0.028026627, z: -0.14992611, w: 0.9882644}
+  m_LocalPosition: {x: -0.23660381, y: 0.00000061035155, z: -0.00000061035155}
+  m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6744762068173468961}
+  m_Father: {fileID: 4429641027326751729}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4056610289159474840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5971513092264946604}
+  m_Layer: 0
+  m_Name: Kupolobrach_ToothBackRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5971513092264946604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4056610289159474840}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.3294233, y: 0.23372808, z: -0.09196274, w: 0.91016173}
+  m_LocalPosition: {x: -0.28396404, y: -0.16199984, z: -0.18395782}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6325522599538395071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4121680337581041030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8672702267134929704}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmRearRight_ClawB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8672702267134929704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4121680337581041030}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.98410934, y: 0.17734228, z: 0.008661785, w: -0.0018962808}
+  m_LocalPosition: {x: -3.72911, y: -0.103001095, z: 0.060484502}
+  m_LocalScale: {x: 0.99999964, y: 1, z: 0.9999998}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7847406206976455802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4194934025014900886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5564292859032528564}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackRightSpitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5564292859032528564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4194934025014900886}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0050508673, y: 0.0424811, z: 0.046885416, w: 0.9979838}
+  m_LocalPosition: {x: -0.40376508, y: 0.00000059718235, z: 0.00000061035155}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 889778218054201251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4259505764889987501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2149966405035198509}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerLeft_7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2149966405035198509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4259505764889987501}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.056668572, y: -0.037058026, z: -0.18016402, w: 0.9813034}
+  m_LocalPosition: {x: -0.26618704, y: -0.000000022940691, z: 0.0000000094535615}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3170494665185692233}
+  m_Father: {fileID: 2537502592350667695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4284792988806823688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4496333218321281932}
+  m_Layer: 0
+  m_Name: root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4496333218321281932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284792988806823688}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3127760546168762242}
+  m_Father: {fileID: 323737447410612248}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4362429393986330924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4232328910893711599}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackLeft_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4232328910893711599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362429393986330924}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0012109502, y: -0.010538459, z: 0.10646568, w: 0.9942598}
+  m_LocalPosition: {x: -0.39157227, y: 0.000032958982, z: 0.0000000018660649}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1708949187843226396}
+  m_Father: {fileID: 7581029764824591689}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4574357976629372779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3127760546168762242}
+  m_Layer: 0
+  m_Name: Kupolobrach_Pelvis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3127760546168762242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4574357976629372779}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5408102, y: -0.45554844, z: 0.54081017, w: -0.45554838}
+  m_LocalPosition: {x: -7.189024e-11, y: 4.1474595, z: -0.031799495}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 469204836854221571}
+  - {fileID: 317467820672583684}
+  - {fileID: 1682976098627634531}
+  - {fileID: 805182567104931762}
+  - {fileID: 2091108052521502200}
+  - {fileID: 8073050515446224744}
+  - {fileID: 7581029764824591689}
+  - {fileID: 7353189700195406945}
+  - {fileID: 1669059991438535077}
+  - {fileID: 5619467448103209533}
+  m_Father: {fileID: 4496333218321281932}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4757519226167413058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3817461209857708270}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackRight_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3817461209857708270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757519226167413058}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00043926926, y: 0.0004653965, z: -0.03255464, w: 0.99946976}
+  m_LocalPosition: {x: -0.5406689, y: -0.00000035620783, z: 0.00000061035155}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 889778218054201251}
+  - {fileID: 7339792019507100961}
+  m_Father: {fileID: 4647866603629598284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4768050975142743650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6325522599538395071}
+  m_Layer: 0
+  m_Name: Kupolobrach_Mouth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6325522599538395071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4768050975142743650}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000023665409, y: 0.12143654, z: 0.000000028952728, w: 0.9925992}
+  m_LocalPosition: {x: -0.5, y: -1.0652173e-13, z: 1.8189894e-14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3404781793544083681}
+  - {fileID: 9145110912933346238}
+  - {fileID: 5971513092264946604}
+  - {fileID: 3501098076467285213}
+  - {fileID: 2800029376267934542}
+  - {fileID: 376574112147951577}
+  - {fileID: 2481831984453171187}
+  - {fileID: 5194830173546020724}
+  m_Father: {fileID: 8025675616246240258}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5037851043195347094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7805024946417576200}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingFrontRight_A_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7805024946417576200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5037851043195347094}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00014457505, y: -0.000490222, z: 0.18896209, w: 0.98198426}
+  m_LocalPosition: {x: -2.075765, y: -0.00000045776366, z: -0.0000018310546}
+  m_LocalScale: {x: 1.0000004, y: 1, z: 1.0000002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4970884672888408051}
+  m_Father: {fileID: 5361120717581982617}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5151482695563162354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4647866603629598284}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackRight_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4647866603629598284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5151482695563162354}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0006574021, y: -0.0052173496, z: -0.08031083, w: 0.996756}
+  m_LocalPosition: {x: -0.33821213, y: -0.00006690587, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3817461209857708270}
+  - {fileID: 7791050476979390301}
+  m_Father: {fileID: 2178703288869269397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5152547399080298785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3742122756276368759}
+  - component: {fileID: 4040448341600523683}
+  m_Layer: 0
+  m_Name: SK_Kupolobrach_SackLeftWeakPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3742122756276368759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152547399080298785}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 323737447410612248}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &4040448341600523683
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152547399080298785}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 76c39094d52b28749be7a4fc1aa35db6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 4
+  m_UpdateWhenOffscreen: 1
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: -5635347340229937314, guid: a4f5c7b2b1afe4541803d25ef1be808d, type: 3}
+  m_Bones:
+  - {fileID: 3066528087179858018}
+  - {fileID: 4232328910893711599}
+  - {fileID: 1708949187843226396}
+  - {fileID: 6866296041208089472}
+  - {fileID: 5571101685060409780}
+  - {fileID: 317467820672583684}
+  - {fileID: 8312062761138599485}
+  - {fileID: 6452265508611881359}
+  - {fileID: 8381712228400336787}
+  - {fileID: 8914441292068256262}
+  - {fileID: 1682976098627634531}
+  - {fileID: 6303157614643798614}
+  - {fileID: 3835641033431377439}
+  - {fileID: 1517530325357097312}
+  - {fileID: 7511410997844825159}
+  - {fileID: 805182567104931762}
+  - {fileID: 75345749206517538}
+  - {fileID: 7847406206976455802}
+  - {fileID: 1626749214237363381}
+  - {fileID: 8672702267134929704}
+  - {fileID: 4295110176976927873}
+  - {fileID: 686309817155591520}
+  - {fileID: 3442719960512387003}
+  - {fileID: 6127942065526022533}
+  - {fileID: 2241248053264145245}
+  - {fileID: 2514357331056920312}
+  - {fileID: 4758183935107169525}
+  - {fileID: 1512782386123938255}
+  - {fileID: 5619467448103209533}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 4232328910893711599}
+  m_AABB:
+    m_Center: {x: -1.1283406, y: -0.29892206, z: 0.02962391}
+    m_Extent: {x: 0.9460003, y: 0.7441193, z: 0.4902137}
+  m_DirtyAABB: 0
+--- !u!1 &5185763262776880874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6303157614643798614}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmRearLeft_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6303157614643798614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5185763262776880874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00011207896, y: -0.0013534706, z: -0.33283493, w: 0.9429841}
+  m_LocalPosition: {x: -2.446997, y: 0, z: -0.0075352476}
+  m_LocalScale: {x: 1.0000004, y: 0.99999994, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3835641033431377439}
+  m_Father: {fileID: 1682976098627634531}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5215624355166051983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6640957182250623014}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingFrontLeft_A_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6640957182250623014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5215624355166051983}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00007056155, y: 0.008779811, z: -0.055699736, w: 0.998409}
+  m_LocalPosition: {x: -1.7382693, y: -0.0000007510168, z: 0.000001233049}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.99999976}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8939463576633851500}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5247598350004194893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2178703288869269397}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackRight_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2178703288869269397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247598350004194893}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0011980827, y: -0.01053577, z: -0.10646706, w: 0.9942597}
+  m_LocalPosition: {x: -0.39157248, y: -0.00003334704, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4647866603629598284}
+  m_Father: {fileID: 7353189700195406945}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5289309821911018756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2858566102182720406}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingFrontRight_B_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2858566102182720406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5289309821911018756}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5392528, y: 0.1547301, z: 0.011737084, w: 0.82772416}
+  m_LocalPosition: {x: -1.3977541, y: -0.28644946, z: 0.6590002}
+  m_LocalScale: {x: 1.0000001, y: 0.99999976, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3268595983529938163}
+  m_Father: {fileID: 1669059991438535077}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5379617411160405842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3744040442022606227}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingRearRight_B_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3744040442022606227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379617411160405842}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0002785631, y: 0.0010260926, z: 0.18610908, w: 0.98252857}
+  m_LocalPosition: {x: -1.8969618, y: -0.0000018310546, z: -0.0000018310546}
+  m_LocalScale: {x: 0.9999998, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8661293056331342763}
+  m_Father: {fileID: 4511745436440441645}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5435091005512494073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2537502592350667695}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerLeft_6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2537502592350667695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5435091005512494073}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.042835604, y: -0.03601765, z: -0.18887338, w: 0.9804054}
+  m_LocalPosition: {x: -0.27431363, y: -0.0000006486499, z: -0.000000012531311}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2149966405035198509}
+  m_Father: {fileID: 1064825965353224750}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5463059076707681830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7353189700195406945}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackRight_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7353189700195406945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5463059076707681830}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.3196332, y: -0.6250719, z: 0.6318239, w: -0.32850924}
+  m_LocalPosition: {x: -1.170474, y: 0.004933355, z: 0.68799984}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2178703288869269397}
+  m_Father: {fileID: 3127760546168762242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5489948170051272986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6866296041208089472}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackWeakPointLeft_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6866296041208089472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5489948170051272986}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0000000046251643, y: -0.00000014778445, z: 0.031281374, w: 0.99951065}
+  m_LocalPosition: {x: -0.26864287, y: 0.01782731, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000005, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1799184301640447876}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5538104098037955438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1064825965353224750}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerLeft_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1064825965353224750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538104098037955438}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.030121995, y: 0.0060349246, z: -0.21170919, w: 0.9768498}
+  m_LocalPosition: {x: -0.29340655, y: 0.00000056251986, z: 0.000000012153773}
+  m_LocalScale: {x: 1.0000004, y: 1.0000004, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2537502592350667695}
+  m_Father: {fileID: 436812219416061457}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5639440394863905187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4511745436440441645}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingRearRight_B_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4511745436440441645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5639440394863905187}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.9430724, y: -0.2693736, z: -0.002730537, w: -0.1950511}
+  m_LocalPosition: {x: -1.4038601, y: 0.6884745, z: 0.28900024}
+  m_LocalScale: {x: 0.99999994, y: 0.99999976, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3744040442022606227}
+  m_Father: {fileID: 1669059991438535077}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5757500554970121881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2645321496351600648}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerLeft_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2645321496351600648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5757500554970121881}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0033302759, y: -0.011678012, z: 0.16899616, w: 0.98554194}
+  m_LocalPosition: {x: -0.23879485, y: 0.00000087103336, z: -0.000000019147047}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4465377518663947361}
+  m_Father: {fileID: 2091108052521502200}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5821210464736504508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4970884672888408051}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingFrontRight_A_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4970884672888408051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821210464736504508}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000027636832, y: 0.008771685, z: 0.05570008, w: 0.99840903}
+  m_LocalPosition: {x: -1.7382673, y: -0.00000061035155, z: 0.0000024414062}
+  m_LocalScale: {x: 0.9999997, y: 0.99999946, z: 0.99999976}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7805024946417576200}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6089600714335608640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3404781793544083681}
+  m_Layer: 0
+  m_Name: Kupolobrach_ToothBack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3404781793544083681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6089600714335608640}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6625998, y: 0.24690367, z: -0.2469036, w: 0.6626}
+  m_LocalPosition: {x: -0.3005286, y: 0.00000019073485, z: -0.28178954}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6325522599538395071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6090325111451454953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 317467820672583684}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmFrontRight_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &317467820672583684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090325111451454953}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6768111, y: 0.52299297, z: -0.2961031, w: 0.42512122}
+  m_LocalPosition: {x: -0.09236694, y: -0.57300925, z: 0.6320001}
+  m_LocalScale: {x: 1.0000001, y: 1.0000004, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8312062761138599485}
+  m_Father: {fileID: 3127760546168762242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6297168441816467384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3268595983529938163}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingFrontRight_B_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3268595983529938163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6297168441816467384}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00059464574, y: 0.0019275194, z: 0.17755932, w: 0.98410803}
+  m_LocalPosition: {x: -1.8969607, y: -0.0000009155273, z: -0.0000012207031}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3439480847917392224}
+  m_Father: {fileID: 2858566102182720406}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6696738952559410537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4758183935107169525}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackLeftSpitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4758183935107169525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6696738952559410537}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.005053599, y: 0.042495035, z: -0.04688475, w: 0.9979832}
+  m_LocalPosition: {x: -0.40376508, y: -0.0000005504489, z: 0.000000018435276}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1512782386123938255}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6769025937276508236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 75345749206517538}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmRearRight_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &75345749206517538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769025937276508236}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000090523514, y: -0.0013493474, z: 0.33284825, w: 0.94297945}
+  m_LocalPosition: {x: -2.4469965, y: -0.0000012207031, z: -0.00753479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7847406206976455802}
+  m_Father: {fileID: 805182567104931762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6773654631026683844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 805182567104931762}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmRearRight_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &805182567104931762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773654631026683844}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.81686425, y: -0.36334866, z: -0.41213176, w: -0.17566466}
+  m_LocalPosition: {x: -0.08800293, y: 0.57482195, z: 0.6320001}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 75345749206517538}
+  m_Father: {fileID: 3127760546168762242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6798117670037930706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7511410997844825159}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmRearLeft_ClawB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7511410997844825159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798117670037930706}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.98248726, y: -0.1861188, z: 0.008678382, w: 0.0018182674}
+  m_LocalPosition: {x: -3.7290568, y: 0.10290207, z: 0.060390778}
+  m_LocalScale: {x: 0.99999976, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3835641033431377439}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6814518544823397144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3835641033431377439}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmRearLeft_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3835641033431377439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6814518544823397144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000015503134, y: 0.000022507593, z: -0.55874795, w: 0.82933754}
+  m_LocalPosition: {x: -2.154645, y: 0.0000012207031, z: 0}
+  m_LocalScale: {x: 0.99999976, y: 1, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1517530325357097312}
+  - {fileID: 7511410997844825159}
+  m_Father: {fileID: 6303157614643798614}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6900301633168394603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1508549981338147780}
+  m_Layer: 0
+  m_Name: Kupolobrach_Throat_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1508549981338147780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6900301633168394603}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00000003129706, y: -0.019891715, z: 6.2267513e-10, w: 0.9998022}
+  m_LocalPosition: {x: -0.59999996, y: -0.000000078697774, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4843933356619481593}
+  - {fileID: 6127942065526022533}
+  m_Father: {fileID: 6450933572114004246}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6942661466161699105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3473919052149945588}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingRearLeft_B_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3473919052149945588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6942661466161699105}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000021584916, y: 0.005814926, z: -0.13058965, w: 0.9914195}
+  m_LocalPosition: {x: -1.8508694, y: -0.00000092774616, z: 0.0000012662308}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.99999976}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6189306925557999141}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7026520885045732955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 614142347034685846}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingRearLeft_B_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &614142347034685846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7026520885045732955}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.19518977, y: -0.0027279558, z: -0.26936376, w: 0.9430465}
+  m_LocalPosition: {x: -1.4038607, y: 0.68847466, z: -0.28859496}
+  m_LocalScale: {x: 0.9999997, y: 0.9999998, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6189306925557999141}
+  m_Father: {fileID: 1669059991438535077}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7221500352507134631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8025675616246240258}
+  m_Layer: 0
+  m_Name: Kupolobrach_Throat_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8025675616246240258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7221500352507134631}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.04208609, z: 0, w: 0.99911404}
+  m_LocalPosition: {x: -0.5, y: -1.8088197e-13, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6325522599538395071}
+  - {fileID: 1045760612547148463}
+  m_Father: {fileID: 4843933356619481593}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7252592087702645994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5361120717581982617}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingFrontRight_A_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5361120717581982617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7252592087702645994}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.19113564, y: 0.05077624, z: 0.019581879, w: 0.98005384}
+  m_LocalPosition: {x: -1.4111236, y: -0.5921792, z: 0.195}
+  m_LocalScale: {x: 0.99999964, y: 0.9999999, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7805024946417576200}
+  m_Father: {fileID: 1669059991438535077}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7382419215151853954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8073050515446224744}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerRight_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8073050515446224744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7382419215151853954}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.51790494, y: 0.8533264, z: -0.04019227, w: 0.04464489}
+  m_LocalPosition: {x: -0.562888, y: -0.9481221, z: 0.30799988}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4429641027326751729}
+  m_Father: {fileID: 3127760546168762242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7395220374358801596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7791050476979390301}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackWeakPointRight_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7791050476979390301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7395220374358801596}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000023841856, y: -0.000000076159665, z: 0.00000023841856, w: 1}
+  m_LocalPosition: {x: -0.2672586, y: -0.004242458, z: -0.00000061035155}
+  m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4647866603629598284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7478885198692868083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4295110176976927873}
+  m_Layer: 0
+  m_Name: Kupolobrach_ThroatWeakPoint_A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4295110176976927873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478885198692868083}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.2736536, y: 0.0000000363071, z: 0}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6450933572114004246}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7627186216026101981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7575511935409896035}
+  - component: {fileID: 1198433886339131378}
+  m_Layer: 0
+  m_Name: SK_Kupolobrach_FeelerLeftWeakPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7575511935409896035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627186216026101981}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 323737447410612248}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &1198433886339131378
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627186216026101981}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 76c39094d52b28749be7a4fc1aa35db6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 4
+  m_UpdateWhenOffscreen: 1
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 3742590252072894428, guid: a4f5c7b2b1afe4541803d25ef1be808d, type: 3}
+  m_Bones:
+  - {fileID: 2537502592350667695}
+  - {fileID: 2149966405035198509}
+  - {fileID: 3170494665185692233}
+  - {fileID: 686309817155591520}
+  - {fileID: 5571101685060409780}
+  - {fileID: 317467820672583684}
+  - {fileID: 8312062761138599485}
+  - {fileID: 6452265508611881359}
+  - {fileID: 8381712228400336787}
+  - {fileID: 8914441292068256262}
+  - {fileID: 1682976098627634531}
+  - {fileID: 6303157614643798614}
+  - {fileID: 3835641033431377439}
+  - {fileID: 3442719960512387003}
+  - {fileID: 7511410997844825159}
+  - {fileID: 805182567104931762}
+  - {fileID: 75345749206517538}
+  - {fileID: 7847406206976455802}
+  - {fileID: 1626749214237363381}
+  - {fileID: 8672702267134929704}
+  - {fileID: 2241248053264145245}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 805182567104931762}
+  m_AABB:
+    m_Center: {x: 1.1441622, y: -2.7847662, z: -1.5052458}
+    m_Extent: {x: 0.31418955, y: 0.50926244, z: 0.42859423}
+  m_DirtyAABB: 0
+--- !u!1 &7670144493531671927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 889778218054201251}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackRight_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &889778218054201251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7670144493531671927}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00035178868, y: 0.013560463, z: -0.028906347, w: 0.9994901}
+  m_LocalPosition: {x: -0.6363287, y: -0.000000335655, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5564292859032528564}
+  - {fileID: 5417849051915089777}
+  m_Father: {fileID: 3817461209857708270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7687954266019024717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087832527818124307}
+  m_Layer: 0
+  m_Name: Kupolobrach_ThroatWeakPoint_C
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1087832527818124307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7687954266019024717}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.23308048, y: 0.00000012340337, z: 0}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4843933356619481593}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7839394552834453518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6744762068173468961}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerRight_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6744762068173468961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839394552834453518}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0028514098, y: -0.011550468, z: 0.036940712, w: 0.99924666}
+  m_LocalPosition: {x: -0.301773, y: 0.0000015258788, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4411829155465742175}
+  m_Father: {fileID: 5845373141593496504}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7874262926000190168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 436812219416061457}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerLeft_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &436812219416061457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874262926000190168}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0028851703, y: -0.0115478635, z: -0.036926873, w: 0.9992471}
+  m_LocalPosition: {x: -0.3017739, y: -0.0000021160952, z: -0.000000011646297}
+  m_LocalScale: {x: 0.99999976, y: 0.99999976, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1064825965353224750}
+  m_Father: {fileID: 4465377518663947361}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7937368209361220158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1517530325357097312}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmRearLeft_ClawA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1517530325357097312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7937368209361220158}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.9487491, y: -0.31590578, z: 0.008843798, w: 0.00064106955}
+  m_LocalPosition: {x: -3.8080058, y: -0.24159156, z: 0.06103119}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 0.9999998}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3835641033431377439}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8013697728928767490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1524026266361744997}
+  - component: {fileID: 841318497195692351}
+  m_Layer: 0
+  m_Name: SK_Kupolobrach_ThroatWeakPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1524026266361744997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013697728928767490}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 323737447410612248}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &841318497195692351
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013697728928767490}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 76c39094d52b28749be7a4fc1aa35db6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 4
+  m_UpdateWhenOffscreen: 1
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: -244491513883433786, guid: a4f5c7b2b1afe4541803d25ef1be808d, type: 3}
+  m_Bones:
+  - {fileID: 4295110176976927873}
+  - {fileID: 5619467448103209533}
+  - {fileID: 6450933572114004246}
+  - {fileID: 6127942065526022533}
+  - {fileID: 1087832527818124307}
+  - {fileID: 1669059991438535077}
+  - {fileID: 8312062761138599485}
+  - {fileID: 6452265508611881359}
+  - {fileID: 8381712228400336787}
+  - {fileID: 8914441292068256262}
+  - {fileID: 1682976098627634531}
+  - {fileID: 6303157614643798614}
+  - {fileID: 3835641033431377439}
+  - {fileID: 1517530325357097312}
+  - {fileID: 7511410997844825159}
+  - {fileID: 805182567104931762}
+  - {fileID: 75345749206517538}
+  - {fileID: 7847406206976455802}
+  - {fileID: 1626749214237363381}
+  - {fileID: 8672702267134929704}
+  - {fileID: 317467820672583684}
+  - {fileID: 3066528087179858018}
+  - {fileID: 1045760612547148463}
+  - {fileID: 5571101685060409780}
+  - {fileID: 7890339228703297387}
+  - {fileID: 6325522599538395071}
+  - {fileID: 2481831984453171187}
+  - {fileID: 6866296041208089472}
+  - {fileID: 2204706315175983445}
+  - {fileID: 686309817155591520}
+  - {fileID: 7791050476979390301}
+  - {fileID: 432972049893782509}
+  - {fileID: 5194830173546020724}
+  - {fileID: 7339792019507100961}
+  - {fileID: 3439480847917392224}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 5619467448103209533}
+  m_AABB:
+    m_Center: {x: -1.6384703, y: 0.00000011920929, z: 0.030667782}
+    m_Extent: {x: 1.2047065, y: 1.0867352, z: 1.0109204}
+  m_DirtyAABB: 0
+--- !u!1 &8077686139793133727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8215126821699655178}
+  - component: {fileID: 4381828013166231792}
+  m_Layer: 0
+  m_Name: SK_Kupolobrach_FeelerRightWeakPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8215126821699655178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077686139793133727}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 323737447410612248}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &4381828013166231792
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077686139793133727}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 76c39094d52b28749be7a4fc1aa35db6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 4
+  m_UpdateWhenOffscreen: 1
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: -5486100120890713587, guid: a4f5c7b2b1afe4541803d25ef1be808d, type: 3}
+  m_Bones:
+  - {fileID: 2344941296582431028}
+  - {fileID: 1471208505877161720}
+  - {fileID: 2097277183826715070}
+  - {fileID: 686309817155591520}
+  - {fileID: 5571101685060409780}
+  - {fileID: 317467820672583684}
+  - {fileID: 8312062761138599485}
+  - {fileID: 6452265508611881359}
+  - {fileID: 8381712228400336787}
+  - {fileID: 8914441292068256262}
+  - {fileID: 1682976098627634531}
+  - {fileID: 6303157614643798614}
+  - {fileID: 3835641033431377439}
+  - {fileID: 1517530325357097312}
+  - {fileID: 7511410997844825159}
+  - {fileID: 805182567104931762}
+  - {fileID: 75345749206517538}
+  - {fileID: 3442719960512387003}
+  - {fileID: 1626749214237363381}
+  - {fileID: 8672702267134929704}
+  - {fileID: 2241248053264145245}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1682976098627634531}
+  m_AABB:
+    m_Center: {x: 1.1439686, y: 2.7844844, z: -1.5055256}
+    m_Extent: {x: 0.31418884, y: 0.5092627, z: 0.4285938}
+  m_DirtyAABB: 0
+--- !u!1 &8182234000877150868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1708949187843226396}
+  m_Layer: 0
+  m_Name: Kupolobrach_SackLeft_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1708949187843226396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8182234000877150868}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0006495715, y: -0.005222589, z: 0.08031372, w: 0.9967557}
+  m_LocalPosition: {x: -0.33821166, y: 0.000067749024, z: 0.000000008150819}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1799184301640447876}
+  - {fileID: 3066528087179858018}
+  m_Father: {fileID: 4232328910893711599}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8223662217698364707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6127942065526022533}
+  m_Layer: 0
+  m_Name: Kupolobrach_ThroatWeakPoint_B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6127942065526022533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8223662217698364707}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.22995853, y: 0.00000010683008, z: 0}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1508549981338147780}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8335676403242557516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8381712228400336787}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmFrontRight_ClawA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8381712228400336787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335676403242557516}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.9456147, y: -0.32516804, z: 0.008849259, w: 0.00055420195}
+  m_LocalPosition: {x: -3.8082955, y: -0.24105926, z: 0.061527748}
+  m_LocalScale: {x: 0.9999999, y: 0.99999976, z: 0.9999997}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6452265508611881359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8392913689905923595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2204706315175983445}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingFrontLeft_B_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2204706315175983445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8392913689905923595}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00016037773, y: 0.01364603, z: -0.12195656, w: 0.99244165}
+  m_LocalPosition: {x: -1.7763674, y: -0.00000088959916, z: 0.0000012195902}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.99999976}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7003476145045123308}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8419392619341262697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4429641027326751729}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerRight_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4429641027326751729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419392619341262697}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0032265729, y: -0.011705044, z: -0.16900115, w: 0.9855411}
+  m_LocalPosition: {x: -0.2387949, y: -0.00000061035155, z: 0.00000061035155}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5845373141593496504}
+  m_Father: {fileID: 8073050515446224744}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8432581445276625700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4411829155465742175}
+  m_Layer: 0
+  m_Name: Kupolobrach_FeelerRight_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4411829155465742175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8432581445276625700}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.03014747, y: 0.006084279, z: 0.21171018, w: 0.9768485}
+  m_LocalPosition: {x: -0.29340622, y: -0.000001373291, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999976, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2344941296582431028}
+  m_Father: {fileID: 6744762068173468961}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8435685344530936843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4972427429557297655}
+  - component: {fileID: 8741300743112785917}
+  m_Layer: 0
+  m_Name: SK_Kupolobrach_Body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4972427429557297655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435685344530936843}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 323737447410612248}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &8741300743112785917
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435685344530936843}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 76c39094d52b28749be7a4fc1aa35db6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 4
+  m_UpdateWhenOffscreen: 1
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 1139788295240618921, guid: a4f5c7b2b1afe4541803d25ef1be808d, type: 3}
+  m_Bones:
+  - {fileID: 3170494665185692233}
+  - {fileID: 2149966405035198509}
+  - {fileID: 3442719960512387003}
+  - {fileID: 686309817155591520}
+  - {fileID: 5571101685060409780}
+  - {fileID: 317467820672583684}
+  - {fileID: 8312062761138599485}
+  - {fileID: 6452265508611881359}
+  - {fileID: 8381712228400336787}
+  - {fileID: 8914441292068256262}
+  - {fileID: 1682976098627634531}
+  - {fileID: 6303157614643798614}
+  - {fileID: 3835641033431377439}
+  - {fileID: 2241248053264145245}
+  - {fileID: 7511410997844825159}
+  - {fileID: 805182567104931762}
+  - {fileID: 75345749206517538}
+  - {fileID: 7847406206976455802}
+  - {fileID: 1626749214237363381}
+  - {fileID: 8672702267134929704}
+  - {fileID: 2537502592350667695}
+  - {fileID: 1064825965353224750}
+  - {fileID: 436812219416061457}
+  - {fileID: 4465377518663947361}
+  - {fileID: 1517530325357097312}
+  - {fileID: 6640957182250623014}
+  - {fileID: 8939463576633851500}
+  - {fileID: 2204706315175983445}
+  - {fileID: 7890339228703297387}
+  - {fileID: 3473919052149945588}
+  - {fileID: 6189306925557999141}
+  - {fileID: 614142347034685846}
+  - {fileID: 5492528904612018563}
+  - {fileID: 7608246674569509046}
+  - {fileID: 4511745436440441645}
+  - {fileID: 3744040442022606227}
+  - {fileID: 1669059991438535077}
+  - {fileID: 3204401893422758140}
+  - {fileID: 6188695999363182136}
+  - {fileID: 7003476145045123308}
+  - {fileID: 5361120717581982617}
+  - {fileID: 2858566102182720406}
+  - {fileID: 2434980041329925888}
+  - {fileID: 469204836854221571}
+  - {fileID: 1045760612547148463}
+  - {fileID: 6127942065526022533}
+  - {fileID: 4295110176976927873}
+  - {fileID: 2514357331056920312}
+  - {fileID: 6866296041208089472}
+  - {fileID: 3066528087179858018}
+  - {fileID: 1087832527818124307}
+  - {fileID: 2645321496351600648}
+  - {fileID: 2091108052521502200}
+  - {fileID: 3127760546168762242}
+  - {fileID: 5619467448103209533}
+  - {fileID: 6450933572114004246}
+  - {fileID: 1799184301640447876}
+  - {fileID: 1708949187843226396}
+  - {fileID: 7581029764824591689}
+  - {fileID: 4232328910893711599}
+  - {fileID: 5417849051915089777}
+  - {fileID: 7339792019507100961}
+  - {fileID: 7791050476979390301}
+  - {fileID: 1508549981338147780}
+  - {fileID: 4843933356619481593}
+  - {fileID: 8025675616246240258}
+  - {fileID: 6325522599538395071}
+  - {fileID: 2800029376267934542}
+  - {fileID: 2481831984453171187}
+  - {fileID: 9145110912933346238}
+  - {fileID: 3404781793544083681}
+  - {fileID: 3501098076467285213}
+  - {fileID: 376574112147951577}
+  - {fileID: 5971513092264946604}
+  - {fileID: 432972049893782509}
+  - {fileID: 5194830173546020724}
+  - {fileID: 7805024946417576200}
+  - {fileID: 4970884672888408051}
+  - {fileID: 1512782386123938255}
+  - {fileID: 4758183935107169525}
+  - {fileID: 8661293056331342763}
+  - {fileID: 8073050515446224744}
+  - {fileID: 1471208505877161720}
+  - {fileID: 2344941296582431028}
+  - {fileID: 2097277183826715070}
+  - {fileID: 4411829155465742175}
+  - {fileID: 6744762068173468961}
+  - {fileID: 3439480847917392224}
+  - {fileID: 5845373141593496504}
+  - {fileID: 4429641027326751729}
+  - {fileID: 4647866603629598284}
+  - {fileID: 3817461209857708270}
+  - {fileID: 2178703288869269397}
+  - {fileID: 7353189700195406945}
+  - {fileID: 3268595983529938163}
+  - {fileID: 4735119789158494456}
+  - {fileID: 889778218054201251}
+  - {fileID: 5564292859032528564}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 3127760546168762242}
+  m_AABB:
+    m_Center: {x: 1.6203892, y: -0.09633589, z: 0.00000047683716}
+    m_Extent: {x: 6.9423313, y: 6.1386285, z: 6.114187}
+  m_DirtyAABB: 0
+--- !u!1 &8523153203347520484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 432972049893782509}
+  m_Layer: 0
+  m_Name: Kupolobrach_WingRearRight_A_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &432972049893782509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8523153203347520484}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00009816894, y: 0.013722025, z: 0.13254493, w: 0.991082}
+  m_LocalPosition: {x: -1.7763678, y: 0.0000009155273, z: 0.0000012207031}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4735119789158494456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8548972643911038264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1626749214237363381}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmRearRight_ClawA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1626749214237363381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8548972643911038264}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.9508446, y: 0.30954167, z: 0.008839031, w: -0.0007004511}
+  m_LocalPosition: {x: -3.8082952, y: 0.24106048, z: 0.061528776}
+  m_LocalScale: {x: 0.9999997, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7847406206976455802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8636433234884448522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5194830173546020724}
+  m_Layer: 0
+  m_Name: Kupolobrach_ToothRigth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5194830173546020724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8636433234884448522}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0060106516, y: 0.019062746, z: -0.30064574, w: 0.95352644}
+  m_LocalPosition: {x: -0.28195372, y: -0.2399998, z: -0.032856446}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6325522599538395071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8876911722421179636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1682976098627634531}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmRearLeft_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1682976098627634531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8876911722421179636}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.17571418, y: -0.4121428, z: -0.36335647, w: 0.81684446}
+  m_LocalPosition: {x: -0.08800201, y: 0.5748221, z: -0.6315576}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000002}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6303157614643798614}
+  m_Father: {fileID: 3127760546168762242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9088224693947676027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6450933572114004246}
+  m_Layer: 0
+  m_Name: Kupolobrach_Throat_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6450933572114004246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9088224693947676027}
+  serializedVersion: 2
+  m_LocalRotation: {x: 3.0500827e-18, y: -0.024905816, z: 1.2242669e-16, w: 0.9996898}
+  m_LocalPosition: {x: -0.5, y: 0.000000021862869, z: -0.000000021855666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1508549981338147780}
+  - {fileID: 4295110176976927873}
+  m_Father: {fileID: 5619467448103209533}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9198461485248358860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7847406206976455802}
+  m_Layer: 0
+  m_Name: Kupolobrach_ArmRearRight_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7847406206976455802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9198461485248358860}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000044178975, y: -0.0000002094435, z: 0.55876344, w: 0.8293271}
+  m_LocalPosition: {x: -2.1546476, y: 0, z: -0.00000045776366}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1626749214237363381}
+  - {fileID: 8672702267134929704}
+  m_Father: {fileID: 75345749206517538}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

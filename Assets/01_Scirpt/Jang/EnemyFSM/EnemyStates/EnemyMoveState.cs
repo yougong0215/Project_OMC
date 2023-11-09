@@ -10,7 +10,7 @@ public class EnemyMoveState : CommonState
 {
     [SerializeField] private EnemyWeaponStance weaponStance;
     [SerializeField] private float idleDec;
-    [SerializeField] private float attackDec;
+    [SerializeField] private float moveDec;
 
     private NavMeshAgent agent;
     private Transform playerTrs;
@@ -38,9 +38,9 @@ public class EnemyMoveState : CommonState
         {
             fsm.ChangeState(FSMState.Idle);
         }
-        else if (playerHit.distance <= attackDec) 
+        else if (playerHit.distance <= moveDec) 
         {
-            weaponStance.ChangeColliderCase(AttackEnum.SPEED);
+            weaponStance.ChangeColliderCase(AttackEnum.NORMAL3);
         }
 
         UpdateAction?.Invoke();
