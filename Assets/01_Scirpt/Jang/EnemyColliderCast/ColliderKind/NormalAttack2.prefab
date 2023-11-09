@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: 4990062523532859066, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
       propertyPath: _skill
       value: 
-      objectReference: {fileID: 11400000, guid: fef8cb5fa37c1664e80dcdcf00eb7ca6, type: 2}
+      objectReference: {fileID: 11400000, guid: 4f9e168f904c65a4298d0d2d89df811b, type: 2}
     - target: {fileID: 5594657452941815927, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
       propertyPath: m_Name
       value: NormalAttack2

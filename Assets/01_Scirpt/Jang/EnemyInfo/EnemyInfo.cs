@@ -14,6 +14,7 @@ public class EnemyInfo : CharacterInfo
     [SerializeField] private float dashSpeed;
 
     private Transform playerTrs;
+    private float enemyHp;
     private float agentSpeed;
     private bool isDashing = false;
 
@@ -21,6 +22,8 @@ public class EnemyInfo : CharacterInfo
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+
+        enemyHp = statSo.HP;
         agentSpeed = StatSo.SPEED;
     }
 
@@ -72,8 +75,11 @@ public class EnemyInfo : CharacterInfo
 
     public override void GetDamage(float _damage)
     {
-        base.GetDamage(_damage);
-        if (statSo.HP <= 0)
+        enemyHp -= _damage;
+
+        if (enemyHp <= 0)
             FSM.ChangeState(FSMState.Die);
+        else
+            FSM.ChangeState(FSMState.Hit);
     }
 }

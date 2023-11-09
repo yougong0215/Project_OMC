@@ -2100,6 +2100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b67878db9be3984bbd2a33a9d781539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponList: []
   _currentWeapon: {fileID: 11400000, guid: db4aa8970c45b2342bc7daba25d8935c, type: 2}
 --- !u!114 &1406241978
 MonoBehaviour:
@@ -2115,7 +2116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fsm: {fileID: 0}
   _con: {fileID: 1835948752}
-  _stat: {fileID: 11400000, guid: 25988b977e9f56d4dabdbb774384a7ab, type: 2}
+  statSo: {fileID: 0}
 --- !u!143 &1406241979
 CharacterController:
   m_ObjectHideFlags: 0

@@ -56,9 +56,10 @@ public class EnemyWeaponStance : MonoBehaviour
 
     public void ChangeColliderCase(AttackEnum attackEnum)
     {
+        Debug.Log(IsAttacking());
         if (IsAttacking())//현재 실행중인얘가 공격 다 안끝남
             return;//근데 어차피 idle이나 run일때 해주니까 없도도 되지 않나...?
-
+        
         currentAttackEnum = attackEnum;//상태 바꾸고
         allColliderCast[currentAttackEnum].Init(enemyInfo, weaponSO.statSo);//액션 넣어줘야지
         allColliderCast[currentAttackEnum].transform.SetParent(transform);//플레이어는 왜 콜라이더 부모를 없엤는지 모르겠지만 유지해야됨
@@ -69,6 +70,7 @@ public class EnemyWeaponStance : MonoBehaviour
     {
         allColliderCast[currentAttackEnum].CastAct = null; //얘 안지우면 전 공격도 피격처리 되겠지
         allColliderCast[currentAttackEnum].CheckDic = new(); //맞았던 기록 엎에고
+        allColliderCast[currentAttackEnum].Attack(false);
     }
 
     private void Attack_Create(ColliderCast colliderCast, AttackEnum attackEnum)

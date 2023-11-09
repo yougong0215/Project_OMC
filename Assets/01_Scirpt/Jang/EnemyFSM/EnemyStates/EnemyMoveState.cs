@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
+using Unity.Profiling;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,7 +10,7 @@ public class EnemyMoveState : CommonState
 {
     [SerializeField] private EnemyWeaponStance weaponStance;
     [SerializeField] private float idleDec;
-    [SerializeField] private float attackDec;
+    [SerializeField] private float moveDec;
 
     private NavMeshAgent agent;
     private Transform playerTrs;
@@ -32,14 +33,14 @@ public class EnemyMoveState : CommonState
         Ray ray = new Ray(transform.position, dir);
         RaycastHit playerHit;
         bool isPlayer = Physics.Raycast(ray, out playerHit, idleDec, LayerMask.GetMask("Player"));
-
+        
         if (!isPlayer)
         {
             fsm.ChangeState(FSMState.Idle);
         }
-        else if (playerHit.distance <= attackDec) 
+        else if (playerHit.distance <= moveDec) 
         {
-            weaponStance.ChangeColliderCase(AttackEnum.NORMAL1);
+            weaponStance.ChangeColliderCase(AttackEnum.NORMAL3);
         }
 
         UpdateAction?.Invoke();

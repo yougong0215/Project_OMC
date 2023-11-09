@@ -22,6 +22,11 @@ public class EnemyAttackAction : CommonAction
         weaponStance.Attack(true);
     }
 
+    protected override void OnEndFunc()
+    {
+        weaponStance.Attack(false);
+    }
+
     protected override void OnUpdateFunc()
     {
         if (!weaponStance.IsAttacking())
@@ -32,10 +37,5 @@ public class EnemyAttackAction : CommonAction
 
             Character.rotation = Quaternion.Euler(0, currentAngle, 0);
         }
-    }
-
-    protected override void OnEndFunc()
-    {
-        weaponStance.Attack(false);
     }
 }
