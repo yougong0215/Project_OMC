@@ -22,9 +22,9 @@ public class PlayerWeaponStance : MonoBehaviour
         _input = GetComponent<PlayerInput>();
         _player = GetComponent<PlayerInfo>();
 
-        if (_currentWeapon != null)
+        if (_currentWeapon == null)
         {
-            ChangeStance(_currentWeapon);
+            ChangeStance(weaponList[0]);
         }
 
         _input.TabBtn += () => ChangeStance(weaponList[(++nowNum)%weaponList.Count]);
