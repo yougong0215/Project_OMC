@@ -7,6 +7,7 @@ public class FirePrefab : MonoBehaviour
 {
     [SerializeField] private GameObject bombParticle;
     [SerializeField] private float fireSpeed;
+    [SerializeField] private LayerMask playerMask;
 
     private Rigidbody rb;
 
@@ -34,7 +35,7 @@ public class FirePrefab : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.TryGetComponent(out CharacterInfo _pl))
+        if (col.gameObject.TryGetComponent(out CharacterInfo _pl) && col.gameObject.layer == playerMask)
         {
             _pl.GetDamage(fireDmg);
         }

@@ -38,6 +38,11 @@ public class EnemyWeaponStance : MonoBehaviour
     //    return AttackEnum.NONE;
     //}
 
+    private void Awake()
+    {
+        currentAttackEnum = AttackEnum.NONE;
+    }
+
     public ColliderCast NowColliderCase()
     {
         return allColliderCast[currentAttackEnum];
@@ -51,6 +56,9 @@ public class EnemyWeaponStance : MonoBehaviour
 
     public bool IsAttacking()
     {
+        if (currentAttackEnum == AttackEnum.NONE) 
+            return false;
+
         return allColliderCast[currentAttackEnum].IsAttack;
     }
 
