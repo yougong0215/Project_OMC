@@ -200,6 +200,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 919210585}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!225 &434081568 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 119430363590639176, guid: 49559753cd0f82e4694f145532f344eb, type: 3}
+  m_PrefabInstance: {fileID: 974103909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &728880367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,7 +1053,7 @@ PrefabInstance:
     - target: {fileID: 7843851689246696845, guid: 48a34ce6e085694429438b68bc044517, type: 3}
       propertyPath: canvasGroup
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 434081568}
     - target: {fileID: 9152379251801273535, guid: 48a34ce6e085694429438b68bc044517, type: 3}
       propertyPath: m_Name
       value: Teleport
