@@ -28,6 +28,7 @@ public class SkillSO : ScriptableObject
     {
         _info = info;
         WeaponStatSo = weapon;
+        
         cols.CastAct += SKillInvoke;
         cols.OnAnimEvnt += SkillEvent;
         _info.AnimCon.Animator.speed = _animSpeed;
@@ -48,7 +49,18 @@ public class SkillSO : ScriptableObject
     /// <returns></returns>
     protected virtual bool CritReturn()
     {
-        return Random.Range(0f, 100f) < _info.StatSo.Crit + WeaponStatSo.Crit + _criticalPercentage ? true : false;
+        try
+        {
+            return Random.Range(0f, 100f) < _info.StatSo.Crit + WeaponStatSo.Crit + _criticalPercentage ? true : false;
+        }
+        catch
+        {
+
+            Debug.LogWarning(_info);
+            Debug.LogWarning(WeaponStatSo);
+            Debug.LogWarning(_info.StatSo);
+            return true;
+        }
     }
     
     /// <summary>

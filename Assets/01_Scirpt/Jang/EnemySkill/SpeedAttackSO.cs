@@ -9,7 +9,7 @@ public class SpeedAttackSO : EnemySkillSO
     public override void Init(CharacterInfo info, ObjectStatSO weapon, ColliderCast cols)
     {
         base.Init(info, weapon, cols);
-        enemyInfo.skillStartEvt += enemyInfo.DashInit;
+        enemyInfo.DashInit();
     }
 
     protected override bool CritReturn()
