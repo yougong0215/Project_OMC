@@ -7,8 +7,8 @@ public class EnemyAttackAction : CommonAction
 {
     [SerializeField] private float rotationSpeed;
 
-    private EnemyWeaponStance weaponStance;
-    private Transform playerTrs;
+    protected EnemyWeaponStance weaponStance;
+    protected Transform playerTrs;
 
     protected override void Init()
     {
@@ -24,6 +24,7 @@ public class EnemyAttackAction : CommonAction
 
     protected override void OnEndFunc()
     {
+
         weaponStance.Attack(false);
     }
 

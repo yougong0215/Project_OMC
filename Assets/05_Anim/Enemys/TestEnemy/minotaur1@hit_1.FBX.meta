@@ -67,7 +67,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 1
+      - time: 0.9559322
         functionName: OnAnimationEnd
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 027fb07379936444f9298626310178a6, type: 3}
