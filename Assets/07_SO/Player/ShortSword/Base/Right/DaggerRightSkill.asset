@@ -22,5 +22,5 @@ MonoBehaviour:
     delayTime: 0
   - cols: {fileID: 5875326251886678980, guid: bef3599de0c50b945bbfc578756892c8, type: 3}
     comboLive: 0
-    isNotWaiting: 1
+    isNotWaiting: 0
     delayTime: 0
