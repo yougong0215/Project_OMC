@@ -14,15 +14,15 @@ public class SkillCollider
     public float delayTime = .05f;
 }
 
-    [CreateAssetMenu(menuName = "SO/Player/SkillList")]
+    [CreateAssetMenu(menuName = "SO/Player/SkillList/Base")]
 public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceiver
 {
-    [Header("Info")] [SerializeField] private float CoolTime = 8f;
+    [Header("Info")] [SerializeField] protected float CoolTime = 8f;
     
     [SerializeField] public float _currentCooltime = 0;
     [SerializeField] public float _dampingCooltime =2f;
-    private int currnetNum = 0;
-    bool ComboInterective = false;
+    protected int currnetNum = 0;
+    protected bool ComboInterective = false;
     [NonSerialized] public bool NoneCombo = false;
     
     protected bool _isRunning = false;
@@ -64,7 +64,11 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
         }
         else
         {
-           Debug.Log($"SKILLSYSTEM : 실패! {Attacks[currnetNum].cols.IsAttack}");
+            if (Attacks.Count > currnetNum)
+            {
+                
+            Debug.Log($"SKILLSYSTEM : 실패! {Attacks[currnetNum].cols.IsAttack}");
+            }
         }
     }
 
@@ -79,7 +83,7 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
         Destroy(col.gameObject);
     }
     
-    public IEnumerator SkillAct(PlayerWeaponStance weapons,CharacterInfo _char, WeaponSO _currentWeapon, Transform tls)
+    public virtual IEnumerator SkillAct(PlayerWeaponStance weapons,CharacterInfo _char, WeaponSO _currentWeapon, Transform tls)
     {
         NoneCombo = false;
         _currentCooltime = CoolTime + _dampingCooltime;

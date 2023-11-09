@@ -15,6 +15,7 @@ public class PlayerWeaponStance : MonoBehaviour
     public PlayerWeaponSO _currentWeapon;
     
     public PlayerSkillListSO _CurrentSkill;
+    private int nowNum = 0;
 
     private void Awake()
     {
@@ -25,8 +26,9 @@ public class PlayerWeaponStance : MonoBehaviour
         {
             ChangeStance(_currentWeapon);
         }
-    }
 
+        _input.TabBtn += () => ChangeStance(weaponList[(++nowNum)%weaponList.Count]);
+    }
     private void Update()
     {
         ///최대 3x5 돌아감
@@ -98,7 +100,7 @@ public class PlayerWeaponStance : MonoBehaviour
         
         
         Debug.Log("Suceess");
-        if ((int)_input._fsm.CurrentState._myState < 12)
+        if ((int)_player.FSM.CurrentState._myState < 12)
         {
             StartCoroutine(_so.SkillAct(this,_player, _currentWeapon, transform));
             //StartCoroutine(_so.R_Click.UpdateLayer());

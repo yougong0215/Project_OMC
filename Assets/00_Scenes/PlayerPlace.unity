@@ -1792,7 +1792,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbef99a8aa9a23d42a3bc2e223f19c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fsm: {fileID: 1388675885}
   _input: {x: 0, y: 0}
 --- !u!143 &1108444894
 CharacterController:
@@ -1834,6 +1833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fsm: {fileID: 0}
   _con: {fileID: 0}
+  _dmgTime: 0
   statSo: {fileID: 11400000, guid: 25988b977e9f56d4dabdbb774384a7ab, type: 2}
 --- !u!114 &1108444896
 MonoBehaviour:
@@ -1848,9 +1848,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponList:
-  - {fileID: 11400000, guid: db4aa8970c45b2342bc7daba25d8935c, type: 2}
   - {fileID: 11400000, guid: 59c4b704a9959664e90e46ec1347ffdf, type: 2}
-  _currentWeapon: {fileID: 11400000, guid: 59c4b704a9959664e90e46ec1347ffdf, type: 2}
+  - {fileID: 11400000, guid: 184d1818db46b2f43939eb55e53f552c, type: 2}
+  _currentWeapon: {fileID: 0}
   _CurrentSkill: {fileID: 0}
 --- !u!1 &1196032315
 GameObject:
