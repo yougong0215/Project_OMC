@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoolTime: 0
   _currentCooltime: 0
+  _dampingCooltime: 3
   CurrentObject: {fileID: 0}
   Attacks:
   - cols: {fileID: 5875326251886678980, guid: 8ebd96e8a4c95f54ead4377adc85bca2, type: 3}
@@ -21,6 +22,6 @@ MonoBehaviour:
     isNotWaiting: 0
     delayTime: 0
   - cols: {fileID: 5875326251886678980, guid: bef3599de0c50b945bbfc578756892c8, type: 3}
-    comboLive: 0
+    comboLive: 1
     isNotWaiting: 0
     delayTime: 0

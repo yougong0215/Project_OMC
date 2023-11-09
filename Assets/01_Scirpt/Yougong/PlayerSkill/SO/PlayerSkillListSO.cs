@@ -18,8 +18,9 @@ public class SkillCollider
 public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceiver
 {
     [Header("Info")] [SerializeField] private float CoolTime = 8f;
-    [SerializeField] public float _currentCooltime = 0;
     
+    [SerializeField] public float _currentCooltime = 0;
+    [SerializeField] public float _dampingCooltime =2f;
     private int currnetNum = 0;
     bool ComboInterective = false;
     [NonSerialized] public bool NoneCombo = false;
@@ -81,7 +82,7 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
     public IEnumerator SkillAct(PlayerWeaponStance weapons,CharacterInfo _char, WeaponSO _currentWeapon, Transform tls)
     {
         NoneCombo = false;
-        _currentCooltime = CoolTime + 2f;
+        _currentCooltime = CoolTime + _dampingCooltime;
         Vector3 vec = tls.position;
         Quaternion rot = tls.rotation;
         GameObject obj = new GameObject();
@@ -106,7 +107,7 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
                 yield return new WaitUntil(() => cols.ReturnColliderEnd() == true || Attacks[currnetNum].isNotWaiting == true);
                 if (Attacks[currnetNum].isNotWaiting == false)
                 {
-                    Destroy(cols.gameObject);
+                    Destroy(cols.gameObject, 2f);
                 }
                 else
                 {

@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f06fb29302ecf6146bcd723e20dd46f2, type: 3}
-  m_Name: Teleport
+  m_Script: {fileID: 11500000, guid: 85dc19a4b64550c4eafe01bd7bbb056e, type: 3}
+  m_Name: LeftDagger2
   m_EditorClassIdentifier: 
   _animSpeed: 2
   _skillDamage: 0
   _criticalPercentage: 0
   _criticalDamage: 0
   State: 11
-  Clip: {fileID: -2907564886427497324, guid: 692f837fbc462c947a36cb76c35eb660, type: 3}
-  distance: 7
+  Clip: {fileID: -1525226487523588040, guid: a59c8c6d7ca343946bf28a1374111230, type: 3}
+  _speed: 20

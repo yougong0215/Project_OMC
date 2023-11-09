@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "SO/Skill/Base")]
 public class SkillSO : ScriptableObject
 {
     //public TextMeshPro _dmgSkin;
-
+    [Header("Anime Speed")]
+    [SerializeField] private float _animSpeed = 1f;
+    
     [Header("Stat")] 
     [SerializeField] protected float _skillDamage;
 
@@ -27,6 +30,7 @@ public class SkillSO : ScriptableObject
         WeaponStatSo = weapon;
         cols.CastAct += SKillInvoke;
         cols.OnAnimEvnt += SkillEvent;
+        _info.AnimCon.Animator.speed = _animSpeed;
 
         if (Clip != null)
         {
