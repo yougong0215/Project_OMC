@@ -77,6 +77,8 @@ public class PlayerWeaponStance : MonoBehaviour
         if (_CurrentSkill != null && _CurrentSkill.IsRunning)
         {
             Debug.Log(2);
+            if(_CurrentSkill)
+            
             return;
         }
 
