@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyAttackState : CommonState
 {
     public EnemyWeaponStance weaponStance;
-    [SerializeField] private float moveDec;
-    [SerializeField] private LayerMask obstacleMask;
+    [SerializeField] protected float moveDec;
+    [SerializeField] protected LayerMask obstacleMask;
 
     [HideInInspector] public Transform playerTrs;
 

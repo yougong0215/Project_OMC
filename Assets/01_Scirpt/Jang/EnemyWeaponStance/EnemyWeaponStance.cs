@@ -56,7 +56,6 @@ public class EnemyWeaponStance : MonoBehaviour
 
     public void ChangeColliderCase(AttackEnum attackEnum)
     {
-        Debug.Log(IsAttacking());
         if (IsAttacking())//현재 실행중인얘가 공격 다 안끝남
             return;//근데 어차피 idle이나 run일때 해주니까 없도도 되지 않나...?
         

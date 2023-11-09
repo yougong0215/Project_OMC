@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Unity.IO.LowLevel.Unsafe;
 using Unity.Profiling;
 using Unity.VisualScripting;
@@ -8,12 +9,12 @@ using UnityEngine.AI;
 
 public class EnemyMoveState : CommonState
 {
-    [SerializeField] private EnemyWeaponStance weaponStance;
-    [SerializeField] private float idleDec;
-    [SerializeField] private float moveDec;
+    [SerializeField] protected EnemyWeaponStance weaponStance;
+    [SerializeField] protected float idleDec;
+    [SerializeField] protected float moveDec;
 
-    private NavMeshAgent agent;
-    private Transform playerTrs;
+    protected NavMeshAgent agent;
+    protected Transform playerTrs;
 
     protected virtual void Start()
     {
@@ -40,7 +41,7 @@ public class EnemyMoveState : CommonState
         }
         else if (playerHit.distance <= moveDec) 
         {
-            weaponStance.ChangeColliderCase(AttackEnum.NORMAL3);
+            weaponStance.ChangeColliderCase(AttackEnum.NORMAL1);
         }
 
         UpdateAction?.Invoke();
