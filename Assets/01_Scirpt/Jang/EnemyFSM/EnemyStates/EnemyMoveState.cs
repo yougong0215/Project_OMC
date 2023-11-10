@@ -10,6 +10,7 @@ using UnityEngine.AI;
 public class EnemyMoveState : CommonState
 {
     [SerializeField] protected EnemyWeaponStance weaponStance;
+    [SerializeField] protected AttackEnum attackEnum;
     [SerializeField] protected float idleDec;
     [SerializeField] protected float moveDec;
 
@@ -41,7 +42,8 @@ public class EnemyMoveState : CommonState
         }
         else if (playerHit.distance <= moveDec) 
         {
-            weaponStance.ChangeColliderCase(AttackEnum.NORMAL1);
+            
+            weaponStance.ChangeColliderCase(attackEnum);
         }
 
         UpdateAction?.Invoke();

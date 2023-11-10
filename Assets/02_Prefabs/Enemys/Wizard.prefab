@@ -475,6 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fsm: {fileID: 7757763014680667871}
   _con: {fileID: 0}
+  _dmgTime: 0
   statSo: {fileID: 11400000, guid: 7bba8325a9d21dc43af68e21f836d976, type: 2}
   agent: {fileID: 0}
   isAttack: 0
@@ -533,7 +534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8383419605132339661}
-  - component: {fileID: 8376025206550510034}
+  - component: {fileID: 675741298046810663}
   m_Layer: 0
   m_Name: MoveState
   m_TagString: Untagged
@@ -557,7 +558,7 @@ Transform:
   - {fileID: 5532582513227331992}
   m_Father: {fileID: 5275900147812763229}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8376025206550510034
+--- !u!114 &675741298046810663
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -566,11 +567,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6219902572751389450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f96faf82d5007c749914af79962493f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d6f82e8323ae9f42a98ad1397ade0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _myState: 3
   weaponStance: {fileID: 1702587355493490842}
+  attackEnum: 5
   idleDec: 9
   moveDec: 8
 --- !u!1 &6803601838325247906

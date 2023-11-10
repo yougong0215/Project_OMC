@@ -35,7 +35,7 @@ public class FirePrefab : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.TryGetComponent(out CharacterInfo _pl) && col.gameObject.layer == playerMask)
+        if (col.gameObject.TryGetComponent(out PlayerInfo _pl) && col.gameObject.layer == playerMask)
         {
             _pl.GetDamage(fireDmg);
         }

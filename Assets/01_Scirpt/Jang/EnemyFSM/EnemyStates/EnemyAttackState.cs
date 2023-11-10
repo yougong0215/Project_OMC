@@ -28,13 +28,14 @@ public class EnemyAttackState : CommonState
 
     public override void UpdateState()
     {
-        Vector3 dir = playerTrs.position - transform.position;
+        Vector3 dir = playerTrs.position - transform.position;  
         Ray ray = new Ray(transform.position, dir);
         RaycastHit playerHit;
 
         bool isPlayer = Physics.Raycast(ray, out playerHit, moveDec, LayerMask.GetMask("Player"));
         bool isObstacle = Physics.Raycast(ray, moveDec, obstacleMask);
 
+        Debug.Log(weaponStance.currentAttackEnum);
         if ((!isPlayer || isObstacle) && !weaponStance.IsAttacking()) //범위에서 벗어나면
         {
             fsm.ChangeState(FSMState.Run);
