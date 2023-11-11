@@ -18,4 +18,4 @@ MonoBehaviour:
   _criticalDamage: 0
   State: 11
   Clip: {fileID: 7400000, guid: a0016d834d72ae140aa299091633552d, type: 2}
-  firePrefab: {fileID: 3174570593578765356, guid: 6469a3d7e97e0c3478668c55eaf47eaa, type: 3}
+  firePrefab: {fileID: 3174570593578765356, guid: fafca419a5766bd43afdffcdf8800cf1, type: 3}
