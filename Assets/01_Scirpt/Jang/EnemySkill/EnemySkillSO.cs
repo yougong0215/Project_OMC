@@ -12,6 +12,8 @@ public class EnemySkillSO : SkillSO
 
     public override void Init(CharacterInfo info, ObjectStatSO weapon, ColliderCast cols)
     {
+        cols.CastAct = null;
+
         base.Init(info, weapon, cols);
         colliderCast = cols;
         enemyInfo = _info.GetComponent<EnemyInfo>();

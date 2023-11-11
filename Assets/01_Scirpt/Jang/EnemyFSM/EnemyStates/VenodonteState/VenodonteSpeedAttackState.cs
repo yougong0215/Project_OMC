@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LarvaeAttactState : EnemyAttackState
+public class VenodonteSpeedAttackState : EnemyAttackState
 {
     public override void UpdateState()
     {
@@ -19,7 +19,7 @@ public class LarvaeAttactState : EnemyAttackState
         }
         else if (!weaponStance.IsAttacking() && weaponStance.currentAttackEnum == AttackEnum.SPEED)
         {
-            weaponStance.ChangeColliderCase(AttackEnum.NORMAL1);
+            weaponStance.ChangeColliderCase(AttackEnum.SPEED);
         }
 
         UpdateAction?.Invoke();

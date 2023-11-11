@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b63aefcb62629f45891fc6fe575d973, type: 3}
-  m_Name: CrabAttackSO
+  m_Script: {fileID: 11500000, guid: 6dd58b64652c0fa4dad2a46821bddf83, type: 3}
+  m_Name: VenodonteSpeedAttack
   m_EditorClassIdentifier: 
-  _animSpeed: 1.5
+  _animSpeed: 1
   _skillDamage: 0
   _criticalPercentage: 0
   _criticalDamage: 0
   State: 11
-  Clip: {fileID: 6720303635017113406, guid: 4159fd5686a8c1c4fb776cf716bd494d, type: 3}
+  Clip: {fileID: 1827226128182048838, guid: 726380aadb3be834c949d7c760562df6, type: 3}

@@ -32,7 +32,7 @@ public class EnemyMoveState : CommonState
     public override void UpdateState()
     {
         Vector3 dir = playerTrs.position - transform.position;
-        Ray ray = new Ray(transform.position, dir);
+        Ray ray = new Ray(transform.position, dir.normalized);
         RaycastHit playerHit;
         bool isPlayer = Physics.Raycast(ray, out playerHit, idleDec, LayerMask.GetMask("Player"));
         

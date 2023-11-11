@@ -35,7 +35,6 @@ public class EnemyAttackState : CommonState
         bool isPlayer = Physics.Raycast(ray, out playerHit, moveDec, LayerMask.GetMask("Player"));
         bool isObstacle = Physics.Raycast(ray, moveDec, obstacleMask);
 
-        Debug.Log(weaponStance.currentAttackEnum);
         if ((!isPlayer || isObstacle) && !weaponStance.IsAttacking()) //범위에서 벗어나면
         {
             fsm.ChangeState(FSMState.Run);
