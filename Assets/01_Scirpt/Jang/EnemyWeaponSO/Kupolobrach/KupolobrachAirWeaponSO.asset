@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 126968c0e1355a649891c8ebd35e5c5d, type: 3}
-  m_Name: KupolobrachWeaponSO
+  m_Name: KupolobrachAirWeaponSO
   m_EditorClassIdentifier: 
   statSo: {fileID: 11400000, guid: f2c453575391e8544a6201a2c8bc81c0, type: 2}
-  Normal_Attack_1: {fileID: 8710362552980665843, guid: 5a67b9b1e08c8a3498f2c0e7e171cc0f, type: 3}
+  Normal_Attack_1: {fileID: 0}
   Normal_Attack_2: {fileID: 0}
   Normal_Attack_3: {fileID: 8710362552980665843, guid: 4b7a8cfb80627814baec2b056b4bacbc, type: 3}
   Power_Attack: {fileID: 0}
   Speed_Attack: {fileID: 0}
-  Throw_Attack: {fileID: 8710362552980665843, guid: fde6f3b4770491d4d8807f86e1742b5d, type: 3}
+  Throw_Attack: {fileID: 0}

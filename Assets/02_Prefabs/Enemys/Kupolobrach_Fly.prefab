@@ -671,7 +671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebb95cae6784d9b46923c5d13750f177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSO: {fileID: 11400000, guid: 02b2a2dd1cdb5514c9d22883c42390db, type: 2}
+  weaponSO: {fileID: 11400000, guid: 403360faa3bdd3f46b04c5ba93f96c67, type: 2}
   enemyInfo: {fileID: 1346973100627407925}
 --- !u!1001 &6583446201949822179
 PrefabInstance:

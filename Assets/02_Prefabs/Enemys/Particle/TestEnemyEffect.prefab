@@ -75549,7 +75549,7 @@ GameObject:
   - component: {fileID: 199833813318027332}
   - component: {fileID: 198796975442952836}
   m_Layer: 0
-  m_Name: pf_vfx-ult_demo_psys_loop_weaponEffectElectricSwordOriginal
+  m_Name: TestEnemyEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

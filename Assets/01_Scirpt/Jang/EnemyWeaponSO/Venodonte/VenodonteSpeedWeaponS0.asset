@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 126968c0e1355a649891c8ebd35e5c5d, type: 3}
-  m_Name: VenodonteWeaponS0
+  m_Name: VenodonteSpeedWeaponS0
   m_EditorClassIdentifier: 
   statSo: {fileID: 11400000, guid: f2c453575391e8544a6201a2c8bc81c0, type: 2}
-  Normal_Attack_1: {fileID: 8710362552980665843, guid: f61ea084d595a8549adaa7d16b1598da, type: 3}
+  Normal_Attack_1: {fileID: 0}
   Normal_Attack_2: {fileID: 0}
   Normal_Attack_3: {fileID: 0}
   Power_Attack: {fileID: 0}
   Speed_Attack: {fileID: 8710362552980665843, guid: 6b6c2177581b20947946076f033053bf, type: 3}
-  Throw_Attack: {fileID: 8710362552980665843, guid: 82e2ddab020a4bc4dbe40ea701649088, type: 3}
+  Throw_Attack: {fileID: 0}
