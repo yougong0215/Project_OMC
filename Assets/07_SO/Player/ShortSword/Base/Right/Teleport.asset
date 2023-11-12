@@ -16,6 +16,9 @@ MonoBehaviour:
   _skillDamage: 0
   _criticalPercentage: 0
   _criticalDamage: 0
+  _isNuckbackAble: 1
+  _localNuckBackVector: {x: -1, y: 0, z: 0}
+  _NuckbackSpeed: 4
   State: 11
   Clip: {fileID: -2907564886427497324, guid: 692f837fbc462c947a36cb76c35eb660, type: 3}
   distance: 7
