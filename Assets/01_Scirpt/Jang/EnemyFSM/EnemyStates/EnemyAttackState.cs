@@ -13,7 +13,6 @@ public class EnemyAttackState : CommonState
     private void Start()
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
-
         Init?.Invoke();
     }
 

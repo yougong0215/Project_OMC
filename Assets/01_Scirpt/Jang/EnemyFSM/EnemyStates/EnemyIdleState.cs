@@ -8,9 +8,9 @@ public class EnemyIdleState : CommonState
     [SerializeField] private float moveDec;
     [SerializeField] private LayerMask obstacleMask;
 
-    private Transform playerTrs;
+    protected Transform playerTrs;
 
-    private void Start()
+    protected virtual void Start()
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
 
