@@ -4,6 +4,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(menuName = "SO/Skill/Base")]
 public class SkillSO : ScriptableObject
@@ -17,12 +18,18 @@ public class SkillSO : ScriptableObject
 
     [SerializeField] protected float _criticalPercentage;
     [SerializeField] protected float _criticalDamage;
+
+    [Header("IsNuckBack")] 
+    [SerializeField] private bool _isNuckbackAble =true;
+
+    [SerializeField] private Vector3 _localNuckBackVector = new Vector3(-1,0,0);
+    [SerializeField] private float _NuckbackSpeed = 4f;
     
     protected CharacterInfo _info;
-    
     protected ObjectStatSO WeaponStatSo;
-    public FSMState State = FSMState.Attack;
-    public AnimationClip Clip = null;
+    [Header("Info")] 
+    [SerializeField] public FSMState State = FSMState.Attack;
+    [SerializeField] public AnimationClip Clip = null;
     
     public virtual void Init(CharacterInfo info, ObjectStatSO weapon, ColliderCast cols)
     {
@@ -112,14 +119,33 @@ public class SkillSO : ScriptableObject
         //    tmp.transform.position += new Vector3(Random.Range(-0.2f, 0.2f),Random.Range(-0.2f, 0.2f),Random.Range(-0.2f, 0.2f));
         //
         //}
+
+        
         
         if (cols.TryGetComponent(out CharacterInfo _pl) && Damaged)
         {
             _pl.GetDamage(DamageReturn());
+            
+            if (_isNuckbackAble && _pl.IsNuckBackAble)
+            {
+                // 넉백
+                _pl.StartCoroutine(NuckBack(_pl));
+            }
         }
     }
-    
-    
+
+    IEnumerator NuckBack(CharacterInfo _pl)
+    {
+        if (_pl != null  && _pl.IsNuckBackAble ==false)
+        {
+            _pl.transform.localPosition += _localNuckBackVector * _NuckbackSpeed * Time.deltaTime;
+            yield return null;
+
+            _pl.StartCoroutine(NuckBack(_pl));
+        }
+
+
+    }
     
     
     

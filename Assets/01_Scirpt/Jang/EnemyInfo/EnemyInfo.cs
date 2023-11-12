@@ -59,7 +59,7 @@ public class EnemyInfo : CharacterInfo
         }
     }
 
-    public override void GetDamage(float _damage)
+    public override void GetDamage(float _damage, bool _nuckBack = false)
     {
         enemyHp -= _damage;
 

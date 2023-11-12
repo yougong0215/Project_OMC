@@ -7,10 +7,16 @@ using UnityEngine.Serialization;
 
 public abstract class CharacterInfo : PoolAble
 {
+    [Header("IsNuckBack ( false = 넉백 되는 상태 )")]
+    [SerializeField] private bool _isNuckbackAble = true;
+
+    public bool IsNuckBackAble => _isNuckbackAble;
+    
 
     public override void Reset()
     {
-        
+        _stat = new ObjectStat();
+        _stat.SetStat(statSo);
     }
     
     [SerializeField] private FSM _fsm;
@@ -27,8 +33,7 @@ public abstract class CharacterInfo : PoolAble
 
     protected virtual void AwakeInvoke()
     {
-        _stat = new ObjectStat();
-        _stat.SetStat(statSo);
+
     }
     
     void Awake()
@@ -47,11 +52,16 @@ public abstract class CharacterInfo : PoolAble
     /// <summary>
     /// 몬스터에 기믹이 있다면 override 하기
     /// </summary>
-    public virtual void GetDamage(float _damage)
+    public virtual void GetDamage(float _damage, bool _nuckBack = false)
     {
         statSo.HP -= (int)_damage;
         if(_co == null)
             _co = StartCoroutine(Damaged());
+
+        if (_nuckBack)
+        {
+            // 적 정보 받아서 넉백 스테이트 Hit 변경
+        }
     }
 
     public IEnumerator Damaged()

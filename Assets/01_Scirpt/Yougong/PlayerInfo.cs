@@ -50,7 +50,7 @@ public class PlayerInfo : CharacterInfo
         }
     }
 
-    public override void GetDamage(float _damage)
+    public override void GetDamage(float _damage, bool _nuckBack = false)
     {
         if (IsParring)
         {
