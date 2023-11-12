@@ -52,14 +52,14 @@ public class SkillSO : ScriptableObject
     {
         try
         {
-            return Random.Range(0f, 100f) < _info.StatSo.Crit + WeaponStatSo.Crit + _criticalPercentage ? true : false;
+            return Random.Range(0f, 100f) < _info.Stat.Crit + WeaponStatSo.Crit + _criticalPercentage ? true : false;
         }
         catch
         {
 
             Debug.LogWarning(_info);
             Debug.LogWarning(WeaponStatSo);
-            Debug.LogWarning(_info.StatSo);
+            Debug.LogWarning(_info.Stat);
             return true;
         }
     }
@@ -73,8 +73,8 @@ public class SkillSO : ScriptableObject
     /// <returns></returns>
     public virtual float DamageReturn()
     {
-        return CritReturn() == true ? ((_info.StatSo.CritAmp + WeaponStatSo.CritAmp + _criticalDamage)*0.01f) * ((_info.StatSo.ATK + WeaponStatSo.ATK) * _skillDamage)
-            : (_info.StatSo.ATK + WeaponStatSo.ATK) * _skillDamage;
+        return CritReturn() == true ? ((_info.Stat.CritAmp + WeaponStatSo.CritAmp + _criticalDamage)*0.01f) * ((_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage)
+            : (_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage;
     }
 
     public virtual void SkillUpdate()

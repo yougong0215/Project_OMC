@@ -18,7 +18,6 @@ public class SkillCollider
 public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceiver
 {
     [Header("Info")] [SerializeField] protected float CoolTime = 8f;
-    
     [SerializeField] public float _currentCooltime = 0;
     [SerializeField] public float _dampingCooltime =2f;
     protected int currnetNum = 0;

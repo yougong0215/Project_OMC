@@ -48,9 +48,9 @@ public class PlayerMovement : MonoBehaviour
 
 
         {
-            vec.y = _gravity / _info.StatSo.SPEED * _gravityScale;
+            vec.y = _gravity / _info.Stat.SPEED * _gravityScale;
         }
-        _char.Move( vec * _info.StatSo.SPEED * Time.deltaTime);
+        _char.Move( vec * _info.Stat.SPEED * Time.deltaTime);
 
 
 
@@ -64,17 +64,17 @@ public class PlayerMovement : MonoBehaviour
             moveUpTime -= Time.deltaTime;
 
             if (Mathf.Abs(vec.x) > 0.1f)
-                vec.x = Mathf.Abs(vec.x) - (_info.StatSo.SPEED * Time.deltaTime);
+                vec.x = Mathf.Abs(vec.x) - (_info.Stat.SPEED * Time.deltaTime);
             else
                 vec.x = 0;
 
             if (Mathf.Abs(vec.y) > -_gravity)
-                vec.y = Mathf.Abs(vec.y) - (_info.StatSo.SPEED * Time.deltaTime);
+                vec.y = Mathf.Abs(vec.y) - (_info.Stat.SPEED * Time.deltaTime);
             else
                 vec.y = -9.8f;
 
             if (Mathf.Abs(vec.z) > 0.1f)
-                vec.z = Mathf.Abs(vec.z) - (_info.StatSo.SPEED * Time.deltaTime);
+                vec.z = Mathf.Abs(vec.z) - (_info.Stat.SPEED * Time.deltaTime);
             else
                 vec.z = 0;
 
@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         vec.Normalize();
 
         Quaternion t = Quaternion.LookRotation(new Vector3(vec.x, 0, vec.z));
-        transform.rotation = Quaternion.Lerp(transform.rotation, t, Time.deltaTime * _info.StatSo.SPEED);
+        transform.rotation = Quaternion.Lerp(transform.rotation, t, Time.deltaTime * _info.Stat.SPEED);
 
         //print(dir);
 

@@ -43,7 +43,7 @@ public class PlayerInfo : CharacterInfo
 
     private void Update()
     {
-        Debug.Log(IsDamage);
+        // Debug.Log(IsDamage);
         if (UnityEngine.Input.GetKeyDown(KeyCode.X))
         {
             GetDamage(0);

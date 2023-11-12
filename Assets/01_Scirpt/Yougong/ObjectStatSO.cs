@@ -5,6 +5,17 @@ using UnityEngine;
 [System.Serializable]
 public class ObjectStat
 {
+    public void SetStat(ObjectStatSO _so)
+    {
+        _hp = _so.HP;
+        _atk = _so.ATK;
+        _def = _so.DEF;
+        _speed = _so.SPEED;
+        _crit = _so.Crit;
+        _critAmp = _so.CritAmp;
+        _coolTime = _so.COOLDOWN;
+    }
+    
     [SerializeField] private float _hp;
     public float HP
     {

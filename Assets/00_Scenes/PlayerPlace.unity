@@ -1850,7 +1850,8 @@ MonoBehaviour:
   weaponList:
   - {fileID: 11400000, guid: 59c4b704a9959664e90e46ec1347ffdf, type: 2}
   - {fileID: 11400000, guid: 184d1818db46b2f43939eb55e53f552c, type: 2}
-  _currentWeapon: {fileID: 11400000, guid: 59c4b704a9959664e90e46ec1347ffdf, type: 2}
+  - {fileID: 11400000, guid: 3fcc8b24de735de44b2f3f2806954564, type: 2}
+  _currentWeapon: {fileID: 11400000, guid: 3fcc8b24de735de44b2f3f2806954564, type: 2}
   _CurrentSkill: {fileID: 0}
 --- !u!1 &1196032315
 GameObject:

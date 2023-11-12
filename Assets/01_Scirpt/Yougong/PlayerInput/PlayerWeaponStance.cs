@@ -26,6 +26,10 @@ public class PlayerWeaponStance : MonoBehaviour
         {
             ChangeStance(weaponList[0]);
         }
+        else
+        {
+            ChangeStance(_currentWeapon);
+        }
 
         _input.TabBtn += () => ChangeStance(weaponList[(++nowNum)%weaponList.Count]);
     }

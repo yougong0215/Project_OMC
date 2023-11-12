@@ -1,12 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Resources;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public abstract class CharacterInfo : MonoBehaviour
+public abstract class CharacterInfo : PoolAble
 {
 
+    public override void Reset()
+    {
+        
+    }
+    
     [SerializeField] private FSM _fsm;
     public FSM FSM => _fsm;
 
@@ -21,31 +27,22 @@ public abstract class CharacterInfo : MonoBehaviour
 
     protected virtual void AwakeInvoke()
     {
-        
+        _stat = new ObjectStat();
+        _stat.SetStat(statSo);
     }
     
     void Awake()
     {
         _fsm = GetComponentInChildren<FSM>();
         _con = GetComponentInChildren<AnimationController>();
+
         AwakeInvoke();
     }
     
     [FormerlySerializedAs("_stat")] [SerializeField] protected ObjectStatSO statSo;
 
-    public ObjectStatSO StatSo
-    {
-        get
-        {
-            if (statSo == null)
-            {
-                Debug.LogError("ChracterStat is Missing");
-                return null;
-            }
-
-            return statSo;
-        }
-    }
+    private ObjectStat _stat;
+    public ObjectStat Stat => _stat;
 
     /// <summary>
     /// 몬스터에 기믹이 있다면 override 하기
@@ -65,6 +62,4 @@ public abstract class CharacterInfo : MonoBehaviour
         _co = null;
     }
     
-
-
 }

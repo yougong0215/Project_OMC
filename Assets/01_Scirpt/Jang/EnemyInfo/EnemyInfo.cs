@@ -24,7 +24,7 @@ public class EnemyInfo : CharacterInfo
         agent = GetComponent<NavMeshAgent>();
 
         enemyHp = statSo.HP;
-        agentSpeed = StatSo.SPEED;
+        agentSpeed = Stat.SPEED;
     }
 
     private void Update()

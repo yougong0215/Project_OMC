@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da84e4532a01c840847be600931c232, type: 3}
+  m_Name: DaggerALeftSkill
+  m_EditorClassIdentifier: 
+  CoolTime: 0
+  _currentCooltime: 0
+  _dampingCooltime: 2
+  CurrentObject: {fileID: 0}
+  Attacks:
+  - cols: {fileID: 5973829581157502212, guid: 7cd289d5736ac1b479a744cb90b5d331, type: 3}
+    comboLive: 0
+    isNotWaiting: 0
+    delayTime: 0
+  - cols: {fileID: 5973829581157502212, guid: bcf6340dc17f113448c1cb9b570ddb5b, type: 3}
+    comboLive: 1
+    isNotWaiting: 0
+    delayTime: 0

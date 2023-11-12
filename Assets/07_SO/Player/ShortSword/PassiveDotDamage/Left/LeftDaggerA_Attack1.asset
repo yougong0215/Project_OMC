@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70064311c07d9f4b9ea44780ca1034e, type: 3}
+  m_Name: LeftDaggerA_Attack1
+  m_EditorClassIdentifier: 
+  _animSpeed: 1
+  _skillDamage: 0
+  _criticalPercentage: 0
+  _criticalDamage: 0
+  State: 11
+  Clip: {fileID: 7998989578573806355, guid: 56aaac380076dc846872d612711abfe2, type: 3}
+  _speed: -80
+  _time: 1
+  _turm: 5
+  _dmgAmp: 0.1
