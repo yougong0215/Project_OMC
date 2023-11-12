@@ -24,6 +24,7 @@ public class FirePrefab : MonoBehaviour
     public void FireSetting(Vector3 targetPos, float dmg)
     {
         fireDmg = dmg;
+        targetPos.y += 1;
         fireDir = targetPos - transform.position;
         transform.rotation = Quaternion.LookRotation(fireDir);
     }
@@ -35,10 +36,12 @@ public class FirePrefab : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.TryGetComponent(out CharacterInfo _pl) && col.gameObject.layer == playerMask)
+        if (col.gameObject.TryGetComponent(out PlayerInfo _pl) && col.gameObject.layer == playerMask)
         {
             _pl.GetDamage(fireDmg);
         }
+
+        Debug.Log(col.transform.name);
 
         GameObject partcle = Instantiate(bombParticle, transform.position, Quaternion.identity);
         ParticleSystem[] a = partcle.GetComponentsInChildren<ParticleSystem>();

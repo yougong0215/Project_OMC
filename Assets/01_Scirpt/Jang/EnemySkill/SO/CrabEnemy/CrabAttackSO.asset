@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b63aefcb62629f45891fc6fe575d973, type: 3}
   m_Name: CrabAttackSO
   m_EditorClassIdentifier: 
-  _animSpeed: 1
+  _animSpeed: 1.5
   _skillDamage: 0
   _criticalPercentage: 0
   _criticalDamage: 0

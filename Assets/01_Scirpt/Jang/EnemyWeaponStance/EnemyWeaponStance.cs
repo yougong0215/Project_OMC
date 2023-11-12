@@ -75,7 +75,6 @@ public class EnemyWeaponStance : MonoBehaviour
 
     public void ExitAttack()
     {
-        allColliderCast[currentAttackEnum].CastAct = null; //얘 안지우면 전 공격도 피격처리 되겠지
         allColliderCast[currentAttackEnum].CheckDic = new(); //맞았던 기록 엎에고
         allColliderCast[currentAttackEnum].Attack(false);
     }
