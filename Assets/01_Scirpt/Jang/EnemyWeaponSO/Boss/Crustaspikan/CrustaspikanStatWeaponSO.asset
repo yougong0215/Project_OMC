@@ -17,5 +17,5 @@ MonoBehaviour:
   Normal_Attack_2: {fileID: 8710362552980665843, guid: 82e2e6f2082fbd244b517a8134c6003d, type: 3}
   Normal_Attack_3: {fileID: 8710362552980665843, guid: a8f9a7cc4fce10b46b69252ad013dbd6, type: 3}
   Power_Attack: {fileID: 8710362552980665843, guid: fdc3866d3ec67754a84bb246d948b4a9, type: 3}
-  Speed_Attack: {fileID: 0}
+  Speed_Attack: {fileID: 8710362552980665843, guid: 78388c2517ed82a4b873654b3b8067c4, type: 3}
   Throw_Attack: {fileID: 0}

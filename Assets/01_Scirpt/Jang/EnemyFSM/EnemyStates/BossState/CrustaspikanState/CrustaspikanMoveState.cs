@@ -1,11 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CrustaspikanMoveState : EnemyMoveState
 {
     [Header("CrustaspikanOverride")]
+    [SerializeField] protected CrustaspikanInfo info;
     [SerializeField] protected EnemyWeaponStance[] weaponStances;
+
+    protected override void Start()
+    {
+        base.Start();
+    }
+
+    public override void EnterState()
+    {
+        base.EnterState();
+        PattenSet();
+    }
+
+    private void PattenSet()
+    {
+        info.RandomPatten();
+        attackEnum = info.NowAttackEnum();
+        moveDec = info.NowMovedec();
+    }
 
     public override void UpdateState()
     {

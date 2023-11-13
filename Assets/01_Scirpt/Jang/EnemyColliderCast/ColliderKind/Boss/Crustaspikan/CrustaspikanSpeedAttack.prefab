@@ -51,10 +51,10 @@ PrefabInstance:
     - target: {fileID: 4990062523532859066, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
       propertyPath: _skill
       value: 
-      objectReference: {fileID: 11400000, guid: feed80ace5a63db4f97d50042f5a8b12, type: 2}
+      objectReference: {fileID: 11400000, guid: c3948081e5bee6043af4898e67847c83, type: 2}
     - target: {fileID: 5594657452941815927, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
       propertyPath: m_Name
-      value: CrustaspikanBothAttack
+      value: CrustaspikanSpeedAttack 1
       objectReference: {fileID: 0}
     - target: {fileID: 5774836303789226633, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
       propertyPath: m_Size.x

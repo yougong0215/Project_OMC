@@ -16,7 +16,7 @@ public class EnemyInfo : CharacterInfo
     protected float agentSpeed;
     protected bool isDashing = false;
 
-    private void Start()
+    protected virtual void Start()
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();

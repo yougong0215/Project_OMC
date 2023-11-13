@@ -23,7 +23,6 @@ public class EnemyWeaponStance : MonoBehaviour
 
     [SerializeField] private EnemyWeaponSO weaponSO;
     [SerializeField] private EnemyInfo enemyInfo;
-    [SerializeField] private Transform nor1, nor2, nor3, pow, sed, thr;
     
 
     //public AttackEnum NowColliderCastEnum(ColliderCast nowColliderCast)
