@@ -11,6 +11,8 @@ public class SkillCollider
     public ColliderCast cols;
     public bool comboLive = false;
     public bool isNotWaiting = false;
+    public bool isPosition = false;
+    public bool isNextSkip = false;
     public float delayTime = .05f;
 }
 
@@ -28,10 +30,13 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
     public bool IsRunning => _isRunning;
 
     public ColliderCast CurrentObject;
-    
-    
-    
-    
+
+
+
+    public void SetOffRunning()
+    {
+        _isRunning = false;
+    }
     
     public List<SkillCollider> Attacks = new();
 
@@ -101,7 +106,7 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
             {
                 ComboInterective = false;
                 ColliderCast cols;
-                if (Attacks[currnetNum].comboLive == true)
+                if (Attacks[currnetNum].comboLive == true || Attacks[currnetNum].isPosition)
                 { 
                     cols = Instantiate(Attacks[currnetNum].cols, _char.transform);
                 }
@@ -109,22 +114,23 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
                 {
                     cols = Instantiate(Attacks[currnetNum].cols, obj.transform);
                 }
+                
+                Debug.LogWarning(Attacks[currnetNum]);
                 //cols.transform.position = vec;
                 //cols.transform.rotation = rot;
                 
                 CurrentObject = cols;
                 cols.Init(_char, _currentWeapon.statSo);
                 
-                yield return new WaitUntil(() => cols.ReturnColliderEnd() == true || Attacks[currnetNum].isNotWaiting == true);
+                yield return new WaitUntil(() => cols.ReturnColliderEnd() == true || Attacks[currnetNum].isNotWaiting == true
+                    || Attacks[currnetNum].isNextSkip == true);
                 if (Attacks[currnetNum].isNotWaiting == false)
                 {
                     Destroy(cols.gameObject, 2f);
                 }
                 else
                 {
-                    
                     MonoBehaviour mono = _char.GetComponent<MonoBehaviour>();
-
                     mono.StartCoroutine(StopFinding(CurrentObject));
                     yield return new WaitForSeconds(Attacks[currnetNum].delayTime);
                 }

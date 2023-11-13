@@ -10,6 +10,10 @@ using UnityEngine.Serialization;
 public class SkillSO : ScriptableObject
 {
     //public TextMeshPro _dmgSkin;
+    [Header("Camera")] [SerializeField] protected float _shake = 6f;
+    [SerializeField] protected float _time = 0.02f;
+    [SerializeField] protected float _powerTime = 0.02f;
+    
     [Header("Anime Speed")]
     [SerializeField] private float _animSpeed = 1f;
     
@@ -31,6 +35,7 @@ public class SkillSO : ScriptableObject
     [SerializeField] public FSMState State = FSMState.Attack;
     [SerializeField] public AnimationClip Clip = null;
     
+    
     public virtual void Init(CharacterInfo info, ObjectStatSO weapon, ColliderCast cols)
     {
         _info = info;
@@ -45,7 +50,8 @@ public class SkillSO : ScriptableObject
         {
             info.AnimCon.ChangeAnimationClip(State, Clip);
         }
-        info.FSM.ChangeState(State);
+        if(info.FSM.CurrentState._myState != State || Clip != null)
+            info.FSM.ChangeState(State);
 //        Debug.Log("스테이트 변경");
         
     }
@@ -126,11 +132,10 @@ public class SkillSO : ScriptableObject
         
         if (cols.TryGetComponent(out CharacterInfo _pl) && Damaged)
         {
-            Debug.Log("Shake");
             if (_pl.gameObject.tag != "Player")
             { 
-                CameraManager.Instance.Shakeing(6f);
-                CameraManager.Instance.ScaleBind();
+                CameraManager.Instance.Shakeing(_shake, _time);
+                CameraManager.Instance.ScaleBind(_powerTime);
             }
             _pl.GetDamage(DamageReturn());
         }

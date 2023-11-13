@@ -87,9 +87,12 @@ public class PlayerWeaponStance : MonoBehaviour
         if (_CurrentSkill != null && _CurrentSkill.IsRunning)
         {
             Debug.Log(2);
-            if(_CurrentSkill)
-            
-            return;
+            if ((int)_player.FSM.CurrentState._myState < 11)
+            {
+                _CurrentSkill.SetOffRunning();
+            }
+            else
+                 return;
         }
 
         // 쿨타임 돌면 됨

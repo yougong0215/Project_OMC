@@ -22,6 +22,12 @@ public class SkillDotDamage_MoveSO : SkillForwardMoveSO
         
         if (cols.TryGetComponent(out CharacterInfo _pl) && Damaged)
         {
+            
+            if (_pl.gameObject.tag != "Player")
+            { 
+                CameraManager.Instance.Shakeing(_shake, _time);
+                CameraManager.Instance.ScaleBind(_powerTime);
+            }
             _pl.GetDamage(DamageReturn());
             DotDma(_pl,_time,_turm,_dmgAmp);
         }

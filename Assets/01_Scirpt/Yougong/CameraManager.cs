@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class CameraManager : Singleton<CameraManager>
@@ -23,15 +24,18 @@ public class CameraManager : Singleton<CameraManager>
 
     private Coroutine _shake;
     private Coroutine _scale;
+    private float _shakeIntensity = 0;
+    private float _shakeTime=0;
+    private float _curtime = 0;
 
-    public void ScaleBind(float _time = 0.02f, float _amp = 0.08f)
+    public void ScaleBind(float _time = 0.02f, float _amp = 0.2f)
     {
         if (_scale != null)
             _scale = null;
-        _scale = StartCoroutine(Scale());
+        _scale = StartCoroutine(Scale(_time, _amp));
     }
 
-    IEnumerator Scale(float _time = 0.04f, float _amp = 0.2f)
+    IEnumerator Scale(float _time = 0.02f, float _amp = 0.2f)
     {
         Time.timeScale = _amp;
         yield return new WaitForSeconds(_time);
@@ -42,18 +46,27 @@ public class CameraManager : Singleton<CameraManager>
     {
         if (_shake != null)
             _shake = null;
-        
-        _shake = StartCoroutine(_ProcessShake(shakeIntensity, shakeTiming));
+        _shakeIntensity = shakeIntensity;
+        _shakeTime = shakeTiming;
+        _curtime = shakeTiming;
+        //_shake = StartCoroutine(_ProcessShake(shakeIntensity, shakeTiming));
     }
 
-    private IEnumerator _ProcessShake(float shakeIntensity = 5f, float shakeTiming = 0.5f)
+    private void Update()
     {
-        Noise(shakeIntensity, shakeIntensity);
-        yield return new WaitForSeconds(shakeTiming);
-        Noise(0, 0);
+        _curtime -= Time.deltaTime;
+        if (_curtime > 0)
+        {
+            Noise(_shakeIntensity);
+        }
+        else if(_shakeIntensity != 0)
+        {
+            _shakeIntensity = 0;
+            Noise(0);
+        }
     }
- 
-    private void Noise(float amplitudeGain, float frequencyGain)
+
+    private void Noise(float amplitudeGain)
     {
         if (Vcam == null)
             return;
@@ -62,12 +75,7 @@ public class CameraManager : Singleton<CameraManager>
             Vcam._currentCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         
         _cin.m_AmplitudeGain = amplitudeGain;
-        _cin.m_AmplitudeGain = amplitudeGain;
-        _cin.m_AmplitudeGain = amplitudeGain;
-            
-        _cin.m_FrequencyGain = frequencyGain;
-        _cin.m_FrequencyGain = frequencyGain;
-        _cin.m_FrequencyGain = frequencyGain;      
+        _cin.m_FrequencyGain = amplitudeGain;
  
     }
     

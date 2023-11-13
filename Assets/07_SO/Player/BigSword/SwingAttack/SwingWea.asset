@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2605c45124f368a40a84b36cd40d2188, type: 3}
-  m_Name: BIngWeapon
+  m_Name: SwingWea
   m_EditorClassIdentifier: 
   statSo: {fileID: 11400000, guid: f1dd39eb32416df4d80e4a2ab50ee8d6, type: 2}
   _skills:
   - {fileID: 11400000, guid: 74b691ef1ce927e45954be9ac8c9e1cb, type: 2}
+  - {fileID: 11400000, guid: 7aa5ab3065a0da643b7de0627c934137, type: 2}
+  - {fileID: 11400000, guid: d394113a0c54c8645a5b944444da6ae1, type: 2}
   _idleCilp: {fileID: 7400000, guid: a6807a6471eddc440aadf941d9d3bdec, type: 3}
   L_Click: {fileID: 11400000, guid: 74b691ef1ce927e45954be9ac8c9e1cb, type: 2}
-  R_Click: {fileID: 0}
-  Q_Skill: {fileID: 0}
+  R_Click: {fileID: 11400000, guid: 7aa5ab3065a0da643b7de0627c934137, type: 2}
+  Q_Skill: {fileID: 11400000, guid: d394113a0c54c8645a5b944444da6ae1, type: 2}
   E_Skill: {fileID: 0}
   R_Skill: {fileID: 0}

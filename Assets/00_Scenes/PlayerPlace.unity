@@ -2302,7 +2302,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3fcc8b24de735de44b2f3f2806954564, type: 2}
   - {fileID: 11400000, guid: 875659e0a470fa64eb6950cde008b276, type: 2}
   - {fileID: 11400000, guid: 88deba589740ac54d992d2b49910dad5, type: 2}
-  _currentWeapon: {fileID: 11400000, guid: 88deba589740ac54d992d2b49910dad5, type: 2}
+  - {fileID: 11400000, guid: f1a6660e59b697f4f9969c19fbaac756, type: 2}
+  _currentWeapon: {fileID: 11400000, guid: f1a6660e59b697f4f9969c19fbaac756, type: 2}
   _CurrentSkill: {fileID: 0}
 --- !u!1 &1109377959
 GameObject:
