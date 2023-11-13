@@ -11,10 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00_Scenes/HY30K/PP.unity
     guid: 86993ab825750f24bb535c2b514d0592
-  - enabled: 1
-    path: Assets/00_Scenes/HY30K/PP 1.unity
-    guid: d586bedcd89c0324e9ec799e04928ccf
-  - enabled: 1
-    path: Assets/00_Scenes/HY30K/PP 2.unity
-    guid: 994df4adc96632641907f97e56967d2c
   m_configObjects: {}
