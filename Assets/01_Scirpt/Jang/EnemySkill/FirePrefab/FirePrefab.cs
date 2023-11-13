@@ -9,19 +9,19 @@ public class FirePrefab : MonoBehaviour
     [SerializeField] private float fireSpeed;
     [SerializeField] private LayerMask playerMask;
 
-    private Rigidbody rb;
+    protected Rigidbody rb;
 
-    private Vector3 fireDir;
-    private float fireDmg;
+    protected Vector3 fireDir;
+    protected float fireDmg;
 
     const float partcleDestroyTime = 1f;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    public void FireSetting(Vector3 targetPos, float dmg)
+    public virtual void FireSetting(Vector3 targetPos, float dmg)
     {
         fireDmg = dmg;
         targetPos.y += 1;
@@ -29,7 +29,7 @@ public class FirePrefab : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(fireDir);
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         rb.velocity = fireDir.normalized * fireSpeed;
     }
