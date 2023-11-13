@@ -16115,26 +16115,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7430219227601780843, guid: 18acfac8d9ce7164d8d6ca2f4e05f5cf, type: 3}
   m_PrefabInstance: {fileID: 1540029184}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1549845312 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9195968447287015253, guid: 48a34ce6e085694429438b68bc044517, type: 3}
-  m_PrefabInstance: {fileID: 2006988808}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1549845319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549845312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4df461849a6aee64d8f2b65ff2f49dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: PRESS G
-  panel: {fileID: 1596943949}
-  playerInput: {fileID: 861956843}
 --- !u!1001 &1554782348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19281,18 +19261,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1232602342}
     m_Modifications:
-    - target: {fileID: 1141239399505404909, guid: 48a34ce6e085694429438b68bc044517, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141239399505404909, guid: 48a34ce6e085694429438b68bc044517, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2599501665090850490, guid: 48a34ce6e085694429438b68bc044517, type: 3}
-      propertyPath: scene
-      value: 
-      objectReference: {fileID: 102900000, guid: 86993ab825750f24bb535c2b514d0592, type: 3}
     - target: {fileID: 4552867313878738044, guid: 48a34ce6e085694429438b68bc044517, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -19333,22 +19301,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7843851689246696845, guid: 48a34ce6e085694429438b68bc044517, type: 3}
-      propertyPath: canvasGroup
+    - target: {fileID: 5940475108915558498, guid: 48a34ce6e085694429438b68bc044517, type: 3}
+      propertyPath: panel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1596943949}
+    - target: {fileID: 5940475108915558498, guid: 48a34ce6e085694429438b68bc044517, type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 861956843}
     - target: {fileID: 9152379251801273535, guid: 48a34ce6e085694429438b68bc044517, type: 3}
       propertyPath: m_Name
       value: Teleport
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7843851689246696845, guid: 48a34ce6e085694429438b68bc044517, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9195968447287015253, guid: 48a34ce6e085694429438b68bc044517, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1549845319}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48a34ce6e085694429438b68bc044517, type: 3}
 --- !u!4 &2006988809 stripped
 Transform:
