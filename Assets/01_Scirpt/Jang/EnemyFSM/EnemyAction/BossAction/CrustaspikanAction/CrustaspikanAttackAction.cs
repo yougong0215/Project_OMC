@@ -5,7 +5,15 @@ using UnityEngine;
 public class CrustaspikanAttackAction : EnemyAttackAction
 {
     [Header("CrustaspikanOverride")]
-    [SerializeField] protected EnemyWeaponStance[] weaponStances;
+    protected CrustaspikanInfo info;
+    protected EnemyWeaponStance[] weaponStances;
+
+    protected override void Init()
+    {
+        base.Init();
+        info = com.GetComponent<CrustaspikanAttackState>().info;
+        weaponStances = com.GetComponent<CrustaspikanAttackState>().weaponStances;
+    }
 
     protected override void OnEventFunc()
     {
@@ -13,5 +21,10 @@ public class CrustaspikanAttackAction : EnemyAttackAction
             weaponStance.NowColliderCase().CheckDic = new();
 
         weaponStance.Attack(true);
+    }
+
+    protected override void OnEndFunc()
+    {
+        base.OnEndFunc();
     }
 }

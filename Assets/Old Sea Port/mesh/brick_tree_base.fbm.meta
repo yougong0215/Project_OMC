@@ -1,6 +1,10 @@
 fileFormatVersion: 2
-guid: a330d40d55d959449a3029a80f7e1e91
+<<<<<<<< HEAD:Assets/Old Sea Port/mesh/brick_tree_base.fbm.meta
+guid: 708d95d2c550eaf4d8e691bdc59967c8
 folderAsset: yes
+========
+guid: 300f952795537be4ba52e20fb4bd0737
+>>>>>>>> a7257b3088a2b4823029960b0a4a5adc85fba678:Assets/FactoryAsset/Factory Interior/Render_Pipeline_Support/Factory_Interior_URP_Support.unitypackage.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

@@ -9,6 +9,9 @@ public class EnemyAttackAction : CommonAction
 
     protected EnemyWeaponStance weaponStance;
     protected Transform playerTrs;
+    private bool isTuring;
+
+    Vector3 targetDirection;
 
     protected override void Init()
     {
@@ -24,19 +27,28 @@ public class EnemyAttackAction : CommonAction
 
     protected override void OnEndFunc()
     {
-        
         weaponStance.Attack(false);
     }
 
     protected override void OnUpdateFunc()
     {
-        if (!weaponStance.IsAttacking())
+        if (!weaponStance.IsAttacking() && !isTuring)
         {
-            Vector3 targetDirection = playerTrs.position - Character.position;
+            isTuring = true;
+            targetDirection = playerTrs.position - Character.position;
+        }
+
+        if (isTuring)
+        {
+            targetDirection = playerTrs.position - Character.position;
             float targetAngle = Mathf.Atan2(targetDirection.x, targetDirection.z) * Mathf.Rad2Deg;
             float currentAngle = Mathf.LerpAngle(Character.eulerAngles.y, targetAngle, rotationSpeed * Time.deltaTime);
-
             Character.rotation = Quaternion.Euler(0, currentAngle, 0);
+
+            if (Mathf.Abs(currentAngle - targetAngle) < 20f)
+            {
+                isTuring = false;
+            }
         }
     }
 }

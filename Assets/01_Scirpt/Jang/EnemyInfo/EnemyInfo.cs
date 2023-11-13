@@ -10,13 +10,14 @@ public class EnemyInfo : CharacterInfo
     [HideInInspector] public bool isAttack;
     [Header("속공 없으면 안넣어도 됨")]
     [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashIntersection = 1.5f;
 
     protected Transform playerTrs;
     protected float enemyHp;
     protected float agentSpeed;
     protected bool isDashing = false;
 
-    private void Start()
+    protected virtual void Start()
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
@@ -25,7 +26,7 @@ public class EnemyInfo : CharacterInfo
         agentSpeed = Stat.SPEED;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         Dashing();
     }
@@ -34,7 +35,7 @@ public class EnemyInfo : CharacterInfo
     {
         if (isDashing)
         {
-            if (agent.remainingDistance <= 1.5f || FSM.NowState() != FSMState.Attack)
+            if (agent.remainingDistance <= dashIntersection || FSM.NowState() != FSMState.Attack)
             {
                 isDashing = false;
 
@@ -52,7 +53,6 @@ public class EnemyInfo : CharacterInfo
         {
             isDashing = true;
 
-            Debug.Log("대쉬");
             agent.isStopped = false;
             agent.speed *= dashSpeed;
             agent.SetDestination(playerTrs.position + transform.forward * 2);

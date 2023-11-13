@@ -152,8 +152,8 @@ public class CameraCollision : MonoBehaviour
         float t = transform.localEulerAngles.y + _originrayY;
             
         transform.localEulerAngles = new Vector3(_originrayX, t, 0);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
 
 
         _setPos = false;

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyIdleState : CommonState
 {
-    [SerializeField] private EnemyWeaponStance weaponStance;
-    [SerializeField] private float moveDec;
-    [SerializeField] private LayerMask obstacleMask;
+    [SerializeField] protected EnemyWeaponStance weaponStance;
+    [SerializeField] protected float moveDec;
+    [SerializeField] protected LayerMask obstacleMask;
 
     protected Transform playerTrs;
 
