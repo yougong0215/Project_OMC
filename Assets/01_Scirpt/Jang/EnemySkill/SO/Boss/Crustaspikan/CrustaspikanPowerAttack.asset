@@ -18,6 +18,6 @@ MonoBehaviour:
   _criticalDamage: 0
   State: 11
   Clip: {fileID: 1827226128182048838, guid: 47f9c4c5a4760ec43a9ed0d45321c290, type: 3}
-  increaseAtk: 0
-  increaseCrit: 0
-  increaseCritAmp: 0
+  increaseAtk: 5
+  increaseCrit: 5
+  increaseCritAmp: 5

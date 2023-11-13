@@ -22,9 +22,20 @@ public class CrustaspikanInfo : EnemyInfo
         pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.NORMAL3, nor3Dec));
     }
 
+    protected override void Update()
+    {
+        base.Update();
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            isArousal = true;
+            Arousal();
+            FSM.ChangeState(FSMState.WakeUP);
+        }
+    }
+
     public void RandomPatten()
     {
-        int idx = UnityEngine.Random.Range(0, 3);
+        int idx = UnityEngine.Random.Range(0, pattens.Count);
         currentPatten = pattens[idx];
     }
 
@@ -38,6 +49,15 @@ public class CrustaspikanInfo : EnemyInfo
         return currentPatten.Item2;
     }
 
+    private void Arousal()
+    {
+        pattens.Clear();
+
+        pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.POWER, powDec));
+        pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.SPEED, sedDec));
+        pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.THROW, thrDec));
+    }
+
     public override void GetDamage(float _damage)
     {
         enemyHp -= _damage;
@@ -47,6 +67,7 @@ public class CrustaspikanInfo : EnemyInfo
         else if (enemyHp < arousalHp && !isArousal)
         {
             isArousal = true;
+            Arousal();
             FSM.ChangeState(FSMState.WakeUP);
         }
     }

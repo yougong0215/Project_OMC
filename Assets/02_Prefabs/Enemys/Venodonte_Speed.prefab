@@ -673,6 +673,7 @@ MonoBehaviour:
   agent: {fileID: 0}
   isAttack: 0
   dashSpeed: 20
+  dashIntersection: 1.5
 --- !u!1001 &3249749724251701345
 PrefabInstance:
   m_ObjectHideFlags: 0

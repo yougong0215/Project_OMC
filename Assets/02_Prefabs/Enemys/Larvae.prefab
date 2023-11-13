@@ -195,6 +195,7 @@ MonoBehaviour:
   agent: {fileID: 0}
   isAttack: 0
   dashSpeed: 10
+  dashIntersection: 2
 --- !u!1 &2757180739105149183
 GameObject:
   m_ObjectHideFlags: 0
