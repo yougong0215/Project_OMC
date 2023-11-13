@@ -7,11 +7,23 @@ public class TutorialManager : MonoBehaviour
     [Header("µÙ∑π¿Ã Ω√∞£")] [SerializeField] private int Time = 0;
     public GameObject[] popUps;
     private Animator animator;
-    private int popUpIndex;
+    [HideInInspector] public int popUpIndex;
+
+    public static TutorialManager Instance;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
@@ -32,28 +44,28 @@ public class TutorialManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                popUpIndex++;
+                IndexUp();
             }
         }
         else if (popUpIndex == 1)
         {
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             {
-                popUpIndex++;
+                IndexUp();
             }
         }
         else if (popUpIndex == 2)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse1))
             {
-                popUpIndex++;
+                IndexUp();
             }
         }
         else if (popUpIndex == 3)
         {
             if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.R))
             {
-                popUpIndex++;
+                IndexUp();
             }
         }
         else if (popUpIndex == 4)
@@ -63,6 +75,11 @@ public class TutorialManager : MonoBehaviour
                 animator.SetTrigger("down");
             }
         }
+    }
+
+    public void IndexUp()
+    {
+        popUpIndex++;
     }
 
     private IEnumerator DelayTime()

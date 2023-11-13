@@ -5,8 +5,8 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
-    [SerializeField] private Animator animator;
     [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private GameObject blurImg;
     public bool isOpen = false;
 
     private void Awake()
@@ -22,33 +22,36 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        blurImg.SetActive(false);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isOpen == true)
-            {
-                animator.SetTrigger("blurIn");
-            }
-            else if (isOpen == false)
-            {
-                animator.SetTrigger("blurOut");
-            }
+            PanelSetting();
         }
     }
-    private void In()
-    {
-        
-    }
-    public void SettingClose()
-    {
-        playerInput.InputAction.Player.Disable();
-        //animator.SetTrigger("panelUp");
-    }
 
-    public void SettingOpen()
+    public void PanelSetting()
     {
-        playerInput.InputAction.Player.Enable();
-        //animator.SetTrigger("panelDown");
+        Cursor.lockState = isOpen ? CursorLockMode.None : CursorLockMode.Locked;
+
+        if (isOpen == false)
+        {
+            Time.timeScale = 0f;
+            blurImg.SetActive(true);
+            isOpen = true;
+            playerInput.InputAction.Player.Disable();
+        }
+        else if (isOpen == true)
+        {
+            Time.timeScale = 1f;
+            blurImg.SetActive(false);
+            isOpen = false;
+            playerInput.InputAction.Player.Enable();
+        }
     }
 }
