@@ -37,7 +37,6 @@ public class EnemyInfo : CharacterInfo
         {
             if (agent.remainingDistance <= dashIntersection || FSM.NowState() != FSMState.Attack)
             {
-                Debug.Log("대시 스탑");
                 isDashing = false;
 
                 agent.enabled = false;
@@ -54,7 +53,6 @@ public class EnemyInfo : CharacterInfo
         {
             isDashing = true;
 
-            Debug.Log("대쉬");
             agent.isStopped = false;
             agent.speed *= dashSpeed;
             agent.SetDestination(playerTrs.position + transform.forward * 2);

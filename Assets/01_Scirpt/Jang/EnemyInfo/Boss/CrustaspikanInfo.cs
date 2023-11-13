@@ -5,6 +5,8 @@ using System;
 
 public class CrustaspikanInfo : EnemyInfo
 {
+    [Header("CrustaspikanOverride")]
+    [SerializeField] private ParticleSystem arousalParticle;
     [SerializeField] private float arousalHp;
     [Header("공격범위")]
     [SerializeField] protected float nor1Dec, nor2Dec, nor3Dec, powDec, sedDec, thrDec;
@@ -28,6 +30,8 @@ public class CrustaspikanInfo : EnemyInfo
         if (Input.GetKeyDown(KeyCode.F))
         {
             isArousal = true;
+            AnimCon.Animator.speed = 1.3f;
+            arousalParticle.Play();
             Arousal();
             FSM.ChangeState(FSMState.WakeUP);
         }
@@ -67,6 +71,8 @@ public class CrustaspikanInfo : EnemyInfo
         else if (enemyHp < arousalHp && !isArousal)
         {
             isArousal = true;
+            AnimCon.Animator.speed = 1.3f;
+            arousalParticle.Play();
             Arousal();
             FSM.ChangeState(FSMState.WakeUP);
         }

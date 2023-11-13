@@ -14,7 +14,7 @@ public class CrustaspikanFireball : FirePrefab
         ps = GetComponent<ParticleSystem>();
         fireDmg = fireBallDmg;
 
-        Invoke("PushEffect", 5f);
+        Invoke("PushEffect", 7f);
     }
 
     protected override void Update()
