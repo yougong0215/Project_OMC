@@ -9,12 +9,6 @@ public class Teleporter : Interactable
     [Header("스폰 이름")] public string spawnName;
     [Header("이동 딜레이")] public int delay;
     private Teleportable player;
-    private FadeInOut fade;
-
-    private void Awake()
-    {
-        fade = GetComponent<FadeInOut>();
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -50,7 +44,6 @@ public class Teleporter : Interactable
 
     private IEnumerator TeleportToNewScene(string sceneName, Teleportable player)
     {
-        fade.fadeIn = true;
         yield return new WaitForSeconds(delay);
         Scene currentScene = SceneManager.GetActiveScene();
         AsyncOperation newSceneAsyncLoad = SceneManager.LoadSceneAsync(scene.name, LoadSceneMode.Additive);
