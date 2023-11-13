@@ -62,7 +62,7 @@ public class CrustaspikanInfo : EnemyInfo
         pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.THROW, thrDec));
     }
 
-    public override void GetDamage(float _damage)
+    public override void GetDamage(float _damage, bool _nuckBack = false)
     {
         enemyHp -= _damage;
 
