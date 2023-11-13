@@ -236,9 +236,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4907938576651579925, guid: 1df6986c70fc95148821d53832beae9f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2599501665090850490}
-    - targetCorrespondingSourceObject: {fileID: 4907938576651579925, guid: 1df6986c70fc95148821d53832beae9f, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7843851689246696845}
   m_SourcePrefab: {fileID: 100100000, guid: 1df6986c70fc95148821d53832beae9f, type: 3}
 --- !u!1 &9195968447287015253 stripped
@@ -246,22 +243,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4907938576651579925, guid: 1df6986c70fc95148821d53832beae9f, type: 3}
   m_PrefabInstance: {fileID: 4288030156276024640}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2599501665090850490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9195968447287015253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f453648e7a77f454b9bc3bc708ad8782, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: PRESS G
-  scene: {fileID: 102900000, guid: 4f2508376f6dba0439d13f0d69e35fb4, type: 3}
-  spawnName: 2
-  delay: 1
 --- !u!114 &7843851689246696845
 MonoBehaviour:
   m_ObjectHideFlags: 0
