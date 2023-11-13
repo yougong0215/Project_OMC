@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
                 vec.z = Mathf.Abs(vec.z) - (_info.StatSo.SPEED * Time.deltaTime);
             else
                 vec.z = 0;
-
+            Debug.LogWarning(_info.FSM);
             if (vec.x == 0 && vec.z == 0 && (int)_info.FSM.CurrentState._myState <= 10)
             {
                 _info.FSM.ChangeState(FSMState.Idle);
