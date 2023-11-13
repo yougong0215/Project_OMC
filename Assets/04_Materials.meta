@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Old Sea Port/mesh/Materials/Bark_Grey_1.mat.meta
+guid: d295243419067be46a75ceb539b17ced
+NativeFormatImporter:
+========
 guid: aa52fb8f30a579340839bed87a45619e
 folderAsset: yes
 DefaultImporter:
+>>>>>>>> a7257b3088a2b4823029960b0a4a5adc85fba678:Assets/04_Materials.meta
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

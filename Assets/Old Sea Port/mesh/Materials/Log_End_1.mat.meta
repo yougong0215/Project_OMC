@@ -1,6 +1,12 @@
 fileFormatVersion: 2
-guid: c36ee6a58b43c6740822a71c71e80e92
+<<<<<<<< HEAD:Assets/Old Sea Port/mesh/Materials/Log_End_1.mat.meta
+guid: be4a1320a15ae0d4d9b9e03384e7b16f
 NativeFormatImporter:
+========
+guid: d6fefb4274b7d4841ab6ff18bf944ac3
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> a7257b3088a2b4823029960b0a4a5adc85fba678:Assets/09_Fonts.meta
   externalObjects: {}
   mainObjectFileID: 2100000
   userData: 

@@ -1,6 +1,10 @@
 fileFormatVersion: 2
-guid: 7f7a573edb8d1014db2ba875a361cb4d
+<<<<<<<< HEAD:Assets/Old Sea Port/mesh/Materials.meta
+guid: 26ded762a0fb1364fb555524982c5fc6
 folderAsset: yes
+========
+guid: 92e9d9293aadc1e4e9c5928c0f4ae495
+>>>>>>>> a7257b3088a2b4823029960b0a4a5adc85fba678:Assets/FactoryAsset/Factory Interior/Render_Pipeline_Support/Factory_Interior_HDRP_Support.unitypackage.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
