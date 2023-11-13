@@ -23,6 +23,8 @@ public class EnemyWeaponStance : MonoBehaviour
 
     [SerializeField] private EnemyWeaponSO weaponSO;
     [SerializeField] private EnemyInfo enemyInfo;
+    [SerializeField] private Transform nor1, nor2, nor3, pow, sed, thr;
+    
 
     //public AttackEnum NowColliderCastEnum(ColliderCast nowColliderCast)
     //{
@@ -90,7 +92,7 @@ public class EnemyWeaponStance : MonoBehaviour
     public void AllAttack_Create()
     {
         ColliderCast[] casts = {
-            weaponSO.Normal_Attack_1 ,
+            weaponSO.Normal_Attack_1,
             weaponSO.Normal_Attack_2,
             weaponSO.Normal_Attack_3,
             weaponSO.Power_Attack,

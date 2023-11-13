@@ -24,7 +24,7 @@ public class EnemyAttackAction : CommonAction
 
     protected override void OnEndFunc()
     {
-
+        
         weaponStance.Attack(false);
     }
 

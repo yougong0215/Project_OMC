@@ -24,21 +24,20 @@ public class EnemyHitAction : CommonAction
 
     protected override void OnEventFunc()
     {
-        Debug.Log("D");
         dir = Character.position - playerTrs.position;
         targetPosition = Character.position + dir * knockbackAmount;
     }
 
     protected override void OnEndFunc()
     {
-        Debug.Log("DD");
         com.FSMMain.ChangeState(FSMState.Idle);
     }
 
     protected override void OnUpdateFunc()
     {
-        Vector3 newPosition = Vector3.MoveTowards(Character.position, targetPosition, knockbackSpeed * Time.deltaTime);
-        newPosition.y = Character.position.y;
-        Character.position = newPosition;
+        //나중에 getdmg에 넣어줄껴
+        //Vector3 newPosition = Vector3.MoveTowards(Character.position, targetPosition, knockbackSpeed * Time.deltaTime);
+        //newPosition.y = Character.position.y;
+        //Character.position = newPosition;
     }
 }

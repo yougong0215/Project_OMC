@@ -11,10 +11,10 @@ public class EnemyInfo : CharacterInfo
     [Header("속공 없으면 안넣어도 됨")]
     [SerializeField] private float dashSpeed;
 
-    private Transform playerTrs;
-    private float enemyHp;
-    private float agentSpeed;
-    private bool isDashing = false;
+    protected Transform playerTrs;
+    protected float enemyHp;
+    protected float agentSpeed;
+    protected bool isDashing = false;
 
     private void Start()
     {
