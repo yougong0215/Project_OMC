@@ -11,14 +11,14 @@ public class PlayerInfo : CharacterInfo
     private PlayerInput _input;
     public PlayerInput Input => _input;
 
-    private PlayerMovement _move;
-    public PlayerMovement Move => _move;
+    private PlayerMovement2 _move;
+    public PlayerMovement2 Move => _move;
 
     bool IsParring = false;
     protected override void AwakeInvoke()
     {
         _input = GetComponent<PlayerInput>();
-        _move = GetComponent<PlayerMovement>();
+        _move = GetComponent<PlayerMovement2>();
     }
 
     public void ParringStart(float time)
