@@ -23,6 +23,7 @@ public class EnemyWeaponStance : MonoBehaviour
 
     [SerializeField] private EnemyWeaponSO weaponSO;
     [SerializeField] private EnemyInfo enemyInfo;
+    
 
     //public AttackEnum NowColliderCastEnum(ColliderCast nowColliderCast)
     //{
@@ -38,6 +39,11 @@ public class EnemyWeaponStance : MonoBehaviour
     //    return AttackEnum.NONE;
     //}
 
+    private void Awake()
+    {
+        currentAttackEnum = AttackEnum.NONE;
+    }
+
     public ColliderCast NowColliderCase()
     {
         return allColliderCast[currentAttackEnum];
@@ -51,6 +57,9 @@ public class EnemyWeaponStance : MonoBehaviour
 
     public bool IsAttacking()
     {
+        if (currentAttackEnum == AttackEnum.NONE) 
+            return false;
+
         return allColliderCast[currentAttackEnum].IsAttack;
     }
 
@@ -67,7 +76,6 @@ public class EnemyWeaponStance : MonoBehaviour
 
     public void ExitAttack()
     {
-        allColliderCast[currentAttackEnum].CastAct = null; //얘 안지우면 전 공격도 피격처리 되겠지
         allColliderCast[currentAttackEnum].CheckDic = new(); //맞았던 기록 엎에고
         allColliderCast[currentAttackEnum].Attack(false);
     }
@@ -83,7 +91,7 @@ public class EnemyWeaponStance : MonoBehaviour
     public void AllAttack_Create()
     {
         ColliderCast[] casts = {
-            weaponSO.Normal_Attack_1 ,
+            weaponSO.Normal_Attack_1,
             weaponSO.Normal_Attack_2,
             weaponSO.Normal_Attack_3,
             weaponSO.Power_Attack,

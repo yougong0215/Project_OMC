@@ -11,10 +11,15 @@ public class ThrowAttackSO : EnemySkillSO
 
     public override void Init(CharacterInfo info, ObjectStatSO weapon, ColliderCast cols)
     {
+        cols.OnAnimEvnt -= SkillEvent;
         base.Init(info, weapon, cols);
 
         playerTrs = GameObject.FindWithTag("Player").transform;
-        enemyInfo.skillStartEvt += FireAttack;
+    }
+
+    public override void SkillEvent()
+    {
+        FireAttack();
     }
 
     protected override bool CritReturn()

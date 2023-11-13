@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CrustaspikanOverrideAnimator
+  m_Controller: {fileID: 9100000, guid: 1a283d088b5ab364099486d6bbdacbae, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 1827226128182048838, guid: 47f9c4c5a4760ec43a9ed0d45321c290, type: 3}
+    m_OverrideClip: {fileID: 1827226128182048838, guid: 85db423e83224724cba9a9f5a9edfebc, type: 3}

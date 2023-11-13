@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b63aefcb62629f45891fc6fe575d973, type: 3}
   m_Name: CrabAttackSO
   m_EditorClassIdentifier: 
+  _animSpeed: 1.5
   _skillDamage: 0
   _criticalPercentage: 0
   _criticalDamage: 0
   State: 11
-  Clip: {fileID: 6720303635017113406, guid: 5779b1a41ccf45b45bfc238034373133, type: 3}
+  Clip: {fileID: 6720303635017113406, guid: 4159fd5686a8c1c4fb776cf716bd494d, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dc19a4b64550c4eafe01bd7bbb056e, type: 3}
   m_Name: LeftDagger2
   m_EditorClassIdentifier: 
-  _animSpeed: 2
+  _animSpeed: 1
   _skillDamage: 0
   _criticalPercentage: 0
   _criticalDamage: 0

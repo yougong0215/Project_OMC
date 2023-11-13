@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             moveUpTime = 0;
         }
 
-        if (dir == Vector2.zero || (int)_input._fsm.CurrentState._myState > 10)
+        if (dir == Vector2.zero || (int)_info.FSM.CurrentState._myState > 10)
         {
             moveUpTime -= Time.deltaTime;
 
@@ -77,18 +77,18 @@ public class PlayerMovement : MonoBehaviour
                 vec.z = Mathf.Abs(vec.z) - (_info.StatSo.SPEED * Time.deltaTime);
             else
                 vec.z = 0;
-
-            if (vec.x == 0 && vec.z == 0 && (int)_input._fsm.CurrentState._myState <= 10)
+            Debug.LogWarning(_info.FSM);
+            if (vec.x == 0 && vec.z == 0 && (int)_info.FSM.CurrentState._myState <= 10)
             {
-                _input._fsm.ChangeState(FSMState.Idle);
+                _info.FSM.ChangeState(FSMState.Idle);
             }
 
             return;
         }
 
-        if ((int)_input._fsm.CurrentState._myState <= 10)
+        if ((int)_info.FSM.CurrentState._myState <= 10)
         {
-            _input._fsm.ChangeState(FSMState.Run);
+            _info.FSM.ChangeState(FSMState.Run);
         }
 
         moveUpTime += Time.deltaTime * .5f;

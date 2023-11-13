@@ -6,19 +6,17 @@ using UnityEngine.AI;
 
 public class EnemyInfo : CharacterInfo
 {
-    public event Action skillStartEvt;
-
     [HideInInspector] public NavMeshAgent agent;
     [HideInInspector] public bool isAttack;
     [Header("속공 없으면 안넣어도 됨")]
     [SerializeField] private float dashSpeed;
 
-    private Transform playerTrs;
-    private float enemyHp;
-    private float agentSpeed;
-    private bool isDashing = false;
+    protected Transform playerTrs;
+    protected float enemyHp;
+    protected float agentSpeed;
+    protected bool isDashing = false;
 
-    private void Start()
+    protected virtual void Start()
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
@@ -29,19 +27,7 @@ public class EnemyInfo : CharacterInfo
 
     private void Update()
     {
-        SkillStart();
         Dashing();
-    }
-
-    private void SkillStart()
-    {
-        if (isAttack)
-        {
-            isAttack = false;
-            skillStartEvt?.Invoke();
-        }
-        else if (FSM.NowState() != FSMState.Attack)
-            skillStartEvt = null;
     }
 
     private void Dashing()

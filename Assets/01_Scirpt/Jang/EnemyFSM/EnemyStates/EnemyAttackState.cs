@@ -13,7 +13,6 @@ public class EnemyAttackState : CommonState
     private void Start()
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
-
         Init?.Invoke();
     }
 
@@ -28,7 +27,7 @@ public class EnemyAttackState : CommonState
 
     public override void UpdateState()
     {
-        Vector3 dir = playerTrs.position - transform.position;
+        Vector3 dir = playerTrs.position - transform.position;  
         Ray ray = new Ray(transform.position, dir);
         RaycastHit playerHit;
 

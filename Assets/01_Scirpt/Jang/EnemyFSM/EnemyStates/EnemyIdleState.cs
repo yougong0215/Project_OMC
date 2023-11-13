@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnemyIdleState : CommonState
 {
-    [SerializeField] private EnemyWeaponStance weaponStance;
-    [SerializeField] private float moveDec;
-    [SerializeField] private LayerMask obstacleMask;
+    [SerializeField] protected EnemyWeaponStance weaponStance;
+    [SerializeField] protected float moveDec;
+    [SerializeField] protected LayerMask obstacleMask;
 
-    private Transform playerTrs;
+    protected Transform playerTrs;
 
-    private void Start()
+    protected virtual void Start()
     {
         playerTrs = GameObject.FindWithTag("Player").transform;
 

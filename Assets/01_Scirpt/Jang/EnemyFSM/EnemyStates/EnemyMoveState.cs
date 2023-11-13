@@ -10,6 +10,7 @@ using UnityEngine.AI;
 public class EnemyMoveState : CommonState
 {
     [SerializeField] protected EnemyWeaponStance weaponStance;
+    [SerializeField] protected AttackEnum attackEnum;
     [SerializeField] protected float idleDec;
     [SerializeField] protected float moveDec;
 
@@ -31,7 +32,7 @@ public class EnemyMoveState : CommonState
     public override void UpdateState()
     {
         Vector3 dir = playerTrs.position - transform.position;
-        Ray ray = new Ray(transform.position, dir);
+        Ray ray = new Ray(transform.position, dir.normalized);
         RaycastHit playerHit;
         bool isPlayer = Physics.Raycast(ray, out playerHit, idleDec, LayerMask.GetMask("Player"));
         
@@ -41,7 +42,8 @@ public class EnemyMoveState : CommonState
         }
         else if (playerHit.distance <= moveDec) 
         {
-            weaponStance.ChangeColliderCase(AttackEnum.NORMAL1);
+            
+            weaponStance.ChangeColliderCase(attackEnum);
         }
 
         UpdateAction?.Invoke();

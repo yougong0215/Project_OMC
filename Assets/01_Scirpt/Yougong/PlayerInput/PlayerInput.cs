@@ -8,7 +8,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerInput : MonoBehaviour
 {
-    public FSM _fsm;
     private PlayerMain _inputAction;
     public PlayerMain InputAction => _inputAction;
 
@@ -26,6 +25,8 @@ public class PlayerInput : MonoBehaviour
     public event Action E_Btn;
     public event Action R_Btn;
 
+    public event Action TabBtn; 
+
     public event Action Interactive_Btn;
 
     public Vector2 _input;
@@ -41,6 +42,7 @@ public class PlayerInput : MonoBehaviour
         _inputAction.Player.Q_Click.performed += Q_ClickHandle;
         _inputAction.Player.E_Click.performed += E_ClickHandle;
         _inputAction.Player.R_Click.performed += R_ClickHandle;
+        _inputAction.Player.Tab.performed += TabHandle;
 
     }
 
@@ -51,6 +53,11 @@ public class PlayerInput : MonoBehaviour
         Q_Btn = null;
         E_Btn = null;
         R_Btn = null;
+    }
+
+    public void TabHandle(InputAction.CallbackContext obj)
+    {
+        TabBtn?.Invoke();
     }
 
     public void SetInteractive(Action act = null)

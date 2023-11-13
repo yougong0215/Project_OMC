@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/05_Anim/Enemys/WizardEnemy.meta
+guid: b85727e8d41fb0c4d85c79a3a42abf5c
+folderAsset: yes
+========
 guid: f1812d811a429d4488700292e1b7634b
+>>>>>>>> main:Assets/00_Scenes/Ingi/Ingi.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
