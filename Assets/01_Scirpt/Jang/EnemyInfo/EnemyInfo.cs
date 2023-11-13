@@ -65,7 +65,7 @@ public class EnemyInfo : CharacterInfo
 
         if (enemyHp <= 0)
             FSM.ChangeState(FSMState.Die);
-        else
+        else if(_nuckBack)
             FSM.ChangeState(FSMState.Hit);
     }
 }

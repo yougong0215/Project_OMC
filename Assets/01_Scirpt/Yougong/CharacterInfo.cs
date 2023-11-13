@@ -41,6 +41,9 @@ public abstract class CharacterInfo : PoolAble
         _fsm = GetComponentInChildren<FSM>();
         _con = GetComponentInChildren<AnimationController>();
 
+        _stat = new ObjectStat();
+        _stat.SetStat(statSo);
+        
         AwakeInvoke();
     }
     

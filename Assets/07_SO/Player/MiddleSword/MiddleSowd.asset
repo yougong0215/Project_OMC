@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statSo: {fileID: 0}
   _skills:
+  - {fileID: 11400000, guid: 88bc6a099ee796949b0df1a8cc5ef750, type: 2}
   - {fileID: 11400000, guid: b7c2b0618f8eb1345bfca948f85df74c, type: 2}
-  L_Click: {fileID: 0}
+  L_Click: {fileID: 11400000, guid: 88bc6a099ee796949b0df1a8cc5ef750, type: 2}
   R_Click: {fileID: 11400000, guid: b7c2b0618f8eb1345bfca948f85df74c, type: 2}
   Q_Skill: {fileID: 0}
   E_Skill: {fileID: 0}

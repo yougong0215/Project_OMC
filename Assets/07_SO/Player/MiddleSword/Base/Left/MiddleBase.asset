@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da84e4532a01c840847be600931c232, type: 3}
+  m_Name: MiddleBase
+  m_EditorClassIdentifier: 
+  CoolTime: 0
+  _currentCooltime: 0
+  _dampingCooltime: 3
+  CurrentObject: {fileID: 0}
+  Attacks:
+  - cols: {fileID: 5973829581157502212, guid: a05dd50a6f378bd498c4a41800a63a25, type: 3}
+    comboLive: 0
+    isNotWaiting: 0
+    delayTime: 0
+  - cols: {fileID: 5973829581157502212, guid: 98fdfa803571f374eb32647a1c811273, type: 3}
+    comboLive: 1
+    isNotWaiting: 0
+    delayTime: 0
+  - cols: {fileID: 5973829581157502212, guid: 075afaff6a19539458916a01dc69fd8e, type: 3}
+    comboLive: 1
+    isNotWaiting: 0
+    delayTime: 0

@@ -7,7 +7,7 @@ public class CrustaspikanInfo : EnemyInfo
     [SerializeField] private float arousalHp;
     [HideInInspector] public bool isArousal;
 
-    public override void GetDamage(float _damage)
+    public override void GetDamage(float _damage, bool _nuckBack = false)
     {
         enemyHp -= _damage;
 

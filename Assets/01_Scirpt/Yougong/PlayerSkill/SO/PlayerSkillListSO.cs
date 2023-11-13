@@ -100,7 +100,15 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
             if (Attacks[currnetNum].comboLive==false || (ComboInterective && Attacks[currnetNum].comboLive))
             {
                 ComboInterective = false;
-                ColliderCast cols = Instantiate(Attacks[currnetNum].cols, obj.transform);
+                ColliderCast cols;
+                if (Attacks[currnetNum].comboLive == true)
+                { 
+                    cols = Instantiate(Attacks[currnetNum].cols, _char.transform);
+                }
+                else
+                {
+                    cols = Instantiate(Attacks[currnetNum].cols, obj.transform);
+                }
                 //cols.transform.position = vec;
                 //cols.transform.rotation = rot;
                 
