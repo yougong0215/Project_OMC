@@ -55,6 +55,12 @@ public class AnimationController : MonoBehaviour
     public void ChangeAnimationClip(FSMState fsm, AnimationClip clip)
     {
         AOC[fsm.ToString()] = clip;
+        Debug.LogWarning(_animator);
+        if (_animator == null)
+        {
+            _animator = GetComponent<Animator>();
+        }
+        
         _animator.runtimeAnimatorController = AOC;
     }
 

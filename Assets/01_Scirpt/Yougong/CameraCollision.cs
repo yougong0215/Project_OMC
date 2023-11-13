@@ -11,11 +11,14 @@ public class CameraCollision : MonoBehaviour
     [Header("락온")] [SerializeField] private Transform _target;
 
     [Header("카메라 셋팅")]
-    [SerializeField] Transform _vcam;
+    [SerializeField] CinemachineVirtualCamera _vcam;
+
+    public CinemachineVirtualCamera _currentCam => _vcam;
 
     [SerializeField] private Transform _LookOnCam;
 
     private CinemachineVirtualCamera _cin;
+    
     private Cinemachine3rdPersonFollow _body;
     [Header("카메라 정보 ( ESC 누르면 Lock모드 해제 되요 (")]
     [SerializeField] float _originrayX;

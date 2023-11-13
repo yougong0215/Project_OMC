@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da84e4532a01c840847be600931c232, type: 3}
+  m_Name: FireBlade
+  m_EditorClassIdentifier: 
+  CoolTime: 4
+  _currentCooltime: 0
+  _dampingCooltime: 2
+  CurrentObject: {fileID: 0}
+  Attacks:
+  - cols: {fileID: 5973829581157502212, guid: 004c6940cd15ba14abc6b2d2c8a339ae, type: 3}
+    comboLive: 0
+    isNotWaiting: 0
+    delayTime: 0

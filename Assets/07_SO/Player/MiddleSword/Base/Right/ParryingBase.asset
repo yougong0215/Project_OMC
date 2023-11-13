@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoolTime: 2
   _currentCooltime: 0
-  _dampingCooltime: 2
+  _dampingCooltime: 4
   CurrentObject: {fileID: 0}
   Attacks:
   - cols: {fileID: 5875326251886678980, guid: a2f43cbb4b0e48745b3062199a6efd36, type: 3}

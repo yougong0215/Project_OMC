@@ -7,6 +7,8 @@ using UnityEngine;
 public class PlayerWeaponSO : WeaponSO,ISerializationCallbackReceiver
 {
     [SerializeField] public List<PlayerSkillListSO> _skills = new();
+    [Header("IdleClip")]
+    [SerializeField] public AnimationClip _idleCilp;
     
 
     [Header("좌클릭")]
@@ -23,7 +25,9 @@ public class PlayerWeaponSO : WeaponSO,ISerializationCallbackReceiver
 
     [Header("R 스킬")]
     public PlayerSkillListSO R_Skill;
-
+    
+    
+    
 
     public void OnBeforeSerialize()
     {

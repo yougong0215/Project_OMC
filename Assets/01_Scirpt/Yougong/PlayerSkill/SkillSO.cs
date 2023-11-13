@@ -80,6 +80,7 @@ public class SkillSO : ScriptableObject
     /// <returns></returns>
     public virtual float DamageReturn()
     {
+        Debug.LogWarning(_info.Stat);
         return CritReturn() == true ? ((_info.Stat.CritAmp + WeaponStatSo.CritAmp + _criticalDamage)*0.01f) * ((_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage)
             : (_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage;
     }
@@ -120,26 +121,37 @@ public class SkillSO : ScriptableObject
         //
         //}
 
-        
+
+
         
         if (cols.TryGetComponent(out CharacterInfo _pl) && Damaged)
         {
-            _pl.GetDamage(DamageReturn());
-            
-            if (_isNuckbackAble && _pl.IsNuckBackAble)
-            {
-                // 넉백
-                _pl.StartCoroutine(NuckBack(_pl));
+            Debug.Log("Shake");
+            if (_pl.gameObject.tag != "Player")
+            { 
+                CameraManager.Instance.Shakeing(6f);
+                CameraManager.Instance.ScaleBind();
             }
+            _pl.GetDamage(DamageReturn());
+        }
+        
+        if (_pl != null && _isNuckbackAble && _pl.IsNuckBackAble)
+        {
+            // 넉백
+            _pl.StartCoroutine(NuckBack(_pl));
         }
     }
 
-    IEnumerator NuckBack(CharacterInfo _pl)
+    protected virtual IEnumerator NuckBack(CharacterInfo _pl)
     {
+        yield return null;
         if (_pl != null  && _pl.IsNuckBackAble ==false)
         {
+            Vector3 dir = (_pl.transform.position - _info.transform.position).normalized;
+            
+            
+            
             _pl.transform.localPosition += _localNuckBackVector * _NuckbackSpeed * Time.deltaTime;
-            yield return null;
 
             _pl.StartCoroutine(NuckBack(_pl));
         }

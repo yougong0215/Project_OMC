@@ -6,9 +6,11 @@ using UnityEngine.Rendering;
 
 public class PlayerWeaponStance : MonoBehaviour
 {
+    [Header("Default IdleAnim")] public AnimationClip _clip;
     protected PlayerInfo _player;
 
     private PlayerInput _input;
+    [Header("WeaponList")]
 
     public List<PlayerWeaponSO> weaponList;
     
@@ -55,6 +57,8 @@ public class PlayerWeaponStance : MonoBehaviour
         }
         
         Debug.Log($"{_so.ToString()}쿨타임 : {_so._currentCooltime}");
+        
+        
         
 
         // 스킬이 같으면서 사용중이면 콤보 연계
@@ -113,6 +117,18 @@ public class PlayerWeaponStance : MonoBehaviour
 
     public void ChangeStance(PlayerWeaponSO _so)
     {
+        if (_so == null)
+            return;
+        
+        if (_so._idleCilp != null)
+        {
+            _player.AnimCon.ChangeAnimationClip(FSMState.Idle, _so._idleCilp);
+        }
+        else
+        {
+            _player.AnimCon.ChangeAnimationClip(FSMState.Idle, _clip);
+        }
+       
          _input.SkillInputReset();
         
         _currentWeapon = _so;

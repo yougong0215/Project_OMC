@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2605c45124f368a40a84b36cd40d2188, type: 3}
   m_Name: MiddleSowd
   m_EditorClassIdentifier: 
-  statSo: {fileID: 0}
+  statSo: {fileID: 11400000, guid: 77c12bfa68fdf4149baeb4f2fe438e1e, type: 2}
   _skills:
   - {fileID: 11400000, guid: 88bc6a099ee796949b0df1a8cc5ef750, type: 2}
   - {fileID: 11400000, guid: b7c2b0618f8eb1345bfca948f85df74c, type: 2}
+  _idleCilp: {fileID: 0}
   L_Click: {fileID: 11400000, guid: 88bc6a099ee796949b0df1a8cc5ef750, type: 2}
   R_Click: {fileID: 11400000, guid: b7c2b0618f8eb1345bfca948f85df74c, type: 2}
   Q_Skill: {fileID: 0}
