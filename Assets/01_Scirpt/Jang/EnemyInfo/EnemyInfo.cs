@@ -12,6 +12,7 @@ public class EnemyInfo : CharacterInfo
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashIntersection = 1.5f;
 
+    protected EnemyHpBar hpBar;
     protected Transform playerTrs;
     protected float enemyHp;
     protected float agentSpeed;
@@ -19,11 +20,14 @@ public class EnemyInfo : CharacterInfo
 
     protected virtual void Start()
     {
+        hpBar = GetComponentInChildren<EnemyHpBar>();
         playerTrs = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
 
         enemyHp = statSo.HP;
         agentSpeed = Stat.SPEED;
+
+        hpBar.SetHpBar(enemyHp, statSo.HP);
     }
 
     protected virtual void Update()
@@ -61,7 +65,10 @@ public class EnemyInfo : CharacterInfo
 
     public override void GetDamage(float _damage, bool _nuckBack = true)
     {
+        _damage = 10;
         enemyHp -= _damage;
+
+        hpBar.SetHpBar(enemyHp, statSo.HP);
 
         if (enemyHp <= 0)
             FSM.ChangeState(FSMState.Die);

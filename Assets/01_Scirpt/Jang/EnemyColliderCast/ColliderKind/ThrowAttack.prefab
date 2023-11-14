@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThrowAttack
       objectReference: {fileID: 0}
+    - target: {fileID: 5774836303789226633, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
