@@ -6,6 +6,16 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SO/Player/Weapon")]
 public class PlayerWeaponSO : WeaponSO,ISerializationCallbackReceiver
 {
+    public enum WEAPON_TYPE
+    {
+        Short,
+        Middle,
+        Big
+    }
+
+    [Header("SOType")] public WEAPON_TYPE _type;
+    
+    
     [SerializeField] public List<PlayerSkillListSO> _skills = new();
     [Header("IdleClip")]
     [SerializeField] public AnimationClip _idleCilp;

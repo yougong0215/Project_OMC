@@ -184,6 +184,8 @@ GameObject:
   - component: {fileID: 2010266427469282004}
   - component: {fileID: 7164700548159730893}
   - component: {fileID: 251942309727992595}
+  - component: {fileID: 9213394364808258849}
+  - component: {fileID: 3370271346769602142}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -303,6 +305,35 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f1a6660e59b697f4f9969c19fbaac756, type: 2}
   _currentWeapon: {fileID: 11400000, guid: f1a6660e59b697f4f9969c19fbaac756, type: 2}
   _CurrentSkill: {fileID: 0}
+--- !u!114 &9213394364808258849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4641673803073005816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052a22890655b8e4e94f9a1bdf65e463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptText: {fileID: 0}
+--- !u!114 &3370271346769602142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4641673803073005816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54f00cd08588b845a7572ad96633efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 10
+  mask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &5447403685518627748
 GameObject:
   m_ObjectHideFlags: 0

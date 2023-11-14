@@ -24,7 +24,9 @@ public class EnemyIdleState : CommonState
 
     public override void UpdateState()
     {
-        Vector3 dir = playerTrs.position - transform.position;
+        Vector3 dir = (playerTrs.position+ new Vector3(0,1,0) - transform.position).normalized;
+        
+        Debug.DrawRay(transform.position,dir * 10, Color.red);
         Ray ray = new Ray(transform.position, dir);
         RaycastHit playerHit;
         bool isPlayer = Physics.Raycast(ray, out playerHit, moveDec, LayerMask.GetMask("Player"));
