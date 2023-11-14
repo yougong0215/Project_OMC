@@ -67,6 +67,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.36271188
+        functionName: OnPowerAttackAnimation
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.902027
         functionName: OnAnimationEnd
         data: 
@@ -77,7 +84,7 @@ ModelImporter:
       - time: 1
         functionName: OnPanntenAnimationChange
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: db5295ca02342c84f893feabacfccd4c, type: 3}
+        objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0

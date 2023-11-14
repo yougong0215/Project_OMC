@@ -5,6 +5,7 @@ using UnityEngine;
 public class CrustaspikanAnimatonEvent : MonoBehaviour
 {
     [SerializeField] private EnemyWeaponStance[] weaponStances;
+    [SerializeField] private GameObject powerParticleObj;
     private CrustaspikanInfo info;
     private FSM fsm;
 
@@ -28,5 +29,10 @@ public class CrustaspikanAnimatonEvent : MonoBehaviour
     public void OnDashAnimation()
     {
         info.DashInit();
+    }
+
+    public void OnPowerAttackAnimation()
+    {
+        Instantiate(powerParticleObj, weaponStances[1].transform.position - new Vector3(0, 5), Quaternion.identity);
     }
 }
