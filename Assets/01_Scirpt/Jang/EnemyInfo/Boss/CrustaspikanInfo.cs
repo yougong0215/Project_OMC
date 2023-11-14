@@ -44,8 +44,9 @@ public class CrustaspikanInfo : EnemyInfo
 
     public void RandomPatten()
     {
-        int idx = UnityEngine.Random.Range(0, pattens.Count);
-        currentPatten = pattens[idx];
+        //int idx = UnityEngine.Random.Range(0, pattens.Count);
+        //currentPatten = pattens[idx];
+        currentPatten = pattens[0];
     }
 
     public AttackEnum NowAttackEnum()
@@ -63,8 +64,8 @@ public class CrustaspikanInfo : EnemyInfo
         pattens.Clear();
 
         pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.POWER, powDec));
-        pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.SPEED, sedDec));
-        pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.THROW, thrDec));
+        //pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.SPEED, sedDec));
+        //pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.THROW, thrDec));
     }
 
     public override void GetDamage(float _damage, bool _nuckBack = false)
