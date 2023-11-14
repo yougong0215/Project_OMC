@@ -122,7 +122,8 @@ public class PlayerWeaponStance : MonoBehaviour
     {
         if (_so == null)
             return;
-        
+
+        Debug.Log(_player.AnimCon);
         if (_so._idleCilp != null)
         {
             _player.AnimCon.ChangeAnimationClip(FSMState.Idle, _so._idleCilp);

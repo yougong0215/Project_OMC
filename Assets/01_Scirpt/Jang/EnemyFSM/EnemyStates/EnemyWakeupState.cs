@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class EnemyWakeupState : CommonState
 {
+    [SerializeField] private GameObject bossUI;
+
     public override void EnterState()
     {
         _animator.OnAnimationEventTrigger += EventAction;
         _animator.OnAnimationEndTrigger += EndAction;
         _animator.SetWakeAnimation(true);
+
+        bossUI.SetActive(true);
     }
 
     public override void UpdateState()

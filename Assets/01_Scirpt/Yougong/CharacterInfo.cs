@@ -27,7 +27,20 @@ public abstract class CharacterInfo : PoolAble
     public bool IsDamage => _isDamaged;
     [SerializeField] private float _dmgTime = 0f;
 
-    public AnimationController AnimCon => _con;
+    public AnimationController AnimCon
+    {
+        get
+        {
+            if (_con == null)
+            {
+
+                _con = GetComponentInChildren<AnimationController>();
+            }
+
+            return _con;
+
+        }
+    }
 
     protected Coroutine _co = null;
 
@@ -39,7 +52,6 @@ public abstract class CharacterInfo : PoolAble
     void Awake()
     {
         _fsm = GetComponentInChildren<FSM>();
-        _con = GetComponentInChildren<AnimationController>();
 
         _stat = new ObjectStat();
         _stat.SetStat(statSo);
@@ -55,7 +67,7 @@ public abstract class CharacterInfo : PoolAble
     /// <summary>
     /// 몬스터에 기믹이 있다면 override 하기
     /// </summary>
-    public virtual void GetDamage(float _damage, bool _nuckBack = false)
+    public virtual void GetDamage(float _damage, bool _nuckBack = true)
     {
         statSo.HP -= (int)_damage;
         if(_co == null)

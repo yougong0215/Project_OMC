@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class CrustaspikanInfo : EnemyInfo
 {
     [Header("CrustaspikanOverride")]
+    [SerializeField] private Slider hpBar;
     [SerializeField] private ParticleSystem arousalParticle;
     [SerializeField] private float arousalHp;
     [Header("공격범위")]
@@ -22,6 +24,9 @@ public class CrustaspikanInfo : EnemyInfo
         pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.NORMAL1, nor1Dec));
         pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.NORMAL2, nor2Dec));
         pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.NORMAL3, nor3Dec));
+
+        hpBar.maxValue = enemyHp;
+        hpBar.value = hpBar.maxValue;
     }
 
     protected override void Update()
@@ -64,10 +69,16 @@ public class CrustaspikanInfo : EnemyInfo
 
     public override void GetDamage(float _damage, bool _nuckBack = false)
     {
+        Debug.Log($"데미지 얼마? {_damage}");
+        _damage = 10;
         enemyHp -= _damage;
+        hpBar.value = enemyHp;
 
         if (enemyHp <= 0)
+        {
+            arousalParticle.Stop();
             FSM.ChangeState(FSMState.Die);
+        }
         else if (enemyHp < arousalHp && !isArousal)
         {
             isArousal = true;

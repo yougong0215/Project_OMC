@@ -29,7 +29,7 @@ public class CrustaspikanFireball : FirePrefab
 
     private void OnParticleCollision(GameObject other)
     {
-        if (other.TryGetComponent(out CharacterInfo _pl))
+        if (other.TryGetComponent(out PlayerInfo _pl))
         {
             _pl.GetDamage(fireDmg);
         }
