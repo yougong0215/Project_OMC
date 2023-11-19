@@ -54,4 +54,10 @@ public class UIManager : MonoBehaviour
             playerInput.InputAction.Player.Enable();
         }
     }
+
+    public void Close()
+    {
+        blurImg.SetActive(false);
+        isOpen = false;
+    }
 }
