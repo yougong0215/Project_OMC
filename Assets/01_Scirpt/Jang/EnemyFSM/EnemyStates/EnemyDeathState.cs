@@ -19,7 +19,7 @@ public class EnemyDeathState : CommonState
 
     public override void ExitState()
     {
-        Destroy(Character);
+        Destroy(Character.gameObject);
     }
 
     public override void UpdateState()

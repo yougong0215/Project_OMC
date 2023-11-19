@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.AI;
 
 public class CrustaspikanInfo : EnemyInfo
 {
@@ -10,7 +11,7 @@ public class CrustaspikanInfo : EnemyInfo
     [SerializeField] private Slider hpBar;
     [SerializeField] private ParticleSystem arousalParticle;
     [SerializeField] private float arousalHp;
-    [Header("°ø°Ý¹üÀ§")]
+    [Header("ê³µê²© ë²”ìœ„")]
     [SerializeField] protected float nor1Dec, nor2Dec, nor3Dec, powDec, sedDec, thrDec;
     [HideInInspector] public bool isArousal;
 
@@ -19,12 +20,15 @@ public class CrustaspikanInfo : EnemyInfo
 
     protected override void Start()
     {
-        base.Start();
+        playerTrs = GameObject.FindWithTag("Player").transform;
+        agent = GetComponent<NavMeshAgent>();
 
         pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.NORMAL1, nor1Dec));
         pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.NORMAL2, nor2Dec));
         pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.NORMAL3, nor3Dec));
 
+        enemyHp = statSo.HP;
+        agentSpeed = Stat.SPEED;
         hpBar.maxValue = enemyHp;
         hpBar.value = hpBar.maxValue;
     }
@@ -44,9 +48,8 @@ public class CrustaspikanInfo : EnemyInfo
 
     public void RandomPatten()
     {
-        //int idx = UnityEngine.Random.Range(0, pattens.Count);
-        //currentPatten = pattens[idx];
-        currentPatten = pattens[0];
+        int idx = UnityEngine.Random.Range(0, pattens.Count);
+        currentPatten = pattens[idx];
     }
 
     public AttackEnum NowAttackEnum()
@@ -64,14 +67,12 @@ public class CrustaspikanInfo : EnemyInfo
         pattens.Clear();
 
         pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.POWER, powDec));
-        //pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.SPEED, sedDec));
-        //pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.THROW, thrDec));
+        pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.SPEED, sedDec));
+        pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.THROW, thrDec));
     }
 
     public override void GetDamage(float _damage, bool _nuckBack = false)
     {
-        Debug.Log($"µ¥¹ÌÁö ¾ó¸¶? {_damage}");
-        _damage = 10;
         enemyHp -= _damage;
         hpBar.value = enemyHp;
 
