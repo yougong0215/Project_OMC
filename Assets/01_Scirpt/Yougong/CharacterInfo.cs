@@ -26,6 +26,8 @@ public abstract class CharacterInfo : PoolAble
     [NonSerialized] protected bool _isDamaged = false;
     public bool IsDamage => _isDamaged;
     [SerializeField] private float _dmgTime = 0f;
+    [SerializeField] private HitDissolve _hit;
+    public HitDissolve HitDis=> _hit;
 
     public AnimationController AnimCon
     {
@@ -52,9 +54,10 @@ public abstract class CharacterInfo : PoolAble
     void Awake()
     {
         _fsm = GetComponentInChildren<FSM>();
-
+        _hit = GetComponentInChildren<HitDissolve>();
         _stat = new ObjectStat();
         _stat.SetStat(statSo);
+        
         
         AwakeInvoke();
     }
@@ -75,6 +78,13 @@ public abstract class CharacterInfo : PoolAble
 
         if (_nuckBack)
         {
+            
+            if (HitDis != null)
+            {
+                Debug.Log("hit");
+                HitDis.StartHiting();
+            }
+            
             // 적 정보 받아서 넉백 스테이트 Hit 변경
         }
     }
