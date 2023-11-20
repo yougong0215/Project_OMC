@@ -26,6 +26,6 @@ public class SoundPlayer : MonoBehaviour
 
     public void AudioSettingSetting()
     {
-        SoundManager.Instance.MixerSave(SoundSetting.Master, slider.value);
+        SoundManager.Instance.MixerSave(SoundSetting.background, slider.value);
     }
 }

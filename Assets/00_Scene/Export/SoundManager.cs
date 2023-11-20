@@ -125,7 +125,10 @@ public class SoundManager : Singleton<SoundManager>
     {
         GameObject bg = Instantiate(new GameObject());
         _backgroundSound = bg.AddComponent<AudioSource>();
-        
+
+        AudioMixerGroup[] _ad = _mixer.FindMatchingGroups("SFX");
+        _backgroundSound.outputAudioMixerGroup = _ad[0];
+
         _backgroundSound.clip = _soundType;
         _backgroundSound.Play();
     }
@@ -156,7 +159,8 @@ public class SoundManager : Singleton<SoundManager>
         
         DontDestroyOnLoad(bg);
         _backgroundSound = bg.AddComponent<AudioSource>();
-        
+        AudioMixerGroup[] _ad = _mixer.FindMatchingGroups("background");
+        _backgroundSound.outputAudioMixerGroup = _ad[0];
         _backgroundSound.clip = _bgType;
         _backgroundSound.Play();
     }
