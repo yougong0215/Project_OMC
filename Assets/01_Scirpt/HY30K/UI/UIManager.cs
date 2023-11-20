@@ -47,18 +47,18 @@ public class UIManager : MonoBehaviour
 
     private void PanelSetting()
     {
-        Cursor.lockState = isOpen ? CursorLockMode.None : CursorLockMode.Locked;
+        //Cursor.lockState = isOpen ? CursorLockMode.None : CursorLockMode.Locked;
 
         if (isOpen == false)
         {
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
             SettingBlur.SetActive(true);
             isOpen = true;
             playerInput.InputAction.Player.Disable();
         }
         else if (isOpen == true)
         {
-            Time.timeScale = 1f;
+            //Time.timeScale = 1f;
             SettingBlur.SetActive(false);
             isOpen = false;
             playerInput.InputAction.Player.Enable();
@@ -79,6 +79,7 @@ public class UIManager : MonoBehaviour
     {
         SettingBlur.SetActive(false);
         isOpen = false;
+        playerInput.InputAction.Player.Enable();
     }
 
     public void Restart()

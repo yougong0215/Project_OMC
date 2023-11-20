@@ -66,7 +66,7 @@ public class SoundManager : Singleton<SoundManager>
 
     public void MixerSave(SoundSetting ss, float value)
     {
-        value = Mathf.RoundToInt(value);
+        //value = Mathf.RoundToInt(value);
         if (value<= .0f)
         {
             _mixer.SetFloat(ss.ToString(), -80f);
@@ -98,7 +98,7 @@ public class SoundManager : Singleton<SoundManager>
         string jsonData = JsonUtility.ToJson(_data);
         File.WriteAllText(path, jsonData);
         
-        Debug.LogWarning((value));
+        Debug.LogWarning($"VOLUM SET : {value}");
     }
 
     public float GetValue(SoundSetting ss)
@@ -125,7 +125,10 @@ public class SoundManager : Singleton<SoundManager>
     {
         GameObject bg = Instantiate(new GameObject());
         _backgroundSound = bg.AddComponent<AudioSource>();
-        
+
+        AudioMixerGroup[] _ad = _mixer.FindMatchingGroups("SFX");
+        _backgroundSound.outputAudioMixerGroup = _ad[0];
+
         _backgroundSound.clip = _soundType;
         _backgroundSound.Play();
     }
@@ -156,7 +159,8 @@ public class SoundManager : Singleton<SoundManager>
         
         DontDestroyOnLoad(bg);
         _backgroundSound = bg.AddComponent<AudioSource>();
-        
+        AudioMixerGroup[] _ad = _mixer.FindMatchingGroups("background");
+        _backgroundSound.outputAudioMixerGroup = _ad[0];
         _backgroundSound.clip = _bgType;
         _backgroundSound.Play();
     }
