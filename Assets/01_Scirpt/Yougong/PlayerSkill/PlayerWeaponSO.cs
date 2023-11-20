@@ -13,6 +13,8 @@ public class PlayerWeaponSO : WeaponSO,ISerializationCallbackReceiver
         Big
     }
 
+    [Header("Item")] public GameObject _weaponModel;
+
     [Header("SOType")] public WEAPON_TYPE _type;
     
     

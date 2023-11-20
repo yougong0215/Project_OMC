@@ -19,6 +19,7 @@ public class SkillCollider
     [CreateAssetMenu(menuName = "SO/Player/SkillList/Base")]
 public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceiver
 {
+    [Header("Icon")] [SerializeField] public Texture _icon;
     [Header("Info")] [SerializeField] protected float CoolTime = 8f;
     [SerializeField] public float _currentCooltime = 0;
     [SerializeField] public float _dampingCooltime =2f;
