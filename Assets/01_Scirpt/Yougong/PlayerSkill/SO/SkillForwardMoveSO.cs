@@ -11,7 +11,9 @@ public class SkillForwardMoveSO : SkillSO
     [Description("0.05배 가속")]
     public override void SkillUpdate()
     {
-        //base.SkillUpdate();
+        base.SkillUpdate();
+        if (_isRunning == true)
+            return;
         _info.transform.position += _info.transform.forward * _speed * 0.05f * Time.deltaTime;
         
     }

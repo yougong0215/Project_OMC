@@ -60,6 +60,11 @@ public abstract class ColliderCast : PoolAble
         ColliderEnd = false;
     }
 
+    public void DeleteSeqeunce()
+    {
+        Destroy(this.gameObject);
+    }
+
     public void Init(CharacterInfo Player, ObjectStatSO Weapon)
     {
         _player = Player;
@@ -103,6 +108,7 @@ public abstract class ColliderCast : PoolAble
     
     protected void Update()
     {
+        
         if (ColliderEnd == false)
         {
             _skill.SkillUpdate();

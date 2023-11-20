@@ -18,6 +18,7 @@ public class PlayerWeaponStance : MonoBehaviour
     
     public PlayerSkillListSO _CurrentSkill;
     private int nowNum = 0;
+    [Header("Cavans")] [SerializeField]private PlayerCanvasM _canvas;
 
     private void Awake()
     {
@@ -44,6 +45,22 @@ public class PlayerWeaponStance : MonoBehaviour
             {
 //                Debug.Log(weaponList[i]._skills[j].name);
                 weaponList[i]._skills[j]._currentCooltime -= Time.deltaTime;
+                if (_currentWeapon.R_Click == weaponList[i]._skills[j])
+                {
+                    _canvas.SkillCooldown(SkillBtn.Left, _currentWeapon.R_Click.MaxCool(),_currentWeapon.R_Click._currentCooltime);
+                }
+                else if (_currentWeapon.Q_Skill == weaponList[i]._skills[j])
+                {
+                    _canvas.SkillCooldown(SkillBtn.Q, _currentWeapon.Q_Skill.MaxCool(),_currentWeapon.Q_Skill._currentCooltime);
+                }
+                else if (_currentWeapon.E_Skill == weaponList[i]._skills[j])
+                {
+                    _canvas.SkillCooldown(SkillBtn.E, _currentWeapon.E_Skill.MaxCool(),_currentWeapon.E_Skill._currentCooltime);
+                }
+                else if (_currentWeapon.R_Skill == weaponList[i]._skills[j])
+                {
+                    _canvas.SkillCooldown(SkillBtn.R, _currentWeapon.R_Skill.MaxCool(),_currentWeapon.R_Skill._currentCooltime);
+                }
             }
         }
 
@@ -131,7 +148,13 @@ public class PlayerWeaponStance : MonoBehaviour
     {
         if (_so == null)
             return;
-
+        Debug.LogWarning(_so.R_Click._icon.name);
+        _canvas.SetSkillIcon(SkillBtn.Left, _so.R_Click != null ? _so.R_Click._icon : null);
+        _canvas.SetSkillIcon(SkillBtn.Q, _so.Q_Skill != null ? _so.Q_Skill._icon : null);
+        _canvas.SetSkillIcon(SkillBtn.E, _so.E_Skill != null ? _so.E_Skill._icon : null);
+        _canvas.SetSkillIcon(SkillBtn.R, _so.R_Skill != null ? _so.R_Skill._icon : null);
+        
+        
         Debug.Log(_player.AnimCon);
         if (_so._idleCilp != null)
         {

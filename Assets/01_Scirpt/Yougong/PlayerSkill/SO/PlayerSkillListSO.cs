@@ -19,7 +19,7 @@ public class SkillCollider
     [CreateAssetMenu(menuName = "SO/Player/SkillList/Base")]
 public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceiver
 {
-    [Header("Icon")] [SerializeField] public Texture _icon;
+    [Header("Icon")] [SerializeField] public Sprite _icon;
     [Header("Info")] [SerializeField] protected float CoolTime = 8f;
     [SerializeField] public float _currentCooltime = 0;
     [SerializeField] public float _dampingCooltime =2f;
@@ -33,7 +33,10 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
     public ColliderCast CurrentObject;
 
 
-
+    public float MaxCool()
+    {
+        return CoolTime + _dampingCooltime;
+    }
     public void SetOffRunning()
     {
         _isRunning = false;
@@ -134,11 +137,16 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
                     Debug.LogWarning("Argument Bug!!!");
                     break;
                 }
- 
-                    yield return new WaitUntil(() => cols.ReturnColliderEnd() == true ||
-                                                     Attacks[currnetNum].isNotWaiting == true
-                                                     || Attacks[currnetNum].isNextSkip == true);
-                 
+
+                yield return new WaitUntil(() => cols.ReturnColliderEnd() == true ||
+                                                 Attacks[currnetNum].isNotWaiting == true
+                                                 || Attacks[currnetNum].isNextSkip == true&&
+                                                 _char.FSM.CurrentState._myState != FSMState.NuckDown);
+                if (_char.FSM.CurrentState._myState == FSMState.NuckDown)
+                {
+                    cols.DeleteSeqeunce();
+                    break;
+                }
                 
 
                 if (Attacks[currnetNum].isNotWaiting == false)
@@ -162,7 +170,8 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
         Destroy(obj);
         _isRunning = false;
 
-        yield return new WaitUntil(() => _char.AnimCon.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f);
+        yield return new WaitUntil(() => _char.AnimCon.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f
+                                         || _char.FSM.CurrentState._myState == FSMState.NuckDown);
         if (_char.FSM.CurrentState._myState != FSMState.Run &&
             _char.FSM.CurrentState._myState != FSMState.Idle &&
             _char.FSM.CurrentState._myState <= _char.FSM.CurrentState._myState && 
