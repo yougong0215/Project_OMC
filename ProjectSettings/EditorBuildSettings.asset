@@ -5,13 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/00_Scenes/HY30K/Tutorial.unity
     guid: ec27e022d06057042bce899b565a3eef
+  - enabled: 1
+    path: Assets/00_Scenes/Intro.unity
+    guid: e5ceff3f66d5781448480b8e24124979
   - enabled: 1
     path: Assets/00_Scenes/HY30K/Lab.unity
     guid: 22d513a3d1315114bbaeaea42a8ee03c
   - enabled: 1
     path: Assets/00_Scenes/HY30K/PP.unity
     guid: 86993ab825750f24bb535c2b514d0592
+  - enabled: 1
+    path: Assets/00_Scenes/MainScene/TutorialScene.unity
+    guid: 980da8b40b5883444b5cd96a70609cc9
+  - enabled: 1
+    path: Assets/00_Scenes/MainScene/MainScene.unity
+    guid: 1855bf0bfb4bbc242b50709665dfd855
   m_configObjects: {}
