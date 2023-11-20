@@ -160,15 +160,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5774836303789226633, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
       propertyPath: m_Size.x
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5774836303789226633, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
       propertyPath: m_Size.y
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5774836303789226633, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
       propertyPath: m_Size.z
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5774836303789226633, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
       propertyPath: m_IsTrigger
