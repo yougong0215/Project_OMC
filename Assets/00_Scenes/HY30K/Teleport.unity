@@ -1986,7 +1986,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 1
-  far clip plane: 70
+  far clip plane: 120
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -2100,8 +2100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b67878db9be3984bbd2a33a9d781539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _clip: {fileID: 0}
   weaponList: []
   _currentWeapon: {fileID: 11400000, guid: db4aa8970c45b2342bc7daba25d8935c, type: 2}
+  _CurrentSkill: {fileID: 0}
 --- !u!114 &1406241978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2114,8 +2116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e227433c2132d5c48b15f5ca38f4332b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isNuckbackAble: 1
   _fsm: {fileID: 0}
   _con: {fileID: 1835948752}
+  _dmgTime: 0
+  _hit: {fileID: 0}
   statSo: {fileID: 0}
 --- !u!143 &1406241979
 CharacterController:
@@ -2155,7 +2160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbef99a8aa9a23d42a3bc2e223f19c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fsm: {fileID: 1926823975}
+  _input: {x: 0, y: 0}
 --- !u!114 &1406241981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2382,6 +2387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453648e7a77f454b9bc3bc708ad8782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  promptMessage: 
   scene: {fileID: 102900000, guid: 4f2508376f6dba0439d13f0d69e35fb4, type: 3}
   spawnName: 2
   delay: 1

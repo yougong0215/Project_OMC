@@ -79,6 +79,7 @@ public class UIManager : MonoBehaviour
     {
         SettingBlur.SetActive(false);
         isOpen = false;
+        playerInput.InputAction.Player.Enable();
     }
 
     public void Restart()
