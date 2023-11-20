@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 using UnityEngine.UI;
 using TMPro;
@@ -51,5 +52,10 @@ public class TutorialManager : MonoBehaviour
             _text.DOFade(0, DrawList[i].fadeTime);
             yield return new WaitForSeconds(DrawList[i].fadeTime);
         }
+    }
+
+    public void SceneMove()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 }
