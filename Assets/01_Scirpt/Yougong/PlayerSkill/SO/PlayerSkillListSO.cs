@@ -140,25 +140,33 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
 
                 yield return new WaitUntil(() => cols.ReturnColliderEnd() == true ||
                                                  Attacks[currnetNum].isNotWaiting == true
-                                                 || Attacks[currnetNum].isNextSkip == true&&
-                                                 _char.FSM.CurrentState._myState != FSMState.NuckDown);
-                if (_char.FSM.CurrentState._myState == FSMState.NuckDown)
-                {
-                    cols.DeleteSeqeunce();
-                    break;
-                }
-                
-
+                                                 || Attacks[currnetNum].isNextSkip == true
+                                                 && _char.FSM.CurrentState._myState == FSMState.NuckDown);
                 if (Attacks[currnetNum].isNotWaiting == false)
                 {
                     Destroy(cols.gameObject, 2f);
+                    if (_char.FSM.CurrentState._myState == FSMState.NuckDown)
+                    {
+                        cols.DeleteSeqeunce();
+                        break;
+                    }
                 }
                 else
                 {
                     MonoBehaviour mono = _char.GetComponent<MonoBehaviour>();
                     mono.StartCoroutine(StopFinding(CurrentObject));
+                    if (_char.FSM.CurrentState._myState == FSMState.NuckDown)
+                    {
+                        cols.DeleteSeqeunce();
+                        break;
+                    }
                     yield return new WaitForSeconds(Attacks[currnetNum].delayTime);
                 }
+                
+
+                
+
+
                 
             }
             else

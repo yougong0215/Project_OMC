@@ -5,6 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SO/Player/SkillList/Parrying")]
 public class ParryingSkillListSO : PlayerSkillListSO
 {
+    
+    
+    
 public override IEnumerator SkillAct(PlayerWeaponStance weapons,CharacterInfo _char, WeaponSO _currentWeapon, Transform tls)
     {
         NoneCombo = false;

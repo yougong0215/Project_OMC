@@ -22,6 +22,20 @@ public class CameraManager : Singleton<CameraManager>
         }
     }
 
+    public void CursorManaging(bool value)
+    {
+        if (value)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
     private Coroutine _shake;
     private Coroutine _scale;
     private float _shakeIntensity = 0;

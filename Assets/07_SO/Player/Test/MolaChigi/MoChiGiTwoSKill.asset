@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fcc7d6725edd6459a928bf047ab9ff, type: 3}
   m_Name: MoChiGiTwoSKill
   m_EditorClassIdentifier: 
+  _shake: 6
+  _time: 0.02
+  _powerTime: 0.02
   _animSpeed: 1
-  _skillDamage: 0
+  _skillDamage: 0.4
   _criticalPercentage: 0
   _criticalDamage: 0
   _isNuckbackAble: 1

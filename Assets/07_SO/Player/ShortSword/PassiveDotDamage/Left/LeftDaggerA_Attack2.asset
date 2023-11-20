@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70064311c07d9f4b9ea44780ca1034e, type: 3}
   m_Name: LeftDaggerA_Attack2
   m_EditorClassIdentifier: 
+  _shake: 6
+  _time: 0
+  _powerTime: 0.02
   _animSpeed: 1
   _skillDamage: 0
   _criticalPercentage: 0
   _criticalDamage: 0
+  _isNuckbackAble: 1
+  _localNuckBackVector: {x: -1, y: 0, z: 0}
+  _NuckbackSpeed: 4
   State: 11
   Clip: {fileID: -1525226487523588040, guid: a59c8c6d7ca343946bf28a1374111230, type: 3}
   _speed: 20

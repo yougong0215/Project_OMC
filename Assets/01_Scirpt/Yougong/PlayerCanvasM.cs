@@ -19,6 +19,8 @@ public class PlayerCanvasM : MonoBehaviour
     public Image _e_cool;
     public Image _r_cool;
 
+    [Header("Weapon")] public Image _weapon;
+
     public void SkillCooldown(SkillBtn bn, float MaxCool, float curCool)
     {
         
@@ -136,5 +138,18 @@ public class PlayerCanvasM : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException(nameof(sk), sk, null);
         }
+    }
+
+    public void Open()
+    {
+        CameraManager.Instance.CursorManaging(false);
+        _weapon.gameObject.SetActive(true);
+    }
+
+    public void Close(bool b = false)
+    {
+        if(b==false)
+        CameraManager.Instance.CursorManaging(true);
+        _weapon.gameObject.SetActive(false);
     }
 }

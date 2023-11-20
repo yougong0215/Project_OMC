@@ -95,14 +95,17 @@ public class SkillSO : ScriptableObject
     /// <returns></returns>
     public virtual float DamageReturn()
     {
-        Debug.LogWarning(_info.Stat);
-        return CritReturn() == true ? ((_info.Stat.CritAmp + WeaponStatSo.CritAmp + _criticalDamage)*0.01f) * ((_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage)
+        float x = CritReturn() == true
+            ? ((_info.Stat.CritAmp + WeaponStatSo.CritAmp + _criticalDamage) * 0.01f) *
+              ((_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage) + ((_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage)
             : (_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage;
+        
+        return x;
     }
 
     public virtual void SkillUpdate()
     {
-        if (_info.FSM.CurrentState._myState == FSMState.NuckDown)
+        if (_info != null && _info.FSM.CurrentState._myState == FSMState.NuckDown)
             _isRunning = true;
 
 
@@ -149,7 +152,10 @@ public class SkillSO : ScriptableObject
                 CameraManager.Instance.Shakeing(_shake, _time);
                 CameraManager.Instance.ScaleBind(_powerTime);
             }
-            _pl.GetDamage(DamageReturn());
+
+            float value = DamageReturn();
+            _pl.GetDamage(value);
+            Debug.Log($"{_pl} : {value} damage");
         }
         
         if (_pl != null && _isNuckbackAble && _pl.IsNuckBackAble)

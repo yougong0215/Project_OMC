@@ -19,6 +19,7 @@ public class PlayerWeaponStance : MonoBehaviour
     public PlayerSkillListSO _CurrentSkill;
     private int nowNum = 0;
     [Header("Cavans")] [SerializeField]private PlayerCanvasM _canvas;
+    public bool _isOpen = false;
 
     private void Awake()
     {
@@ -34,7 +35,10 @@ public class PlayerWeaponStance : MonoBehaviour
             ChangeStance(_currentWeapon);
         }
 
-        _input.TabBtn += () => ChangeStance(weaponList[(++nowNum)%weaponList.Count]);
+        _input.TabBtn += TabBtn;
+        _input.ESCBtn += ()=>_canvas.Close(true);
+
+        //_input.TabBtn += () => ChangeStance(weaponList[(++nowNum)%weaponList.Count]);
     }
     private void Update()
     {
@@ -72,6 +76,11 @@ public class PlayerWeaponStance : MonoBehaviour
                 _CurrentSkill = null;
             }
         }
+    }
+
+    public void TabBtn()
+    {
+        _canvas.Open();
     }
 
     public void SkillInvoke(PlayerSkillListSO _so)
@@ -142,6 +151,13 @@ public class PlayerWeaponStance : MonoBehaviour
             StartCoroutine(_so.SkillAct(this,_player, _currentWeapon, transform));
             //StartCoroutine(_so.R_Click.UpdateLayer());
         }
+    }
+
+    public void ChangeWeaponUI(int value)
+    {
+        _canvas.Close();
+        if(value != 3)
+        ChangeStance(weaponList[value]);
     }
 
     public void ChangeStance(PlayerWeaponSO _so)

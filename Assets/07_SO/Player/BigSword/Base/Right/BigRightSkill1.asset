@@ -16,7 +16,7 @@ MonoBehaviour:
   _time: 0.02
   _powerTime: 0.02
   _animSpeed: 1
-  _skillDamage: 0
+  _skillDamage: 1.2
   _criticalPercentage: 0
   _criticalDamage: 0
   _isNuckbackAble: 1
