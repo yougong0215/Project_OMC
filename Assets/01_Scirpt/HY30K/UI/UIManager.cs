@@ -47,8 +47,6 @@ public class UIManager : MonoBehaviour
 
     private void PanelSetting()
     {
-        Cursor.lockState = isOpen ? CursorLockMode.None : CursorLockMode.Locked;
-
         if (isOpen == false)
         {
             Time.timeScale = 0f;

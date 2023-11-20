@@ -16,7 +16,7 @@ public class PlayerCanvasM : MonoBehaviour
     public Image _e_image;
     public Image _r_image;
     
-    public Image
+    //public Image
 
 
     public void SetSkillIcon(SkillBtn sk, Sprite tm)

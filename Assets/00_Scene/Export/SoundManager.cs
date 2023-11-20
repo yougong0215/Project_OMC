@@ -66,7 +66,7 @@ public class SoundManager : Singleton<SoundManager>
 
     public void MixerSave(SoundSetting ss, float value)
     {
-        value = Mathf.RoundToInt(value);
+        //value = Mathf.RoundToInt(value);
         if (value<= .0f)
         {
             _mixer.SetFloat(ss.ToString(), -80f);
@@ -98,7 +98,7 @@ public class SoundManager : Singleton<SoundManager>
         string jsonData = JsonUtility.ToJson(_data);
         File.WriteAllText(path, jsonData);
         
-        Debug.LogWarning((value));
+        Debug.LogWarning($"VOLUM SET : {value}");
     }
 
     public float GetValue(SoundSetting ss)
