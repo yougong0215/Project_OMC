@@ -2705,6 +2705,7 @@ GameObject:
   - component: {fileID: 7371189150926178124}
   - component: {fileID: 4132517038391907717}
   - component: {fileID: 5630240764365295050}
+  - component: {fileID: 2685181169451727798}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -2765,6 +2766,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AOC: {fileID: 22100000, guid: 47369584bd440824b9257886493d65a3, type: 2}
   av: {fileID: 9000000, guid: 5779b1a41ccf45b45bfc238034373133, type: 3}
+--- !u!114 &2685181169451727798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4165868463166619663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a7de952dc690644a64c259e9ee4496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skin: []
 --- !u!1 &4205448096878113637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3642,6 +3656,7 @@ MonoBehaviour:
   _fsm: {fileID: 0}
   _con: {fileID: 0}
   _dmgTime: 0
+  _hit: {fileID: 0}
   statSo: {fileID: 11400000, guid: 1739de7d08858114a9b0470abafe90f4, type: 2}
   agent: {fileID: 0}
   isAttack: 0

@@ -193,6 +193,7 @@ MonoBehaviour:
   _fsm: {fileID: 0}
   _con: {fileID: 0}
   _dmgTime: 0
+  _hit: {fileID: 0}
   statSo: {fileID: 11400000, guid: b3b469099219572449a24b1e9528dcd4, type: 2}
   agent: {fileID: 0}
   isAttack: 0
@@ -1137,6 +1138,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3438673837367667287, guid: 5cbb9314d047c4b4cbc3fd9bd6b86f91, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4951108258019913033}
+    - targetCorrespondingSourceObject: {fileID: 3438673837367667287, guid: 5cbb9314d047c4b4cbc3fd9bd6b86f91, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6946305977104958258}
   m_SourcePrefab: {fileID: 100100000, guid: 5cbb9314d047c4b4cbc3fd9bd6b86f91, type: 3}
 --- !u!1 &4674989806432904054 stripped
 GameObject:
@@ -1157,6 +1161,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AOC: {fileID: 22100000, guid: 7db31e52e7f7fa94f8628f59946fddf5, type: 2}
   av: {fileID: 9000000, guid: ff5a620656b0ad14c8d0d4c457290ba2, type: 3}
+--- !u!114 &6946305977104958258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4674989806432904054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a7de952dc690644a64c259e9ee4496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skin: []
 --- !u!4 &5452512080298064332 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2662558727395799277, guid: 5cbb9314d047c4b4cbc3fd9bd6b86f91, type: 3}
