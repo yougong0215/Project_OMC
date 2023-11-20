@@ -69,6 +69,12 @@ public class EnemyInfo : CharacterInfo
         enemyHp -= _damage;
 
         hpBar.SetHpBar(enemyHp, statSo.HP);
+        if (HitDis != null)
+        {
+            Debug.Log("Hit");
+            HitDis.StartHiting();
+        }
+
 
         if (enemyHp <= 0)
             FSM.ChangeState(FSMState.Die);

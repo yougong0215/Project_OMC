@@ -114,6 +114,10 @@ PrefabInstance:
       propertyPath: _skill
       value: 
       objectReference: {fileID: 11400000, guid: 4b712d6959984d44ca8b63f58d05ee88, type: 2}
+    - target: {fileID: 4990062523532859066, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
+      propertyPath: _layer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 5594657452941815927, guid: 19ee988692a4ec14f938fc0e0054374d, type: 3}
       propertyPath: m_Name
       value: CrabAttack

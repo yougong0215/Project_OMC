@@ -27,7 +27,7 @@ public class CrustaspikanFireball : FirePrefab
     {
         if (other.TryGetComponent(out PlayerInfo _pl))
         {
-            _pl.GetDamage(fireDmg);
+            _pl.GetDamage(fireDmg, true);
         }
     }
 }
