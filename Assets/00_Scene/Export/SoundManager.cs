@@ -18,44 +18,6 @@ public enum SoundSetting
 
 }
 
-public enum SFXSoundType
-{
-    BtnClick = 0,
-    Beep1 = 1,
-    Beep2,
-    Drill,
-    Explosion,
-    Gun1,
-    Gun2,
-    Gun3,
-    Gun4,
-    HatchOpen,
-    Hit,
-    Ignite,
-    PowerDown1,
-    PowerDown2,
-    PowerDown3,
-    R_Emergency,
-    R_GrrSound,
-    R_StandardSound1,
-    R_StandardSound2,
-    R_StandardSound3,
-    R_StandardSound4,
-    R_StandardSound5,
-    R_StandardSound6,
-    Setting1,
-    Setting2
-}
-
-public enum BGSoundType
-{
-    Opening = 0,
-    Lobby = 1,
-    Game1,
-    Game2,
-    Win
-}
-
 public class SoundJson
 {
     public float Master = 50.0f;
@@ -66,8 +28,6 @@ public class SoundJson
 
 public class SoundManager : Singleton<SoundManager>
 {
-    [SerializeField] private List<AudioClip> _sfxList = new List<AudioClip>();
-    [SerializeField] private List<AudioClip> _bgmList = new List<AudioClip>();
 
     [SerializeField] private AudioSource _backgroundSound;
     public AudioMixer _mixer;
@@ -161,12 +121,12 @@ public class SoundManager : Singleton<SoundManager>
     }
     
     
-    public void PlaySFX(SFXSoundType _soundType)
+    public void PlaySFX(AudioClip _soundType)
     {
         GameObject bg = Instantiate(new GameObject());
         _backgroundSound = bg.AddComponent<AudioSource>();
         
-        _backgroundSound.clip = _sfxList[(int)_soundType];
+        _backgroundSound.clip = _soundType;
         _backgroundSound.Play();
     }
 
@@ -182,7 +142,7 @@ public class SoundManager : Singleton<SoundManager>
             Destroy(s);
         }
     }
-    public void PlayBGM(BGSoundType _bgType)
+    public void PlayBGM(AudioClip _bgType)
     {
         if (_backgroundSound != null)
         {
@@ -197,7 +157,7 @@ public class SoundManager : Singleton<SoundManager>
         DontDestroyOnLoad(bg);
         _backgroundSound = bg.AddComponent<AudioSource>();
         
-        _backgroundSound.clip = _bgmList[(int)_bgType];
+        _backgroundSound.clip = _bgType;
         _backgroundSound.Play();
     }
 }
