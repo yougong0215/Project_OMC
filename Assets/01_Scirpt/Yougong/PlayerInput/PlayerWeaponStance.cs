@@ -46,6 +46,15 @@ public class PlayerWeaponStance : MonoBehaviour
                 weaponList[i]._skills[j]._currentCooltime -= Time.deltaTime;
             }
         }
+
+        if (_player.FSM.CurrentState._myState == FSMState.NuckDown)
+        {
+            if (_CurrentSkill != null)
+            {
+                _CurrentSkill.SetOffRunning();
+                _CurrentSkill = null;
+            }
+        }
     }
 
     public void SkillInvoke(PlayerSkillListSO _so)

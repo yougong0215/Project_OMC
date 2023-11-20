@@ -121,9 +121,25 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
                 
                 CurrentObject = cols;
                 cols.Init(_char, _currentWeapon.statSo);
+                try
+                {
+                    if (cols.ReturnColliderEnd() == true ||
+                        Attacks[currnetNum].isNotWaiting == true
+                        || Attacks[currnetNum].isNextSkip == true)
+                        Debug.Log("None");
+                }
+                catch
+                {
+                    Debug.LogWarning("Argument Bug!!!");
+                    break;
+                }
+ 
+                    yield return new WaitUntil(() => cols.ReturnColliderEnd() == true ||
+                                                     Attacks[currnetNum].isNotWaiting == true
+                                                     || Attacks[currnetNum].isNextSkip == true);
+                 
                 
-                yield return new WaitUntil(() => cols.ReturnColliderEnd() == true || Attacks[currnetNum].isNotWaiting == true
-                    || Attacks[currnetNum].isNextSkip == true);
+
                 if (Attacks[currnetNum].isNotWaiting == false)
                 {
                     Destroy(cols.gameObject, 2f);

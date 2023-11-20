@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private GameObject blurImg;
+    [SerializeField] private GameObject SettingBlur;
+    [SerializeField] private CanvasGroup GameOverBlur;
+    public bool isGameOver = false;
     public bool isOpen = false;
 
     private void Awake()
@@ -24,7 +29,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        blurImg.SetActive(false);
+        SettingBlur.SetActive(false);
     }
 
     void Update()
@@ -33,25 +38,52 @@ public class UIManager : MonoBehaviour
         {
             PanelSetting();
         }
+
+        if (isGameOver == true)
+        {
+            PanelGameOver();
+        }
     }
 
-    public void PanelSetting()
+    private void PanelSetting()
     {
         Cursor.lockState = isOpen ? CursorLockMode.None : CursorLockMode.Locked;
 
         if (isOpen == false)
         {
             Time.timeScale = 0f;
-            blurImg.SetActive(true);
+            SettingBlur.SetActive(true);
             isOpen = true;
             playerInput.InputAction.Player.Disable();
         }
         else if (isOpen == true)
         {
             Time.timeScale = 1f;
-            blurImg.SetActive(false);
+            SettingBlur.SetActive(false);
             isOpen = false;
             playerInput.InputAction.Player.Enable();
         }
+    }
+
+    private void PanelGameOver()
+    {
+        GameOverBlur.DOFade(1, 2);
+
+        if (Input.anyKeyDown)
+        {
+            Restart();
+        }
+    }
+
+    public void Close()
+    {
+        SettingBlur.SetActive(false);
+        isOpen = false;
+    }
+
+    public void Restart()
+    {
+        isGameOver = false;
+        SceneManager.LoadScene("MainScene");
     }
 }

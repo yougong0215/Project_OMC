@@ -11,14 +11,14 @@ public class PlayerInfo : CharacterInfo
     private PlayerInput _input;
     public PlayerInput Input => _input;
 
-    private PlayerMovement2 _move;
-    public PlayerMovement2 Move => _move;
+    private PlayerMovement _move;
+    public PlayerMovement Move => _move;
 
     bool IsParring = false;
     protected override void AwakeInvoke()
     {
         _input = GetComponent<PlayerInput>();
-        _move = GetComponent<PlayerMovement2>();
+        _move = GetComponent<PlayerMovement>();
     }
 
     public void ParringStart(float time)
@@ -46,7 +46,7 @@ public class PlayerInfo : CharacterInfo
         // Debug.Log(IsDamage);
         if (UnityEngine.Input.GetKeyDown(KeyCode.X))
         {
-            GetDamage(0);
+            GetDamage(0, true);
         }
     }
 
@@ -57,6 +57,22 @@ public class PlayerInfo : CharacterInfo
             // Block 택스트 띄우기
             _isDamaged = true;
             return;
+        }
+        
+        if(_nuckBack && _isDamaged==false)
+        {
+            if (FSMState.NuckDown != FSM.CurrentState._myState)
+            {
+                            
+                if (HitDis != null)
+                {
+                    Debug.Log("hit");
+                    HitDis.StartHiting();
+                }
+                FSM.ChangeState(FSMState.NuckDown);   
+            }
+
+
         }
         //Debug.Log("불려오면안됨");
         

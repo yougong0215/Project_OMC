@@ -150,6 +150,7 @@ public class SkillSO : ScriptableObject
     protected virtual IEnumerator NuckBack(CharacterInfo _pl)
     {
         yield return null;
+        
         if (_pl != null  && _pl.IsNuckBackAble ==false)
         {
             Vector3 dir = (_pl.transform.position - _info.transform.position).normalized;
