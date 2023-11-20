@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombParticle: {fileID: 130146, guid: c1e1630e03a3c1a4989b4c15cd619ca9, type: 3}
   fireSpeed: 8
+  fireDmg: 4
   playerMask:
     serializedVersion: 2
     m_Bits: 512

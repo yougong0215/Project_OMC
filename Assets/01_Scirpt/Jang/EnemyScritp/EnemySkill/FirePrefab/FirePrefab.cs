@@ -7,12 +7,12 @@ public class FirePrefab : MonoBehaviour
 {
     [SerializeField] private GameObject bombParticle;
     [SerializeField] private float fireSpeed;
+    [SerializeField] protected float fireDmg;
     [SerializeField] private LayerMask playerMask;
 
     protected Rigidbody rb;
 
     protected Vector3 fireDir;
-    protected float fireDmg;
 
     const float partcleDestroyTime = 1f;
 

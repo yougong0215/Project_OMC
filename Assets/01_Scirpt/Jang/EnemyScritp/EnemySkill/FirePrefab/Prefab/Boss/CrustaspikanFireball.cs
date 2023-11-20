@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class CrustaspikanFireball : FirePrefab
 {
-    [Header("CrustaspikanOverridle")]
-    [SerializeField] private float fireBallDmg;
-
     private ParticleSystem ps;
 
     protected override void Awake()
     {
         ps = GetComponent<ParticleSystem>();
-        fireDmg = fireBallDmg;
 
         Invoke("PushEffect", 7f);
     }
