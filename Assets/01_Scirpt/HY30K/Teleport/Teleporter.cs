@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Teleporter : Interactable
 {
-    [Header("ÀÌµ¿ÇÒ ¾À")] public Object scene;
-    [Header("½ºÆù ÀÌ¸§")] public string spawnName;
-    [Header("ÀÌµ¿ µô·¹ÀÌ")] public int delay;
+    [Header("ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½")] public Object scene;
+    [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½")] public string spawnName;
+    [Header("ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")] public int delay;
     private Teleportable player;
 
     private void OnTriggerEnter(Collider other)
@@ -54,7 +54,7 @@ public class Teleporter : Interactable
             yield return null;
         }
 
-        SceneManager.MoveGameObjectToScene(player.gameObject, SceneManager.GetSceneByName(sceneName));
+        SceneManager.LoadScene(sceneName);
         Teleport(player);
 
         SceneManager.UnloadSceneAsync(currentScene);

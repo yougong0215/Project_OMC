@@ -34,7 +34,7 @@ public class SkillSO : ScriptableObject
     [Header("Info")] 
     [SerializeField] public FSMState State = FSMState.Attack;
     [SerializeField] public AnimationClip Clip = null;
-    
+    [SerializeField] public AudioClip _skillSound;
 
     protected bool _isRunning = false;
     
@@ -60,6 +60,7 @@ public class SkillSO : ScriptableObject
             info.FSM.ChangeState(State);
             
         }
+        SoundManager.Instance.PlaySFX(_skillSound);
 
         _isRunning = false;
 //        Debug.Log("스테이트 변경");

@@ -78,7 +78,7 @@ public class CrustaspikanInfo : EnemyInfo
     public void BossDeath()
     {
         OnDeathEvt?.Invoke();
-        SceneManager.LoadScene(clearSceneName);
+        SceneManager.LoadScene("ClearScene");
     }
 
     public override void GetDamage(float _damage, bool _nuckBack = false)
