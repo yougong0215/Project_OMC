@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afbf37179bdd7642be44845883ef4d7, type: 3}
   m_Name: Parring
   m_EditorClassIdentifier: 
+  _shake: 6
+  _time: 0.02
+  _powerTime: 0.02
   _animSpeed: 1
   _skillDamage: 0
   _criticalPercentage: 0
   _criticalDamage: 0
+  _isNuckbackAble: 1
+  _localNuckBackVector: {x: -1, y: 0, z: 0}
+  _NuckbackSpeed: 4
   State: 11
   Clip: {fileID: 8383680703467187579, guid: 21553180442283540a79211785830c02, type: 3}
+  _skillSound: {fileID: 8300000, guid: dd33f1eb8d6579c4e804dd76be162746, type: 3}
   _parringTime: 0.5
