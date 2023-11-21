@@ -15,7 +15,7 @@ MonoBehaviour:
   _shake: 6
   _time: 0.02
   _powerTime: 0.02
-  _animSpeed: 0.5
+  _animSpeed: 1
   _skillDamage: 0
   _criticalPercentage: 0
   _criticalDamage: 0
