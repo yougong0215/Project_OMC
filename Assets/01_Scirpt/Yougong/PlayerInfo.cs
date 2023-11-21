@@ -52,7 +52,6 @@ public class PlayerInfo : CharacterInfo
 
     public override void GetDamage(float _damage, bool _nuckBack = false)
     {
-        Debug.Log("닿네");
         if (IsParring)
         {
             // Block 택스트 띄우기
@@ -62,10 +61,8 @@ public class PlayerInfo : CharacterInfo
         
         if(_nuckBack && _isDamaged==false)
         {
-            Debug.Log("맞아");
             if (FSMState.NuckDown != FSM.CurrentState._myState)
             {
-                Debug.Log("??");
                 if (HitDis != null)
                 {
                     Debug.Log("hit");

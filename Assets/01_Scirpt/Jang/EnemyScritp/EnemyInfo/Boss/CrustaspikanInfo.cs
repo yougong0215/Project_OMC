@@ -8,7 +8,7 @@ using UnityEngine.AI;
 public class CrustaspikanInfo : EnemyInfo
 {
     [Header("CrustaspikanOverride")]
-    [SerializeField] private Slider hpBar;
+    [SerializeField] private new Slider hpBar;
     [SerializeField] private ParticleSystem arousalParticle;
     [SerializeField] private float arousalHp;
     [Header("공격 범위")]
@@ -73,6 +73,7 @@ public class CrustaspikanInfo : EnemyInfo
 
     public override void GetDamage(float _damage, bool _nuckBack = false)
     {
+        Debug.LogError("df");
         enemyHp -= _damage;
         hpBar.value = enemyHp;
 
