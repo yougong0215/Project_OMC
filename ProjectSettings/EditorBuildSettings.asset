@@ -23,4 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00_Scenes/MainScene/MainScene.unity
     guid: 1855bf0bfb4bbc242b50709665dfd855
+  - enabled: 1
+    path: Assets/00_Scenes/Ingi/Stage1-YG.unity
+    guid: 16d461441fa0e9840b7bf263cf5d02eb
+  - enabled: 1
+    path: Assets/00_Scenes/HY30K/Castle.unity
+    guid: 3c85032dd2b8f4d4fb7e6522432b4b13
+  - enabled: 1
+    path: Assets/00_Scenes/JangWheesong/BossStage.unity
+    guid: 3ee4ef35ffae507458a3e3cc75778ce7
   m_configObjects: {}

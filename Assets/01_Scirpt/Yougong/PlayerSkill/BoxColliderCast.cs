@@ -34,7 +34,6 @@ public class BoxColliderCast : ColliderCast
     public override Collider[] ReturnColliders()
     {
 
-        
         return Physics.OverlapBox(transform.position + _box.center, _box.size, transform.rotation, _layer);
     }
 }
