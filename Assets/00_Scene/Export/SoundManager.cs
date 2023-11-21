@@ -33,10 +33,10 @@ public class SoundManager : Singleton<SoundManager>
 
     private SoundJson _data;
 
-    private void Start()
+    private void Init()
     {
         
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         SoundJson savedata = new SoundJson();
         try
         {
@@ -55,7 +55,7 @@ public class SoundManager : Singleton<SoundManager>
 
 
         _data = savedata;
-        
+        _data.Master = 100;
         print(savedata.Master);
         MixerSave(SoundSetting.Master, _data.Master);
         MixerSave(SoundSetting.background, _data.BGM);
@@ -65,6 +65,9 @@ public class SoundManager : Singleton<SoundManager>
 
     public void MixerSave(SoundSetting ss, float value)
     {
+        if(_data==null)
+            Init();
+        
         //value = Mathf.RoundToInt(value);
         if (value<= .0f)
         {
@@ -102,6 +105,9 @@ public class SoundManager : Singleton<SoundManager>
 
     public float GetValue(SoundSetting ss)
     {
+        if(_data==null)
+            Init();
+        
         switch (ss)
         {
             case SoundSetting.Master:
@@ -122,6 +128,12 @@ public class SoundManager : Singleton<SoundManager>
     
     public void PlaySFX(AudioClip _soundType)
     {
+        if (_soundType == null)
+        {
+            Debug.LogWarning("Sound is Null");
+            return;
+        }
+        
         GameObject bg = Instantiate(new GameObject());
         _backgroundSound = bg.AddComponent<AudioSource>();
 
@@ -161,6 +173,9 @@ public class SoundManager : Singleton<SoundManager>
         AudioMixerGroup[] _ad = _mixer.FindMatchingGroups("background");
         _backgroundSound.outputAudioMixerGroup = _ad[0];
         _backgroundSound.clip = _bgType;
+        _backgroundSound.loop = true;
         _backgroundSound.Play();
+        _backgroundSound.PlayOneShot(_bgType);
+        Debug.LogWarning($"BGM Succcess");
     }
 }

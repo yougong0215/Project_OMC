@@ -24,4 +24,5 @@ MonoBehaviour:
   _NuckbackSpeed: 4
   State: 11
   Clip: {fileID: 7400000, guid: d563f10e8e203744f9f14df93869f6bb, type: 3}
+  _skillSound: {fileID: 8300000, guid: 606d4a88b1cc40143b5a03f52c3192d5, type: 3}
   _speed: 0
