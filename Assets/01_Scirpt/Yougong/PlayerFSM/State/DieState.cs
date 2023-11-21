@@ -7,6 +7,7 @@ public class DieState : CommonState
     public override void EnterState()
     {
         _animator.SetDeathAnimation(true);
+        UIManager.Instance.PanelGameOver();
     }
 
     public override void UpdateState()

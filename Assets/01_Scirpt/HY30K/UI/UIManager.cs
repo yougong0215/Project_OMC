@@ -65,7 +65,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void PanelGameOver()
+    public void PanelGameOver()
     {
         GameOverBlur.DOFade(1, 2);
 

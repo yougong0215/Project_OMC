@@ -97,8 +97,17 @@ public class PlayerInfo : CharacterInfo
         }
         
         _stat.HP -= _damage;
+
+        
         Debug.LogWarning($"HP :  {_damage} | {_stat.HP}/{statSo.HP} = {(float)_stat.HP / (float)statSo.HP}");
         _canvas._hpBackBar.fillAmount = _canvas._hpBar.fillAmount;
         _canvas._hpBar.fillAmount = Mathf.Lerp(0, 1, _stat.HP / statSo.HP);
+        
+        if (_stat.HP < 0)
+        {
+            FSM.ChangeState(FSMState.Die);
+            //UIManager.Instance.PanelGameOver();
+            
+        }
     }
 }
