@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 093ae8caf8d004d48880b24bbfaa8ad1, type: 3}
   m_Name: KupolobrachStat
   m_EditorClassIdentifier: 
-  _hp: 30
-  _atk: 2
-  _def: 1
+  _hp: 40
+  _atk: 3
+  _def: 4
   _speed: 3
   _crit: 4
   _critAmp: 3

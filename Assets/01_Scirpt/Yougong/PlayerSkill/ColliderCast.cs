@@ -117,7 +117,6 @@ public abstract class ColliderCast : PoolAble
             return;
 
         cols = ReturnColliders();
-
         // 생각해 봤는데 어차피 col있는 만큼만 돌아가기 때문에 큰 문제 없음
         foreach (var col in cols)
         {
@@ -125,7 +124,7 @@ public abstract class ColliderCast : PoolAble
                 return;
             else
                 CheckDic.Add(col, false);
-
+            Debug.Log("이밴트 시작");
             CastAct?.Invoke(col, true);
             //Debug.Log($"{col.name} 맞음");
 

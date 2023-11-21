@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: CrustaspikanStat
   m_EditorClassIdentifier: 
   _hp: 200
-  _atk: 2
-  _def: 1
-  _speed: 3
-  _crit: 4
-  _critAmp: 3
+  _atk: 6
+  _def: 10
+  _speed: 2
+  _crit: 10
+  _critAmp: 10
   _coolTime: 0.2

@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b63aefcb62629f45891fc6fe575d973, type: 3}
   m_Name: CrabAttackSO
   m_EditorClassIdentifier: 
-  _animSpeed: 1.5
+  _shake: 6
+  _time: 0.02
+  _powerTime: 0.02
+  _animSpeed: 0.5
   _skillDamage: 0
   _criticalPercentage: 0
   _criticalDamage: 0
+  _isNuckbackAble: 1
+  _localNuckBackVector: {x: -1, y: 0, z: 0}
+  _NuckbackSpeed: 4
   State: 11
   Clip: {fileID: 6720303635017113406, guid: 4159fd5686a8c1c4fb776cf716bd494d, type: 3}
