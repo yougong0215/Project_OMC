@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b63aefcb62629f45891fc6fe575d973, type: 3}
   m_Name: LarvaeNormalAttack
   m_EditorClassIdentifier: 
+  _shake: 6
+  _time: 0.02
+  _powerTime: 0.02
   _animSpeed: 1
   _skillDamage: 0
   _criticalPercentage: 0
   _criticalDamage: 0
+  _isNuckbackAble: 0
+  _localNuckBackVector: {x: -1, y: 0, z: 0}
+  _NuckbackSpeed: 4
   State: 11
   Clip: {fileID: 1827226128182048838, guid: 2f6368f030c665549968d111a4ead004, type: 3}
