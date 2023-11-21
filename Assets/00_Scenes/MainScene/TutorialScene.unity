@@ -679,7 +679,7 @@ MonoBehaviour:
     waitTime: 1
     fadeTime: 2
     duration: 3
-    sprite: {fileID: 21300000, guid: 228ed6af6715f654d8badab7b0b00170, type: 3}
+    sprite: {fileID: 21300000, guid: a32bc3bcdfb444945aed12f5ec48e55a, type: 3}
     OnEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -688,7 +688,7 @@ MonoBehaviour:
     waitTime: 1
     fadeTime: 2
     duration: 3
-    sprite: {fileID: 21300000, guid: 790b3ca97009ef242b91717ce24e0770, type: 3}
+    sprite: {fileID: 21300000, guid: 75e7b5418ad18574f87d592e1f9b68ac, type: 3}
     OnEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -697,7 +697,7 @@ MonoBehaviour:
     waitTime: 1
     fadeTime: 2
     duration: 3
-    sprite: {fileID: 21300000, guid: 759b6f7293a1f90469f36d8065d6606d, type: 3}
+    sprite: {fileID: 21300000, guid: 860d6e03bec38f04b9eb7c7afb4ded36, type: 3}
     OnEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -706,7 +706,7 @@ MonoBehaviour:
     waitTime: 1
     fadeTime: 2
     duration: 3
-    sprite: {fileID: 21300000, guid: c34d1d75dd0cc3146a62a1f8d03e2d8e, type: 3}
+    sprite: {fileID: 21300000, guid: a62333ce15325ae4581c2111e8b0c4e1, type: 3}
     OnEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -714,7 +714,7 @@ MonoBehaviour:
     waitTime: 1
     fadeTime: 2
     duration: 3
-    sprite: {fileID: 21300000, guid: b2de0bfd307cd0e4dad4fef5e1c1a5cc, type: 3}
+    sprite: {fileID: 21300000, guid: 114e1e7115dfc95439c0342d52c2c3ab, type: 3}
     OnEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -723,7 +723,7 @@ MonoBehaviour:
     waitTime: 1
     fadeTime: 2
     duration: 3
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: df2870801b1d6fa47b608bb1ffa4d0e0, type: 3}
     OnEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -731,7 +731,7 @@ MonoBehaviour:
     waitTime: 1
     fadeTime: 2
     duration: 3
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: a32bc3bcdfb444945aed12f5ec48e55a, type: 3}
     OnEvent:
       m_PersistentCalls:
         m_Calls:
