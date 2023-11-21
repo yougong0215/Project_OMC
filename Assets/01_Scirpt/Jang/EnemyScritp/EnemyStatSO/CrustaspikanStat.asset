@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 093ae8caf8d004d48880b24bbfaa8ad1, type: 3}
   m_Name: CrustaspikanStat
   m_EditorClassIdentifier: 
-  _hp: 200
+  _hp: 300
   _atk: 6
-  _def: 10
+  _def: 20
   _speed: 2
   _crit: 10
   _critAmp: 10

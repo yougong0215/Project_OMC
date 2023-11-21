@@ -4,13 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class CrustaspikanInfo : EnemyInfo
 {
+    public event Action OnDeathEvt;
+
     [Header("CrustaspikanOverride")]
     [SerializeField] private new Slider hpBar;
     [SerializeField] private ParticleSystem arousalParticle;
     [SerializeField] private float arousalHp;
+    [SerializeField] private string clearSceneName;
     [Header("공격 범위")]
     [SerializeField] protected float nor1Dec, nor2Dec, nor3Dec, powDec, sedDec, thrDec;
     [HideInInspector] public bool isArousal;
@@ -36,14 +40,14 @@ public class CrustaspikanInfo : EnemyInfo
     protected override void Update()
     {
         base.Update();
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            isArousal = true;
-            AnimCon.Animator.speed = 1.3f;
-            arousalParticle.Play();
-            Arousal();
-            FSM.ChangeState(FSMState.WakeUP);
-        }
+        //if (Input.GetKeyDown(KeyCode.F))
+        //{
+        //    isArousal = true;
+        //    AnimCon.Animator.speed = 1.3f;
+        //    arousalParticle.Play();
+        //    Arousal();
+        //    FSM.ChangeState(FSMState.WakeUP);
+        //}
     }
 
     public void RandomPatten()
@@ -71,9 +75,14 @@ public class CrustaspikanInfo : EnemyInfo
         pattens.Add(new Tuple<AttackEnum, float>(AttackEnum.THROW, thrDec));
     }
 
+    public void BossDeath()
+    {
+        OnDeathEvt?.Invoke();
+        SceneManager.LoadScene(clearSceneName);
+    }
+
     public override void GetDamage(float _damage, bool _nuckBack = false)
     {
-        Debug.LogError("df");
         enemyHp -= _damage;
         hpBar.value = enemyHp;
 
