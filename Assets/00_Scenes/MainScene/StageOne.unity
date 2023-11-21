@@ -657,6 +657,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1774630995747016868, guid: a2754239ce4b3164496ba108853dfdf2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774630995747016868, guid: a2754239ce4b3164496ba108853dfdf2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2552974560179588557, guid: a2754239ce4b3164496ba108853dfdf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -724,6 +732,10 @@ PrefabInstance:
     - target: {fileID: 4958171712092967681, guid: a2754239ce4b3164496ba108853dfdf2, type: 3}
       propertyPath: m_LocalPosition.z
       value: 77.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225480432969356153, guid: a2754239ce4b3164496ba108853dfdf2, type: 3}
+      propertyPath: m_text
+      value: -press p-
       objectReference: {fileID: 0}
     - target: {fileID: 8024649879876884724, guid: a2754239ce4b3164496ba108853dfdf2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1520,6 +1532,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1058946943273831422, guid: 48a34ce6e085694429438b68bc044517, type: 3}
+      propertyPath: pointName
+      value: Stage1
+      objectReference: {fileID: 0}
     - target: {fileID: 2788837656119764690, guid: 48a34ce6e085694429438b68bc044517, type: 3}
       propertyPath: delay
       value: 2
@@ -1531,6 +1547,10 @@ PrefabInstance:
     - target: {fileID: 2788837656119764690, guid: 48a34ce6e085694429438b68bc044517, type: 3}
       propertyPath: spawnName
       value: MainScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2788837656119764690, guid: 48a34ce6e085694429438b68bc044517, type: 3}
+      propertyPath: promptMessage
+      value: PRESS G
       objectReference: {fileID: 0}
     - target: {fileID: 4552867313878738044, guid: 48a34ce6e085694429438b68bc044517, type: 3}
       propertyPath: m_LocalPosition.x
