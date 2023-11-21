@@ -521,4 +521,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6409758158ad2034a97fe8c22705e736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointName: 1
+  pointName: Stage1-YG
