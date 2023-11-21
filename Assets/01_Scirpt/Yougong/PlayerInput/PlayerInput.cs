@@ -10,6 +10,7 @@ public class PlayerInput : MonoBehaviour
 {
     private PlayerMain _inputAction;
     public PlayerMain InputAction => _inputAction;
+    
 
     public event Action<Vector2> OnMovement;
 

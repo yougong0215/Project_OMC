@@ -84,7 +84,9 @@ public class PlayerInfo : CharacterInfo
                     Debug.Log("hit");
                     HitDis.StartHiting();
                 }
-                FSM.ChangeState(FSMState.NuckDown);   
+                if(FSM.CurrentState._myState != FSMState.Die
+                   && FSM.CurrentState._myState != FSMState.Attack)
+                    FSM.ChangeState(FSMState.NuckDown);   
             }
 
 

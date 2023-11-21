@@ -24,6 +24,8 @@ public class PlayerWeaponStance : MonoBehaviour
     [SerializeField] private Transform HandPos = null;
 
     private GameObject _currentWeaponModel = null;
+
+    public bool _superArrmor = false;
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
@@ -146,7 +148,7 @@ public class PlayerWeaponStance : MonoBehaviour
 
             
         _CurrentSkill = _so;
-
+        
         
         
         Debug.Log("Suceess");
