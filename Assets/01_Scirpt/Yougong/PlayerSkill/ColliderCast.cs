@@ -70,7 +70,7 @@ public abstract class ColliderCast : PoolAble
         _player = Player;
         _skill.Init(_player, Weapon, this);
         //transform.localPosition += originVec;
-        transform.parent = null;
+        transform.SetParent(null);
         //originVec = transform.position;
         
             Debug.Log("Reset try");
