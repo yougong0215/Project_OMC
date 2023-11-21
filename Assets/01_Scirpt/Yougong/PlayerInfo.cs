@@ -89,14 +89,15 @@ public class PlayerInfo : CharacterInfo
         }
         //Debug.Log("불려오면안됨");
         
-        Stat.HP -= (int)_damage;
         if (_co == null)
         {
             _co = StartCoroutine(Damaged());
             
         }
-
+        
+        _stat.HP -= _damage;
+        Debug.LogWarning($"HP :  {_damage} | {_stat.HP}/{statSo.HP} = {(float)_stat.HP / (float)statSo.HP}");
         _canvas._hpBackBar.fillAmount = _canvas._hpBar.fillAmount;
-        _canvas._hpBar.fillAmount = Mathf.Lerp(0, 1, Stat.HP / statSo.HP);
+        _canvas._hpBar.fillAmount = Mathf.Lerp(0, 1, _stat.HP / statSo.HP);
     }
 }

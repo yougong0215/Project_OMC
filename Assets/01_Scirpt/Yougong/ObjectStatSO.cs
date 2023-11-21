@@ -25,7 +25,7 @@ public class ObjectStat
         }
         set
         {
-            //_hp = value;
+            _hp = value;
         }
     }
 
@@ -38,7 +38,7 @@ public class ObjectStat
         }
         set
         {
-            //_atk = value;
+            _atk = value;
         }
     }
 
@@ -51,7 +51,7 @@ public class ObjectStat
         }
         set
         {
-            //_def = value;
+            _def = value;
         }
     }
 
@@ -68,7 +68,7 @@ public class ObjectStat
         }
         set
         {
-            //_speed = value;
+            _speed = value;
         }
     }
 
@@ -81,7 +81,7 @@ public class ObjectStat
         }
         set
         {
-            //_crit = value;
+            _crit = value;
         }
     }
 
@@ -98,7 +98,7 @@ public class ObjectStat
         }
         set
         {
-            //_crit = value;
+            _crit = value;
         }
     }
 
@@ -114,7 +114,7 @@ public class ObjectStat
         }
         set
         {
-            //_coolTime = value;
+            _coolTime = value;
         }
     }
 }

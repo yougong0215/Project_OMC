@@ -64,7 +64,7 @@ public abstract class CharacterInfo : PoolAble
     
     [FormerlySerializedAs("_stat")] [SerializeField] protected ObjectStatSO statSo;
 
-    private ObjectStat _stat;
+    protected ObjectStat _stat;
     public ObjectStat Stat => _stat;
 
     /// <summary>
@@ -72,7 +72,7 @@ public abstract class CharacterInfo : PoolAble
     /// </summary>
     public virtual void GetDamage(float _damage, bool _nuckBack = true)
     {
-        statSo.HP -= (int)_damage;
+        _stat.HP -= (int)_damage;
         if(_co == null)
             _co = StartCoroutine(Damaged());
 

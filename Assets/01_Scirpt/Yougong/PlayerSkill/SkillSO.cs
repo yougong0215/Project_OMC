@@ -95,6 +95,11 @@ public class SkillSO : ScriptableObject
     /// <returns></returns>
     public virtual float DamageReturn()
     {
+        if (_skillDamage == 0)
+        {
+            _skillDamage = 1;
+        }
+        
         float x = CritReturn() == true
             ? ((_info.Stat.CritAmp + WeaponStatSo.CritAmp + _criticalDamage) * 0.01f) *
               ((_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage) + ((_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage)
