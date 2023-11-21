@@ -38,6 +38,14 @@ public class TutorialManager : MonoBehaviour
         StartCoroutine(TextDraw());
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneMove("MainScene");
+        }
+    }
+
     private IEnumerator TextDraw()
     {
         for (int i = 0; i < DrawList.Count; i++)
