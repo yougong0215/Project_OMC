@@ -18,7 +18,12 @@ public class PlayerWeaponStance : MonoBehaviour
     
     public PlayerSkillListSO _CurrentSkill;
     private int nowNum = 0;
+    [Header("Cavans")] [SerializeField]private PlayerCanvasM _canvas;
+    public bool _isOpen = false;
+    [Header("Hands")]
+    [SerializeField] private Transform HandPos = null;
 
+    private GameObject _currentWeaponModel = null;
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
@@ -33,7 +38,10 @@ public class PlayerWeaponStance : MonoBehaviour
             ChangeStance(_currentWeapon);
         }
 
-        _input.TabBtn += () => ChangeStance(weaponList[(++nowNum)%weaponList.Count]);
+        _input.TabBtn += TabBtn;
+        _input.ESCBtn += ()=>_canvas.Close(true);
+
+        //_input.TabBtn += () => ChangeStance(weaponList[(++nowNum)%weaponList.Count]);
     }
     private void Update()
     {
@@ -44,6 +52,22 @@ public class PlayerWeaponStance : MonoBehaviour
             {
 //                Debug.Log(weaponList[i]._skills[j].name);
                 weaponList[i]._skills[j]._currentCooltime -= Time.deltaTime;
+                if (_currentWeapon.R_Click == weaponList[i]._skills[j])
+                {
+                    _canvas.SkillCooldown(SkillBtn.Left, _currentWeapon.R_Click.MaxCool(),_currentWeapon.R_Click._currentCooltime);
+                }
+                else if (_currentWeapon.Q_Skill == weaponList[i]._skills[j])
+                {
+                    _canvas.SkillCooldown(SkillBtn.Q, _currentWeapon.Q_Skill.MaxCool(),_currentWeapon.Q_Skill._currentCooltime);
+                }
+                else if (_currentWeapon.E_Skill == weaponList[i]._skills[j])
+                {
+                    _canvas.SkillCooldown(SkillBtn.E, _currentWeapon.E_Skill.MaxCool(),_currentWeapon.E_Skill._currentCooltime);
+                }
+                else if (_currentWeapon.R_Skill == weaponList[i]._skills[j])
+                {
+                    _canvas.SkillCooldown(SkillBtn.R, _currentWeapon.R_Skill.MaxCool(),_currentWeapon.R_Skill._currentCooltime);
+                }
             }
         }
 
@@ -55,6 +79,11 @@ public class PlayerWeaponStance : MonoBehaviour
                 _CurrentSkill = null;
             }
         }
+    }
+
+    public void TabBtn()
+    {
+        _canvas.Open();
     }
 
     public void SkillInvoke(PlayerSkillListSO _so)
@@ -95,6 +124,7 @@ public class PlayerWeaponStance : MonoBehaviour
         // 현제 실행중인 스킬이 있으면 안됨
         if (_CurrentSkill != null && _CurrentSkill.IsRunning)
         {
+            
             Debug.Log(2);
             if ((int)_player.FSM.CurrentState._myState < 11)
             {
@@ -127,11 +157,32 @@ public class PlayerWeaponStance : MonoBehaviour
         }
     }
 
+    public void ChangeWeaponUI(int value)
+    {
+        _canvas.Close();
+        if(value != 3)
+        ChangeStance(weaponList[value]);
+    }
+
     public void ChangeStance(PlayerWeaponSO _so)
     {
         if (_so == null)
             return;
+        if (_currentWeaponModel != null)
+        {
+            Destroy(_currentWeaponModel);
+        }
 
+        _currentWeaponModel = Instantiate(_so._weaponModel, HandPos);
+        
+        
+        Debug.LogWarning(_so.R_Click._icon.name);
+        _canvas.SetSkillIcon(SkillBtn.Left, _so.R_Click != null ? _so.R_Click._icon : null);
+        _canvas.SetSkillIcon(SkillBtn.Q, _so.Q_Skill != null ? _so.Q_Skill._icon : null);
+        _canvas.SetSkillIcon(SkillBtn.E, _so.E_Skill != null ? _so.E_Skill._icon : null);
+        _canvas.SetSkillIcon(SkillBtn.R, _so.R_Skill != null ? _so.R_Skill._icon : null);
+        
+        
         Debug.Log(_player.AnimCon);
         if (_so._idleCilp != null)
         {

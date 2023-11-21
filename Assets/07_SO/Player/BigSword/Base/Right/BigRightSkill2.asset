@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dc19a4b64550c4eafe01bd7bbb056e, type: 3}
   m_Name: BigRightSkill2
   m_EditorClassIdentifier: 
-  _shake: 30
-  _time: 2
-  _powerTime: 2
+  _shake: 6
+  _time: 0.02
+  _powerTime: 0.02
   _animSpeed: 1
-  _skillDamage: 0
+  _skillDamage: 2.4
   _criticalPercentage: 0
   _criticalDamage: 0
   _isNuckbackAble: 1

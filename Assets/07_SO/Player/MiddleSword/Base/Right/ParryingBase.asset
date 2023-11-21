@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d420b4a83b41e784fa849c57e272bff7, type: 3}
   m_Name: ParryingBase
   m_EditorClassIdentifier: 
+  _icon: {fileID: 21300000, guid: a7658b0131c3cb14da11b09e07327528, type: 3}
   CoolTime: 2
   _currentCooltime: 0
   _dampingCooltime: 4
@@ -20,8 +21,12 @@ MonoBehaviour:
   - cols: {fileID: 5875326251886678980, guid: a2f43cbb4b0e48745b3062199a6efd36, type: 3}
     comboLive: 0
     isNotWaiting: 0
+    isPosition: 0
+    isNextSkip: 0
     delayTime: 0
   - cols: {fileID: 5875326251886678980, guid: c29882e4e372d0c41b14f80c818e5bd9, type: 3}
     comboLive: 0
     isNotWaiting: 0
+    isPosition: 0
+    isNextSkip: 0
     delayTime: 0

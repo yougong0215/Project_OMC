@@ -25,6 +25,8 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        playerInput.ESCBtn += PanelSetting;
     }
 
     private void Start()
@@ -34,10 +36,6 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PanelSetting();
-        }
 
         if (isGameOver == true)
         {
@@ -54,6 +52,7 @@ public class UIManager : MonoBehaviour
             //Time.timeScale = 0f;
             SettingBlur.SetActive(true);
             isOpen = true;
+            CameraManager.Instance.CursorManaging(false);
             playerInput.InputAction.Player.Disable();
         }
         else if (isOpen == true)
@@ -61,6 +60,7 @@ public class UIManager : MonoBehaviour
             //Time.timeScale = 1f;
             SettingBlur.SetActive(false);
             isOpen = false;
+            CameraManager.Instance.CursorManaging(true);
             playerInput.InputAction.Player.Enable();
         }
     }
@@ -77,9 +77,7 @@ public class UIManager : MonoBehaviour
 
     public void Close()
     {
-        SettingBlur.SetActive(false);
-        isOpen = false;
-        playerInput.InputAction.Player.Enable();
+        PanelSetting();
     }
 
     public void Restart()

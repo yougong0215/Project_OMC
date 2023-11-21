@@ -34,10 +34,12 @@ public class SkillSO : ScriptableObject
     [Header("Info")] 
     [SerializeField] public FSMState State = FSMState.Attack;
     [SerializeField] public AnimationClip Clip = null;
-    
+
+    protected bool _isRunning = false;
     
     public virtual void Init(CharacterInfo info, ObjectStatSO weapon, ColliderCast cols)
     {
+        
         _info = info;
         WeaponStatSo = weapon;
         
@@ -50,10 +52,17 @@ public class SkillSO : ScriptableObject
         {
             info.AnimCon.ChangeAnimationClip(State, Clip);
         }
-        if(info.FSM.CurrentState._myState != State || Clip != null)
+
+        if ((info.FSM.CurrentState._myState != State || Clip != null) &&
+            _info.FSM.CurrentState._myState != FSMState.NuckDown)
+        {
             info.FSM.ChangeState(State);
+            
+        }
+
+        _isRunning = false;
 //        Debug.Log("스테이트 변경");
-        
+
     }
     
     
@@ -86,14 +95,25 @@ public class SkillSO : ScriptableObject
     /// <returns></returns>
     public virtual float DamageReturn()
     {
-        Debug.LogWarning(_info.Stat);
-        return CritReturn() == true ? ((_info.Stat.CritAmp + WeaponStatSo.CritAmp + _criticalDamage)*0.01f) * ((_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage)
+        if (_skillDamage == 0)
+        {
+            _skillDamage = 1;
+        }
+        
+        float x = CritReturn() == true
+            ? ((_info.Stat.CritAmp + WeaponStatSo.CritAmp + _criticalDamage) * 0.01f) *
+              ((_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage) + ((_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage)
             : (_info.Stat.ATK + WeaponStatSo.ATK) * _skillDamage;
+        
+        return x;
     }
 
     public virtual void SkillUpdate()
     {
-        
+        if (_info != null && _info.FSM.CurrentState._myState == FSMState.NuckDown)
+            _isRunning = true;
+
+
     }
 
     public virtual void SkillEvent()
@@ -137,7 +157,10 @@ public class SkillSO : ScriptableObject
                 CameraManager.Instance.Shakeing(_shake, _time);
                 CameraManager.Instance.ScaleBind(_powerTime);
             }
-            _pl.GetDamage(DamageReturn());
+
+            float value = DamageReturn();
+            _pl.GetDamage(value);
+            Debug.Log($"{_pl} : {value} damage");
         }
         
         if (_pl != null && _isNuckbackAble && _pl.IsNuckBackAble)

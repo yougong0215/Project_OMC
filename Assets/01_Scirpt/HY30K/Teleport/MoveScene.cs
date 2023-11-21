@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MoveScene : MonoBehaviour
 {
-    public void MoveToScene()
+    public void MoveToScene(string scene)
     {
-        SceneController.Instance.MoveLevel();
+        SceneController.Instance.MoveLevel(scene);
     }
 }

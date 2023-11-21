@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &64721572695219669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2779054077337888764}
+  - component: {fileID: 6550681862312056468}
+  m_Layer: 0
+  m_Name: NuckDown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2779054077337888764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64721572695219669}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2790928883504466479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6550681862312056468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64721572695219669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68fd43f169f6c394d854151a0f383131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myState: 13
 --- !u!1 &157821787245958418
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,6 +200,7 @@ Transform:
   - {fileID: 7468113754687203387}
   - {fileID: 4317615795528974279}
   - {fileID: 6857434784950458609}
+  - {fileID: 2779054077337888764}
   m_Father: {fileID: 3155573003349188565}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1902016088894753321
@@ -306,6 +352,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f1a6660e59b697f4f9969c19fbaac756, type: 2}
   _currentWeapon: {fileID: 11400000, guid: f1a6660e59b697f4f9969c19fbaac756, type: 2}
   _CurrentSkill: {fileID: 0}
+  _canvas: {fileID: 0}
 --- !u!114 &9213394364808258849
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fcc7d6725edd6459a928bf047ab9ff, type: 3}
   m_Name: BaseSkills
   m_EditorClassIdentifier: 
+  _shake: 6
+  _time: 0.02
+  _powerTime: 0.02
   _animSpeed: 1
-  _skillDamage: 0
+  _skillDamage: 4
   _criticalPercentage: 0
   _criticalDamage: 0
+  _isNuckbackAble: 1
+  _localNuckBackVector: {x: -1, y: 0, z: 0}
+  _NuckbackSpeed: 4
   State: 11
   Clip: {fileID: -4304836385353429653, guid: 4f2d00b64b239804fb07d21d9e10fa32, type: 3}

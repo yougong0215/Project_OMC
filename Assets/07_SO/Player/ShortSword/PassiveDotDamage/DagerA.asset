@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: DagerA
   m_EditorClassIdentifier: 
   statSo: {fileID: 11400000, guid: 749f180badee61941a481fdb1a0e13d8, type: 2}
+  _weaponModel: {fileID: 1075035319354358686, guid: 02e5ed1b66960d442b1d2e9e2f7c50b7, type: 3}
+  _type: 0
   _skills:
-  - {fileID: 11400000, guid: d2647c866b4835348bf41381c887d0d0, type: 2}
+  - {fileID: 11400000, guid: 846bf6acd97b85742a315865a55b26eb, type: 2}
   - {fileID: 11400000, guid: 2cbc96fa15809f94199e8da683194b24, type: 2}
   - {fileID: 11400000, guid: 439ae83104f3e9e4997ba08762dfdc1a, type: 2}
   - {fileID: 11400000, guid: e4b43237fc56cb845b2376a24735306c, type: 2}
-  - {fileID: 11400000, guid: b7c2b0618f8eb1345bfca948f85df74c, type: 2}
   _idleCilp: {fileID: 0}
-  L_Click: {fileID: 11400000, guid: d2647c866b4835348bf41381c887d0d0, type: 2}
+  L_Click: {fileID: 11400000, guid: 846bf6acd97b85742a315865a55b26eb, type: 2}
   R_Click: {fileID: 11400000, guid: 2cbc96fa15809f94199e8da683194b24, type: 2}
   Q_Skill: {fileID: 11400000, guid: 439ae83104f3e9e4997ba08762dfdc1a, type: 2}
   E_Skill: {fileID: 11400000, guid: e4b43237fc56cb845b2376a24735306c, type: 2}
-  R_Skill: {fileID: 11400000, guid: b7c2b0618f8eb1345bfca948f85df74c, type: 2}
+  R_Skill: {fileID: 0}

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da84e4532a01c840847be600931c232, type: 3}
   m_Name: BigRight
   m_EditorClassIdentifier: 
-  CoolTime: 5
+  _icon: {fileID: 21300000, guid: ffc549d2299ad79498781fa48a0c44de, type: 3}
+  CoolTime: 12
   _currentCooltime: 0
   _dampingCooltime: 2
   CurrentObject: {fileID: 0}
@@ -20,8 +21,12 @@ MonoBehaviour:
   - cols: {fileID: 401785147082644528, guid: 6307d63c2c8564c4381b8fd712f996f0, type: 3}
     comboLive: 0
     isNotWaiting: 0
+    isPosition: 0
+    isNextSkip: 0
     delayTime: 0
   - cols: {fileID: 401785147082644528, guid: 15b926755db63ab439a8ee29629f3ab8, type: 3}
     comboLive: 1
     isNotWaiting: 0
+    isPosition: 0
+    isNextSkip: 0
     delayTime: 0

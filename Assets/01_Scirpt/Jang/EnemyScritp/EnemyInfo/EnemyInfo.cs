@@ -65,8 +65,10 @@ public class EnemyInfo : CharacterInfo
 
     public override void GetDamage(float _damage, bool _nuckBack = true)
     {
+        //_damage = 10;
         enemyHp -= _damage;
-
+        if (enemyHp <= 0)
+            enemyHp = 0;
         hpBar.SetHpBar(enemyHp, statSo.HP);
         if (HitDis != null)
         {

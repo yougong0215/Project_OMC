@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: SwingWea
   m_EditorClassIdentifier: 
   statSo: {fileID: 11400000, guid: f1dd39eb32416df4d80e4a2ab50ee8d6, type: 2}
+  _weaponModel: {fileID: 7156112210415569206, guid: a7bd629d074085249bd3c79cbebf7b13, type: 3}
+  _type: 0
   _skills:
   - {fileID: 11400000, guid: 74b691ef1ce927e45954be9ac8c9e1cb, type: 2}
   - {fileID: 11400000, guid: 7aa5ab3065a0da643b7de0627c934137, type: 2}

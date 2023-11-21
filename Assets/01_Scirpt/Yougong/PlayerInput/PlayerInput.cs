@@ -13,6 +13,8 @@ public class PlayerInput : MonoBehaviour
 
     public event Action<Vector2> OnMovement;
 
+
+    public event Action ESCBtn;
     public event Action OnSpace;
     public event Action OnLeftClick;
     public event Action OnContrl;
@@ -43,6 +45,7 @@ public class PlayerInput : MonoBehaviour
         _inputAction.Player.E_Click.performed += E_ClickHandle;
         _inputAction.Player.R_Click.performed += R_ClickHandle;
         _inputAction.Player.Tab.performed += TabHandle;
+        _inputAction.Player.ESC.performed += ESCHandle;
 
     }
 
@@ -53,6 +56,12 @@ public class PlayerInput : MonoBehaviour
         Q_Btn = null;
         E_Btn = null;
         R_Btn = null;
+    }
+
+    public void ESCHandle(InputAction.CallbackContext obj)
+    {
+        Debug.Log("ESC");
+        ESCBtn?.Invoke();
     }
 
     public void TabHandle(InputAction.CallbackContext obj)

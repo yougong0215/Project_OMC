@@ -68,6 +68,9 @@ public class CameraCollision : MonoBehaviour
         _cin = _vcam.GetComponent<CinemachineVirtualCamera>();
         _body = _cin.GetCinemachineComponent<Cinemachine3rdPersonFollow>();
         _camDistance = CameraMaxDistance;
+        
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     
     private Transform _player;
@@ -111,6 +114,9 @@ public class CameraCollision : MonoBehaviour
     void CameraAltitude()
     {
 
+        if (Cursor.visible == true)
+            return;
+
         // 플레이어 위치는 보통 발바닥임 + 1.4f
         transform.position = _target.position + new Vector3(0, 2f, 0);
         // 카메라 반전
@@ -152,8 +158,7 @@ public class CameraCollision : MonoBehaviour
         float t = transform.localEulerAngles.y + _originrayY;
             
         transform.localEulerAngles = new Vector3(_originrayX, t, 0);
-        //Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Locked;
+
 
 
         _setPos = false;
