@@ -146,6 +146,7 @@ public class PlayerCanvasM : MonoBehaviour
     public void Open()
     {
         CameraManager.Instance.CursorManaging(false);
+        if(_weapon != null)
         _weapon.gameObject.SetActive(true);
     }
 
@@ -153,6 +154,7 @@ public class PlayerCanvasM : MonoBehaviour
     {
         if(b==false)
         CameraManager.Instance.CursorManaging(true);
+        if(_weapon != null)
         _weapon.gameObject.SetActive(false);
     }
 }

@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
+    
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private GameObject SettingBlur;
     [SerializeField] private CanvasGroup GameOverBlur;
@@ -16,18 +17,13 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
+
 
         playerInput.ESCBtn += PanelSetting;
     }
+    
+    
 
     private void Start()
     {
@@ -52,6 +48,7 @@ public class UIManager : MonoBehaviour
         if (isOpen == false)
         {
             //Time.timeScale = 0f;
+                        if(SettingBlur != null)
             SettingBlur.SetActive(true);
             isOpen = true;
             CameraManager.Instance.CursorManaging(false);
@@ -60,6 +57,7 @@ public class UIManager : MonoBehaviour
         else if (isOpen == true)
         {
             //Time.timeScale = 1f;
+            if(SettingBlur != null)
             SettingBlur.SetActive(false);
             isOpen = false;
             CameraManager.Instance.CursorManaging(true);

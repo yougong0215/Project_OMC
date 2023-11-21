@@ -34,6 +34,7 @@ public class SkillSO : ScriptableObject
     [Header("Info")] 
     [SerializeField] public FSMState State = FSMState.Attack;
     [SerializeField] public AnimationClip Clip = null;
+    
 
     protected bool _isRunning = false;
     

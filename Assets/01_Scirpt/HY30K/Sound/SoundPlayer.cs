@@ -5,18 +5,16 @@ using UnityEngine.UI;
 
 public class SoundPlayer : MonoBehaviour
 {
+    [SerializeField] private SoundSetting _type;
     [SerializeField] AudioClip bgm;
     [SerializeField] Slider slider;
 
     private void Start()
     {
         //bgm = GetComponent<AudioClip>();
-
-        SoundPlay(bgm);
-    }
-    private void Update()
-    {
-        AudioSettingSetting();
+        slider.value = SoundManager.Instance.GetValue(_type);
+        if(bgm != null)
+            SoundPlay(bgm);
     }
 
     public void SoundPlay(AudioClip bgm)
@@ -24,8 +22,8 @@ public class SoundPlayer : MonoBehaviour
         SoundManager.Instance.PlayBGM(bgm);
     }
 
-    public void AudioSettingSetting()
+    public void AudioSettingSetting(float value)
     {
-        SoundManager.Instance.MixerSave(SoundSetting.background, slider.value);
+        SoundManager.Instance.MixerSave(_type, value);
     }
 }
