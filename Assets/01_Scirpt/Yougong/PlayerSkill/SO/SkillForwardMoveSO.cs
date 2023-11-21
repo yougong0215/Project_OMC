@@ -8,6 +8,7 @@ public class SkillForwardMoveSO : SkillSO
 {
     [Header("나아가는 속도")]
     public float _speed;
+    
     [Description("0.05배 가속")]
     public override void SkillUpdate()
     {

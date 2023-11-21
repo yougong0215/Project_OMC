@@ -112,8 +112,6 @@ public class SkillSO : ScriptableObject
     {
         if (_info != null && _info.FSM.CurrentState._myState == FSMState.NuckDown)
             _isRunning = true;
-
-
     }
 
     public virtual void SkillEvent()
@@ -123,7 +121,7 @@ public class SkillSO : ScriptableObject
 
     public virtual void SkillEnd()
     {
-        
+        _isRunning = true;
     }
     /// <summary>
     /// cols의 게임오브잭트  접근 피격시 이벤트 발동

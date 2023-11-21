@@ -17,9 +17,11 @@ public class EffectColliderOut : MonoBehaviour
 
     public void OutEffect()
     {
+        
         foreach (var effect in a)
         {
-            effect.Play();
+            if(effect != null)
+             effect.Play();
         }
     }
 

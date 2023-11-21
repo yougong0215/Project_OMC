@@ -70,7 +70,10 @@ public abstract class ColliderCast : PoolAble
         _player = Player;
         _skill.Init(_player, Weapon, this);
         //transform.localPosition += originVec;
-        transform.SetParent(null);
+        if (transform != null)
+        {
+            transform.SetParent(null);
+        }
         //originVec = transform.position;
         
             Debug.Log("Reset try");
@@ -114,17 +117,6 @@ public abstract class ColliderCast : PoolAble
         {
             _skill.SkillUpdate();
         }
-        
-        if (isAttack == true)
-        {
-            _check += Time.deltaTime;
-        }
-
-        if (_check >= 3f)
-        {
-            Destroy(this.gameObject);
-        }
-        
         
         if (!isAttack)
             return;
