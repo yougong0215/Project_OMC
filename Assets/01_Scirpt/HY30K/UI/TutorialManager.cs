@@ -59,8 +59,8 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-    public void SceneMove()
+    public void SceneMove(string scene)
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(scene);
     }
 }
