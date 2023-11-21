@@ -15562,6 +15562,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1232602342}
     m_Modifications:
+    - target: {fileID: 1058946943273831422, guid: 48a34ce6e085694429438b68bc044517, type: 3}
+      propertyPath: pointName
+      value: MainScene
+      objectReference: {fileID: 0}
     - target: {fileID: 4552867313878738044, guid: 48a34ce6e085694429438b68bc044517, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -15609,6 +15613,14 @@ PrefabInstance:
     - target: {fileID: 5940475108915558498, guid: 48a34ce6e085694429438b68bc044517, type: 3}
       propertyPath: playerInput
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401915293753453350, guid: 48a34ce6e085694429438b68bc044517, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401915293753453350, guid: 48a34ce6e085694429438b68bc044517, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.6
       objectReference: {fileID: 0}
     - target: {fileID: 9152379251801273535, guid: 48a34ce6e085694429438b68bc044517, type: 3}
       propertyPath: m_Name
