@@ -25,17 +25,17 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    public void MoveLevel()
+    public void MoveLevel(string scene)
     {
-        StartCoroutine(LoadLevel());
+        StartCoroutine(LoadLevel(scene));
     }
 
-    private IEnumerator LoadLevel()
+    private IEnumerator LoadLevel(string scene)
     {
         fadeAnime.SetTrigger("In");
         yield return new WaitForSeconds(1);
         playerInput.InputAction.Player.Enable();
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(scene);
         fadeAnime.SetTrigger("Out");
     }
 }

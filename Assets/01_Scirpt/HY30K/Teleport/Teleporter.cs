@@ -13,6 +13,7 @@ public class Teleporter : Interactable
     private void OnTriggerEnter(Collider other)
     {
         player = other.GetComponent<Teleportable>();
+        Debug.Log(other.gameObject.name);
     }
 
     protected override void Interact()
@@ -80,6 +81,7 @@ public class Teleporter : Interactable
                 return spawnPoint;
             }
         }
+        Debug.LogError(spawnPoints.Length);
         return null;
     }
 }

@@ -42,6 +42,7 @@ public class PlayerInteract : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.G))
                 {
+                    Debug.Log(interactable.gameObject.name);
                     interactable.BaseInteract();
                 }
             }

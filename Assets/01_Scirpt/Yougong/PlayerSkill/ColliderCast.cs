@@ -138,6 +138,7 @@ public abstract class ColliderCast : PoolAble
             else
                 CheckDic.Add(col, false);
             Debug.Log("이밴트 시작");
+            Debug.Log(col.gameObject.name);
             CastAct?.Invoke(col, true);
             //Debug.Log($"{col.name} 맞음");
 
