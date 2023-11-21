@@ -1,8 +1,10 @@
+using System;
 using System.Numerics;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Quaternion = UnityEngine.Quaternion;
+using Random = UnityEngine.Random;
 using Vector3 = UnityEngine.Vector3;
 
 public class CameraCollision : MonoBehaviour
@@ -69,10 +71,15 @@ public class CameraCollision : MonoBehaviour
         _body = _cin.GetCinemachineComponent<Cinemachine3rdPersonFollow>();
         _camDistance = CameraMaxDistance;
         
+
+    }
+
+    private void Start()
+    {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
-    
+
     private Transform _player;
     public Transform Player
     {

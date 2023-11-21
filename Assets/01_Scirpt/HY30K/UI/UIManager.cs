@@ -34,12 +34,14 @@ public class UIManager : MonoBehaviour
         SettingBlur.SetActive(false);
     }
 
-    void Update()
+    private void Update()
     {
-
         if (isGameOver == true)
         {
-            PanelGameOver();
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                Restart();
+            }
         }
     }
 
@@ -65,14 +67,10 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void PanelGameOver()
+    public void PanelGameOver()
     {
+        isGameOver = true;
         GameOverBlur.DOFade(1, 2);
-
-        if (Input.anyKeyDown)
-        {
-            Restart();
-        }
     }
 
     public void Close()
@@ -82,7 +80,7 @@ public class UIManager : MonoBehaviour
 
     public void Restart()
     {
-        isGameOver = false;
         SceneManager.LoadScene("MainScene");
+        isGameOver = false;
     }
 }

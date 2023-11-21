@@ -73,7 +73,7 @@ public class SoundManager : Singleton<SoundManager>
         }
         else
         {
-            _mixer.SetFloat(ss.ToString(), Mathf.Lerp(-40,0, value * 0.01f));
+            _mixer.SetFloat(ss.ToString(), Mathf.Lerp(-40,0, value));
         }
         switch (ss)
         {
@@ -157,7 +157,7 @@ public class SoundManager : Singleton<SoundManager>
         
         GameObject bg = Instantiate(new GameObject());
         
-        DontDestroyOnLoad(bg);
+        //DontDestroyOnLoad(bg);
         _backgroundSound = bg.AddComponent<AudioSource>();
         AudioMixerGroup[] _ad = _mixer.FindMatchingGroups("background");
         _backgroundSound.outputAudioMixerGroup = _ad[0];

@@ -15,9 +15,8 @@ public class InteractUI : Interactable
     }
     protected override void Interact()
     {
-        
         playerInput.InputAction.Player.Disable();
-        Cursor.lockState = CursorLockMode.None;
+        CameraManager.Instance.CursorManaging(false);
         panel.SetActive(true);
     }
 }
