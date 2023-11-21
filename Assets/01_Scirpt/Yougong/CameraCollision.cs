@@ -114,8 +114,7 @@ public class CameraCollision : MonoBehaviour
     void CameraAltitude()
     {
 
-        if (Cursor.visible == true)
-            return;
+
 
         // 플레이어 위치는 보통 발바닥임 + 1.4f
         transform.position = _target.position + new Vector3(0, 2f, 0);
@@ -148,22 +147,26 @@ public class CameraCollision : MonoBehaviour
         
         _body.CameraDistance = _camDistance;
 
+        if (Cursor.visible == false)
+        {
+            _originrayY = Input.GetAxis("Mouse X") * _sense * L;
+            _originrayX += Input.GetAxisRaw("Mouse Y") * _sense * U;
 
-        
-        _originrayY = Input.GetAxis("Mouse X") * _sense * L;
-        _originrayX += Input.GetAxisRaw("Mouse Y") * _sense * U;
-
-        _originrayX = Mathf.Clamp(_originrayX, _bindCamMin, _bindCamMax);
-
-        float t = transform.localEulerAngles.y + _originrayY;
+            _originrayX = Mathf.Clamp(_originrayX, _bindCamMin, _bindCamMax);
             
-        transform.localEulerAngles = new Vector3(_originrayX, t, 0);
+            float t = transform.localEulerAngles.y + _originrayY;
+            
+            transform.localEulerAngles = new Vector3(_originrayX, t, 0);
+
+        }
+
+
 
 
 
         _setPos = false;
     }
-
+    
 
     void shake()
     {

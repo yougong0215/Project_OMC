@@ -21,6 +21,14 @@ public class EnemyHpBar : MonoBehaviour
     public void SetHpBar(float cur, float max)
     {
         Debug.Log($"scale {cur / max}");
-        rectSize.transform.localScale = new Vector3(cur / max, 1, 1);
+        try
+        {
+
+            rectSize.transform.localScale = new Vector3(cur / max, 1, 1);
+        }
+        catch
+        {
+            Debug.LogWarning($"Error Exapsion");
+        }
     }
 }

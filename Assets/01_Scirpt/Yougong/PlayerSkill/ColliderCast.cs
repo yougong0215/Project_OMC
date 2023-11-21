@@ -104,6 +104,7 @@ public abstract class ColliderCast : PoolAble
         return ColliderEnd;
     }
 
+    private float _check = 0;
     
     
     protected void Update()
@@ -113,6 +114,18 @@ public abstract class ColliderCast : PoolAble
         {
             _skill.SkillUpdate();
         }
+        
+        if (isAttack == true)
+        {
+            _check += Time.deltaTime;
+        }
+
+        if (_check >= 3f)
+        {
+            Destroy(this.gameObject);
+        }
+        
+        
         if (!isAttack)
             return;
 
