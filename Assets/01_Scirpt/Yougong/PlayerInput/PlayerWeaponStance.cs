@@ -20,7 +20,10 @@ public class PlayerWeaponStance : MonoBehaviour
     private int nowNum = 0;
     [Header("Cavans")] [SerializeField]private PlayerCanvasM _canvas;
     public bool _isOpen = false;
+    [Header("Hands")]
+    [SerializeField] private Transform HandPos = null;
 
+    private GameObject _currentWeaponModel = null;
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
@@ -121,6 +124,7 @@ public class PlayerWeaponStance : MonoBehaviour
         // 현제 실행중인 스킬이 있으면 안됨
         if (_CurrentSkill != null && _CurrentSkill.IsRunning)
         {
+            
             Debug.Log(2);
             if ((int)_player.FSM.CurrentState._myState < 11)
             {
@@ -164,6 +168,14 @@ public class PlayerWeaponStance : MonoBehaviour
     {
         if (_so == null)
             return;
+        if (_currentWeaponModel != null)
+        {
+            Destroy(_currentWeaponModel);
+        }
+
+        _currentWeaponModel = Instantiate(_so._weaponModel, HandPos);
+        
+        
         Debug.LogWarning(_so.R_Click._icon.name);
         _canvas.SetSkillIcon(SkillBtn.Left, _so.R_Click != null ? _so.R_Click._icon : null);
         _canvas.SetSkillIcon(SkillBtn.Q, _so.Q_Skill != null ? _so.Q_Skill._icon : null);

@@ -14,6 +14,9 @@ public class PlayerInfo : CharacterInfo
     private PlayerMovement _move;
     public PlayerMovement Move => _move;
 
+
+   [SerializeField] private PlayerCanvasM _canvas;
+
     bool IsParring = false;
     protected override void AwakeInvoke()
     {
@@ -48,6 +51,14 @@ public class PlayerInfo : CharacterInfo
         {
             GetDamage(0, true);
         }
+
+        if(_canvas._hpBackBar.fillAmount > 0)
+            _canvas._hpBackBar.fillAmount -= Time.deltaTime;
+        else
+        {
+            _canvas._hpBackBar.fillAmount = 0;
+        }
+            
     }
 
     public override void GetDamage(float _damage, bool _nuckBack = false)
@@ -58,6 +69,8 @@ public class PlayerInfo : CharacterInfo
             _isDamaged = true;
             return;
         }
+
+        
         
         if(_nuckBack && _isDamaged==false)
         {
@@ -76,11 +89,14 @@ public class PlayerInfo : CharacterInfo
         }
         //Debug.Log("불려오면안됨");
         
-        statSo.HP -= (int)_damage;
+        Stat.HP -= (int)_damage;
         if (_co == null)
         {
             _co = StartCoroutine(Damaged());
             
         }
+
+        _canvas._hpBackBar.fillAmount = _canvas._hpBar.fillAmount;
+        _canvas._hpBar.fillAmount = Mathf.Lerp(0, 1, Stat.HP / statSo.HP);
     }
 }

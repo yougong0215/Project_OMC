@@ -10,6 +10,9 @@ public enum SkillBtn
 }
 public class PlayerCanvasM : MonoBehaviour
 {
+    [Header("HP")] public Image _hpBar;
+    public Image _hpBackBar;
+    
     [Header("Skill_Img")] public Image _left_image;
     public Image _q_image;
     public Image _e_image;

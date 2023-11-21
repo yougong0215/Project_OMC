@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DagerA
   m_EditorClassIdentifier: 
   statSo: {fileID: 11400000, guid: 749f180badee61941a481fdb1a0e13d8, type: 2}
-  _weaponModel: {fileID: 0}
+  _weaponModel: {fileID: 1075035319354358686, guid: 02e5ed1b66960d442b1d2e9e2f7c50b7, type: 3}
   _type: 0
   _skills:
   - {fileID: 11400000, guid: 846bf6acd97b85742a315865a55b26eb, type: 2}

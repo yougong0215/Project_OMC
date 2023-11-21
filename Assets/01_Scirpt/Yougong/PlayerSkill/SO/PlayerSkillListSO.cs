@@ -26,6 +26,7 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
     protected int currnetNum = 0;
     protected bool ComboInterective = false;
     [NonSerialized] public bool NoneCombo = false;
+
     
     protected bool _isRunning = false;
     public bool IsRunning => _isRunning;
@@ -135,13 +136,15 @@ public class PlayerSkillListSO : ScriptableObject, ISerializationCallbackReceive
                 catch
                 {
                     Debug.LogWarning("Argument Bug!!!");
+                    Destroy(cols.gameObject);
+                    _isRunning = false;
                     break;
                 }
 
-                yield return new WaitUntil(() => cols.ReturnColliderEnd() == true ||
-                                                 Attacks[currnetNum].isNotWaiting == true
-                                                 || Attacks[currnetNum].isNextSkip == true
-                                                 && _char.FSM.CurrentState._myState == FSMState.NuckDown);
+                yield return new WaitUntil(
+                    () => ( cols.ReturnColliderEnd() == true || Attacks[currnetNum].isNotWaiting == true
+                                                 || Attacks[currnetNum].isNextSkip == true )
+                                                 || _char.FSM.CurrentState._myState == FSMState.NuckDown);
                 if (Attacks[currnetNum].isNotWaiting == false)
                 {
                     Destroy(cols.gameObject, 2f);
